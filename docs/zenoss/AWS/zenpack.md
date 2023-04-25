@@ -19,15 +19,13 @@ ZenPacks.zenoss.AWS
 
 ### Applications Monitored:
 
-Amazon Web Services
-
 This ZenPack provides support for monitoring [Amazon Web Services](https://aws.amazon.com/){.external-link}.
 
 ## Releases
 
 Version 5.2.0 -
 [Download](https://delivery.zenoss.com/){.external-link}
-           Release on 2022/12/01
+           Released on 2022/12/01
            Requires PythonCollector ZenPack (&gt;=1.11.0), ZenPackLib
 ZenPack (&gt;=2.1.0)
            Compatible with Zenoss 6.4 - 6.7 and Zenoss Cloud
@@ -71,7 +69,7 @@ are each detailed further below.
 
 The following entities will be automatically discovered through an
 account name, access key and secret key you provide. The attributes,
-tags and collections will be updated on Zenoss&rsquo; normal remodeling
+tags and collections will be updated on Zenoss' normal remodeling
 interval which defaults to every 12 hours.
 
 Regions:   Attributes: ID:   Collections: VPCs, Subnets, Zones, Instances, Volumes, Images,
@@ -151,8 +149,7 @@ Lambda Functions
 FunctionName, Description, FunctionArn, Handler, CodeSize, LastModified,
 Role, Alias, Memory, Runtime, Version, Timeout, Security Group
 
-  Tags:
-Name
+Tags: Name
 
 ECS Clusters
 
@@ -192,7 +189,8 @@ Tasks, Pending Tasks, Launch Type
 
   Tags: Name
   Collections: ECS Tasks
-*  Note*: For ECS Tasks that are hosted directly on the ECS Cluster
+  
+**Note**: For ECS Tasks that are hosted directly on the ECS Cluster
 additional 'virtual' ECS Service will be added to contain those tasks
 
 ECS Tasks
@@ -254,7 +252,7 @@ queue on zenpython's side and sends datamaps contained to zenhub.
 
 ### Modeling and zAWSEnabledPlugins property
 
-\`zAWSEnabledPlugins\` controls a list of AWS modeler sub-plugins, such
+`zAWSEnabledPlugins` controls a list of AWS modeler sub-plugins, such
 as:
 
 -   EC2
@@ -283,8 +281,9 @@ Account:   Metrics: EstimatedCharges, EC2EstimatedCharges, S3EstimatedCharges,
     KmsEstimatedCharges, ECSEstimatedCharges, ElastiCacheEstimatedCharges
 
 Regions:   Metrics: CPUUtilization, DiskReadOps, DiskWriteOps, DiskReadBytes,
-    DiskWriteBytes, NetworkIn, NetworkOut:   *Note*: These metrics aggregated only for EC2 Instances with
-    detailed monitoring enabled
+    DiskWriteBytes, NetworkIn, NetworkOut
+    
+**Note**: These metrics aggregated only for EC2 Instances with detailed monitoring enabled
 
 Instances:   Metrics: CPUUtilization, DiskReadOps, DiskWriteOps, DiskReadBytes,
     DiskWriteBytes, NetworkIn, NetworkOut, StatusCheckFailed_Instance,
@@ -319,7 +318,7 @@ Application Load Balancers:
     HTTPCode_ELB_503_Count, HTTPCode_ELB_504_Count,
     HTTPCode_Target_2XX_Count, HTTPCode_Target_3XX_Count,
     HTTPCode_Target_4XX_Count, HTTPCode_Target_5XX_Count,
-    ProcessedBytes, ConsumedLCUs, RequestCount, RuleEvaluations:   *Note*: Depending on the Load Balancer configuration, some metrics
+    ProcessedBytes, ConsumedLCUs, RequestCount, RuleEvaluations:   **Note**: Depending on the Load Balancer configuration, some metrics
     might be unavailable.
 
 Network Load Balancers:
@@ -335,7 +334,7 @@ ECS Clusters:
   Metrics: CPUUtilization, MemoryUtilization, CPUReservation,
 MemoryReservation, NetworkRxBytes, NetworkTxBytes, StorageWriteBytes,
 StorageReadBytes
-*  Note*: Enable Container Insights to monitor Network and Storage
+**Note**: Enable Container Insights to monitor Network and Storage
 metrics
 
 ECS Service:
@@ -343,7 +342,7 @@ ECS Service:
   Metrics: CPUUtilization, MemoryUtilization, NetworkRxBytes,
 NetworkTxBytes, StorageWriteBytes, StorageReadBytes
 
-*  Note*: Enable Container Insights to monitor Network and Storage
+**Note**: Enable Container Insights to monitor Network and Storage
 metrics
 
 ElastiCache
@@ -376,18 +375,19 @@ value in the configuration of `zenpython` daemon. Please note that
 setting a higher value will result also in bigger memory usage.
 
 Collection interval may be changed using the
-\`zAWSCloudWatchCollectionInterval\` property. By default, it is set to
+`zAWSCloudWatchCollectionInterval` property. By default, it is set to
 300 seconds. This will affect most Amazon CloudWatch datasources and may
-help in reducing monitoring costs. It doesn&rsquo;t change the interval of
+help in reducing monitoring costs. It doesn't change the interval of
 datapoints on the graphs, but only changes the frequency Zenoss performs
 API calls to CloudWatch.
 
-Note: By default, \`CloudFormation\`, \`ECS\` and \`ElastiCache\`
-modeler sub-plugins are not enabled. Users need to add them manually and
-initiate the modeling for those components to be modeled and
-monitored. For AutoScalingGroup monitoring to become working, the user
-needs to enable the monitoring on the AWS console for the specific
-AutoScalingGroups.
+!!! note 
+    By default, `CloudFormation`, `ECS` and `ElastiCache` 
+    modeler sub-plugins are not enabled. Users need to add them manually and 
+    initiate the modeling for those components to be modeled and 
+    monitored. For AutoScalingGroup monitoring to become working, the user 
+    needs to enable the monitoring on the AWS console for the specific 
+    AutoScalingGroups.
 
 ### SQS Queue Messages Monitoring
 
@@ -434,8 +434,9 @@ others *INFO* one.
 By default, all generated events are mapped to `/AWS/CloudFormation`
 event class.
 
-***Note:*** Once the event is sent, it will not be sent again. If the
-user clears the event, it will not reappear again.
+!!! note 
+    Once the event is sent, it will not be sent again. If the 
+    user clears the event, it will not reappear again.
 
 In case `zAWSCloudFormationEventsAutoClear` zProperty set to True for
 each `CREATE_COMPLETE` and `DELETE_COMPLETE` corresponding auto-clear
@@ -450,12 +451,10 @@ and shows them as Zenoss Events at the same time.
 Standard Zenoss Event Fields:
 
 -   device (set to EC2Account)
--   component (ElastiCache
-    Cluster/ElastiCache Node)
+-   component (ElastiCache Cluster/ElastiCache Node)
 -   summary
 -   severity
--   eventClassKey (set to
-    *ElastiCacheEvents*)
+-   eventClassKey (set to `ElastiCacheEvents`)
 -   eventKey (for de-duplication and auto-clear fingerprinting)
 
 Additional Fields:
@@ -470,8 +469,9 @@ By default,
 all generated events are mapped to \`/AWS/ElastiCache\` event
 class.
 
-***Note:*** Once the event is sent, it will not be sent again. If the
-user clears the event, it will not reappear again.
+!!! note 
+    Once the event is sent, it will not be sent again. If the 
+    user clears the event, it will not reappear again.
 
 ### Zenoss Notifications with SES
 
@@ -521,7 +521,7 @@ requires that your Zenoss system has the network and server access it
 needs to monitor the guest operating system. VPC and non-VPC modes are
 supported.
 
-The guest operating system devices&rsquo; life-cycle is managed along with the
+The guest operating system devices' life-cycle is managed along with the
 instance. For example, the guest operating system device is set to a
 decommissioned production state when the EC2 instance is stopped, and
 the guest operating system device is deleted when the EC2 instance is
@@ -582,7 +582,7 @@ Service Impact Relationships
 
 The ZenPack now provides a way to group and collect AWS components on an
 account based on AWS Tags. You can define a tag filter by navigating to
-your AWS account device and selecting &ldquo;Add AWS Tag Filter&rdquo; from the &ldquo;+&rdquo;
+your AWS account device and selecting "Add AWS Tag Filter" from the "+"
 menu in the lower left corner of the screen. On the dialog that pops up,
 give your Tag Filter a name, and select the tag you want to track. You
 can combine multiple tags with the AND and OR operators. You can also
@@ -590,7 +590,7 @@ generate a Component Group based on the Tag Filter. Click Submit when
 finished.
 
 The Tag Filter will be visible in the the navigation bar area, and the
-&ldquo;AWS Tag Filters&rdquo; section. This will allow you to view all components of
+"AWS Tag Filters" section. This will allow you to view all components of
 any type matched by the filter, along with their graphs.
 
 In addition, you can use this Tag Filter to view billing information for
@@ -598,7 +598,7 @@ the group of components in the Expenses Analysis section (see [Expense Analysis]
 
 The AWS Tag Filters use a special monitoring template, TagFilter, which
 is not visible in the device-level monitoring template section, but is
-visible if you go to Advanced &gt; Monitoring Templates. From here, you
+visible if you go to Advanced > Monitoring Templates. From here, you
 can add modify the template, should you need to do so.
 
 ### Estimated charges monitoring
@@ -614,16 +614,16 @@ Account Billing Overview
 
 To control spendings limit `zAWSBillingCostThreshold` zProperty should
 be used. It is set to 1000 by default. This property sets threshold for
-bullet-like billing graph to turn red and used in &ldquo;Billing Cost&rdquo;
-threshold as well. Event is generated if spendings go over it&rsquo;s value.
+bullet-like billing graph to turn red and used in "Billing Cost"
+threshold as well. Event is generated if spending goes over its value.
 
 Billing graphs shows estimated charges for whole account and detailed
 charges per service. Top 10 services displayed on pie chart.
 
 This ZenPack uses linear interpolation to predict total per month
 charges and this information is displayed on the device overview page
-and on the \`Total Estimated Charge\` graph as new a datapoint in
-\`Expense Analysis\`.
+and on the `Total Estimated Charge` graph as new a datapoint in
+`Expense Analysis`.
 
 ### Expense Analysis
 
@@ -640,19 +640,19 @@ Expenses Analysis
 
 ### Cloudwatch API Cost
 
-This zenpack uses the Amazon Cloudwatch API to collect metric data. The
+This ZenPack uses the Amazon Cloudwatch API to collect metric data. The
 first 1,000,000 calls to this API each month are free, and then
 additional calls are charged at a rate of $0.01 per 1,000 calls. For
 specific pricing questions, see [AWS Cloudwatch Pricing](https://aws.amazon.com/cloudwatch/pricing/){.external-link}.
 
-A report is provided (Reports -&gt; AWS Reports -&gt; Monitoring Costs)
+A report is provided (Reports > AWS Reports > Monitoring Costs)
 to provide a detailed breakdown of API calls and estimated cost per
 monitoring template on each monitored EC2 Account.
 
 ### CloudFormation Stacks Blueprints
 
 CloudFormation Stacks Blueprints provides a graphical representation of
-all Stacks templates. The same way as it&rsquo;s done in AWS Console.
+all Stacks templates. The same way as it's done in AWS Console.
 
 @lb[](img/zenpack-aws_blueprint.png)
 
@@ -664,7 +664,7 @@ collapsing all visible stacks are available.
 
 The set of visible stacks can be narrowed down by regions and stack name
 filters. The stack name filter sets the fragment that needs to be
-present in the stack&rsquo;s name. After setting filters *Refresh* button
+present in the stack's name. After setting filters *Refresh* button
 should be pressed to apply changes.
 
 Each node in the stack is a resource defined in the template. The first
@@ -682,11 +682,11 @@ There also are separate blueprints for each CF Stack component.
 
 ### Configuring ECS Schedule Rules discovery
 
-'zAWSECSEventBuses' contains names of AWS Event Bridge Event Buses which
+`zAWSECSEventBuses` contains names of AWS Event Bridge Event Buses which
 are used for ECS Schedule Rules discovery.
-By default Event Bus with the name 'default' is used. If you use a
+By default Event Bus with the name `default` is used. If you use a
 custom Event Bus for ECS Schedule Rules, you will need to add its name
-to 'zAWSECSEventBuses' manually.
+to `zAWSECSEventBuses` manually.
 
 ## Usage
 
@@ -701,13 +701,15 @@ interface.
 4.  Optionally choose a collector other than the default *localhost*.
 5.  Click *Add*.
 
-Alternatively, you can use zenbatchload to add accounts from the command
+Alternatively, you can use `zenbatchload` to add accounts from the command
 line. To do this, you must create a file with contents similar to the
 following. Replace all values in angle brackets with your values minus
 the brackets. Multiple accounts can be added under the same
 `/Device/AWS/EC2` section.
 
-    /Devices/AWS/EC2 loader='ec2account', loader_arg_keys=['accountid', 'devicename', 'accesskey', 'secretkey', 'devicePath', 'collector'] <devicename> accountid='accountid', devicename='devicename', accesskey='accesskey', secretkey='secretkey', devicePath='/Devices/AWS/EC2', collector='localhost'
+```
+/Devices/AWS/EC2 loader='ec2account', loader_arg_keys=['accountid', 'devicename', 'accesskey', 'secretkey', 'devicePath', 'collector'] <devicename> accountid='accountid', devicename='devicename', accesskey='accesskey', secretkey='secretkey', devicePath='/Devices/AWS/EC2', collector='localhost'
+```
 
 You can then load the account(s) with the following command:
 
@@ -723,7 +725,7 @@ help with large AWS accounts.
 
 Some regions (such as 'ap-east-1'
 (Hong Kong)) may be disabled by default, on the AWS console. In this
-case message about skipping it will be shown while modeling.
+case, a message about skipping it will be shown while modeling.
 
 ### Configuring Guest Device Discovery
 
@@ -736,22 +738,22 @@ account.
     Instances*
 3.  Choose the device class for Linux and/or Windows instances.
 4.  Navigate to the *Configuration Properties* panel and in the
-    `zAWSDiscover` property specify the instances&rsquo; tags and values (e.g.
+    `zAWSDiscover` property specify the instances' tags and values (e.g.
     `<tag:value>;`).
 5.  Verify that appropriate SSH, SNMP or Windows credentials are
     configured for the chosen device class(es).
 6.  To choose private or public IP address will be used for creating
     guest devices, and change the `zAWSGuestUsePublicIPs` property.
-7.  To specify guest device device classes based on AWS tags from the
-    instance, set the tag key=value in the `zAWSGuestDeviceClassTags`.
+7.  To specify device classes for guest devices based on AWS tags from the
+    instance, set the tag `key=value` in the `zAWSGuestDeviceClassTags`.
     For example: in EC2 Console it is a tag `app=1`, then use `app=1`
     and `/Server/Linux` in `zAWSGuestDeviceClassTags` property edit
     window.
 8.  Like specifying guest device classes from AWS tags, Zenoss Group &
     System membership can be configured via
-    \`zAWSGuestDeviceGroupingTags\`. The tag definition works exactly as
-    it does in \`zAWSGuestDeviceClassTags\`.
-    Note: you will need to restart zproxy service in Control Center, to
+    `zAWSGuestDeviceGroupingTags`. The tag definition works exactly as
+    it does in `zAWSGuestDeviceClassTags`.
+    **Note:** you will need to restart zproxy service in Control Center, to
     have a proper UI window for this zProperty after installation.
 9.  Remodel the EC2 account by choosing *Model Device* from its menu.
 
@@ -764,12 +766,12 @@ and used before `zAWSGuestDeviceClassTags`. A list of tags in
 key=value will apply. Also, property `zAWSGuestDeviceClassTags` takes
 precedence over Device Overview configured classes.
 
-\`zAWSDiscover\` also supports complex tags in the format
-\`&lt;some:long:key:value&gt;;\` Multiply colons are allowed in the
-\`key\` name only (\`key:key:value\`).
+`zAWSDiscover` also supports complex tags in the format
+`<some:long:key:value>;` Multiply colons are allowed in the
+`key` name only (`key:key:value`).
 
 If your instances are VPC instances and are in a different VPC than the
-Zenoss server that&rsquo;s monitoring the EC2 account, you must add a
+Zenoss server that's monitoring the EC2 account, you must add a
 *Collector* tag containing VPC with the value set to the name of the
 Zenoss collector to which discovered guest devices should be assigned.
 
@@ -787,17 +789,17 @@ You can optionally configure an alternate remote collector for the
 devices created from AWS Instances with the following configuration
 properties:
 
-zAWSGuestCollector:   This property allows you to specify the name of the collector all
+`zAWSGuestCollector` This property allows you to specify the name of the collector all
     discovered devices for this AWS device will use.
 
-zAWSResetGuestCollector:   Setting this property to *false* on a guest device (not an EC2
+`zAWSResetGuestCollector` Setting this property to *false* on a guest device (not an EC2
     Account) will tell AWS not to change the collector if you have set
     it manually.
 
 ### Configuring closing events on guest device deletion.
 
-New zAWSCloseGuestEvents property added. If set to true, all open events
-for guest device will be closed while the guest device deletion.
+New `zAWSCloseGuestEvents` property added. If set to true, all open events
+for guest device will be closed when the guest device is deleted.
 
 ### Find Missing Guest Devices
 
@@ -809,7 +811,7 @@ repeated.
 
 In the Zenoss UI, navigate to your AWS EC2 Account device, and find the
 gear icon menu in the bottom left corner of the window. Under this menu,
-click the option labeled &ldquo;Find Missing Guest Devices.&rdquo; This will
+click the option labeled "Find Missing Guest Devices." This will
 schedule a job for immediate execution, which will clear the guest ID
 cache and run the discovery process for each instance. Existing guest
 devices will remain, but any devices previously missed will be detected.
@@ -823,13 +825,13 @@ discovered by the AWS ZenPack. Those requirements are as follows:
 
 -   The instance must contain a tag listed in the `zAWSDiscover`
     configuration property.
--   Guest device classes must be defined. See the &ldquo;Device Class for
-    Discovered Linux Instances&rdquo; and &ldquo;Device Class for Discovered Windows
-    Instances&rdquo; fields on the Device Overview page.
+-   Guest device classes must be defined. See the "Device Class for
+    Discovered Linux Instances" and "Device Class for Discovered Windows
+    Instances" fields on the Device Overview page.
 -   The guest must have a valid collector, either from the EC2
-    Instance&rsquo;s VPC, from the `zAWSGuestCollector`, or the default
+    Instance's VPC, from the `zAWSGuestCollector`, or the default
     collector for the AWS account device.
--   The guest must have a valid manageIP, either the EC2 Instance&rsquo;s
+-   The guest must have a valid `manageIP`, either the EC2 Instance's
     private IP, public IP, or its DNS name.
 -   The EC2 Instance `guest` property must be set. This should be set
     automatically. If you believe it is set improperly, use the Find
@@ -838,12 +840,12 @@ discovered by the AWS ZenPack. Those requirements are as follows:
     automatically. If you believe it is set improperly, use the Find
     Missing Guest Devices feature described above.
 -   The guest device ID must not be previously cached in the AWS
-    account&rsquo;s guest device ID cache. This should be handled
+    account's guest device ID cache. This should be handled
     automatically. If you believe it is set improperly, use the Find
     Missing Guest Devices feature described above.
 
 If all the criteria above are met by the EC2 Instance, and an existing
-device with an ID or title matching the EC2 Instance&rsquo;s ID exists, or an
+device with an ID or title matching the EC2 Instance's ID exists, or an
 existing device has a matching IP address, the EC2 Instance will be
 linked to that existing device.
 
@@ -894,11 +896,11 @@ for this purpose you have to:
 3.  Navigate to the *Configuration Properties* panel.
 4.  Change the `zAWSAutoChangeProdState` property (default is *true*).
 
-By default, the production state is changed to &lsquo;Production&rsquo; (1000) for
-running EC2 instances, and to &lsquo;Decommissioned&rsquo; (-1) for stopped ones.
+By default, the production state is changed to 'Production' (1000) for
+running EC2 instances, and to 'Decommissioned' (-1) for stopped ones.
 These states may be customized by specifying the desired production
-state IDs (numbers) in zAWSAutoChangeProdStateRunning and
-zAWSAutoChangeProdStateStopped.
+state IDs (numbers) in `zAWSAutoChangeProdStateRunning` and
+`zAWSAutoChangeProdStateStopped`.
 
 If the user changes the production state for some guest device manually,
 this state will be used for this guest device when the EC2 instance
@@ -932,8 +934,8 @@ removing them can cause the modeler to timeout. If this occurs, you can
 remove them manually by running the included dmd script
 `delete_all_snapshot_components` from the zope container.
 
-*Note*: The `delete_all_snapshot_component` the script will delete *all*
-AWS snapshot components from *all* AWS devices without prompting for
+*Note*: The `delete_all_snapshot_component` script will delete **all**
+AWS snapshot components from **all** AWS devices without prompting for
 confirmation. If you have multiple AWS devices and only want to delete
 snapshots from some devices, use `zendmd`.
 
@@ -963,7 +965,7 @@ using `zAWSBillingAccessKey` and `zAWSBillingSecretKey` zProperties):
 *Note*: It can take up to 24 hours for AWS to start delivering reports
 to your S3 bucket.
 
-For configuration on Zenoss side set the next zProperties:
+For configuration on Zenoss side set the following zProperties:
 
 -   `zAWSBillingReportS3Bucket`: S3 Bucket name of Cost and Usage
     reports being delivered (e.g. `aws-billing-master`).
@@ -973,7 +975,7 @@ For configuration on Zenoss side set the next zProperties:
 -   `zAWSBillingAthenaResultsS3Bucket`: S3 Bucket AWS Athena will use to
     store query results. For details please check [AWS documentation](http://docs.aws.amazon.com/athena/latest/ug/querying.html){.external-link}.
 -   `zAWSBillingAthenaRegion`: Region which will be used to run AWS
-    Athena. To avoid extra charges for cross-region data transfer, it&rsquo;s
+    Athena. To avoid extra charges for cross-region data transfer, it's
     recommended to use the same region as S3 Bucket with Cost and Usage
     reports.
 
@@ -997,16 +999,20 @@ instance, enabling proxying for zenpython may cause it to be used for
 other service monitoring beyond just AWS.
 
 To configure these environment variables, edit the service definitions
-(via &lsquo;serviced service edit&rsquo; or the Control Center UI) for the
+(via `serviced service edit` or the Control Center UI) for the
 zenpython, zenmodeler, and zenjobs containers as follows:
 
 Change
 
-     "Environment": null,
+```
+"Environment": null,
+```
 
 to:
 
-     "Environment": [ "http_proxy=http://[proxy host]:[proxy port]", "https_proxy=http://[proxy host]:[proxy port]", "no_proxy=localhost" ],
+```
+"Environment": [ "http_proxy=http://[proxy host]:[proxy port]", "https_proxy=http://[proxy host]:[proxy port]", "no_proxy=localhost" ],
+```
 
 Note that both `http_proxy` and `https_proxy` values must begin with
 `http://`. The `no_proxy` variable is required so that communication
@@ -1047,7 +1053,7 @@ will be *Info*.
 **sns_topic**
 
 There is a possibility to attach SQS Queues to SNS Topics. The parser
-Zenoss will decode the message and use the &ldquo;Subject&rdquo; and &ldquo;Message&rdquo;
+Zenoss will decode the message and use the "Subject" and "Message"
 fields to set corresponding Zenoss event fields. Event severity will be
 *Info*.
 
@@ -1105,16 +1111,17 @@ component instance.
 
 Here is an example of how to add monitoring of AWS ECS:
 
-1.  Create a separate monitoring template in Advanced -&gt; Monitoring
+1.  Create a separate monitoring template in Advanced > Monitoring
     Templates tab under`/AWS/EC2`device class.
 2.  Create a new data source for the template created above using the
     Amazon CloudWatch type. Add a datapoint with the same name as
     datasource.
 3.  Edit datasource created above and
-    populate`Namespace`and`Metric Name`fields. Change the Region field
-    and set the actual region where your ECS cluster is located. In
-    Dimension put the string in
-    format`ServiceName=<service_name>;ClusterName=<cluster_name>`(e.g.`ServiceName=web;ClusterName=test-ec2-cluster`).
+    populate `Namespace` and `Metric Name` fields. Change the `Region` field
+    and set the actual region where your ECS cluster is located.
+    In `Dimension` put the string in format 
+    `ServiceName=<service_name>;ClusterName=<cluster_name>` 
+    (e.g.`ServiceName=web;ClusterName=test-ec2-cluster`).
 4.  You can add the datapoints you created to a graph for visualization.
 5.  Open your AWS device bind template you just created.
 6.  You may see your graphs on the Graphs page.
@@ -1133,12 +1140,12 @@ ECS incremental modeling
 
 ### Changing maximum retries while making API call to AWS
 
-'zAWSMaxCallRetries' with a default value of 4 is responsible for the
+`zAWSMaxCallRetries` with a default value of 4 is responsible for the
 number of maximum retries per call to AWS API. You can increase it if
 you have throttling issues with AWS API. Setting this property to high
 values may cause too long calls and delays.
 
-### Using zAWSUseNewIds property
+### Using `zAWSUseNewIds` property
 
 This property is applied for AutoScalingGroups, LambdaFunctions,
 LoadBalancers, and TargetGroups. After changing this property and
@@ -1146,26 +1153,25 @@ remodeling - device historical data for that components will be lost. By
 default, this property is enabled for a fresh install for AWS ZP 5.1.0
 and disabled for an upgrade to AWS ZP 5.1.0.
 
-This property uses AWS ARN as \`id \` for AutoScalingGroups,
+This property uses AWS ARN as `id ` for AutoScalingGroups,
 LambdaFunctions, LoadBalancers and TargetGroups to handle a case, when
 some component was created on the AWS, deleted and recreated with the
 same name. On the AWS side - these are two different components. On
 Zenoss's side, this was the same component for AutoScalingGroups,
 LambdaFunctions, LoadBalancers and TargetGroups. Setting
-\`zAWSUseNewIds\` to true and remodeling will fix this issue.
+`zAWSUseNewIds` to *true* and remodeling will fix this issue.
 
 ### Configuring retries delay for Lambda Functions, ECS Services and Load Balancers
 
-Sometimes
-throttling error \`Rate exceeded\` may happen during
+Sometimes throttling error `Rate exceeded` may happen during
 modeling Lambda Functions, ECS Services and Load Balancers while getting
-tags info and ECS List of Services. roperties \`zAWSLambdaFunctionsRetriesDelay\`,
-\`zAWSECSRetriesDelay\` and \`zAWSLoadBalancersRetriesDelay\`
+tags info and ECS List of Services. Properties `zAWSLambdaFunctionsRetriesDelay`,
+`zAWSECSRetriesDelay` and `zAWSLoadBalancersRetriesDelay`
 set base delay in seconds for retries.
 
-Also, \`zAWSLoadBalancersMaxARNsCount\`
+Also, `zAWSLoadBalancersMaxARNsCount`
 and
-\`zAWSECSListServicesMaxResults\`
+`zAWSECSListServicesMaxResults`
 were added for
 API calls count configuring. These zProperties should be used to reduce
 or increase API call count to prevent throttling and timeout
@@ -1174,8 +1180,8 @@ exceptions.
 ### Configuring exponential backoff and retries delay for SQS Queues
 
 Sometimes
-connecting cancelled error \`ConnectingCancelledError\` may happen during
-collection of SQS Queues messages. zProperty \`zAWSConnectingCancelledRetriesDelay\`
+connecting cancelled error `ConnectingCancelledError` may happen during
+collection of SQS Queues messages. zProperty `zAWSConnectingCancelledRetriesDelay`
 set base delay in seconds for retries. These zProperty should be used to
 prevent connecting cancelled errors and timeout exceptions for SQS
 Queues.
@@ -1183,22 +1189,22 @@ Queues.
 ### Additional SQS Queues discovery
 
 If you have more than 1000 SQS Queues in one region, only 1000 will be
-discovered. To handle this case you may use the \`zAWSSQSQueuesPrefix\`
+discovered. To handle this case you may use the `zAWSSQSQueuesPrefix`
 property. Add prefixes to specify
 SQS Queues you want to model additionally. Only strings should be used,
 regexes are not supported. SQS Queues that are collected using
-\`zAWSSQSQueuesPrefix\` are also limited
+`zAWSSQSQueuesPrefix` are also limited
 to 1000 Queues per prefix.
 
 ### Filter EC2 Instances by name
 
 You may filter
-EC2 instances by name with \`zAWSEC2Allowed\` and \`zAWSEC2Denied\`
+EC2 instances by name with `zAWSEC2Allowed` and `zAWSEC2Denied`
 properties.
 They contain a list of regexes to allow/deny EC2 instances modeling. At
-first we apply \`zAWSEC2Allowed\` propery, if it
+first we apply `zAWSEC2Allowed` propery, if it
 is empty - we modell all EC2 instances. Then we skip instances which
-match \`zAWSEC2Denied\` regexes.
+match `zAWSEC2Denied` regexes.
 
 ### Overwrite default AWS events transformation
 
@@ -1229,7 +1235,7 @@ you can write and apply your own AWS event transformation for specific
 events.
 
 **Note:** Do
-not forget to click the \`*Save Transform*\`
+not forget to click the *Save Transform*
 button.
 
 @lb[](img/zenpack-aws_default_events_transformation.png){.confluence-embedded-image width="700"}
@@ -1240,31 +1246,31 @@ events transformation
 ### CloudFormation Stacks and Resources discovery and monitoring on highly scalable environment
 
 If you have a large amount of CloudFormation Stacks and Resources on
-your EC2 Account you may face \`timeout\` events for
+your EC2 Account you may face "timeout" events for
 data sources responsible for data collection for these components. This
 cause no status and events collection for CloudFormation components.
-In order to avoid \`timeout\` events and collect all data correctly, you
-should increase \`cycletime\` property for \`events\`
-the data source for CF Stacks and \`CFResourceState\` for CF Resources
+In order to avoid "timeout" events and collect all data correctly, you
+should increase the "cycletime" property for events,
+the data source for CF Stacks, and "CFResourceState" for CF Resources
 on appropriate monitoring templates.
 
 **Note:** In case when you have around 2000 CloudFormation Stacks the
-appropriate \`cycletime\` for \`events\` and \`CFResourceState\` data
+appropriate cycletime for events and CFResourceState data
 sources is 1200 seconds.
 
-Sometimes throttling error \`Rate exceeded\` may happen during modeling
+Sometimes throttling error "Rate exceeded" may happen during modeling
 and monitoring CloudFormation Stacks and
-Resources. zProperty \`zAWSCloudFormationRetriesDelay\` set base delay
+Resources. zProperty `zAWSCloudFormationRetriesDelay` set base delay
 in seconds for retries.
 This zProperty should be used to prevent throttling errors and timeout
 exceptions for CloudFormation Stacks and Resources.
 
-**Note:** Starting from the 5.2.0 version the attributes \`Stack
-Template\`and \`Stack Policy\` are no longer will be discovered during
+**Note:** Starting from the 5.2.0 version the attributes `Stack
+Template`and `Stack Policy` are no longer discovered during
 device modeling. These components were moved to a separate
-\`CFStackDetails\` data source under CF Stack components and will be
+`CFStackDetails` data source under CF Stack components and will be
 discovered after 12 hours from the initial device modeling. The
-CloudFormation components are collecting with a Zenoss&rsquo; normal
+CloudFormation components are collecting with a Zenoss' normal
 remodeling interval which defaults to every 12 hours.
 
 ## Installed Items
@@ -1464,22 +1470,26 @@ appear before regular collecting process starts.
 
 During monitoring AWS Account such error events might be created:
 
-    During processing ... datapoints in ... an error occured: SignatureDoesNotMatch: The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. An error occurred (SignatureDoesNotMatch) when calling the GetQueueUrl operation: The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. Consult the service documentation for details. An error occurred (AuthFailure) when calling the DescribeReservedInstances operation: AWS was not able to validate the provided access credentials.
+```
+During processing ... datapoints in ... an error occured: SignatureDoesNotMatch: The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. An error occurred (SignatureDoesNotMatch) when calling the GetQueueUrl operation: The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. Consult the service documentation for details. An error occurred (AuthFailure) when calling the DescribeReservedInstances operation: AWS was not able to validate the provided access credentials.
+```
 
 These errors mean that Zenoss could not connect to AWS API due to the
 wrong access token. It might be caused by:
 
-1\. Wrong AWS credentials. Please check EC2 Access and Secret Keys.
+1. Wrong AWS credentials. Please check EC2 Access and Secret Keys.
 
-2\. Wrong time on collector host. Please adjust the system clock on
+2. Wrong time on collector host. Please adjust the system clock on
 collector hosts. Consider using NTP daemon to automatically adjust the
-host&rsquo;s clock.
+host's clock.
 
 The next error occurs during gathering billing data for tags and means
 that `zAWSBillingAccessKey` and `zAWSBillingSecretKey` need to be
 checked:
 
-    Could not fetch billing data. Check your zAWSBilling* properties: An error occurred (SignatureDoesNotMatch) when calling the GetObject operation: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+```
+Could not fetch billing data. Check your zAWSBilling* properties: An error occurred (SignatureDoesNotMatch) when calling the GetObject operation: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+```
 
 ## Upgrade
 
@@ -1520,7 +1530,7 @@ next monitoring cycles. If those events are not cleared, close them
 manually.
 
 In the current version of Zenpack monitoring of large AWS accounts
-(e.g. &gt;1000 EC2 instances and volumes) may cause performance issues:
+(e.g. >1000 EC2 instances and volumes) may cause performance issues:
 
 -   The limit for datapoints processed by `zenpython` daemon may be
     exceeded. This will result in gaps in graphs.
@@ -1534,40 +1544,40 @@ In the current version of Zenpack monitoring of large AWS accounts
     RAM Requested parameter on Control Center UI.
 
 It is possible to reduce the number of datapoints collected by disabling
-monitoring templates you don&rsquo;t need.
+monitoring templates you don't need.
 
 ## Known Issues
 
 ZPS-1533
 
--   &ldquo;TypeError&rdquo; flare may be shown when attempting to add a device after
-    upgrading from an older version of the zenpack on Zenoss 5.x
+-   "TypeError" flare may be shown when attempting to add a device after
+    upgrading from an older version of the ZenPack on Zenoss 5.x
 -   If this error is encountered, restarting the zproxy service (by
-    restarting) top-level &ldquo;Zenoss.resmgr&rdquo; application in Control Center.
+    restarting) top-level "Zenoss.resmgr" application in Control Center.
     It is not necessary to restart the child services.
 
 ZPS-7015
 
 -   if incremental modeling for ECS
-    is turn on, there may be warning in zenpython log that
+    is turn on, there may be warning in `zenpython` log that
     ECSWatchDataSourcePlugin is blocked for some amount of time in
-    collect. This doesn't affect incremental modelling, unless blocking
-    time is bigger than 30 seconds.
+    collect. This doesn't affect incremental modelling, unless the blocking
+    time is longer than 30 seconds.
 -   if the ECSWatch datasource is
     blocked, it will remain permanently blocked until its name is
-    removed from /var/zenoss/zenpython.blocked on Zenoss Cloud and
+    removed from `/var/zenoss/zenpython.blocked` on Zenoss Cloud and
     Zenoss 6. The zenpython service must be restarted after manual
     modifications to this file.
 
 ZPS-7541
 
 -   Spaces are not trimmed in
-    zAWSGuestDeviceClassTags and zAWSGuestDeviceGroupingTags
+    `zAWSGuestDeviceClassTags` and `zAWSGuestDeviceGroupingTags`
     properties.
 
 ## Changes
 
-5.2.0
+**5.2.0**
 
 -   Add support for Amazon ElastiCache Clusters and Nodes (ZPS-8295)
 -   Add the possibility to control which EC2 Instances to model based on
@@ -1584,14 +1594,14 @@ ZPS-7541
 -   Tested with Zenoss Resource Manager 6.7.0, Zenoss Cloud, and Service
     Impact 5.5.5
 
-5.1.1
+**5.1.1**
 
 -   Define Group & System membership by Tag in Guest Device Discovery
     (ZPS-7228)
 -   Tested with Zenoss Resource Manager 6.5.0, Zenoss Cloud and Service
     Impact 5.5.3
 
-5.1.0
+**5.1.0**
 
 -   Add support (with optional incremental modeling) for AWS ECS
 -   Make possible modeling more than 1000 of SQS Queues per one region
@@ -1609,7 +1619,7 @@ ZPS-7541
     Manager 6.4.1, Zenoss Resource Manager 6.5.0, Zenoss Cloud and
     Service Impact 5.5.2
 
-5.0.1
+**5.0.1**
 
 -   Fix Lambda functions modeling, add retries to handle Rate Exceeded
     Error (ZPS-6639)
@@ -1619,7 +1629,7 @@ ZPS-7541
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service
     Impact 5.5.1
 
-5.0.0
+**5.0.0**
 
 -   Move modeling from zenmodeler to zenpython (ZPS-6117)
 -   Support AWS Serverless technologies (ZPS-5717)
@@ -1631,7 +1641,7 @@ ZPS-7541
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service
     Impact 5.5.1
 
-4.1.1
+**4.1.1**
 
 -   Added aws.AutoScalingGroup, aws.LoadBalancers modeler plugins
     (ZPS-5088)
@@ -1644,7 +1654,7 @@ ZPS-7541
 -   Tested with Zenoss Resource Manager 6.3.2, Zenoss Cloud and Service
     Impact 5.3.4
 
-4.1.0
+**4.1.0**
 
 -   Add possibility to use Amazon CloudWatch datasource on SQS Queues
     (ZPS-3955)
@@ -1658,7 +1668,7 @@ ZPS-7541
 -   Added zAWSGuestDeviceClassTags property to specify guest device
     classes mapped from EC2 instance tags (ZPS-5005)
 -   Auto Scaling Groups modeling and monitoring (ZPS-4474)
--   Added &ldquo;Treat missing data as&rdquo; field to Amazon CloudWatch datasource
+-   Added "Treat missing data as" field to Amazon CloudWatch datasource
     to set the default value for metric when no data returned from AWS
 -   Application and Network Load Balancers modeling and monitoring
     (ZPS-38)
@@ -1668,24 +1678,24 @@ ZPS-7541
 -   Tested with Zenoss Resource Manager 5.3.3, Zenoss Resource Manager
     6.3.1, Zenoss Cloud and Service Impact 5.3.4
 
-4.0.2
+**4.0.2**
 
 -   Handle CloudFormation templates where a stack output has no
     description (ZPS-3181)
 -   Upgrade to botocore 1.8.41 / boto3 1.5.27
 -   Fix type of the ec2secretkey property (ZEN-29852)
--   AWS Prediction charges time is &lsquo;undefined&rsquo; on overview page
+-   AWS Prediction charges time is 'undefined' on overview page
     (ZEN-30367)
 -   Styling updates and fixes for Zenoss Cloud
 -   Change event class for Billing Cost threshold (ZPS-3838)
--   Handle Cloud Formation Stack Outputs witout a &lsquo;Description&rsquo; field
+-   Handle Cloud Formation Stack Outputs witout a 'Description' field
     (ZPS-3181)
 -   Updated documentation with IAM permissions required to model SQS
     successfully (ZPS-3268)
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.0, 5.3.3 and
     Service Impact 5.3.1
 
-4.0.1
+**4.0.1**
 
 -   Avoid duplicate events created from SQS messages by querying based
     on timestamp. (ZPS-2364)
@@ -1695,7 +1705,7 @@ ZPS-7541
     Manager 5.3.3, Zenoss Resource Manager 6.1.0 and Service Impact
     5.2.3.
 
-4.0.0
+**4.0.0**
 
 -   Allow filtering of components by AWS tags.
 -   Optionally populate Component Groups based on tag filters
@@ -1703,7 +1713,7 @@ ZPS-7541
 -   Added zAWSCloudWatchCollectionInterval (default to 300) to simplify
     configuration of default collection interval for all Amazon
     CloudWatch datasources
--   Fixed incorrectly scaled percentage values in the Volume &lsquo;Time&rsquo;
+-   Fixed incorrectly scaled percentage values in the Volume 'Time'
     graph. (ZPS-2247)
 -   Improve the managing of guest device production states when
     zAWSAutoChangeProdState is enabled. When an instance is restarted,
@@ -1711,25 +1721,25 @@ ZPS-7541
 -   Add support for CloudFormation YAML templates (ZPS-2201)
 -   Converted to use ZPL and updated to Boto v3
 -   SSL error fixed (ZPS-1739)
--   Added report &ldquo;Monitoring Costs&rdquo; to check estimated charges for AWS
+-   Added report "Monitoring Costs" to check estimated charges for AWS
     devices monitoring
 -   Tested with Zenoss Resource Manager 5.3.2, Zenoss Resource Manager
     4.2.5 RPS 743 and Service Impact 5.1.7
 
-3.0.3
+**3.0.3**
 
 -   Specify dmd to use for device facade in unit test (ZEN-28777)
 -   Internal-only release. No changes to production code, only unit
     tests
 
-3.0.2
+**3.0.2**
 
 -   Fixed crochet requirement for unit tests, to allow platform build
     tests to run (ZEN-28777)
 -   Internal-only release. No changes to production code, only unit
     tests
 
-3.0.1
+**3.0.1**
 
 -   Fixed SSL error in S3 modeling when using proxy
 -   Added zAWSEnableSnapshotCollection (default to false) to allow
@@ -1741,59 +1751,59 @@ ZPS-7541
 -   Moved guest device deletion to scheduled job to improve modeling
     performance and reduce database conflicts due to long transactions
 
-3.0.0
+**3.0.0**
 
 -   CloudFormation and RDS support
 -   Estimated charges monitoring
 -   Add support for GovCloud (us-gov-west-1) region
 -   Migrate S3 Bucket monitoring to use AWS CloudWatch
 
-2.4.6
+**2.4.6**
 
 -   Fix broken AWS monitoring when a proxy is being used (ZPS-1260)
 
-2.4.5
+**2.4.5**
 
 -   Update boto version shipped with the ZenPack to support new
-    &ldquo;eu-west-2&rdquo; region.
+    "eu-west-2" region.
 -   Updated AmazonCloudWatchDataSource to use txboto.
 -   Usage of AmazonCloudWatchDataSource on device level is now allowed.
 
-2.4.4
+**2.4.4**
 
 -   Update boto version shipped with the ZenPack to support new
-    &ldquo;us-east-2&rdquo; region.
+    "us-east-2" region.
 
-2.4.3
+**2.4.3**
 
 -   Fix Region and S3 Buckets graphs inconsistencies (ZEN-17242)
--   Fix ZenPack failing on model \[New Region in Mumbai\] (ZEN-23892)
+-   Fix ZenPack failing on model [New Region in Mumbai] (ZEN-23892)
 -   AWS ZenPack is able to collect and consume data from demo
     environment (ZEN-24089)
 -   Proper handling for ConnectionLost, TimeoutError and other
     exceptions (ZEN-23901)
--   Fix EC2RegionPlugin&rsquo;s traceback events (ZEN-23174)
+-   Fix EC2RegionPlugin's traceback events (ZEN-23174)
 -   Fix S3 bucket lookup / get_bucket broken for eu-central-1
     (ZEN-23044)
--   Fix S3BucketPlugin&rsquo;s traceback events when S3 bucket&rsquo;s region is EU
+-   Fix S3BucketPlugin's traceback events when S3 bucket's region is EU
     (ZEN-23236)
--   Account ID field is added to &lsquo;Add EC2 Account&rsquo; dialog (ZEN-21880)
+-   Account ID field is added to 'Add EC2 Account' dialog (ZEN-21880)
 -   Add `zAWSAutoChangeProdState` property to have more control over EC2
-    Instance&rsquo;s production state (ZEN-23427)
+    Instance's production state (ZEN-23427)
 
-2.4.2
+**2.4.2**
 
 -   Fix intermittent graph gaps (ZEN-22337)
 
-2.4.1
+  **2.4.1**
 
 -   Fix errors encountered during monitoring of Reserved Instances
     (ZEN-22379)
 
-2.4.0
+**2.4.0**
 
 -   Update boto version shipped with the ZenPack to support new
-    &ldquo;ap-northeast-2&rdquo; region.
+    "ap-northeast-2" region.
 -   Improve HTTP errors and warnings.
 -   Added `zAWSCloudWatchMaxParallel` property to configure number of
     concurrent cloudwatch calls.
@@ -1803,7 +1813,7 @@ ZPS-7541
     buckets.
 -   Added path reporter for EC2Snapshots
 
-2.3.1
+**2.3.1**
 
 -   Ignore reserved instances with a null id. (ZEN-17556).
 -   Added `zAWSRegionToModel` property to tell RM what to model
@@ -1811,16 +1821,16 @@ ZPS-7541
 -   Improved `zAWSRemodelEnabled` and `zAWSResetGuestCollector`
     properties
 
-2.3.0
+**2.3.0**
 
 -   Add ability for instances into VPC to use public IP address for
     guest device
 -   Add parallel processing for CloudWatch datasources using
     multithreading. For large AWS installation it can be boosted by
-    setting bigger value for &ldquo;twistedthreadpoolsize&rdquo; setting of
+    setting bigger value for "twistedthreadpoolsize" setting of
     PythonCollector.
 
-2.2.2
+**2.2.2**
 
 -   Add support for Zenoss 5x.
 -   Add ability for user to specify an alternate remote collector for
@@ -1828,7 +1838,7 @@ ZPS-7541
 -   Update boto version shipped with the ZenPack to support signature
     v4.
 
-2.2.1
+**2.2.1**
 
 -   Add support for SQS Messages, S3 Buckets, Reserved Instances,
     Elastic IPs, Images, VPN Gateways, Snapshots.
@@ -1843,12 +1853,12 @@ ZPS-7541
 -   Monitor AWS Soft Limits and VPC Subnet available IP address count.
 -   Update component statuses during monitoring.
 
-2.1.0
+**2.1.0**
 
 -   Support CloudWatch metrics with multiple indexes.
--   Add &ldquo;Amazon Email Host&rdquo; notification type for SES notifications.
+-   Add "Amazon Email Host" notification type for SES notifications.
 
-2.0.0
+**2.0.0**
 
 -   Add support for regions, zones, VPCs, subnets and volumes.
 -   Add support for custom CloudWatch metrics.
