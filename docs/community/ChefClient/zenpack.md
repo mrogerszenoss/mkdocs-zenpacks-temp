@@ -1,0 +1,67 @@
+# Chef Client
+
+@lb[](img/zenpack-chef-zenpack.png)
+
+## Community
+
+This ZenPack is developed and supported by the Zenoss User Community.
+[Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
+request more information regarding this or any other ZenPacks. [Click here](https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1021){.external-link} to
+view all available Zenoss Community ZenPacks.
+
+### Authors:
+
+Matt Ray
+
+### Maintainers:
+
+Matt Ray
+
+### License:
+
+GNU General Public License, Version 2, or later
+
+### Name:
+
+ZenPacks.community.ChefClient
+
+### More Information:
+
+[GitHub page/HomePage](http://community.zenoss.org/docs/DOC-7446){.external-link}
+
+### Link To More Docs:
+
+[View Documentation](http://community.zenoss.org/docs/DOC-7446){.external-link}
+
+### Git Sources (For Cloning):
+
+[Link](https://github.com/zenoss/ZenPacks.community.ChefClient.git){.external-link}
+
+## Chef Client ZenPack
+
+This ZenPack provides modeling (and eventually some monitoring possibly)
+for devices managed by Chef using the Ohaicommand
+
+## Support
+
+This ZenPack is developed by the Zenoss user community and supported via
+our online forums. Zenoss, Inc. does not provide direct support for this
+ZenPack.
+
+## Releases
+
+Version 0.2- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.community.ChefClient/0.2/ZenPacks.community.ChefClient-0.2.egg){.external-link}:   Compatible with Zenoss Core 3.1.x, Zenoss Core 3.2.x
+
+## Background
+
+Links:
+
+-   [Chef](http://www.opscode.com/chef/){.external-link}
+-   [Ohai](http://wiki.opscode.com/display/ohai/Home){.external-link}
+
+## Attachments:
+
+-   [chef-zenpack.png](img/zenpack-chef-zenpack.png)
+-   [chef-zenpack.png](img/zenpack-chef-zenpack.png)
+-   [chef-zenpack.png](img/zenpack-chef-zenpack.png)
+

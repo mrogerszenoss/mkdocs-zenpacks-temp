@@ -1,0 +1,72 @@
+copyright: Copyright &copy; 2005-2023 Zenoss Inc.
+edit_uri: ''
+extra:
+  generator: false
+  social: true
+extra_css:
+- css/lightbox.min.css
+- css/zenoss.css
+extra_javascript:
+- js/jquery-3.6.0.min.js
+- js/lightbox.min.js
+- js/lightbox-options.js
+- https://unpkg.com/@popperjs/core@2
+- https://unpkg.com/tippy.js@6
+- js/config-tippy.js
+markdown_extensions:
+- admonition
+- attr_list
+- def_list
+- md_in_html
+- meta
+- pymdownx.caret
+- pymdownx.emoji:
+    emoji_generator: !!python/name:materialx.emoji.to_svg ''
+    emoji_index: !!python/name:materialx.emoji.twemoji ''
+    options:
+      custom_icons:
+      - overrides/.icons
+- pymdownx.extra
+- pymdownx.highlight
+- pymdownx.keys
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tilde
+- pymdownx_zenoss.glossary
+- pymdownx_zenoss.lightbox
+- pymdownx_zenoss.logicalpath
+plugins:
+- include-markdown
+- literate-nav:
+    nav_file: NAVIGATION.md
+- render_swagger
+- search
+- section-index
+repo_name: ''
+repo_url: ''
+site_name: Zenoss Cloud Documentation
+site_url: ''
+theme:
+  custom_dir: overrides
+  favicon: /images/favicon.png
+  features:
+  - content.code.copy
+  logo_dark_mode: /images/zenoss-logo-tag-white.png
+  logo_light_mode: /images/zenoss-logo-tag-black.png
+  name: material
+  palette:
+  - primary: blue
+    scheme: default
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  - scheme: slate
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
+use_directory_urls: false
+
+### NOTE: Navigation has been moved to the "docs/NAVIGATION.md" file.
+###       See https://oprypin.github.io/mkdocs-literate-nav/index.html
+###       for more information.

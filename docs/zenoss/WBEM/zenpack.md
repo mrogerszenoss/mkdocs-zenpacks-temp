@@ -1,0 +1,242 @@
+# WBEM
+
+@lb[](img/zenpack-zenpack-general.png)
+
+## WBEM ZenPack
+
+Adds a *WBEM* data source type and a *WBEMPlugin* base modeler plugin.
+
+## Support
+
+WBEM ZenPack is an Open Source ZenPack developed by Zenoss, Inc.
+Enterprise support for this ZenPack is available to commercial customers
+with an active subscription.
+
+## Releases
+
+Version 3.0.0- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.WBEM/3.0.0/ZenPacks.zenoss.WBEM-3.0.0.egg){.external-link}:   Released on 2019/08/15:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss 6.2 -
+    6.4 and Zenoss Cloud
+
+Version 2.1.0- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.WBEM/2.1.0/ZenPacks.zenoss.WBEM-2.1.0.egg){.external-link}:   Released on 2018/09/26:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss 5.3 - 6.2 and Zenoss Cloud
+
+Version 2.0.1- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.WBEM/2.0.1/ZenPacks.zenoss.WBEM-2.0.1.egg){.external-link}:   Released on 2018/05/15:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss 4.2.5 - 6.2
+
+Version 1.0.3- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.WBEM/1.0.3/ZenPacks.zenoss.WBEM-1.0.3.egg){.external-link}:   Released on 2015/09/11:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss 4.2.5 - 5.3
+
+## Contents
+
+-   [WBEM ZenPack](#wbem-zenpack)
+    -   [Support](#support)
+    -   [Releases](#releases)
+    -   [Background](#background)
+    -   [Installed Items](#installed-items)
+    -   [Configuration Options](#configuration-options)
+    -   [WBEM Data Source Type](#wbem-datasource-type)
+    -   [WBEMPlugin Modeler Plugin Base Class](#wbem-plugin-modeler-plugin-base-class)
+    -   [Troubleshooting](#troubleshooting)
+        -   [WBEM Device Modeling or Monitoring never completes](#wbem-device-modeling-or-monitoring-never-completes)
+        -   [No data for components with same identifiers](#no-data-for-components-with-same-identifiers)
+    -   [Changes](#changes)
+
+## Background
+
+This ZenPack provides a new *WBEM* data source type that makes it easy
+to collect metrics from a WBEM provider using a CQL query. It also
+provides a new *WBEMPlugin* modeler plugin base class that simplifies
+modeling devices and applications that support WBEM.
+
+## Installed Items
+
+Datasource Types
+
+-   WBEM
+
+Configuration Properties
+
+-   zWBEMPort
+-   zWBEMUsername
+-   zWBEMPassword
+-   zWBEMUseSSL
+-   zWBEMRequestTimeout
+-   zWBEMMaxObjectCount
+-   zWBEMOperationTimeout
+
+## Configuration Options
+
+-   zWBEMPort: Value of the WBEM port number. The default value is 5989.
+-   zWBEMUsername: WBEM username.
+-   zWBEMPassword: Password for user defined by *zWBEMUsername*.
+-   zWBEMUseSSL: True or false value to use SSL. The default value is
+    true.
+-   zWBEMRequestTimeout: Time in seconds while Zenoss waits for WBEM
+    server to return all data.
+-   zWBEMMaxObjectCount: Maximum number of instances the WBEM server may
+    return for each of the requests. The user should adjust the value if
+    device modeling never completes.
+-   zWBEMOperationTimeout: Time in seconds while WBEM Server keeps
+    enumeration session opened after a previous request.
+
+## WBEM Data Source Type
+
+The *WBEM* data source type added by this ZenPack allows you to add a
+WBEM data source with the following new data source properties.
+
+Namespace:   The WBEM namespace. This must be specified and there is no default
+    value. A common example would be root/cimv2.
+
+<!-- -->
+
+CQL Query:   The CQL query to execute that will return the desired record(s). It
+    must be specified, and there is no default value.
+
+<!-- -->
+
+Result Component Key:   Optional. Only used in cases where the WBEM data source is in a
+    monitoring template that gets bound to components. In this case
+    *Result Component Key* should be set to the attribute or column name
+    that contains the component identifier in the result set of the CQL
+    Query. Property can be filled with more that one comma-separated key
+    to get more values from the result and compare it with data from
+    *Result Component Value* field.
+
+<!-- -->
+
+Result Component Value:   Optional. Only used in cases where the WBEM data source is in a
+    monitoring template that gets bound to components. In this case
+    *Result Component Value* is the value that gets mapped to values in
+    the *Result Component Key* column of the CQL result set. Typically
+    this takes the form of a TALES expression such as ${here/id} or
+    ${here/wbemInstanceId} if wbemInstanceID was modeled on your
+    component. Property can be filled with more that one comma-separated
+    values to compare it with data from *Result Component Key* field.
+
+<!-- -->
+
+Result Timestamp Key:   Optional. Used in both device- and component-bound monitoring
+    templates when the query result set has a column noting the time the
+    data was originally collected. Like the *Result Component Key* this
+    should be the name of an attribute or column name in the results. By
+    default this will default to NOW as the collection time.
+
+`Note`: *Result Component Key* and *Result Component Value* fields have
+to contain the same number of elements. Also *CQL Query* must include
+all elements from *Result Component Key*
+
+## WBEMPlugin Modeler Plugin Base Class
+
+The *WBEMPlugin* modeler plugin base class allows you to create modeler
+plugins that do something with data that is returned from a WBEM
+EnumerateInstances call.
+
+See the following example of a modeler plugin.
+
+~~~ sourceCode
+from ZenPacks.zenoss.WBEM.modeler.wbem import WBEMPlugin from ZenPacks.zenoss.WBEM.utils import result_errmsg """Description of what MyWBEMPlugin does.""" class MyWBEMPlugin(WBEMPlugin): wbemQueries = { # EnumerateInstances (ei) for all EMC arrays. 'root/emc:EMC_ArrayChassis': 'ei', } def process(self, device, results, log): log.info('Modeler %s processing data for device %s', self.name(), device.id) for success, instances in results: if not success: log.warn("WBEM: %s%s", device.id, result_errmsg(instances)) continue # Check for no instances in results. if len(instances) < 1: continue # classname will become EMC_ArrayChassis. classname = instances[0].classname if classname == 'EMC_ArrayProduct': return self.objectMap(compname='hw', data={ 'serialNumber': instance['SerialNumber'], 'setProductKey': MultiArgs(instance['Model'], instance['Manufacturer']), })
+~~~
+
+## Troubleshooting
+
+Please refer the Zenoss Service Dynamics documentation if you run into
+any of the following problems:
+
+-   ZenPack will not install
+-   Adding device fails
+-   Don't understand how to add a device
+-   Don't understand how to model a device
+
+If you cannot find the answer in the documentation, then Resource
+Manager (Service Dynamics) users should contact [Zenoss Customer Support](https://support.zenoss.com){.external-link}. Core users can use
+the *\#zenoss* IRC channel or the [Zenoss Community Forums](https://community.zenoss.com/home){.external-link}.
+
+### WBEM Device Modeling or Monitoring never completes
+
+In case EMC devices with a large number of components cannot be modeled
+successfully, you can adjust `zWBEMMaxObjectCount` and
+`zWBEMOperationTimeout` properties. The first property allows you to
+control the number of components which WBEM ZenPack will get during the
+monitoring/modeling per one request. For example, you have 5000 volumes,
+2000 hard disk, etc. on a target system. Without configuring
+`zWBEMMaxObjectCount` property, ZenPack will try to get data for all
+components as one big response. WBEM server may not be able to process
+such a big request due to performance reasons or transfer response due
+to network issues. To avoid that you can modify a value of
+`zWBEMMaxObjectCount` for example to 200, ZenPack will get data in
+smaller chunks by 200 components in each response. Also, you can adjust
+`zWBEMOperationTimeout` property with a time in seconds which the WBEM
+Server keeps enumeration session opened after a previous request and
+based on that time server will close the session.
+
+### No data for components with same identifiers
+
+For example, you have two hard disks with same identifiers but on
+different arrays, and you set *Result Component Key* to attribute or
+column name that contains the *component name* in the result. In this
+case, you will get two components in the results with same name and
+system will not be able to identify components correctly. To avoid such
+scenario you can specify additional identifier like *array name* in
+*Result Component Key*, *CQL Query* and corresponding values in *Result
+Component Value* to filter it in a more efficient way.
+
+For that example it looks like:
+
+*Result Component Key* = `diskName`, `arrayName`
+
+*Result Component Value* = `${here/name}`, `${here/arrayName}`
+
+*CQL Query* = `SELECT * FORM someDiskClass` or *CQL Query* =
+`SELECT diskName, arrayName, otherNeededProperties FORM someDiskClass`
+
+## Changes
+
+3.0.0
+
+-   Updated the dependencies pywbem and M2Crypto.  Prior version of the
+    pywbem library exclusively made use of SSLv2, (a deprecated,
+    insecure protocol)
+-   Adapted the pywbem-0.14.3 library to maintain backward compatible
+    with other previously released ZenPacks.  The adapted pywbem
+    library, (pywbemz-0.14.3.tar.gz,) is included with this release.
+-   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1
+
+2.1.0
+
+-   Use non-blocking IO for collection (ZPS-4376)
+-   Add labels and descriptions for WBEM configuration properties
+    (ZPS-4489)
+-   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1, Zenoss
+    Resource Manager 5.3.3
+
+2.0.1
+
+-   Add possibility to check monitoring data by multiple fields
+    (ZPS-2817)
+-   Tested with Zenoss Resource Manager 6.1.2, Zenoss Resource Manager
+    5.3.3
+
+2.0.0
+
+-   Add optional pull instance operations during modeling (ZPS-2450)
+-   Add optional pull instance operations during monitoring (ZPS-2533)
+-   Fix memory leak in zenpython (ZPS-2742)
+-   Tested with Zenoss Resource Manager 6.0.1, Zenoss Resource Manager
+    6.1.0, Zenoss Resource Manager 5.3.3, Zenoss Resource Manager 4.2.5
+    RPS 743 and Service Impact 5.2.3
+
+|                                      |                                                                                                                                                                                                                                                                                                                                                                   |
+|:-------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ZenPack Classification**           |                                                                                                                                                                                                                                                                                                                                                                   |
+| **Open Source**                      | This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to request more information regarding this or any other ZenPacks. [Click here](https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1091){.external-link} to view all available Zenoss Open Source ZenPacks. |
+| **Organization**                     | Zenoss, Inc.                                                                                                                                                                                                                                                                                                                                                      |
+| **License**                          | GNU General Public License, Version 2, or later                                                                                                                                                                                                                                                                                                                   |
+| **Name**                             | ZenPacks.zenoss.WBEM                                                                                                                                                                                                                                                                                                                                              |
+| **More Information**                 | [GitHub page/HomePage](https://github.com/zenoss/ZenPacks.zenoss.OpenStack){.external-link}                                                                                                                                                                                                                                                                       |
+| **Git Sources (For Cloning)**        | [Link](https://github.com/zenoss/ZenPacks.zenoss.WBEM.git){.external-link}                                                                                                                                                                                                                                                                                        |
+| **Applications / Systems Monitored** | Applications / Systems that support WBEM standard                                                                                                                                                                                                                                                                                                                 |
+
+## Attachments:
+
+-   [zenpack-general.png](img/zenpack-zenpack-general.png)
+-   [zenpack-general.png](img/zenpack-zenpack-general.png)
+-   [zenpack-general.png](img/zenpack-zenpack-general.png)
+-   [zenpack-general.png](img/zenpack-zenpack-general.png)
+

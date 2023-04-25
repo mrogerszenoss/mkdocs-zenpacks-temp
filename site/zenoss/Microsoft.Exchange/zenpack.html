@@ -1,0 +1,11798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Microsoft.Core/zenpack.html">
+      
+      
+        <link rel="next" href="../Microsoft.HyperV/zenpack.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6+insiders-4.32.5">
+    
+    
+      
+        <title>Microsoft Exchange - Zenoss Cloud Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.dc5b59cc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.6932e648.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/lightbox.min.css">
+    
+      <link rel="stylesheet" href="../../css/zenoss.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#microsoft-exchange" class="md-skip">
+          action.skip
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="header">
+    <a href="../.." title="Zenoss Cloud Documentation" class="md-header__button md-logo" aria-label="Zenoss Cloud Documentation" data-md-component="logo">
+      <img id="logo_light_mode" src="/images/zenoss-logo-tag-black.png" alt="logo">
+<img id="logo_dark_mode" src="/images/zenoss-logo-tag-white.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zenoss Cloud Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Microsoft Exchange
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="nav" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zenoss Cloud Documentation" class="md-nav__button md-logo" aria-label="Zenoss Cloud Documentation" data-md-component="logo">
+      <img id="logo_light_mode" src="/images/zenoss-logo-tag-black.png" alt="logo">
+<img id="logo_dark_mode" src="/images/zenoss-logo-tag-white.png" alt="logo">
+    </a>
+    Zenoss Cloud Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdvancedSearch/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AixMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon Web Services (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TomcatMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache Tomcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AuditLog/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AutoTune/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AutoTune
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Capacity/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Capacity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CatalogService/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalog Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ceph/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Ceph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CheckPointMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Check Point Security Appliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CiscoAPIC/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco APIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CiscoMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CiscoMonitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CiscoUCS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco UCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CiscoUCSCentral/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco UCS Central
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CallManagerMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Unified Communications Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NetScaler/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix NetScaler (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudView/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ControlCenter/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DatabaseMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diagram/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Datacenter View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EMC.base/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell EMC base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EMC.Isilon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell EMC Isilon (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EMC.XtremIO/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell EMC XtremIO (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dell.PowerEdge/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell PowerEdge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenDeviceACL/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Access Control Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiscoveryMapping/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Discovery Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DistributedCollector/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Collector
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Redfish/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DMTF Redfish
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DurationThreshold/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Duration Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DynamicView/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Service View
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnterpriseCollector/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Enterprise Collector
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnterpriseReports/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Enterprise Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnterpriseSecurity/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Enterprise Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnterpriseSkin/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Enterprise Skin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BigIPMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    F5 BIG-IP (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FoundryMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundry Networks Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GoogleCloudPlatform/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Cloud Platform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenHoltWinters/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Holt-Winters Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HP.Proliant/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP Proliant (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HpuxMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP-UX (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DB2/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM DB2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IBM.Power/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebsphereMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM WebSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JBossMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    JBoss Application Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JuniperMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NetScreenMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper NetScreen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kubernetes/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LantronixMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Lantronix Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LDAPAuthenticator/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenMailTx/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mail Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microsoft.Azure/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Azure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microsoft.Core/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Exchange
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="zenpack.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Exchange
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commercial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commercial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commercial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organization:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Releases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-exchange-zenpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Exchange ZenPack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thresholds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-current-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of Current Release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zenoss-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zenoss Analytics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zenoss Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#domains-microsoft-exchange-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domains: Microsoft Exchange Domain
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installed-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installed Items
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attachments:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microsoft.HyperV/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Hyper-V
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microsoft.Lync/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Lync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MultiRealmIP/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Realm IP Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NetAppMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NetApp Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NortelMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nortel Passport Switches (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nutanix/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nutanix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenOperatorRole/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Operator Role
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebLogicMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Oracle WebLogic Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PagerDuty/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PagerDuty (Official)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PortalIntegration/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Portal Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RANCIDIntegrator/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    RANCID Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FalconMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    RLE Falcon Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TrapForwarder/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMP Trap Forwarder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SolarisMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Solaris
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Splunk/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Splunk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenSQLTx/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StorageBase/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    StorageBase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SugarCRMMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SugarCRM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TrangoMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Trango Devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Vectra/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Vectra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VMwareESXMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware ESX SNMP (Commercial)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NSX/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware NSX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vCloud/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vCloud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vSphere/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware vSphere
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenWebTx/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Web-Based Synthetic Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebScale/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WebScale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.WebTransaction/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/A10/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    A10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Merit/AdvaFSP150CC/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Adva FSP150CC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Merit/AdvaFSP3000R7/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Adva FSP3000R7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/deviceAdvDetail/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Device Details
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/AIX/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AIX SNMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/AlliedTelsys/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Allied Telesis Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/AlphaPowerRectifier/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Alpha Technologies CXC Controller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Alvarion/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Alvarion Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ApacheVirtualHost/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache Virtual Host Modeler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ZenSystems/ApcAts/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    APC Automatic Transfer Switches - ATS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Netbotz/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    APC Netbotz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/aggregateAPCpduAB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    APC PDU Aggregate A-B Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ZenSystems/ApcPdu/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    APC Power Distribution Units - PDU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_94" >
+        
+          <label class="md-nav__link" for="__nav_94" id="__nav_94_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    
+  
+    APC PowerNet 
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_94_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_94">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    APC PowerNet 
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iwillfearnoevil/Powernet9225/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+     MasterSwitch AP9225
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ZenSystems/ApcUps/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    APC UPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenAppProfiler/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Aruba/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Aruba Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Asterisk16/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Asterisk 1.6 SNMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lais/Asterisk/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Asterisk SSH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/AvailabilityReportPerCollection/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Availability Report Per Collection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/AvayaVoicePoratal/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaya Voice Portal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cascadeo/ZenRDS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS RDS Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MJW/BarracudaMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Barracuda Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/BasicPing/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    BasicPing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/beepScript/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Beep Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Bind/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Bind
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Imas/BlueCoat/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    BlueCoat Appliances
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills1st/bridge/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Bridge MIB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BlakeDrager/Bridgewave/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Bridgewave Point-To-Point Radios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Brocade/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Brocade SAN Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BrocadeMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Brocade SAN Switches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vaibhav/brocadeswitches/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Brocade Switches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rackspace/BTI7200/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    BTI 7200 Fiber
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Cfengine/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cfengine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ChefClient/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Chef Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Firestar/CiscoASA/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Adaptive Security Appliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CiscoASAVPN/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco ASA VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atelepin/cbCiscoQOS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Base QOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nova/Cisco.Catalyst/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Catalyst
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CiscoEnvMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Environmental Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CiscoEnvMonE/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Environmental Monitor (NWN)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turner/CiscoMDS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco MDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CiscoPluggableOptics/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco Pluggable Optics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NetScaler/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Citrix NetScaler (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Colubris/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Colubris Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ShaneScott/CPUCount/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CPU Count Modeler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Darkemon/ZenCustomMap/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Networks Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chudler/AlterPathCS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cyclades Console Servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DDN/GridScalerv2/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DDN GridScaler v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DDN/GridScaler/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DDN GridScaler v1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/DellEqualLogicMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell EqualLogic Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/DellM1000e/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell M1000e Blade Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PowerConnect/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell PowerConnect iSCSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/DellSNMPTransforms/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell SNMP Event Transforms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ZenSystems/DellUps/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell UPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills1st/deviceReports/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ShaneScott/DeviceSearch/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/DirFile/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DirFile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/DistributedCollectors/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Collector (Open Source)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iwillfearnoevil/Domain/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain-SSL Certificate Expiration Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SLSMC/DragonWave/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DragonWave AirPair
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/DurationThreshold/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Duration Threshold (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/eltek/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Eltek Power Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/EmailPing/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Email Ping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CelerraFileSystem/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    EMC Celerra Filesystem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/clariion/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    EMC Clariion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/EMCIsilon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    EMC Isilon (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SteelHouseLabs/EnhancedEthernetCsmacd/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Enhanced Ethernet Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EventEnrichment/Connector/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Enrichment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SteelHouseLabs/EventForwarder/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Forwarder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/EventGraph.BySeverity/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Histograms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sodonnell/TransformReport/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Transforms Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fdeckert/myeventviews/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Views Portlet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DDN/Exascaler/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Exascaler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/f5/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    F5 BIG-IP (Open Source)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills1st/FancyEmail/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    FancyEmail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FDS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    FDS 389 LDAP Servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Fedora/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Fedora Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fdeckert/myDeviceIssues/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Filtered Device Issues Portlet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ForemanStatus/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Foreman Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FormulaDataSource/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Formula Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Fortigate/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Fortigate SNMP Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FoundryLB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundry Load Balancer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BlakeDrager/fping/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Fping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FreeRADIUS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    FreeRADIUS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Funkwerk/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Funkwerk Router Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jschroeder/GangliaMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Ganglia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Gentoo/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Gentoo Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chudler/GoogleAppEngine/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Google App Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/GoogleSearch/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Search Provider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/groupreporting/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Group Resources Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HAProxy/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HAProxy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HipChat/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HipChat Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DrD_Studios/BlueArc/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Hitachi BlueArc Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPBladeChassis/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP Blade Chassis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPEVAMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP EVA Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPMSA/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HPMSA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPPrinterTrapTransforms/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP Printer Trap Transforms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HP/Proliant.MIBs/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP ProLiant MIBs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP ProLiant Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPTemperatureSensors/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP Temperature Sensors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../andinod/HPUXMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP-UX Monitor (SSH)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HPUXMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP-UX (Open Source)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenHttpComponent/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HuaweiSwitches/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Huawei Enterprise Switches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HuaweiServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Huawei Server ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/OceanStor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Huawei Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Huawei/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Huawei Switches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/HuaweiWireless/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Huawei Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/IBM3584Mon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM 3584
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/IBMSystemxIMM/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM System x Integrated Management Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/IBMV7000/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM V7000 Storwize
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcgov/IBMMQMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM WebSphere MQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenIbmMQ/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM WebSphere MQ Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ImprovedEthernetCsmacd/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Improved EthernetCsmacd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rackspace/LinuxMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Improved Linux Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Infoblox/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Infoblox
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssv/InstalledSoftwareReport/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Installed Software Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InterfaceGraphs/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Interface Graphs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Iomega/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Iomega NAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ironport/PerformanceGraphs/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IronPort Email Security-Relay Appliances
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Jenkins/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/JuniperCard/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    JuniperCard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TijmenvandenBrink/JuniperIVE/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper IVE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BlakeDrager/JuniperJSeries.Performance/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper J-Series Routers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/JuniperPerformance/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper NetScreen Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/JuniperPluggableOptics/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper Pluggable Optics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ZenSystems/Juniper/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper Routers - Firewalls - Switches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oie/KannelMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Kannel SMPP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../andinod/KyoceraPrinter/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Kyocera Printer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lbn/LDAPMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Monitor (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/LenovoRDThinkServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Lenovo ThinkServer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssv/LibvirtSNMP/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    LibvirtSNMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/libvirt/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Libvirt Virtualization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/LinuxMonitorAddOn/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux Monitor Addon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sodonnell/MACReport/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MAC Address Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/OSX/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mac OS X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Mandriva/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mandriva Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Memcached/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Memcached Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Memcached_Template/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Memcached Performance Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chitambira/mgeUPS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MGE UPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/mib_browser/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MIB Browser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/mib_utils/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MIB Browser-Utils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/MSIAS_RadiusServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft IAS Radius Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Microtick/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MikroTik Router
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/MitsubishiUPS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Mitsubishi UPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ModelingMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    ModelingMonitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenMongoDB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MongoDB Component
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsador/Motorola/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Motorola PTP & Canopy Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/MRV/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MRV Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../altea/SQLServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MS SQL 2000 - 2005 Server Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/MsSQLMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MS SQL Database Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/MSSQL64Monitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MS SQL Server 64-bit (SNMP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/MySQLMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MySQL Database Monitor (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/MySQLSSH/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MySQL SSH Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nagios/CheckPing/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nagios Check Ping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NanThreshold/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NaN Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NetApp/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NetApp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Netasq/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Netasq Firewall
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NetWare/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NetWare 6.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NWMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NetWare SNMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NFS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NginxStatus/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nginx Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Nimble/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nimble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NokiaIPSO/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nokia IPSO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jcolon/NortelMibs/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nortel Passport and Baystack MIBs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/NortelMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Nortel Passport Switches (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenNrpeComponent/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NRPE Component
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ZenODBC/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    ODBC Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ZenSystems/olsonPower/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Olson Power meters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Opengear/ConsoleServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Opengear Console Servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Opengear/Mibs/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Opengear MIBs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ecocoms/OpenLayersMap/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenLayers Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/OpenSolaris/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSolaris
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/OpenTSDB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenTSDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RomanTykhonov/OracleDB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Oracle Database (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/OracleMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Oracle Database Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FOOBAR/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Oracle - Sun Hardware Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssv/OrgModeler/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Organizer Modeler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PacketFence/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PacketFence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PagerDuty/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PagerDuty (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PanduitMonitoring/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Panduit Environmental Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Perfmon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Perfmon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Pfsense/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PfSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PillarAxiom/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Pillar Axiom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PointThreshold/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Point Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trelane/Postfix/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Postfix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PgSQLMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL Database Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LearningObjects/PostgresqlMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgresqlMonitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/powerware/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Powerware UPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PredictiveThreshold/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Predictive Threshold (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TwoNMS/PrinterMIB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Printer MIB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/PrinterToner/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Printer Toner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ZenossProcessStats/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Process Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/puppet/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Puppet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TwoNMS/Rancid/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Rancid Integration (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/RangeThreshold/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Range Threshold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Raytalk/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Raytalk Wireless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/RDBMS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    RDBMS Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenRedis/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis Component
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chudler/redis/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Redis Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fdeckert/reports/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports Portlet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ResponsiveUI/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    ResponsiveUI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rhybudd/alerts/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Rhybudd Push
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TijmenvandenBrink/Riverbed/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Riverbed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Stingray/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Riverbed Stingray Traffic Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Rundeck/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Rundeck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PlixerInternational/Scrutinizer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrutinizer NetFlow & sFlow Analyzer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chudler/SentryCDU/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Sentry CDU Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SCC/ShowGraphPortlet/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Show Graph Portlet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenSiebelCRM/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Siebel CRM Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcgov/SiebelCRMMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Siebel CRM Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Slack/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Slack Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ShaneScott/SnmpName/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMP Device Name Modeler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills1st/snmpExtend/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SnmpExtend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SNMPLocation/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMP Location (RackSlot)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SonicWALL/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SonicWALL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Splunk/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Splunk Alerting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SteelHouseLabs/SplunkForwarder/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Splunk Event Forwarder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenSplunkSearch/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Splunk Search Component
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SQLDataSource/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SquidMon/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SquidMon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssv/SubagentShell/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Subagent Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SunMibMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Sun MIB Process Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SuSE/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SuSE Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/SwiftCM2/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Swiftbase Climate Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenTwillScriptComponent/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Synthetic Web Transaction Component
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SonnyStormes/synthetictransactions/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Synthetic Web Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JanGaraj/TcpStat/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    TCP Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/zenTerracotta/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Terracotta Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/TokyoTyrant/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Tokyo Tyrant Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BCN/Trango/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Trango M900 Access Point
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iXsystems/TrueNAS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    TrueNAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BCN/Ubiquiti/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubiquiti airMAX AP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/UbiquitiNanostation/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubiquiti NanoStation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/Ubuntu/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nova/UCDFileSystemMap/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    UCD FileSystem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SNMP/UDPMIB/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    UDP Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Veritas/Netbackup/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Veritas Netbackup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/VMwareDataSource/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/VMwareEsx/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware ESX Filesystems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/VMwareESXiMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware ESXi Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/VMwareESXMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware ESX SNMP (Community)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vmware/VirtualMachines/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Virtual Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sodonnell/VMReport/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware Virtual Machines Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WBEMDataSource/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WBEM Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/LinMon_WBEM/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WBEM Linux Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Peak6JC/WeatherGoose/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Weathergoose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WhatsDownPortlet/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Whats Down Portlet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nova/Windows.SNMPPerfMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows SNMP Performance Monitor (Advanced)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nova/Windows.SNMPPerfMonitor.Simple/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows SNMP Performance Monitor (Simple)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nova/WinServiceSNMP/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows SNMP Service Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills1st/WinSnmp/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WinSnmp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smbambling/ActiveDirectory/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Active Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIDataSource/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Data Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIPerf_Exchange2003/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Exchange 2003
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AndreaConsadori/Exchange2007WMI/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Exchange 2007
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIFilesMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Files Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIPerf_IIS6/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI IIS6 Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIPerf_MSSQL/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI MSSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIPerf_TerminalServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Terminal Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/WMIPerf_Windows/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WMI Windows Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../puzzle/VMReportXen/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Xen Virtual Machine Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JanGaraj/ZabbixAgent/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Zabbix Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SteelHouseLabs/ZenossForwarder/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Zenoss Event Forwarder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/ZeusLoadBalancer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Zeus Load Balancer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon Web Services (Open Source)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ApacheMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache HTTP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CalculatedPerformance/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Calculated Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudFoundry/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudFoundry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudStack/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CloudStack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dashboard/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DellMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dell Monitor (Core)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DigMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Dig Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DnsMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DNS Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docker/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DRBDMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    DRBD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FtpMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    FTP Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeviceSearch/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Global Device Search
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hadoop/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Hadoop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HBase/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HBase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HPMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HttpMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstalledTemplatesReport/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Installed Templates Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IRCDMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    IRCD Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JabberMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Jabber Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenJMX/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Java 2 Platform Standard Edition - J2E
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JMXNotificationListener/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    JMX Notification Listener
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Layer2/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LDAPMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    LDAP Monitor (Core)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinuxMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memcached/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Memcached
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microsoft.MSMQ/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Message Queueing (MSMQ)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microsoft.Windows/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MikroTik/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MikroTik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MySqlMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NNTPMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NNTP Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NtpMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    NTP Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenStackSwift/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenStack Object Storage (Swift)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenStackInfrastructure/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenStack (Provider View)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenStack/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenStack (Tenant View)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenvSwitch/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenvSwitch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenVZ/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenVZ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oVirt/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    oVirt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PostgreSQL/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PropertyMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PropertyMonitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PythonCollector/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PythonCollector
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RabbitMQ/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    RabbitMQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RaphaelJS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    RaphaelJS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RPCMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    RPC Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PySamba/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenossVirtualHostMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Host Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EsxTop/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    VMware ESX Server Monitor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WBEM/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WBEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WSMAN/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    WSMAN Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XenServer/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    XenServer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XenMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Xen Virtual Hosts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZenPackLib/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    ZenPackLib
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZooKeeper/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    ZooKeeper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Arista/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Arista Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Aruba/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Aruba Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.CloudGenix/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudgenix Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CMDBIntegrationNG/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CMDB Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Commvault/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CommVault Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConfigurationManager/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Cumulus/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Cumulus Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.EMC.ECS/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    EMC ECS Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.EMC.Unity/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    EMC Unity Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.EMCVPLEX/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    EMC VPLEX Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Fortigate/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Fortinet Fortigate Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HitachiUCPDirector/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Hitachi UCPDirector Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.HP3PAR/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    HP 3Par Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncidentManagement/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Management Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Infoblox/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Infoblox Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.LogMonitor/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    LogMonitor Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Meraki/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Meraki Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.PaloAlto/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Palo Alto Networks Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.PureStorage/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    PureStorage Integration ZenPack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HANA/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    SAP HANA Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SAMLAuthenticator/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Sign-On - SSO SAML Authenticator Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PS.Viptela/zenpack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Viptela SD-WAN Integration Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commercial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commercial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commercial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organization:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Releases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-exchange-zenpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft Exchange ZenPack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thresholds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-current-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of Current Release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zenoss-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zenoss Analytics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zenoss Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#domains-microsoft-exchange-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domains: Microsoft Exchange Domain
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installed-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installed Items
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attachments:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="microsoft-exchange">Microsoft Exchange</h1>
+<p>
+<div><a data-lightbox="zenpack-microsoft-zenpack" href="img/zenpack-microsoft-zenpack.png"><img src="img/zenpack-microsoft-zenpack.png" /></a></div>
+</p>
+<h2 id="commercial">Commercial</h2>
+<p>This ZenPack is developed and supported by Zenoss Inc. Commercial
+ZenPacks are available to Zenoss commercial customers only. <a class="external-link" href="https://tryit.zenoss.com/zenpack-contact">Contact Zenoss</a> to
+request more information regarding this or any other ZenPacks. <a class="external-link" href="https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1046">Click here</a> to
+view all available Zenoss Commercial ZenPacks.</p>
+<h3 id="organization">Organization:</h3>
+<p>Zenoss, Inc.</p>
+<h3 id="name">Name:</h3>
+<p>ZenPacks.zenoss.Microsoft.Exchange</p>
+<h2 id="releases">Releases</h2>
+<p>Version 1.1.2- <a class="external-link" href="https://delivery.zenoss.com/">Download</a>:   Released on 2019/01/17:   Requires <a class="external-link" href="https://help.zenoss.com/display/in/PythonCollector" title="ZenPack:PythonCollector">PythonCollector ZenPack</a>,
+    <a class="external-link" href="https://help.zenoss.com/display/in/ZenPackLib" title="ZenPack:ZenPackLib">ZenPackLib ZenPack</a>,
+    <a class="external-link" href="https://help.zenoss.com/display/in/Microsoft+Windows" title="ZenPack:MicrosoftWindows">Microsoft Windows ZenPack</a>:   Compatible with Zenoss Resource Manager 6.x and Zenoss Cloud</p>
+<p>Version 1.0.6- <a class="external-link" href="https://delivery.zenoss.com/">Download</a>:   Released on 2016/07/13:   Requires <a class="external-link" href="https://help.zenoss.com/display/in/PythonCollector" title="ZenPack:PythonCollector">PythonCollector ZenPack</a>,
+    <a class="external-link" href="https://help.zenoss.com/display/in/ZenPackLib" title="ZenPack:ZenPackLib">ZenPackLib ZenPack</a>,
+    <a class="external-link" href="https://help.zenoss.com/display/in/Microsoft+Windows" title="ZenPack:MicrosoftWindows">Microsoft Windows ZenPack</a>:   Compatible with Zenoss Core 4.2.5, Zenoss Core 5.0.x, Zenoss Core
+    5.1.x, Zenoss Core 5.2.x, Zenoss Resource Manager 4.2.5, Zenoss
+    Resource Manager 5.0.x, Zenoss Resource Manager 5.1.x, Zenoss
+    Resource Manager 5.2.x</p>
+<h2 id="microsoft-exchange-zenpack">Microsoft Exchange ZenPack</h2>
+<p>Monitoring for Microsoft Exchange Server Devices.</p>
+<h2 id="contents">Contents</h2>
+<p><a href="#releases">1 Releases</a></p>
+<p><a href="#microsoft-exchange-zenpack">1 Microsoft Exchange ZenPack</a></p>
+<p><a href="#background">1.1 Background</a></p>
+<p><a href="#features">1.2 Features</a></p>
+<p><a href="#discovery">1.2.1 Discovery</a></p>
+<p><a href="#performance-monitoring">1.2.2 Performance Monitoring</a></p>
+<p><a href="#thresholds">2 Thresholds</a></p>
+<p><a href="#usage">2.1 Usage</a></p>
+<p><a href="#configuration-options">2.1.1 Configuration Options</a></p>
+<p><a href="#limitations-of-current-release">2.2 Limitations of Current Release</a></p>
+<p><a href="#troubleshooting">2.3 Troubleshooting</a></p>
+<p><a href="#zenoss-analytics">2.4 Zenoss Analytics</a></p>
+<p><a href="#domains">2.4.1 Domains</a></p>
+<p><a href="#service-impact">2.5 Service Impact</a></p>
+<p><a href="#installed-items">2.6 Installed Items</a></p>
+<p><a href="#changes">2.7 Changes</a></p>
+<h2 id="background">Background</h2>
+<p>This ZenPack provides support for monitoring Microsoft Exchange Server.
+Monitoring is performed using the Windows Remote Management (WinRM) to
+collect Perfmon data.</p>
+<h2 id="features">Features</h2>
+<p>The features added by this ZenPack can be summarized as follows. They
+are each detailed further below.</p>
+<ul>
+<li>Discovery of Exchange components</li>
+<li>Performance monitoring</li>
+<li>Service monitoring</li>
+</ul>
+<h3 id="discovery">Discovery</h3>
+<p>The following components will be automatically discovered through the
+Windows server address, username and password you provide. The
+properties and relationships will be periodically updated by modeling.</p>
+<p>Exchange Server:   <strong>Attributes:</strong> Name, Version, Is Client Access Role, Is Mailbox
+    Role, Is Hub Transport Role:   <strong>Relationships:</strong> Mailbox Databases</p>
+<p>Mailbox Database:   <strong>Attributes:</strong> Name, Is Mailbox Database, Is Public Folder Database:   <strong>Relationships:</strong> Exchange Server</p>
+<h3 id="performance-monitoring">Performance Monitoring</h3>
+<p>Performance counters are collected using the PowerShell Get-Counter
+Cmdlet within a remote shell (WinRS). The following metrics will be
+collected every 5 minutes by default. Any other Windows Perfmon counters
+can also be collected by adding them to the appropriate monitoring
+template.</p>
+<p>ClientAccessRole:   \ASP.NET\Application Restarts:   \ASP.NET\Request Wait Time:   \ASP.NET\Worker Process Restarts:   \MSExchangeAB\NSPI Connections Current:   \MSExchangeAB\NSPI Connections/sec:   \MSExchangeAB\NSPI RPC Browse Requests Average Latency:   \MSExchangeAB\NSPI RPC Requests Average Latency:   \MSExchangeAB\NSPI RPC Requests/sec:   \MSExchangeAB\Referral RPC Requests Average Latency:   \MSExchangeAB\Referral RPC Requests/sec:   \MSExchangeAutodiscover\Requests/sec:   \MSExchange Availability Service\Availability Requests (sec):   \MSExchange Availability Service\Average Time to Process a Free
+    Busy Request:   \MSExchange ActiveSync\Current Requests:   \MSExchange ActiveSync\Ping Commands Pending:   \MSExchange ActiveSync\Requests/sec:   \MSExchange ActiveSync\Sync Commands Pending:   \MSExchange ActiveSync\Sync Commands/sec:   \MSExchange Control Panel\ASP.Net Request Failures/sec:   \MSExchange Control Panel\Explicit Sign-On Inbound Proxy
+    Requests/sec:   \MSExchange Control Panel\Explicit Sign-On Inbound Proxy
+    Sessions/sec:   \MSExchange Control Panel\Explicit Sign-On Outbound Proxy
+    Requests/sec:   \MSExchange Control Panel\Explicit Sign-On Outbound Proxy
+    Sessions/sec:   \MSExchange Control Panel\Explicit Sign-On Standard RBAC
+    Requests/sec:   \MSExchange Control Panel\Explicit Sign-On Standard RBAC
+    Sessions/sec:   \MSExchange Control Panel\Inbound Proxy Requests/sec:   \MSExchange Control Panel\Inbound Proxy Sessions/sec:   \MSExchange Control Panel\Outbound Proxy Requests/sec:   \MSExchange Control Panel\Outbound Proxy Requests - Average
+    Response Time:   \MSExchange Control Panel\Outbound Proxy Sessions/sec:   \MSExchange Control Panel\PowerShell Runspaces - Activations/sec:   \MSExchange Control Panel\PowerShell Runspaces - Average Active
+    Time:   \MSExchange Control Panel\PowerShell Runspaces/sec:   \MSExchange Control Panel\RBAC Sessions/sec:   \MSExchange Control Panel\Requests - Activations/sec:   \MSExchange Control Panel\Requests - Average Response Time:   \MSExchange OWA\Average Search Time:   \MSExchange OWA\Current Unique Users:   \MSExchange OWA\Requests/sec:   \MSExchange RpcClientAccess\User Count:   \MSExchange RpcClientAccess\Active User Count:   \MSExchange RpcClientAccess\Connection Count:   \MSExchange RpcClientAccess\RPC Averaged Latency:   \MSExchange RpcClientAccess\RPC Operations/sec:   \MSExchange RpcClientAccess\RPC Requests:   \MSExchangeWS\Requests/sec:   \Web Service(_Total)\Connection Attempts/sec:   \Web Service(_Total)\Current Connections:   \Web Service(_Total)\Other Request Methods/sec</p>
+<p>ClientAccessRole-2010:   \MSExchangeFDS:OAB(_Total)\Download Tasks Completed:   \MSExchangeFDS:OAB(_Total)\Download Task Queued</p>
+<p>;MailboxRole:   \MSExchange Database(Information Store)\Log Record Stalls/sec:   \Process(MSExchangeMailboxAssistants)\% Processor Time:   \MSExchange Calendar Attendant\Average Calendar Attendant
+    Processing time:   \MSExchange Calendar Attendant\Requests Failed:   \MSExchange Database(information store)\I/O Log Reads Average
+    Latency:   \MSExchange Database(information store)\I/O Database Reads
+    (Attached) Average Latency:   \MSExchange Database(information store)\I/O Database Reads
+    (Recovery) Average Latency:   \MSExchange Database(information store)\I/O Database Writes
+    (Attached) Average Latency:   \MSExchange Database(information store)\I/O Database Writes
+    (Recovery) Average Latency:   \MSExchange Database(information store)\I/O Log Writes Average
+    Latency:   \MSExchange Database(Information Store)\Database Page Fault
+    Stalls/sec:   \MSExchange Database(Information Store)\Database Cache % Hit:   \MSExchange Database(Information Store)\Database Cache Size (MB):   \MSExchange Database(Information Store)\Log Bytes Write/sec:   \MSExchange Database(Information Store)\Log Threads Waiting:   \MSExchange Database(Information Store)\Version buckets allocated:   \MSExchange Resource Booking\Average Resource Booking Processing
+    Time:   \MSExchange Resource Booking\Requests Failed:   \MSExchange Store Interface(_Total)\RPC Requests outstanding</p>
+<p>;MailboxRole-2010:   \MSExchange Search Indices(_Total)\Average Document Indexing Time:   \MSExchange Search Indices(_Total)\Average Latency of RPCs Used
+    to Obtain Content:   \MSExchangeIS Mailbox(_Total)\Messages Delivered/sec:   \MSExchangeIS Mailbox(_Total)\Messages Queued for Submission:   \MSExchangeIS Mailbox(_Total)\Messages Sent/sec:   \MSExchangeIS Mailbox(_Total)\Messages Submitted/sec:   \MSExchangeIS Mailbox(_Total)\Search Task Rate:   \MSExchangeIS Mailbox(_Total)\Slow Findrow Rate:   \MSExchangeIS Public(_Total)\Messages Queued for Submission:   \MSExchangeIS Public(_Total)\Replication Receive Queue Size:   \MSExchangeIS\Client: RPCs Failed/sec:   \MSExchangeIS\RPC Averaged Latency:   \MSExchangeIS\RPC Client Backoff/sec:   \MSExchangeIS\Slow QP Threads:   \MSExchangeIS\Slow Search Threads:   \MSExchangeIS\User Count:   \Process(Microsoft.Exchange.Search.ExSearch)\% Processor time:   \Process(msftesql)\% Processor Time</p>
+<p>;TransportRole:   \MSExchangeTransport Queues(_total)\Active Mailbox Delivery Queue
+    Length:   \MSExchangeTransport Queues(_total)\Active Non-Smtp Delivery
+    Queue Length:   \MSExchangeTransport Queues(_total)\Messages Completed Delivery
+    Per Second:   \MSExchangeTransport Queues(_total)\Messages Queued for Delivery
+    Per Second:   \MSExchangeTransport Queues(_total)\Messages Submitted Per Second:   \MSExchangeTransport Queues(_total)\Poison Queue Length:   \MSExchangeTransport Queues(_total)\Retry Mailbox Delivery Queue
+    Length:   \MSExchangeTransport Queues(_total)\Retry Non-Smtp Delivery Queue
+    Length:   \MSExchangeTransport Queues(_total)\Submission Queue Length:   \MSExchangeTransport Queues(_total)\Unreachable Queue Length:   \MSExchangeTransport SmtpReceive(_total)\Average bytes/message:   \MSExchangeTransport SmtpReceive(_total)\Messages Received/sec:   \MSExchangeTransport SmtpSend(_total)\Messages Sent/sec</p>
+<p>;TransportRole-2010:   \MSExchange Store Driver\Inbound: LocalDeliveryCallsPerSecond:   \MSExchange Store Driver\Inbound: MessageDeliveryAttemptsPerSecond:   \MSExchange Store Driver\Inbound: Recipients Delivered Per Second:   \MSExchange Store Driver\Outbound: Submitted Mail Items Per Second:   \MSExchangeTransport Dumpster\Dumpster Deletes/sec:   \MSExchangeTransport Dumpster\Dumpster Inserts/sec:   \MSExchangeTransport Dumpster\Dumpster Item Count:   \MSExchangeTransport Dumpster\Dumpster Size:   \MSExchangeTransport Queues(_total)\Active Remote Delivery Queue
+    Length:   \MSExchangeTransport Queues(_total)\Aggregate Delivery Queue
+    Length (All Queues):   \MSExchangeTransport Queues(_total)\Largest Delivery Queue Length:   \MSExchangeTransport Queues(_total)\Retry Remote Delivery Queue
+    Length</p>
+<p>;MailboxDatabase:   \MSExchange Assistants - Per
+    Database(msexchangemailboxassistants-)\Average Event Processing
+    Time in Seconds:   \MSExchange Assistants - Per
+    Database(msexchangemailboxassistants-)\Events in queue:   \MSExchange Assistants - Per
+    Database(msexchangemailboxassistants-)\Events Polled/sec:   \MSExchange Assistants - Per
+    Database(msexchangemailboxassistants-)\Mailboxes Processed/sec:   \MSExchange Replication(_total)\CopyQueueLength:   \MSExchange Replication(_total)\ReplayQueueLength</p>
+<p>;MailboxDatabase-2010:   \MSExchange Assistants - Per
+    Database(msexchangemailsubmission-)\Average Event Processing Time
+    in Seconds:   \MSExchange Assistants - Per
+    Database(msexchangemailsubmission-)\Events Polled/sec:   \MSExchange Assistants - Per
+    Database(msexchangemailsubmission-)\Events in queue:   \MSExchange Assistants - Per
+    Database(msexchangemailsubmission-)\Mailboxes Processed/sec:   \MSExchange Database ==&gt; Instances(Information Store/)\I/O
+    Database Reads Average Latency:   \MSExchange Database ==&gt; Instances(Information Store/)\I/O
+    Database Writes Average Latency:   \MSExchange Database ==&gt; Instances(Information Store/)\Log
+    Generation Checkpoint Depth:   \MSExchange Search Indices()\Average Document Indexing Time:   \MSExchange Search Indices()\Average Latency of RPCs Used to
+    Obtain Content:   \MSExchange Search Indices()\Full Crawl Mode Status:   \MSExchangeIS Mailbox()\Search Task Rate:   \MSExchangeIS Mailbox()\Slow Findrow Rate</p>
+<dl>
+<dt>The following services will be monitored:</dt>
+<dd>
+<p>IISADMIN:   MSExchangeIS:   MSExchangeADTopology:   MSExchangeMailboxAssistants:   MSExchangeSearch:   MSExchangeServiceHost:   MSExchangeMonitoring:   MSExchangeSA:   MSExchangeMailSubmission:   MSExchangeTransportLogSearch:   msftesql-Exchange:   W3SVC:   MSExchangeFDS</p>
+</dd>
+</dl>
+<h2 id="thresholds">Thresholds</h2>
+<p>There are thresholds associated with several of the collected counters
+in the above templates.</p>
+<p>ClientAccessRole:   activesync_current_requests - Between 50 and 100:   address_book_referral_rpc_requests_latency - Less than 1000:   address_book_rpc_browse_requests_latency - Less than 1000:   address_book_rpc_requests_latency - Less than 1000:   asp_application_restarts - Less than 0:   asp_request_wait_time - Less than 0:   asp_worker_process_restarts - Less than 0:   availability_service_time - Less than 5:   control_panel_outbound_proxy_requests_response_time - Less than 6000:   control_panel_requests_response_time - Less than 6000:   owa_average_search_time - Less than 5000:   rpc_client_access_rpc_averaged_latency - Less than 250:   rpc_client_access_rpc_requests - Less than 40</p>
+<p>ClientAccessRole-2010:   oab_download_tasks_queued - Less than 0</p>
+<p>MailboxRole:   calendar_attendant_requests_failed - Less than 0:   mailbox_database_cache_size - At least 2 GB free:   mailbox_database_page_flush - Less than 0:   mailbox_log_bytes_write - Less than 10000000:   mailbox_log_read_latency - Less than 200:   mailbox_log_stalls - Less than 10:   mailbox_log_threads_waiting - Less than 10:   mailbox_read_attached_latency - Less than 20:   mailbox_read_recovery_latency - Less than 20:   mailbox_version_buckets - Less than 12000:   resource_booking_requests_failed - Less than 0:   rpc_latency_average - Less than 100:   rpc_requests_outstanding - Less than 0</p>
+<p>MailboxRole-2010:   mailbox_average_document_indexing_time - Less than 30000:   mailbox_client_rpc_fails - Less than 0:   mailbox_messages_queued - Less than 50:   mailbox_public_message_queued - Less than 20:   mailbox_slow_qp_threads - Less than 10:   mailbox_slow_search_threads - Less than 10:   replication_receive_queue_size - Less than 100</p>
+<p>TransportRole:   active_mailbox_delivery_queue_length - Less than 250:   active_non_smtp_delivery_queue_length - Less than 250:   poison_queue_length - Less than 0:   retry_mailbox_delivery_queue_length - Less than 100:   retry_non_smtp_delivery_queue_length - Less than 100:   submission_queue_length - Less than 100:   unreachable_queue_length - Less than 100</p>
+<p>TransportRole-2010:   active_remote_delivery_queue_length - Less than 250:   largest_delivery_queue_length - Less than 200:   retry_remote_delivery_queue_length - Less than 100:   total_delivery_queue_length - Between 3000 and 5000</p>
+<h2 id="usage">Usage</h2>
+<p>To use the ZenPack, add the zenoss.winrm.WinExchange modeler plugin to
+an existing Windows device and run the modeler. For a new device, follow
+the directions for adding a new device using the Microsoft Windows
+ZenPack</p>
+<p>Note: The monitoring user must be a domain user.</p>
+<p>Note: If monitoring Exchange with a non-administrator user, the user
+must be a member of the Active Directory group "View Only Organization
+Management" for 2010 and later installations.</p>
+<h3 id="configuration-options">Configuration Options</h3>
+<p>-</p>
+<div class="highlight"><pre><span></span><code>zExchangeUser:   If the NETBIOS domain name for the Exchange Server is different
+    than the domain name used in the zWinRMUser property, enter that
+    information here in either &#39;&#39;netbios&#39;&#39; or &#39;&#39;user@netbios&#39;&#39;
+    format. This can also be used if a different user account needs
+    to be used to model the Exchange Server.
+</code></pre></div>
+<p>-</p>
+<div class="highlight"><pre><span></span><code>zExchangePassword:   Enter the password of the above account here. It can be left
+    blank if it is the same as zWinRMPassword.
+</code></pre></div>
+<p>-</p>
+<div class="highlight"><pre><span></span><code>zExchangeNoProxy:   Defines whether Session Option NoProxyServer should be added to
+    the PowerShell command during modeling device or not.
+</code></pre></div>
+<h2 id="limitations-of-current-release">Limitations of Current Release</h2>
+<ul>
+<li>Support for Exchange Server 2010, 2013 and 2016 only. Support for
+    future versions of Exchange will be added when they are released by
+    Microsoft.</li>
+<li>Exchange Server 2016 will use the same templates as Exchange Server
+    2013</li>
+<li>There are three duplicate counters being collected for Exchange
+    Server in the Windows ZenPack. There is a fix available in v2.8.4 of
+    the Microsoft.Windows ZenPack which will allow viewing of these
+    counters across multiple graphs.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>The first step in troubleshooting any monitoring issues is to scan the
+zenpython log for errors. Most issues can be solved by troubleshooting
+the Windows ZenPack.</p>
+<blockquote>
+<p>There are currently no logon servers available to service the logon
+request</p>
+</blockquote>
+<p>If you see this error during modeling, check the NETBIOS name against
+the users domain name. If they are not the same then use the
+zExchangeUser/zExchangePassword configuration options.</p>
+<blockquote>
+<p>The WinRM client received an HTTP status code of 403 from the remote
+WS-Management service</p>
+</blockquote>
+<p>If you use WinHTTP proxy on your exchange server and see this error
+during modeling, check zExchangeNoProxy property and set it to true.</p>
+<h2 id="zenoss-analytics">Zenoss Analytics</h2>
+<p>This ZenPack provides additional support for Zenoss Analytics. Perform
+the following steps to install extra reporting resources into Zenoss
+Analytics after installing the ZenPack.</p>
+<ol>
+<li>Copy analytics-bundle.zip from
+    $ZENHOME/ZenPacks/ZenPacks.zenoss.Microsoft.Exchange/ZenPacks/zenoss/Microsoft/Exchange/analytics/
+    on your Zenoss server.</li>
+<li>Navigate to Zenoss Analytics in your browser.</li>
+<li>From the Zenoss Instance list of options, select Internal
+    Authentication.</li>
+<li>Login as an Analytics user with superuser privileges.</li>
+<li>Remove any existing <em>Microsoft Exchange ZenPack</em> folder.<ol>
+<li>Choose <em>Repository</em> from the <em>View</em> menu at the top of the page.</li>
+<li>Expand <em>Public</em> in the list of folders.</li>
+<li>Right-click on <em>Microsoft Exchange ZenPack</em> folder and choose
+    <em>Delete</em>.</li>
+<li>Confirm deletion by clicking <em>OK</em>.</li>
+</ol>
+</li>
+<li>Add the new <em>Microsoft Exchange ZenPack</em> folder.<ol>
+<li>Choose <em>Server Settings</em> from the <em>Manage</em> menu at the top of
+    the page.</li>
+<li>Choose <em>Import</em> in the left page.</li>
+<li>Remove checks from all check boxes.</li>
+<li>Click <em>Choose File</em> to import a data file.</li>
+<li>Choose the analytics-bundle.zip file copied from your Zenoss
+    server.</li>
+<li>Click <em>Import</em>.</li>
+</ol>
+</li>
+</ol>
+<p>You can now navigate back to the <em>Microsoft Exchange ZenPack</em> folder in
+the repository to see the following resources added by the bundle.</p>
+<h5 id="domains-microsoft-exchange-domain">Domains: Microsoft Exchange Domain</h5>
+<p>Domains can be used to create Ad Hoc views using the following steps.</p>
+<ol>
+<li>Choose ''Ad Hoc View'' from the ''Create'' menu.</li>
+<li>Click ''Domains'' at the top of the data chooser dialog.</li>
+<li>Expand ''Public'' then ''Microsoft Exchange ZenPack''.</li>
+<li>Choose the ''Microsoft Exchange Domain'' domain</li>
+</ol>
+<h2 id="service-impact">Service Impact</h2>
+<p>When combined with the Zenoss Service Dynamics product, this ZenPack
+adds built-in service impact capability for services running on
+Microsoft Windows. The following service impact relationships are
+automatically added. These will be included in any services that contain
+one or more of the explicitly mentioned entities.</p>
+<dl>
+<dt>Service Impact Relationships:   The Windows server is impacted by the Exchange Server.</dt>
+<dd>
+<p>The Exchange Server is impacted by the Mailbox Databases.</p>
+</dd>
+</dl>
+<h2 id="installed-items">Installed Items</h2>
+<p>Installing this ZenPack will add the following items to your Zenoss
+system.</p>
+<p>Modeler Plugins:   zenoss.winrm.WinExchange</p>
+<p>Monitoring Templates:   ClientAccessRole (in /Server/Microsoft):   ClientAccessRole-2010 (in /Server/Microsoft):   IISADMIN (in /Server/Microsoft):   MSExchangeADTopology (in /Server/Microsoft):   MSExchangeFDS (in /Server/Microsoft):   MSExchangeIS (in /Server/Microsoft):   MSExchangeMailSubmission (in /Server/Microsoft):   MSExchangeMailboxAssistants (in /Server/Microsoft):   MSExchangeMonitoring (in /Server/Microsoft):   MSExchangeSA (in /Server/Microsoft):   MSExchangeSearch (in /Server/Microsoft):   MSExchangeServiceHost (in /Server/Microsoft):   MSExchangeTransportLogSearch (in /Server/Microsoft):   MailboxDatabase (in /Server/Microsoft):   MailboxDatabase-2010 (in /Server/Microsoft):   MailboxRole (in /Server/Microsoft):   MailboxRole-2010 (in /Server/Microsoft):   TransportRole (in /Server/Microsoft):   TransportRole-2010 (in /Server/Microsoft):   W3SVC (in /Server/Microsoft):   msftesql-Exchange (in /Server/Microsoft)</p>
+<h2 id="changes">Changes</h2>
+<p>1.1.2</p>
+<ul>
+<li>Fix MicrosoftExchange - N/A for some graphs of Exchange Server
+    component and on Graphs tab (ZPS-2197)</li>
+<li>Fix Azure ZenPack and Exchange Installation Conflict (ZPS-4417)</li>
+<li>Fix Exchange: Modeler script passes password in plain text
+    (ZPS-3482)</li>
+<li>Tested with Zenoss Resource Manager 6.3.1 and Zenoss Cloud</li>
+</ul>
+<p>1.1.1</p>
+<ul>
+<li>Fix Unable to model due to Exchange Server missing Mailbox role
+    (ZPS-2641)</li>
+<li>Fix The WinRM client received an HTTP status code of 403 from the
+    remote WS-Management service (ZPS-2378)</li>
+<li>Testing was provided on Zenoss Resource Manager: 4.2.5; 5.3.3. and
+    6.1.0 and Serevice Impact 5.2.3</li>
+</ul>
+<p>1.1.0</p>
+<ul>
+<li>Use Microsoft Windows ZenPack 2.7.0 session management (ZPS-1227)</li>
+<li>Fix [Microsoft Exchange] Netbios username function fails to
+    account for subdomains (ZPS-1942)</li>
+<li>Make use of new ZenPackLib ZenPack</li>
+<li>Fix password in log when powershell error occurs during modeling
+    (ZPS-1766)</li>
+<li>Fix MicrosoftExchange - Exchange services are monitored but State is
+    'Unknown' (ZPS-2202)</li>
+<li>Fix Mailbox Databases Discovered Under Device Not Hosting the
+    Database (ZPS-1477)</li>
+<li>Verify support for Exchange 2016 (ZPS-2214)</li>
+</ul>
+<p>1.0.5</p>
+<ul>
+<li>Fix Exchange 2013 Missing Counter Events</li>
+</ul>
+<p>1.0.4</p>
+<ul>
+<li>Fix zenpacks.zenoss.microsoft.windows 2.6.0 missing hardware
+    relations (ZEN-23968)</li>
+</ul>
+<p>1.0.3</p>
+<ul>
+<li>Fix impact to be compatible with Windows ZenPack version 2.6.0</li>
+</ul>
+<p>1.0.2</p>
+<ul>
+<li>Fix Exchange ZenPack: WinRM error during modeling (ZEN-23351)</li>
+<li>Fix Microsoft Exchange modeler type mismatch (ZEN-23317)</li>
+<li>Update zenpacklib.py to 1.0.12</li>
+</ul>
+<p>1.0.1</p>
+<ul>
+<li>Fix Exchange modeler plugin gets unauthorized error (ZEN-22314)</li>
+</ul>
+<p>1.0.0</p>
+<ul>
+<li>Inital release of Exchange ZenPack</li>
+</ul>
+<h2 id="attachments">Attachments:</h2>
+<ul>
+<li><a href="img/zenpack-microsoft-zenpack.png">microsoft-zenpack.png</a></li>
+<li><a href="img/zenpack-microsoft-zenpack.png">microsoft-zenpack.png</a></li>
+</ul>
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2005-2023 Zenoss Inc.
+    </div>
+  
+  
+</div>
+      
+        <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Social links in footer -->
+<div class="md-social">
+    <a
+      href="https://www.zenoss.com/company/contact"
+      target="_blank" rel="noopener"
+      title="Feedback"
+      class="md-social__link"
+    >Feedback</a>
+    <a
+      href="https://www.zenoss.com/privacy"
+      target="_blank" rel="noopener"
+      title="Privacy Policy"
+      class="md-social__link"
+    >Privacy Policy</a>
+    <a
+      href="https://www.zenoss.com/terms-of-use"
+      target="_blank" rel="noopener"
+      title="Terms of Use"
+      class="md-social__link"
+    >Terms of Use</a>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "select.version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.803ed251.min.js"></script>
+      
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+      
+        <script src="../../js/lightbox.min.js"></script>
+      
+        <script src="../../js/lightbox-options.js"></script>
+      
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+      
+        <script src="https://unpkg.com/tippy.js@6"></script>
+      
+        <script src="../../js/config-tippy.js"></script>
+      
+    
+  </body>
+</html>
