@@ -1,7 +1,5 @@
 # AIX_v2
 
-@lb[](img/zenpack-ibm-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -79,8 +77,8 @@ The following components will be automatically discovered through the
 AIX server address, username and password you provide. The properties
 and relationships will be periodically updated by modeling.
 
-Server (Device):   Attributes: ent_cpu, ent_vproc, active_cpu, systemId, prof_max_mem,
-    ent_mem
+Server (Device):   Attributes: ent_cpu, ent_vproc, active_cpu, systemId, 
+prof_max_mem, ent_mem
 
 EntAdapter:   Attributes: devname, location, parent, physloc
 
@@ -314,7 +312,9 @@ time.
 When upgrading this ZenPack from version 1.3.0 to a later version, a
 traceback containing the text:
 
-    AttributeError: 'ZenPack' object has no attribute '__of__'
+```
+AttributeError: 'ZenPack' object has no attribute '__of__'
+```
 
 may be encountered. This traceback does not affect the functionality of
 the ZenPack, which should function normally after installation is
