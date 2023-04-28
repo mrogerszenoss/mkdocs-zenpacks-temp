@@ -1,7 +1,5 @@
 # Layer2
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -34,132 +32,6 @@ This ZenPack provides support to model OSI Layer 2 (or data link layer)
 topology. That topology information is used to suppress events from
 devices connection to which was lost because they are connected to
 broken devices. Data collection is performed using SNMP.
-
-## Contents
-
-[1 Layer2 ZenPack](#layer2-zenpack)
-
-[1.1 Background](#background)
-
-[1.2 Releases](#releases)
-
-[1.3 Features](#features)
-
-[1.3.1 Discovered Components](#discovered-components)
-
-[1.3.2 Monitoring](#monitoring)
-
-[1.3.3 Event Suppression](#event-suppression)
-
-[1.3.3.1 Ping Event Suppression](#ping-event-suppression)
-
-[1.3.3.2 Non-Ping Event Suppression](#ping-event-suppression)
-
-[1.3.3.3 Event Suppression Performance](#event-suppression-performance)
-
-[1.3.3.3.1 Caches](#caches)
-
-[1.4 Network Map](#network-map)
-
-[1.4.1 Filtering](#filtering)
-
-[1.4.1.1 Layers](#layers)
-
-[1.4.2 Colors and Shapes](#colors-and-shapes)
-
-[1.4.2.1 Node Colors](#node-colors)
-
-[1.4.2.2 Link Color](#link-color)
-
-[1.4.2.3 Link Shape](#link-shape)
-
-[1.4.3 Interaction](#interaction)
-
-[1.4.3.1 Context Menu](#context-menu)
-
-[1.5 zenmapper daemon](#zenmapper-daemon)
-
-[1.6 Writing Your Own Connection Provider](#writing-your-own-connection-provider)
-
-[1.7 Installation](#installation)
-
-[1.7.1 Zenoss 5.0](#zenoss5-0)
-
-[1.7.2 Open vSwitch ZenPack](#openv-switch-zenpack)
-
-[1.8 Usage](#usage)
-
-[1.8.1 Collecting Switch Port Clients](#collecting-switch-port-clients)
-
-[1.8.2 Collecting Network Device Neighbors](#collecting-network-device-neighbors)
-
-[1.8.3 Update Control](#update-control)
-
-[1.9 Service Impact](#service-impact)
-
-[1.9.1 Service Impact Relationships](#service-impact-relationships)
-
-[1.10 Troubleshooting](#troubleshooting)
-
-[1.10.1 Empty Map/Links for Device](#Layer2-EmptyMap/LinksforDevice)
-
-[1.10.2 Layer2 Forwarding Table](#layer2-forwarding-table)
-
-[1.10.3 Impact](#impact)
-
-[1.10.4 Limitations](#limitations)
-
-[1.10.4.1 Delay in Discovering Connections](#delayin-discovering-connections)
-
-[1.10.4.2 No Layer 3 (IP) Connectivity for Cisco UCS](#Layer2-NoLayer3(IP)ConnectivityforCiscoUCS)
-
-[1.10.5 More Information](#more-information)
-
-[1.11 Installed Items](#installed-items)
-
-[1.11.1 Modeler Plugins](#modeler-plugins)
-
-[1.11.2 Configuration Properties](#configuration-properties)
-
-[1.11.3 Services / Daemons](#Layer2-Services/Daemons)
-
-[1.12 Changes](#changes)
-
-[1.12.1 1.4.3](#143)
-
-[1.12.2 1.4.2](#142)
-
-[1.12.3 1.4.1](#141)
-
-[1.12.4 1.4.0](#140)
-
-[1.12.5 1.3.5](#135)
-
-[1.12.6 1.3.4](#134)
-
-[1.12.7 1.3.3](#133)
-
-[1.12.8 1.3.2](#132)
-
-[1.12.9 1.3.1](#131)
-
-[1.12.10 1.3.0](#130)
-
-[1.12.11 1.2.2](#122)
-
-[1.12.12 1.2.1](#121)
-
-[1.12.13 1.1.1](#111)
-
-[1.12.14 1.1.0](#110)
-
-[1.12.15 1.0.3](#103)
-
-[1.12.16 1.0.2](#102)
-
-[1.12.17 1.0.1](#101)
-
-[1.12.18 1.0.0](#100)
 
 ## Releases
 
@@ -798,29 +670,29 @@ system.
 
 -   zenmapper
 
-## Changes
+### Changes
 
-### 1.4.6
+**1.4.6**
 
 -   Fix user permissions issue for network map (ZPS-1249)
 -   Fix CDPLLDPDiscover Modeler plugin fails when encounter HEX values
     (ZPS-7165)
 -   Tested with Zenoss Cloud and Zenoss 6.6.0
 
-### 1.4.5
+**1.4.5**
 
 -   Added checks to skip DB Compact operations that would trigger a DB clear() operation. (ZPS-7612)
 
-### 1.4.4
+**1.4.4**
 
 -   Add compatibility with MySQL-python 1.2.5 (ZPS-7117)
 
-### 1.4.3
+**1.4.3**
 
 -   Improve performance of calculating network impact relationships.
     (ZPS-5712)
 
-### 1.4.2
+**1.4.2**
 
 -   Reduce fragmentation of database tables. (ZPS-4402)
 -   Add "optimize-interval" option to zenmapper. (ZPS-4402)
@@ -828,7 +700,7 @@ system.
 -   Tested with Zenoss Cloud and Zenoss Resource Manager 6.2.1, and
     5.3.3.
 
-### 1.4.1
+**1.4.1**
 
 -   Fix unnecessary ZODB growth caused by zenmapper. (ZPS-3548)
 -   Fix zProdStateThreshold error on client MAC addresses table.
@@ -837,7 +709,7 @@ system.
 -   Fix missing neighbor switches on Cisco devices. (ZPS-4062)
 -   Tested with Zenoss Resource Manager 5.3.3, 6.2.0 and Zenoss Cloud.
 
-### 1.4.0
+**1.4.0**
 
 -   Fix suppression when zL2PotentialRootCause is set, and zL2Gateways
     is not. (ZPS-2313)
@@ -848,33 +720,33 @@ system.
 -   Fix "l2_gateways" AttributeError after ZenPack is removed.
     (ZPS-2581)
 
-### 1.3.5
+**1.3.5**
 
 -   Add client MAC addresses to SubInterfaces and ManagementInterfaces
     dropdown lists (ZPS-1663)
 -   Fix an invalid expanded device link. (ZPS-1683)
 
-### 1.3.4
+**1.3.4**
 
 -   Fix potential infinite loop during event suppression. (ZPS-1353)
 
-### 1.3.3
+**1.3.3**
 
 -   Fix compatibility with ZenPacks rely on deprecated CatalogAPI.
     (ZPS-1267)
 
-### 1.3.2
+**1.3.2**
 
 -   Optimize modeling and zenmapper for devices with many connections.
     (ZPS-736)
 -   Eliminate Layer2 modeling overhead for vSphere devices. (ZPS-736)
 
-### 1.3.1
+**1.3.1**
 
 -   Improve modeling performance for devices with many component types.
     (ZPS-736)
 
-### 1.3.0
+**1.3.0**
 
 -   Add "Show MAC addresses" and "Show dangling connectors" to network
     map.
@@ -893,12 +765,12 @@ system.
 -   Add client discovery support using Q-BRIDGE MIB. (ZEN-25336)
 -   Fix "NeighborSwitch" errors after removing the ZenPack. (ZEN-26189)
 
-### 1.2.2
+**1.2.2**
 
 -   Fix potential 2 minute modeling delay in Zenoss 4.
 -   Fix "Connection refused" when Redis not available.
 
-### 1.2.1
+**1.2.1**
 
 -   Added "workers" option to zenmapper daemon.
 -   Refactored connection catalog to use Redis as a storage. This
@@ -909,12 +781,12 @@ system.
 -   In time when zenpack installed/upgraded zenmapper daemon will create
     initial index. This occurs only on first run.
 
-### 1.1.1
+**1.1.1**
 
 -   Fix page help code in Layer2 ZP conflict with other ZenPacks
     (ZEN-21264)
 
-### 1.1.0
+**1.1.0**
 
 -   When filtering by VLAN show also layer2 links that are VLAN-unaware
     (ZEN-20946)
@@ -928,12 +800,12 @@ system.
     (ZEN-18636)
 -   Fix Broken link for Subnet node in Network map (ZEN-20749)
 
-### 1.0.3
+**1.0.3**
 
 -   Remove macs_catalog when removing the ZenPack. (ZEN-17967)
 -   Replace Layer2Info template with ClientMACs modeler plugin.
 
-### 1.0.2
+**1.0.2**
 
 -   Fix modeling of CDP neighbor switches with IPv6 addresses.
     (ZEN-17248)
@@ -942,7 +814,7 @@ system.
 -   Change default cycletime for Layer2Info from 30 minutes to 12 hours.
     (ZEN-17031)
 
-### 1.0.1
+**1.0.1**
 
 -   Fix device overview links error. (ZEN-14063)
 -   Remove add/remove from catalog logging. (ZEN-15465)
@@ -953,38 +825,6 @@ system.
     time. (ZEN-17023)
 -   Stop binding Layer2Info template to /Network by default. (ZEN-17035)
 
-### 1.0.0
+**1.0.0**
 
 -   Initial release
-
-## Attachments:
-
--   [Layer2_client_mac_addresses.png](img/zenpack-layer2_client_mac_addresses.png)
--   [Layer2_configuration_properties.png](img/zenpack-layer2_configuration_properties.png)
--   [Layer2_datacenter_topology_diagram.png](img/zenpack-layer2_datacenter_topology_diagram.png)
--   [Layer2_modeler_plugins.png](img/zenpack-layer2_modeler_plugins.png)
--   [Layer2_neighbor_switches.png](img/zenpack-layer2_neighbor_switches.png)
--   [Layer2_network_map.png](img/zenpack-layer2_network_map.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Layer2_client_mac_addresses.png](img/zenpack-layer2_client_mac_addresses.png)
--   [Layer2_configuration_properties.png](img/zenpack-layer2_configuration_properties.png)
--   [Layer2_datacenter_topology_diagram.png](img/zenpack-layer2_datacenter_topology_diagram.png)
--   [Layer2_modeler_plugins.png](img/zenpack-layer2_modeler_plugins.png)
--   [Layer2_neighbor_switches.png](img/zenpack-layer2_neighbor_switches.png)
--   [Layer2_network_map.png](img/zenpack-layer2_network_map.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Layer2_client_mac_addresses.png](img/zenpack-layer2_client_mac_addresses.png)
--   [Layer2_configuration_properties.png](img/zenpack-layer2_configuration_properties.png)
--   [Layer2_datacenter_topology_diagram.png](img/zenpack-layer2_datacenter_topology_diagram.png)
--   [Layer2_modeler_plugins.png](img/zenpack-layer2_modeler_plugins.png)
--   [Layer2_neighbor_switches.png](img/zenpack-layer2_neighbor_switches.png)
--   [Layer2_network_map.png](img/zenpack-layer2_network_map.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Layer2_client_mac_addresses.png](img/zenpack-layer2_client_mac_addresses.png)
--   [Layer2_datacenter_topology_diagram.png](img/zenpack-layer2_datacenter_topology_diagram.png)
--   [Layer2_configuration_properties.png](img/zenpack-layer2_configuration_properties.png)
--   [Layer2_modeler_plugins.png](img/zenpack-layer2_modeler_plugins.png)
--   [Layer2_neighbor_switches.png](img/zenpack-layer2_neighbor_switches.png)
--   [Layer2_network_map.png](img/zenpack-layer2_network_map.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

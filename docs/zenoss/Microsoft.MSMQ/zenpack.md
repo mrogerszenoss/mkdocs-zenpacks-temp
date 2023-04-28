@@ -1,7 +1,5 @@
 # Microsoft Message Queueing (MSMQ)
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -168,9 +166,8 @@ blank will have the result of no threshold being applied.
 
 ## Daemons
 
-|                       |            |
-|-----------------------|------------|
 | Type                  | Name       |
+|-----------------------|------------|
 | Modeler               | zenmodeler |
 | Performance Collector | zenpython  |
 
@@ -181,7 +178,7 @@ blank will have the result of no threshold being applied.
 
 ## Changes
 
-### 1.3.2
+**1.3.2**
 
 -   Add support of system queues. (ZPS-2605)
 -   Ensure relations are preserved on upgrade. (ZPS-2618)
@@ -189,7 +186,7 @@ blank will have the result of no threshold being applied.
     5.3.3, Zenoss Resource Manager 4.2.5 RPS 743 and Service Impact
     5.2.2.
 
-### 1.3.1
+**1.3.1**
 
 -   Model queues that aren't in use or haven't passed messages yet.
     (ZPS-1690)
@@ -197,11 +194,3 @@ blank will have the result of no threshold being applied.
     (ZPS-2366)
 -   Tested with Zenoss Resource Manager 5.3.2 and Zenoss Resource
     Manager 4.2.5 RPS 743.
-
-## Attachments:
-
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
-

@@ -1,7 +1,5 @@
 # Microsoft Core
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -569,11 +567,11 @@ The current release is known to have the following limitations.
 
 ## Changes
 
-1.1.1
+**1.1.1**
 
 -   Corrected update process to replace the runtime image. (ZPS-7324)
 
-1.1.0
+**1.1.0**
 
 -   Add JSON parser to process data in more user-friendly format.
     (ZPS-7146)
@@ -593,21 +591,12 @@ The current release is known to have the following limitations.
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Resource Manager
     6.5.0, Zenoss Cloud and Service Impact 5.5.2
 
-1.0.1
+**1.0.1**
 
 -   Update txwinrm to latest version
 
-1.0.0
+**1.0.0**
 
 -   Initial release of Microsoft Core
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.0, Zenoss
     Resource Manager 5.3.3 with Service Impact 5.3.1 and Analytics 5.1.0
-
-## Attachments:
-
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [windows-kerberos-wireshark.png](img/zenpack-windows-kerberos-wireshark.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [windows-kerberos-wireshark.png](img/zenpack-windows-kerberos-wireshark.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
-

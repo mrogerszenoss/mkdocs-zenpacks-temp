@@ -1,7 +1,5 @@
 # Cisco Unified Communications Manager
 
-@lb[](img/zenpack-cisco-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -227,47 +225,27 @@ Event classes:
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-4.3.0 (2016-04-08)
-</dt>
-</dl>
+**4.3.0** (2016-04-08)
 
 -   Compatibility with Zenoss 5.x.
 -   Fix missed relations from CallManager to IP Phones (ZEN-22781).
 
-<dl markdown="1">
-<dt markdown="1">
-4.2.3 (2014-10-21)
-</dt>
-</dl>
+**4.2.3** (2014-10-21)
 
 -   Fix issue with modeling of zero devices (phones).
 -   Add troubleshooting section to documentation.
 
-<dl markdown="1">
-<dt markdown="1">
-4.2.2 (2013-11-21)
-</dt>
-</dl>
+**4.2.2** (2013-11-21)
 
 -   Strip invalid XML responses and handle alternate successful login.
 
-<dl markdown="1">
-<dt markdown="1">
-4.2.1 (2013-05-06)
-</dt>
-</dl>
+**4.2.1** (2013-05-06)
 
 -   Request all counters used in datapoints.
 -   Fix stacking on MTP Resources graph.
 -   Restore compatibility with Zenoss 4.1 and earlier.
 
-<dl markdown="1">
-<dt markdown="1">
-4.2.0 (2013-03-08)
-</dt>
-</dl>
+**4.2.0** (2013-03-08)
 
 -   Remove dependency on ZenPacks.zenoss.CiscoMonitor.
 -   Remove /Server/Linux/CallManager device class.
@@ -275,17 +253,7 @@ Event classes:
 -   Add "Cisco UC" category to zAxl\* configuration properties.
 -   Documentation and code cleanup for general availability.
 
-<dl markdown="1">
-<dt markdown="1">
-4.1.2 (2013-01-25)
-</dt>
-</dl>
+**4.1.2** (2013-01-25)
 
 -   Add zAxlHostname configuration property.
 -   Fix support for UC9.
-
-## Attachments:
-
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
-

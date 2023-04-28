@@ -1,7 +1,5 @@
 # PostgreSQL
 
-@lb[](img/zenpack-postgresql-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -67,17 +65,6 @@ Version
 Released on 2014/11/06
 Compatible with Zenoss Core 4.2.x-5.0.x, Zenoss RM 4.2.x
 
-## Contents
-
--   [Background](#background)
--   [Features](#features)
-    -   [Discovery](#discovery)
-    -   [Monitoring](#monitoring)
--   [Usage](#usage)
-    -   [PostgreSQL Server Impact](#post-gresqlserver-impact)
--   [Limitations](#limitations)
-    -   [Troubleshooting Modeling](#troubleshooting-modeling)
--   [Changes](#changes)
 
 ## Background
 
@@ -201,7 +188,7 @@ zSnmpMonitorIgnore property to True and remodel.
 
 ## Changes
 
-1.0.12
+**1.0.12**
 
 -   Resolved issue with error in pg8000 library on Ubuntu OS (ZPS-7424)
 -   Resolved issue with falling data collecting after platform upgrade.
@@ -209,7 +196,7 @@ zSnmpMonitorIgnore property to True and remodel.
 -   Tested with Zenoss Cloud, Zenoss 6.4.1, Zenoss 6.5.0 and Service
     Impact 5.5.3
 
-1.0.10
+**1.0.10**
 
 -   Add support for Bi-Directional Replication (ZPS-249)
 
@@ -226,20 +213,12 @@ zSnmpMonitorIgnore property to True and remodel.
     6.0.1, Zenoss Resource Manager 6.1.0 and Zenoss Resource Manager
     4.2.5 RPS 743
 
-1.0.9
+**1.0.9**
 
 -   Filter PIDs for lock query (ZEN-15165)
 -   Guard against locks in PGSQL poller (ZPS-312)
 
-1.0.8
+**1.0.8**
 
 -   Handle null data by skipping it (ZEN-14276)
 -   Update pg8000 lib to 1.9.14 (ZEN-12752)
-
-## Attachments:
-
--   [postgresql-zenpack.png](img/zenpack-postgresql-zenpack.png)
--   [postgresql-zenpack.png](img/zenpack-postgresql-zenpack.png)
--   [postgresql-zenpack.png](img/zenpack-postgresql-zenpack.png)
--   [postgresql-zenpack.png](img/zenpack-postgresql-zenpack.png)
-

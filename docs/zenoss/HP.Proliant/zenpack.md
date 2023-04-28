@@ -1,7 +1,5 @@
 # HP Proliant - Commercial
 
-@lb[](img/zenpack-hp-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -36,39 +34,6 @@ Version 3.2.2 - [Download](https://delivery.zenoss.com/){.external-link}:   Rele
     5.1.x, Zenoss Core 5.2.x, Zenoss Resource Manager 4.2.x, Zenoss
     Resource Manager 5.0.x, Zenoss Resource Manager 5.1.x, Zenoss
     Resource Manager 5.2.x
-
-## Contents
-
--   [Background](#background)
--   [External Dependencies](#external-dependencies)
--   [Features](#features)
-    -   [Discovery](#discovery)
-    -   [Monitoring](#monitoring)
-    -   [Event Management](#event-management)
-    -   [Service Impact](#service-impact)
--   [Data Collection](#data-collection)
-    -   [SNMP](#snmp)
-    -   [ILO](#ilo)
-    -   [WBEM](#wbem)
--   [Usage](#usage)
-    -   [Adding SNMP Onboard Administrator Device         (Enclosure)](#HPProliant-Commercial-AddingSNMPOnboardAdministratorDevice(Enclosure))
-    -   [Adding Linux SNMP or Windows (SNMP) Blade/Rack Device](#HPProliant-Commercial-AddingLinuxSNMPorWindows(SNMP)Blade/RackDevice)
-    -   [Adding ILO Device](#adding-ilo-device)
-    -   [Adding ILO Device         (SNMP)](#HPProliant-Commercial-AddingILODevice(SNMP))
-    -   [Adding ESXi Device](#adding-esxi-device)
-    -   [Combining HP Proliant SNMP monitoring with existing Device Classes](#combining-hpproliant-snmp-monitoring-with-existing-device-classes)
-    -   [Command Line Tools](#command-line-tools)
--   [Installed Items](#installed-items)
--   [Required Daemons](#required-daemons)
--   [Upgrade](#upgrade)
--   [Limitations](#limitations)
--   [Known Issues](#known-issues)
-    -   [Known Issue when monitoring systems with Failover Onboard Administrators](#known-issue-when-monitoring-systems-with-failover-onboard-administrators)
-    -   [Known Issue upgrading from 1.0 to 3.0](#)
-    -   [Known issue regarding ilo unknown or N/A values](#HPProliant-Commercial-KnownissueregardingilounknownorN/Avalues)
-    -   [Known issue regarding ilo monitoring](#known-issue-regarding-ilo-monitoring)
-    -   [Known issue when removing ZenPack](#known-issue-when-removing-zenpack)
--   [Changes](#changes)
 
 ## [Background](#contents)
 
@@ -634,14 +599,14 @@ uninstallation is complete.
 
 ## [Changes](#contents)
 
-3.3.5
+**3.3.5**
 
 -   Make zenpack compatible with twisted 19.10.0 (ZPS-6981)
 -   Tested with
     Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service Impact
     5.5.1
 
-3.3.4
+**3.3.4**
 
 -   Add log
     message to notify when "SERVER NAME" is blank in the iLO
@@ -650,7 +615,7 @@ uninstallation is complete.
     Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service Impact
     5.5.1
 
-3.3.3
+**3.3.3**
 
 -   Updated icons with dark-theme
     compatible versions
@@ -667,113 +632,132 @@ uninstallation is complete.
 -   Fix WBEM component metric
     duplication issue (ZPS-6132)
 
-3.3.2:   Fix Error modeling Generation 9 iLO hardware when memory/swap info
-    is missing (ZPS-3101):   Ensure all NICs are discovered and monitored (ZPS-3645):   Correct unrecognized "Good, In Use" status (ZPS-3737):   Modeling should succeed when drive enclosure is absent (ZPS-3306):   Update Physical Disk possible status values (ZPS-2946)
+**3.3.2**
+-   Fix Error modeling Generation 9 iLO hardware when memory/swap info is missing (ZPS-3101):   
+-   Ensure all NICs are discovered and monitored (ZPS-3645)
+-   Correct unrecognized "Good, In Use" status (ZPS-3737)
+-   Modeling should succeed when drive enclosure is absent (ZPS-3306)
+-   Update Physical Disk possible status values (ZPS-2946)
+-    Tested with Zenoss 5.3.3, Zenoss 6.2.0, and Zenoss Cloud
 
-    Tested with Zenoss 5.3.3, Zenoss 6.2.0, and Zenoss Cloud
-
-3.3.1:   Updated unit tests for build platform compatability (ZPS-29150,
+**3.3.1**
+- Updated unit tests for build platform compatability (ZPS-29150,
     ZEN-28507)
 
-3.3.0:   Ported to ZenPackLib 2.0:   Extend support to G9 and G10 platforms (ZPS-2086):   Add support for Fibre Channel Adapter and Port monitoring (ZPS-2086):   Added scripts for debug and data collection of iLO and WBEM clients:   Revised monitoring template organziation and protocol dependency:   Added new HP WBEM Datasource and revised all WBEM templates:   Added multiple new metrics for WBEM monitoring:   New icons added for device and all component classes:   WBEM modeling and performance data collection completely revised:   Additional mappings for SNMP traps (ZPS-679):   Fix bidirectional links on Device Status Page (ZPS-745, ZPS-2280):   Fix various SNMP modeling tracebacks (ZPS-1621):   Fix various issues during upgrade (ZPS-2088, ZPS-2256, ZPS-2257):   Fix various ILO modeling issues (ZPS-)
+**3.3.0**
+-   Ported to ZenPackLib 2.0:   Extend support to G9 and G10 platforms (ZPS-2086)
+-   Add support for Fibre Channel Adapter and Port monitoring (ZPS-2086)
+-   Added scripts for debug and data collection of iLO and WBEM clients
+-   Revised monitoring template organziation and protocol dependency
+-   Added new HP WBEM Datasource and revised all WBEM templates
+-   Added multiple new metrics for WBEM monitoring
+-   New icons added for device and all component classes
+-   WBEM modeling and performance data collection completely revised
+-   Additional mappings for SNMP traps (ZPS-679)
+-   Fix bidirectional links on Device Status Page (ZPS-745, ZPS-2280)
+-   Fix various SNMP modeling tracebacks (ZPS-1621)
+-   Fix various issues during upgrade (ZPS-2088, ZPS-2256, ZPS-2257)
+-   Fix various ILO modeling issues (ZPS-)
 
-3.2.2:   Fixed ILO and WBEM modeler plugins to better handle empty results:   Updated list of recognized XML status strings
+**3.2.2**
+-   Fixed ILO and WBEM modeler plugins to better handle empty results
+-   Updated list of recognized XML status strings
 
-3.2.1:   Updated ILO Protocol handler to address SSL certificate validation
-    issue while preserving HTTP/1.1 compliance:   Updated XML parser to better handle invalid XML output:   Fix bad threshold datasource reference in HPArrayController template:   Corrected type of cycletime parameter:   Ensure all SNMP templates available to /Devices/Server/HP/ILO/SMNP
+**3.2.1**
+-   Updated ILO Protocol handler to address SSL certificate validation
+    issue while preserving HTTP/1.1 compliance
+-   Updated XML parser to better handle invalid XML output
+-   Fix bad threshold datasource reference in HPArrayController template
+-  Corrected type of cycletime parameter
+-   Ensure all SNMP templates available to /Devices/Server/HP/ILO/SMNP
 
-3.2.0:   Added "HP Chassis List" and "HP Device Bay List" reports (ported
-    from HPBladeChassis community ZP):   Update Impact documentation (ZEN-25324):   Added "zILOCollectSamples" zProperty (raw modeler output storage):   Updated zProperties (removed zProperty zILOSSLPort, replace with
-    zILOUsesSSL and zILOPort):   Adjust component labels and titles for DynamicView (ZEN-25248):   Add ResetClassRelations migrate script (ZEN-25281):   Sensible thresholds for Temperature graphs (ZEN-25260):   More informative event logging (ZEN-24270):   Ensure that ILODatasource, HPStatusThreshold, and GUI use shared
-    reference data:   Updated graph datapoints and templates (ZEN-24886):   Improved datasource/datapoint access methdos for status string
-    retrieval (ZEN-24277):   Fix traceback during WBEM modeling (ZEN-24786):   updated and new unit testing to handle ILO datasource/modeler
-    testing (ZEN-24810):   Revised and simplified all string-to-integer status mapping code:   Added new ILOProtocolHandler ILO client (ZEN-25277):   Added new ILOXMLParser for shared access to ILO output:   Added cross-reference functions to HPDevice and HPChassis (get_ilo,
-    get_cpus, get_mem):   Revised shared component attributes for consistency:   Remove/migrate code from utils.py and ErrorHandler.py:   Added ManagedObject base to contine shared component code:   deprecate ILO2 support (ZEN-22388):   Rewrite of all modeler plugins:   Added HPPluginBase, HPSnmpPlugin to contain shared plugin code:   Prevent premature data collection termination (ZEN-24277):   Add support for RAID controller monitoring via SNMP and ILO
-    (ZEN-24211, ZEN-23388):   Fix HPStatusThreshold issue causing data collection to stop
-    (ZEN-23040):   Improved handling of components with blank id (ZEN-22872, ZEN-22851,
+**3.2.0**
+-   Added "HP Chassis List" and "HP Device Bay List" reports (ported
+    from HPBladeChassis community ZP)
+-   Update Impact documentation (ZEN-25324)
+-   Added "zILOCollectSamples" zProperty (raw modeler output storage)
+-   Updated zProperties (removed zProperty zILOSSLPort, replace with zILOUsesSSL and zILOPort)
+-   Adjust component labels and titles for DynamicView (ZEN-25248):   Add ResetClassRelations migrate script (ZEN-25281)
+-   Sensible thresholds for Temperature graphs (ZEN-25260)
+-   More informative event logging (ZEN-24270)
+-   Ensure that ILODatasource, HPStatusThreshold, and GUI use shared
+    reference data
+-   Updated graph datapoints and templates (ZEN-24886)
+-   Improved datasource/datapoint access methdos for status string retrieval (ZEN-24277)
+-   Fix traceback during WBEM modeling (ZEN-24786)
+   updated and new unit testing to handle ILO datasource/modeler
+    testing (ZEN-24810)
+-   Revised and simplified all string-to-integer status mapping code
+-   Added new ILOProtocolHandler ILO client (ZEN-25277)
+-   Added new ILOXMLParser for shared access to ILO output
+-   Added cross-reference functions to HPDevice and HPChassis (get_ilo,
+    get_cpus, get_mem)
+-   Revised shared component attributes for consistency
+-   Remove/migrate code from utils.py and ErrorHandler.py
+-   Added ManagedObject base to contine shared component code
+-   deprecate ILO2 support (ZEN-22388)
+-   Rewrite of all modeler plugins
+-   Added HPPluginBase, HPSnmpPlugin to contain shared plugin code
+-   Prevent premature data collection termination (ZEN-24277)
+-   Add support for RAID controller monitoring via SNMP and ILO
+    (ZEN-24211, ZEN-23388)
+-   Fix HPStatusThreshold issue causing data collection to stop
+    (ZEN-23040)
+-   Improved handling of components with blank id (ZEN-22872, ZEN-22851,
     ZEN-21680)
 
-3.1.1:   Updated zenpacklib.py to address modeler timeouts from
+**3.1.1**
+- Updated zenpacklib.py to address modeler timeouts from
     attribute-indexed components
 
-3.1.0:   Numerous enhancements and bugfixes
+**3.1.0**
+-   Numerous enhancements and bugfixes
 
-3.0.2:   Fixes ZEN-18151. HP.wbem.HPWBEMPlugin modeling traceback on
+**3.0.2**
+-   Fixes ZEN-18151. HP.wbem.HPWBEMPlugin modeling traceback on
     tempStatus()
 
-3.0.1:   Standardized commonly used code for converting RRD status to
-    formatted string:   Standardized most component properties to those common between
-    collection methods (some still outstanding):   Standardized common datasource/datapoint names throughout templates:   Simplified customized classes to reduce duplication of function:   Removed duplicate property definitions with similar names but
-    identical values:   Removed most component properties that should have been performance
-    or status datasources:   Standardized unit testing for modeler plugins and class loading:   Folded deviceMap modeler plugins into component modeler plugins,
-    removed device map plugins:   Added ZenPack class to remove all RRD templates upon ZP uninstall:   Changed Fan Speed to display status string (only ILO shows actual
-    speed):   SNMP modeler plugins are now appropriate for use wherever SNMP is
-    supported:   Deprecated HPOSHypervisor and HPThermalSubsystem components:   Removed COMMAND datasource from HPLogicalDrive (used snmpindex_dct
-    instead):   Added ILO datasource queries for HPChassis, HPProcessor,
+**3.0.1**
+-   Standardized commonly used code for converting RRD status to
+    formatted string
+-   Standardized most component properties to those common between
+    collection methods (some still outstanding)
+-   Standardized common datasource/datapoint names throughout templates
+-   Simplified customized classes to reduce duplication of function
+-   Removed duplicate property definitions with similar names but
+    identical values
+-   Removed most component properties that should have been performance
+    or status datasources
+-   Standardized unit testing for modeler plugins and class loading
+-   Folded deviceMap modeler plugins into component modeler plugins,
+    removed device map plugins
+-   Added ZenPack class to remove all RRD templates upon ZP uninstall
+-   Changed Fan Speed to display status string (only ILO shows actual
+    speed)
+-   SNMP modeler plugins are now appropriate for use wherever SNMP is
+    supported
+-   Deprecated HPOSHypervisor and HPThermalSubsystem components
+-   Removed COMMAND datasource from HPLogicalDrive (used snmpindex_dct
+    instead)
+-   Added ILO datasource queries for HPChassis, HPProcessor,
     HPManagementController, HPNetworkInterfaceController, and updated
-    ILODatasource to accommodate:   Added "perfID" to ILO HPTemperature components to correct some
-    missing datapoints:   Updated migrate methods to remove all templates before re-adding
-    from YAML:   Removed "uptime" metric from HPSystemBoard since it duplicates the
-    Device sysUptime datapoint:   Added several status indicators to HPManagementController component
-    (SNMP):   Re-based SNMP Device templates on /Server/Linux to ensure
+    ILODatasource to accommodate
+-   Added "perfID" to ILO HPTemperature components to correct some
+    missing datapoints
+-   Updated migrate methods to remove all templates before re-adding
+    from YAML
+-   Removed "uptime" metric from HPSystemBoard since it duplicates the
+    Device sysUptime datapoint
+-   Added several status indicators to HPManagementController component
+    (SNMP)
+-   Re-based SNMP Device templates on /Server/Linux to ensure
     consistency
 
-3.0.0:   Major rewrite of significant sections of the zenpack to use
+**3.0.0**
+
+-   Major rewrite of significant sections of the zenpack to use
     zenpacklib and remove obvious defects.
 
-1.0.0:   Initial release.
+**1.0.0**
 
-## Attachments:
-
--   [array-controller-graphs-esx.PNG](img/zenpack-array-controller-graphs-esx.png)
--   [dynamic-view-chassis.PNG](img/zenpack-dynamic-view-chassis.png)
--   [enclosure-device-status.PNG](img/zenpack-enclosure-device-status.png)
--   [enclosure-onboard-admin.PNG](img/zenpack-enclosure-onboard-admin.png)
--   [esx-device-status.PNG](img/zenpack-esx-device-status.png)
--   [esx-fc-port.PNG](img/zenpack-esx-fc-port.png)
--   [esx-raid-controller.PNG](img/zenpack-esx-raid-controller.png)
--   [esx-temp-sensor.PNG](img/zenpack-esx-temp-sensor.png)
--   [fc-port-component-errors-graph.PNG](img/zenpack-fc-port-component-errors-graph.png)
--   [fc-port-ilo-snmp-status.PNG](img/zenpack-fc-port-ilo-snmp-status.png)
--   [fc-ports-component-graphs.PNG](img/zenpack-fc-ports-component-graphs.png)
--   [fc-ports-details.PNG](img/zenpack-fc-ports-details.png)
--   [fc-ports.PNG](img/zenpack-fc-ports.png)
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
--   [ilo-device-status.PNG](img/zenpack-ilo-device-status.png)
--   [impact-graph-small.PNG](img/zenpack-impact-graph-small.png)
--   [impact.png](img/zenpack-impact.png)
--   [model.png](img/zenpack-model.png)
--   [network-iface-stats-esx.PNG](img/zenpack-network-iface-stats-esx.png)
--   [new-icons.PNG](img/zenpack-new-icons.png)
--   [phys-drive-graphs-esx.PNG](img/zenpack-phys-drive-graphs-esx.png)
--   [proliant-server-graph.PNG](img/zenpack-proliant-server-graph.png)
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
--   [network-iface-stats-esx.PNG](img/zenpack-network-iface-stats-esx.png)
--   [enclosure-temp-sensor.PNG](img/zenpack-enclosure-temp-sensor.png)
--   [array-controller-graphs-esx.PNG](img/zenpack-array-controller-graphs-esx.png)
--   [dynamic-view-chassis.PNG](img/zenpack-dynamic-view-chassis.png)
--   [enclosure-device-status.PNG](img/zenpack-enclosure-device-status.png)
--   [enclosure-onboard-admin.PNG](img/zenpack-enclosure-onboard-admin.png)
--   [enclosure-temp-sensor.PNG](img/zenpack-enclosure-temp-sensor.png)
--   [esx-fc-port.PNG](img/zenpack-esx-fc-port.png)
--   [esx-raid-controller.PNG](img/zenpack-esx-raid-controller.png)
--   [fc-port-component-errors-graph.PNG](img/zenpack-fc-port-component-errors-graph.png)
--   [fc-port-ilo-snmp-status.PNG](img/zenpack-fc-port-ilo-snmp-status.png)
--   [fc-ports-component-graphs.PNG](img/zenpack-fc-ports-component-graphs.png)
--   [fc-ports-details.PNG](img/zenpack-fc-ports-details.png)
--   [fc-ports.PNG](img/zenpack-fc-ports.png)
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
--   [ilo-device-status.PNG](img/zenpack-ilo-device-status.png)
--   [impact-graph-small.PNG](img/zenpack-impact-graph-small.png)
--   [impact.png](img/zenpack-impact.png)
--   [model.png](img/zenpack-model.png)
--   [network-iface-stats-esx.PNG](img/zenpack-network-iface-stats-esx.png)
--   [phys-drive-graphs-esx.PNG](img/zenpack-phys-drive-graphs-esx.png)
--   [proliant-server-graph.PNG](img/zenpack-proliant-server-graph.png)
--   [esx-device-status.PNG](img/zenpack-esx-device-status.png)
--   [new-icons.PNG](img/zenpack-new-icons.png)
--   [array-controller-graphs-esx.PNG](img/zenpack-array-controller-graphs-esx.png)
--   [esx-temp-sensor.PNG](img/zenpack-esx-temp-sensor.png)
--   [fc-ports-details.PNG](img/zenpack-fc-ports-details.png)
--   [fc-ports-component-graphs.PNG](img/zenpack-fc-ports-component-graphs.png)
-
+-   Initial release.

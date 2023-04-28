@@ -1,7 +1,5 @@
 # WBEM
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## WBEM ZenPack
 
 Adds a *WBEM* data source type and a *WBEMPlugin* base modeler plugin.
@@ -22,21 +20,6 @@ Version 2.1.0- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenos
 Version 2.0.1- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.WBEM/2.0.1/ZenPacks.zenoss.WBEM-2.0.1.egg){.external-link}:   Released on 2018/05/15:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss 4.2.5 - 6.2
 
 Version 1.0.3- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.WBEM/1.0.3/ZenPacks.zenoss.WBEM-1.0.3.egg){.external-link}:   Released on 2015/09/11:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss 4.2.5 - 5.3
-
-## Contents
-
--   [WBEM ZenPack](#wbem-zenpack)
-    -   [Support](#support)
-    -   [Releases](#releases)
-    -   [Background](#background)
-    -   [Installed Items](#installed-items)
-    -   [Configuration Options](#configuration-options)
-    -   [WBEM Data Source Type](#wbem-datasource-type)
-    -   [WBEMPlugin Modeler Plugin Base Class](#wbem-plugin-modeler-plugin-base-class)
-    -   [Troubleshooting](#troubleshooting)
-        -   [WBEM Device Modeling or Monitoring never completes](#wbem-device-modeling-or-monitoring-never-completes)
-        -   [No data for components with same identifiers](#no-data-for-components-with-same-identifiers)
-    -   [Changes](#changes)
 
 ## Background
 
@@ -188,7 +171,7 @@ For that example it looks like:
 
 ## Changes
 
-3.0.0
+**3.0.0**
 
 -   Updated the dependencies pywbem and M2Crypto.  Prior version of the
     pywbem library exclusively made use of SSLv2, (a deprecated,
@@ -198,7 +181,7 @@ For that example it looks like:
     library, (pywbemz-0.14.3.tar.gz,) is included with this release.
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1
 
-2.1.0
+**2.1.0**
 
 -   Use non-blocking IO for collection (ZPS-4376)
 -   Add labels and descriptions for WBEM configuration properties
@@ -206,14 +189,14 @@ For that example it looks like:
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1, Zenoss
     Resource Manager 5.3.3
 
-2.0.1
+**2.0.1**
 
 -   Add possibility to check monitoring data by multiple fields
     (ZPS-2817)
 -   Tested with Zenoss Resource Manager 6.1.2, Zenoss Resource Manager
     5.3.3
 
-2.0.0
+**2.0.0**
 
 -   Add optional pull instance operations during modeling (ZPS-2450)
 -   Add optional pull instance operations during monitoring (ZPS-2533)
@@ -222,21 +205,13 @@ For that example it looks like:
     6.1.0, Zenoss Resource Manager 5.3.3, Zenoss Resource Manager 4.2.5
     RPS 743 and Service Impact 5.2.3
 
-|                                      |                                                                                                                                                                                                                                                                                                                                                                   |
-|:-------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | **ZenPack Classification**           |                                                                                                                                                                                                                                                                                                                                                                   |
+|:-------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Open Source**                      | This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to request more information regarding this or any other ZenPacks. [Click here](https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1091){.external-link} to view all available Zenoss Open Source ZenPacks. |
 | **Organization**                     | Zenoss, Inc.                                                                                                                                                                                                                                                                                                                                                      |
 | **License**                          | GNU General Public License, Version 2, or later                                                                                                                                                                                                                                                                                                                   |
 | **Name**                             | ZenPacks.zenoss.WBEM                                                                                                                                                                                                                                                                                                                                              |
 | **More Information**                 | [GitHub page/HomePage](https://github.com/zenoss/ZenPacks.zenoss.OpenStack){.external-link}                                                                                                                                                                                                                                                                       |
 | **Git Sources (For Cloning)**        | [Link](https://github.com/zenoss/ZenPacks.zenoss.WBEM.git){.external-link}                                                                                                                                                                                                                                                                                        |
-| **Applications / Systems Monitored** | Applications / Systems that support WBEM standard                                                                                                                                                                                                                                                                                                                 |
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-
+| **Applications / Systems Monitored** | Applications / Systems that support WBEM standard                                                                                                                                                                                           

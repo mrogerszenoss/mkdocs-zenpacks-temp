@@ -1,32 +1,9 @@
 # Microsoft Windows
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 <table>
 <tbody>
 <tr markdown="1">
 <th>This ZenPack is developed and supported by Zenoss Inc. <a href="https://tryit.zenoss.com/zenpack-contact/" class="external-link">Contact Zenoss</a> to request more information regarding this or any other ZenPacks. <a href="https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1091" class="external-link">Click here</a> to view all available Zenoss Open Source ZenPacks.</th>
-<th><br />
-</th>
-<th><br />
-</th>
-</tr>
-
-<tr markdown="1">
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr markdown="1">
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
 </tr>
 </tbody>
 </table>
@@ -73,140 +50,6 @@ Microsoft Exchange
 
 Monitoring for Microsoft Windows Devices.
 
-## Contents
-
-[1 Microsoft Windows ZenPack](#microsoft-windows-zenpack)
-
-[1.1 Background](#background)
-
-[1.2 Releases](#releases)
-
-[1.3 Video](#video)
-
-[1.4 Features](#features)
-
-[1.4.1 Discovery](#discovery)
-
-[1.4.2 Performance Monitoring](#performance-monitoring)
-
-[1.5 Thresholds](#thresholds)
-
-[1.6 Event Management](#event-management)
-
-[1.6.1 Usage](#usage)
-
-[1.6.1 Custom Event Views](#custom-event-views)
-
-[1.6.2 Powershell Examples](#powershell-examples)
-
-[1.6.3 LogAlways Warning](#log-always-warning)
-
-[1.6.3.1 For servers with pre-3.5 .NET installed](#35net-installed)
-
-[1.6.3.2 Changing Event Severity](#changing-event-severity)
-
-[1.6.1 Custom Commands](#custom-commands)
-
-[1.6.1.1 Example usage](#example-usage)
-
-[1.6.1.1.1 Script with TALES expression](#script-with-tales-expression)
-
-[1.6.1.1.2 Using a custom parser](#usinga-custom-parser)
-
-[1.6.1.1.3 Powershell Scripting using Auto parser](#powershell-scripting-using-autoparser)
-
-[1.6.2 Configuring Service Monitoring](#configuring-service-monitoring)
-
-[1.6.2.1 Manually Enable or disable monitoring for a single service on a single server.](#manually-enable-or-disable-monitoring-for-a-single-service-on-a-single-server)
-
-[1.6.2.2 Enable monitoring by default for the WinRM service wherever it is enabled.](#enable-monitoring-by-default-for-the-winrm-service-wherever-it-is-enabled)
-
-[1.6.2.3 Enable/Disable monitoring by default for the WinRM service for a select group of servers.](#MicrosoftWindows-Enable/DisablemonitoringbydefaultfortheWinRMserviceforaselectgroupofservers.)
-
-1.6.2.4 Enable monitoring of all services
-with a start mode of 'Auto'.
-
-[1.6.2.5 Create an organizer to monitor auto start SQL Server services.](#create-an-organizer-to-monitor-auto-start-sqlserver-services)
-
-[1.6.2.6 The order of precedence for monitoring a service](#the-order-of-precedence-for-monitoring-a-service)
-
-[1.6.3 DCDiag](#dcdiag)
-
-[1.6.4 PortCheck](#port-check)
-
-[1.6.5 WinRM Ping](#winrm-ping)
-
-[1.7 Collector Daemons](#collector-daemons)
-
-[1.8 Requirements](#requirements)
-
-[1.8.1 Installing Kerberos Dependency](#installing-kerberos-dependency)
-
-[1.9 Usage](#usage-1)
-
-[1.9.1 Monitoring User Account](#monitoring-user-account)
-
-[1.9.1 Port Requirements](#port-requirements)
-
-[1.9.2 Adding a Windows Device](#adding-a-windows-device)
-
-[1.9.3 Adding a Cluster Device](#MicrosoftWindows-AddingaCluster%C2%A0Device)
-
-[1.9.4 Configuration Options](#configuration-options)
-
-[1.9.5 Configuring MSSQL Server Modeling/Monitoring](#MicrosoftWindows-ConfiguringMSSQLServerModeling/Monitoring)
-
-1.9.5.1 Support for SQL Server and
-Windows Authentication:
-
-1.9.5.2 Support for Local and Failover
-Cluster SQL instances:
-
-[1.9.5.3 SQL Server Monitoring](#sqlserver-monitoring)
-
-[1.9.6 Working with WinCommand Notification Action](#working-with-win-command-notification-action)
-
-[1.10 Setting up WinRM Service for Target Windows Machines](#setting-up-winrm-service-for-target-windows-machines)
-
-[1.10.1 Group Policy](#group-policy)
-
-[1.10.2 Individual Machine configuration](#individual-machine-configuration)
-
-[1.11 Transitioning from WindowsMonitor](#transitioning-from-windows-monitor)
-
-[1.12 Limitations of Current Release](#limitations-of-current-release)
-
-[1.12.1 Kerberos Tickets](#kerberos-tickets)
-
-[1.13 Service Impact](#service-impact)
-
-[1.13.1 Service Impact Relationships](#service-impact-relationships)
-
-[1.14 Troubleshooting](#troubleshooting)
-
-[1.14.1 Troubleshooting Windows](#troubleshooting-windows)
-
-[1.14.2 Troubleshooting Kerberos Error Messages](#troubleshooting-kerberos-error-messages)
-
-[1.14.3 Troubleshooting Kerberos Authentication with Wireshark](#troubleshooting-kerberos-authentication-with-wireshark)
-
-[1.14.4 Troubleshooting Services](#troubleshooting-services)
-
-[1.14.5 Troubleshooting monitoring](#troubleshooting-monitoring)
-
-[1.14.6 Troubleshooting modeling/monitoring](#MicrosoftWindows-Troubleshootingmodeling/monitoring)
-
-[1.14.7 Troubleshooting Perfmon Collection](#troubleshooting-perfmon-collection)
-
-[1.14.8 Troubleshooting MSSQL Modeling/Monitoring](#MicrosoftWindows-TroubleshootingMSSQLModeling/Monitoring)
-
-[1.15 Zenoss Analytics](#zenoss-analytics)
-
-[1.15.1 Domains](#domains)
-
-[1.16 Installed Items](#installed-items)
-
-[1.17 Changes](#changes)
 
 ## Background
 
@@ -2178,7 +2021,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 
 ## Changes
 
-3.0.2
+**3.0.2**
 
 -   Add zWinDBStateMonitoringIgnore configuration property to disable
     monitoring of MS SQL databases in specified statuses (ZPS-7867)
@@ -2190,14 +2033,14 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     to model services with generic Windows Service class. (ZPS-8115)
 -   Tested with Zenoss Cloud, Zenoss 6.6.0 and Service Impact 5.5.5
 
-3.0.1
+**3.0.1**
 
 -   Fix numerous WinRM connections spawn (ZPS-7726)
 -   Document a new case for zWinRMEnvelopeSize property (ZPS-7787)
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, Zenoss 6.5.0 and Service
     Impact 5.5.3
 
-3.0.0
+**3.0.0**
 
 -   Add MS SQL Always On Availability Groups (ZPS-7363)
 -   Add MS SQL Always On Availability Group Replica component (ZPS-7370)
@@ -2225,7 +2068,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, Zenoss 6.5.0, Analytics and
     Service Impact 5.5.3
 
-2.9.5
+**2.9.5**
 
 -   Add zWinServicesModeled and zWinServicesNotModeled properties to
     control Services component (ZPS-7220)
@@ -2238,7 +2081,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Cloud, Zenoss 6.5.0, Zenoss 6.4.1 and Service
     Impact 5.5.3
 
-2.9.4
+**2.9.4**
 
 -   Fix Traceback seen for zenoss.winrm.Processes modeler plugin
     (ZPS-5676)
@@ -2264,7 +2107,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.3.2 and Service
     Impact 5.5.0.
 
-2.9.3
+**2.9.3**
 
 -   Fix deprecated Get-WmiObject cmdlet for PowerShell Core (ZPS-4927)
 -   Fix Windows Perfmon data collection stops for long time after device
@@ -2304,12 +2147,12 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.3.2 and Service
     Impact 5.3.4.
 
-2.9.2
+**2.9.2**
 
 -   Fix applyDataMaps call for onSuccess method destabilizing zenhub
     (ZPS-4422)
 
-2.9.1
+**2.9.1**
 
 -   Fix Misleading Error when parsing MSSQL status datasource on
     different cycle than other database datasources (ZPS-3194)
@@ -2354,7 +2197,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     Resource Manager 5.3.3, Zenoss Resource Manager 4.2.5 RPS 743 and
     Service Impact 5.3.1
 
-2.9.0
+**2.9.0**
 
 -   Fix Windows - IIS 7 or higher may show Unknown site status
     (ZPS-2728)
@@ -2386,7 +2229,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Resource Manager 5.3.3, 6.1.0, and 6.1.1, Zenoss
     Resource Manager 4.2.5 RPS 743 and Service Impact 5.2.3
 
-2.8.3
+**2.8.3**
 
 -   Fix Components moving between hosts on a cluster get events as they
     disappear. (ZPS-2134)
@@ -2404,7 +2247,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Resource Manager 5.3.3 and 6.0.1, Zenoss Resource
     Manager 4.2.5 RPS 743 and Service Impact 5.2.2
 
-2.8.2
+**2.8.2**
 
 -   Fix Microsoft Windows fails to model 2008 Server Cluster Disks
     (ZPS-2015)
@@ -2423,7 +2266,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Resource Manager 5.3.2, Zenoss Resource Manager
     4.2.5 RPS 743 and Service Impact 5.2.2
 
-2.8.1
+**2.8.1**
 
 -   Fix "Error in zenoss.winrm.WinMSSQL: too many values to unpack"
     (ZPS-2206)
@@ -2449,7 +2292,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Resource Manager 5.3.2, Zenoss Resource Manager
     4.2.5 RPS 743 and Service Impact 5.2.2
 
-2.8.0
+**2.8.0**
 
 -   Added SQL Server instance performance counters
 -   Added Application Pool Status check for IIS Application Pools
@@ -2496,7 +2339,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Tested with Zenoss Resource Manager 5.3.1, Zenoss Resource Manager
     4.2.5 RPS 743 and Service Impact 5.1.7
 
-2.7.8
+**2.7.8**
 
 -   Fix HardDisks with a size of 'None' cause unhandled exceptions in
     modeling (ZPS-1424)
@@ -2514,15 +2357,15 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Microsoft Windows - Cluster MSSQL server is at 100% CPU
     utilization (ZPS-1697)
 
-2.7.7
+**2.7.7**
 
 -   Fix redundant publishing of service state datapoints (ZPS-1604)
 
-2.7.6
+**2.7.6**
 
 -   Fix traceback during modeling (ZPS-1599)
 
-2.7.5
+**2.7.5**
 
 -   Fix Windows ZP uses a lot of RAM when it contains hundreds of
     components due to checking for IIS (ZPS-1576)
@@ -2536,7 +2379,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Microsoft Windows: Migrate script takes long time to run, no
     feedback (ZPS-1473)
 
-2.7.2
+**2.7.2**
 
 -   Fix WinRS: Failed collection local variable 'databasename'
     referenced before assignment on a.device.title (ZPS-1271)
@@ -2547,7 +2390,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Microsoft Windows: v2.7.x shows errors in zenrelationscan,
     zenchkrels (ZPS-1442)
 
-2.7.1
+**2.7.1**
 
 -   Fix Microsoft Windows: Honor template severity for MS SQL Instance
     events (ZPS-1323)
@@ -2566,7 +2409,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Windows 2.7.0 WinService migrate script only updates template
     bound at /Server/Microsoft (ZPS-1280)
 
-2.7.0
+**2.7.0**
 
 -   Added support for Hard Disk association with storage servers
 -   Added Session Management to lower number of connections to Windows
@@ -2593,30 +2436,30 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Long MSSQL Database names aren't parsed correctly because they
     exceed the powershell shell width (ZPS-944)
 
-2.6.12
+**2.6.12**
 
 -   Fix ZenPack throws traceback when non windows data source is added
     (ZPS-661)
 
-2.6.11
+**2.6.11**
 
 -   Fix Monitoring of SQL Instances results in a UUID error (ZPS-453)
 -   Added additional event classes and handlers for Kerberos failures
     (ZEN-25700)
 
-2.6.9
+**2.6.9**
 
 -   Added Auth event clears, getPingStatus includes /Status/Ping event
     class (ZEN-25700)
 -   Fix Windows Shell Datasources are sending datamaps and bogging down
     ZenHub (ZEN-26226)
 
-2.6.7
+**2.6.7**
 
 -   Fix TypeError during zenpython collection of a ShellDataSource
     (ZEN-25978)
 
-2.6.6
+**2.6.6**
 
 -   Added additional event classes to cover connection errors
     (ZEN-25700)
@@ -2628,11 +2471,11 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Auto Creation of Windows Cluster Device doesn't copy over
     zWinKDC property (ZEN-25564)
 
-2.6.5
+**2.6.5**
 
 -   Fix missing Process Set process title (ZEN-25311)
 
-2.6.4
+**2.6.4**
 
 -   Fix Windows ZenPack incorrectly assumes that the first database
     returned is the master when modeling databases, backups, and jobs
@@ -2640,7 +2483,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix WinRM ZenPack - WinService components disabled at template still
     show "Monitored" in component view (ZEN-24528)
 
-2.6.3
+**2.6.3**
 
 -   Fix potential "clusternetworks" and "clusternodes" errors after
     upgrading (ZEN-24401)
@@ -2648,14 +2491,14 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     update (ZEN-24347)
 -   Fix duplicated "Interfaces" components after upgrade (ZEN-24401)
 
-2.6.2
+**2.6.2**
 
 -   Fix WinRM ZenPack - Windows Services page elections conflict with
     WinService template exclusions (ZEN-24165)
 -   Fix Modifying the WinService template causes parallel reindexing of
     the same components (ZEN-24375)
 
-2.6.1
+**2.6.1**
 
 -   Fix Microsoft Windows ZenPack doesn't work with HyperV pack
     (ZEN-23967)
@@ -2664,7 +2507,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Editing a Windows Service (WinService) Locks Up Zope and Times
     Out (ZEN-23827)
 
-2.6.0
+**2.6.0**
 
 -   Enabled the use of the Infrastructure -&gt; Windows Services page
 -   Enabled domain authentication without the need for DNS
@@ -2697,18 +2540,18 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Copy Override of Windows template breaks EventLogDataSource
     query attribute (ZEN-23157)
 
-2.5.13
+**2.5.13**
 
 -   Fix Active Directory not correctly detected (ZEN-23137)
 
-2.5.12
+**2.5.12**
 
 -   Fix Windows EvenLog Datasource causes CPU 100% utilization
     (ZEN-20232)
 -   Fix Windows Zenpack is improperly setting the Active Directory
     Template (ZEN-22369)
 
-2.5.11
+**2.5.11**
 
 -   Fix MSSQL Monitoring (ZEN-22476)
 -   Document Microsoft Windows: High CPU usage when modeling domain
@@ -2719,25 +2562,25 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     many open files. (ZEN-22558)
 -   Fix /Status/WinRM/Ping Event Class does not exist (ZEN-22407)
 
-2.5.10
+**2.5.10**
 
 -   Fix Microsoft Windows Cluster datasources are sending datamaps too
     often and bogging down zenhub (ZEN-22345)
 
-2.5.9
+**2.5.9**
 
 -   Fix Windows Team NIC Monitoring/Modeling Failure (ZEN-19588)
 
-2.5.8
+**2.5.8**
 
 -   Fix ShellDataSource custom command does not send severity to custom
     parsers (ZEN-21928)
 
-2.5.7
+**2.5.7**
 
 -   Fix Windows traceback during zenpack install (ZEN-21899)
 
-2.5.6
+**2.5.6**
 
 -   Fix MicrosoftWindows - warning is generated if $$ is used in command
     datasource. (ZEN-20221)
@@ -2746,7 +2589,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Disabled WinRMService templates continue to event after
     disabling (ZEN-21603)
 
-2.5.5
+**2.5.5**
 
 -   Fix WinRM Modeling Software Breaks if Installed Software Ends in
     Underscores(ZEN-20375)
@@ -2758,7 +2601,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     collection (ZEN-21396)
 -   Fix WinRM Polling causing partial Event Creation (ZEN-18757)
 
-2.5.4
+**2.5.4**
 
 -   Fix Windows Service monitoring improvements
 -   Fix WinRM Ping DataSource marks ping up devices down and stops all
@@ -2766,17 +2609,17 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix WinCommand notification fails to run on WinRM ZP 2.5.1, 2.5.3
     (ZEN-21272)
 
-2.5.3
+**2.5.3**
 
 -   Fix Microsoft Windows - modeling cluster results in traceback error
     (ZEN-21242)
 
-2.5.2
+**2.5.2**
 
 -   Fix IIS Site Failed connection when monitoring Windows Server 2012
     with IIS 8.5 (ZEN-21029)
 
-2.5.1
+**2.5.1**
 
 -   Fix MicrosoftWindows - Unbound Cluster Error when modeling cluster
     (ZEN-20931)
@@ -2784,7 +2627,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     processes (ZEN-20932)
 -   Fix MicrosoftWindows - Documentation typo mistakes (ZEN-20940)
 
-2.5.0
+**2.5.0**
 
 -   Windows Service monitoring improvements
 -   Added State column for MSSQL Databases
@@ -2830,25 +2673,25 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Microsoft Windows - Windows cluster fails modeling for Task
     Scheduler traceback (ZEN-20438)
 
-2.4.9
+**2.4.9**
 
 -   Fix Windows ZenPack - Cluster device does not add cluster nodes as
     devices on model (ZEN-19085)
 -   Fix WinService - "list index out of range" error (ZEN-19452)
 
-2.4.8
+**2.4.8**
 
 -   Fix Microsoft Windows Zenpack - MSSQLSERVER service shows as down
     but received event saying db instance was down (ZEN-19323)
 
-2.4.7
+**2.4.7**
 
 -   Fix Microsoft Windows ZenPack - no data returned for databases in
     MSSQLSERVER default instance (ZEN-19282)
 -   Fix Microsoft Windows ZenPack - services are not being monitored
     (ZEN-19284)
 
-2.4.6
+**2.4.6**
 
 -   Fix Microsoft Windows ZenPack doesn't create events for MS SQL
     Jobs/Instances (ZEN-18680)
@@ -2857,7 +2700,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Microsoft Windows: DCDiag reports Access Denied during tests
     (ZEN-19188)
 
-2.4.5
+**2.4.5**
 
 -   Fix MSSQL Components Generate Clear Event When PowerShell Script
     Fails (ZEN-18234)
@@ -2869,31 +2712,31 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     (ZEN-18533)
 -   Windows 2003 will no longer be supported
 
-2.4.4
+**2.4.4**
 
 -   Fix extra points being sent into "Windows Shell" datasource parsers.
     (ZEN-18049)
 -   With the ending of support by Microsoft for Windows 2003, this is
     the last version of the ZenPack to support Windows 2003.
 
-2.4.3
+**2.4.3**
 
 -   Fix Port Checker in Microsoft Windows ZP 2.4.2 Results in Errors
     (ZEN-17893)
 
-2.4.2
+**2.4.2**
 
 -   Fix poor performance of SQL Server monitoring of large number of
     databases. (ZEN-17535)
 -   Fix poor performance of SQL Server modeling of large number of
     databases. (ZEN-17669)
 
-2.4.1
+**2.4.1**
 
 -   Fixed Data from MS Exchange monitoring template is written to
     MSExchangeIS service component (ZEN-17566)
 
-2.4.0
+**2.4.0**
 
 -   Added DCDiag tests for Active Directory monitoring
 -   Added Port checking ability for Active Directory and other
@@ -2942,7 +2785,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Cannot "View and edit details" on datasource Windows Eventlog
     (ZEN-17240)
 
-2.3.2
+**2.3.2**
 
 -   Fix traceback during Software modeling (ZEN-16224)
 -   Fix Event Log datasource ignoring max age field (ZEN-16564)
@@ -2952,28 +2795,28 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
     datasource (ZEN-16834)
 -   Fix traceback during Operating System modeling (ZEN-16799)
 
-2.3.1
+**2.3.1**
 
 -   Fix significant memory leak when using kerberos authentication.
     (ZEN-16261)
 -   Support "Wow6432Node" uninstall key for software inventory.
     (ZEN-16574)
 
-2.3.0
+**2.3.0**
 
 -   Update Windows Service monitoring template to allow for monitoring
     by start mode
 -   Fix memory leak with kerberos
 -   Fix moving device to a different class
 
-2.2.1
+**2.2.1**
 
 -   Fix Windows 2003 modeling/monitoring
 -   Add log message during install
 -   Re-authenticate through kerberos if connection is broken
 -   Small bug fixes
 
-2.2.0
+**2.2.0**
 
 -   Payload encryption over kerberos connections
 -   Updated Events to use Get-WinEvent cmdlet
@@ -2983,18 +2826,18 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Support for Zenoss Analytics
 -   Numerous bug fixes
 
-2.1.3
+**2.1.3**
 
 -   Zenoss 5 compatibility fixes.
 
-2.1.2
+**2.1.2**
 
 -   Added WinCommand notification action
 -   Support for monitoring fail-over clustered MSSQL instances
 -   Support for monitoring Windows event logs
 -   Numerous bug fixes
 
-2.1.0
+**2.1.0**
 
 -   Support for Service Impact
 -   Support for Microsoft Exchange 2010 and Microsoft Exchange 2013
@@ -3004,7 +2847,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix cluster and node relationship
 -   Fix virtual network adapter monitoring
 
-2.0.3
+**2.0.3**
 
 -   Reduce possibility of gaps in perfmon collection.
     [ZEN-10600](https://jira.zenoss.com/browse/ZEN-10600){.external-link}
@@ -3031,11 +2874,11 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Fix Windows Shell collection on empty results.
 -   Fix Windows Perfmon collection with cycletime &gt; 600.
 
-2.0.2
+**2.0.2**
 
 -   Fix build issue that made ZenPack unavailable from catalog.
 
-2.0.1
+**2.0.1**
 
 -   Eliminate need for manual kerberos configuration on Enterprise
     Linux 5.
@@ -3045,53 +2888,7 @@ Monitoring Templates:   Device (in /Server/Microsoft):   FileSystem (in /Server/
 -   Provide more helpful error if AllowUnencrypted is disabled.
     [ZEN-9524](https://jira.zenoss.com/browse/ZEN-9524){.external-link}
 
-2.0.0
+**2.0.0**
 
 -   Initial release of new Windows support using WinRM instead of
     DCOM/RPC.
-
-## Attachments:
-
--   [CustomViewOptions.png](img/zenpack-customviewoptions.png)
--   [CustomViewXML.png](img/zenpack-customviewxml.png)
--   [EventDatasourceXML.png](img/zenpack-eventdatasourcexml.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Windows_database.png](img/zenpack-windows_database.png)
--   [Windows_device2.png](img/zenpack-windows_device2.png)
--   [Windows_filesystem2.png](img/zenpack-windows_filesystem2.png)
--   [Windows_graphs2.png](img/zenpack-windows_graphs2.png)
--   [Windows_harddisk.png](img/zenpack-windows_harddisk.png)
--   [Windows_interfaces2.png](img/zenpack-windows_interfaces2.png)
--   [Windows_processes.png](img/zenpack-windows_processes.png)
--   [Windows_services2.png](img/zenpack-windows_services2.png)
--   [windows-kerberos-wireshark.png](img/zenpack-windows-kerberos-wireshark.png)
--   [winservice.png](img/zenpack-winservice.png)
--   [CustomViewOptions.png](img/zenpack-customviewoptions.png)
--   [CustomViewXML.png](img/zenpack-customviewxml.png)
--   [EventDatasourceXML.png](img/zenpack-eventdatasourcexml.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Windows_database.png](img/zenpack-windows_database.png)
--   [Windows_device2.png](img/zenpack-windows_device2.png)
--   [Windows_filesystem2.png](img/zenpack-windows_filesystem2.png)
--   [Windows_graphs2.png](img/zenpack-windows_graphs2.png)
--   [Windows_harddisk.png](img/zenpack-windows_harddisk.png)
--   [Windows_interfaces2.png](img/zenpack-windows_interfaces2.png)
--   [Windows_processes.png](img/zenpack-windows_processes.png)
--   [Windows_services2.png](img/zenpack-windows_services2.png)
--   [windows-kerberos-wireshark.png](img/zenpack-windows-kerberos-wireshark.png)
--   [winservice.png](img/zenpack-winservice.png)
--   [CustomViewOptions.png](img/zenpack-customviewoptions.png)
--   [EventDatasourceXML.png](img/zenpack-eventdatasourcexml.png)
--   [CustomViewXML.png](img/zenpack-customviewxml.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Windows_device2.png](img/zenpack-windows_device2.png)
--   [Windows_database.png](img/zenpack-windows_database.png)
--   [Windows_graphs2.png](img/zenpack-windows_graphs2.png)
--   [Windows_filesystem2.png](img/zenpack-windows_filesystem2.png)
--   [Windows_harddisk.png](img/zenpack-windows_harddisk.png)
--   [Windows_interfaces2.png](img/zenpack-windows_interfaces2.png)
--   [Windows_processes.png](img/zenpack-windows_processes.png)
--   [windows-kerberos-wireshark.png](img/zenpack-windows-kerberos-wireshark.png)
--   [Windows_services2.png](img/zenpack-windows_services2.png)
--   [winservice.png](img/zenpack-winservice.png)
-

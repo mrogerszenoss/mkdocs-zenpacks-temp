@@ -1,7 +1,5 @@
 # EMC.base
 
-@lb[](img/zenpack-emc-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -16,37 +14,6 @@ Zenoss, Inc.
 ### Name:
 
 ZenPacks.zenoss.EMC.base
-
-## Contents
-
--   [EMC base ZenPack](#emcbase-zenpack)
-    -   [Releases](#releases)
-    -   [Gallery](#gallery)
-    -   [Features](#features)
-    -   [EMC Prerequisites](#emc-prerequisites)
-    -   [Block Storage for VNX/VMAX](#EMC.base-BlockStorageforVNX/VMAX)
-        -   [Use of WBEM Pull Operations](#useof-wbem-pull-operations)
-        -   [Block VNX/VMAX Discovery](#EMC.base-BlockVNX/VMAXDiscovery)
-        -   [Block VNX/VMAX Performance Monitoring](#EMC.base-BlockVNX/VMAXPerformanceMonitoring)
-        -   [Block VNX/VMAX Impact Services](#EMC.base-BlockVNX/VMAXImpactServices)
-    -   [File level Storage for VNX](#file-level-storage-for-vnx)
-        -   [File VNX Discovery](#file-vnxdiscovery)
-        -   [File VNX Performance Monitoring](#file-vnxperformance-monitoring)
-        -   [File VNX Events](#file-vnxevents)
-        -   [File VNX Service Impact and Root Cause Analysis](#file-vnxservice-impact-and-root-cause-analysis)
-    -   [Zenoss Block and File Analytics](#zenoss-block-and-file-analytics)
-    -   [Installed Items](#installed-items)
-    -   [Usage](#usage)
-        -   [Configuring Block or File for Monitoring](#configuring-blockor-file-for-monitoring)
-        -   [Adding Block Storage Devices](#adding-block-storage-devices)
-        -   [Configuring status-severity mapping for components status events](#severity-mapping-for-components-status-events)
-        -   [SMI-S Provider Verification](#sprovider-verification)
-        -   [Adding File Storage Devices](#adding-file-storage-devices)
-        -   [Starting the XML API Server](#starting-the-xml-api-server)
-    -   [Troubleshooting](#troubleshooting)
-        -   [Tuning Modeling of EMC VNX and VMAX devices](#tuning-modeling-of-emcvnx-and-vmax-devices)
-        -   [VNX File Request Fault Error](#vnx-file-request-fault-error)
-    -   [Changes](#changes)
 
 ## EMC base ZenPack
 
@@ -963,7 +930,7 @@ indicate additional problems.
 
 ## Changes
 
-2.1.1
+**2.1.1**
 
 -   Compatibility with WMEB ZenPack 3.0.0
 -   Updated Storage Pool graphs to reflect collected data and remove
@@ -976,7 +943,7 @@ indicate additional problems.
     component to another (ZPS-4400)
 -   Tested with Zenoss 6.3.2, Cloud and Service Impact 5.5
 
-2.1.0
+**2.1.0**
 
 -   Add capacity thresholds for storage pools (ZPS-2693)
 -   Fix monitoring for hard disks with the same IDs which are connected
@@ -988,7 +955,7 @@ indicate additional problems.
 -   Tested with Zenoss Resource Manager 6.1.2, Zenoss Resource Manager
     5.3.3 and Service Impact 5.3.0
 
-2.0.0
+**2.0.0**
 
 -   Add new datasource type EMC
 -   Make optional use of WBEM Pull Operations (ZPS-2533)
@@ -1010,13 +977,13 @@ indicate additional problems.
     6.1.0, Zenoss Resource Manager 5.3.3, Zenoss Resource Manager 4.2.5
     RPS 743 and Service Impact 5.2.3
 
-1.2.1
+**1.2.1**
 
 -   Enable adding VNX File devices from multi-device add wizard
     (ZPS-1440)
 -   Fix &ldquo;old_data_path&rdquo; errors on Zenoss 5.2.3 and newer (ZPS-1392)
 
-1.2.0
+**1.2.0**
 
 -   Add support for File Storage via API
 -   Fix traceback KeyError: &lsquo;Serial Number&rsquo; in VMAX modeler plugin
@@ -1030,84 +997,20 @@ indicate additional problems.
     Usage&rsquo; graph after the upgrade. (ZPS-179)
 -   Fix Reports for block emc-vnx-bundle.zip in Analytics (ZPS-964)
 
-1.1.2
+**1.1.2**
 
 -   Remove dependency on CalculatedPerformance ZenPack. (ZEN-19707)
 
-1.1.1
+**1.1.1**
 
 -   Fix incorrect data device (LUN) impacts. (ZEN-21813)
 
-1.1.0
+**1.1.0**
 
 -   Add DynamicView support for EMC storage dependencies. (ZEN-19844)
 -   Fix scaling of time utilization values on LUN and hard disk graphs.
     (ZEN-20152)
 
-1.0.6
+**1.0.6**
 
 -   Removed dependency on Calculated Performance (ZEN-19707)
-
-## Attachments:
-
--   [Add_EMC_Storage_Block.png](img/zenpack-add_emc_storage_block.png)
--   [Add_EMC_Storage_dropdown.png](img/zenpack-add_emc_storage_dropdown.png)
--   [Add_EMC_Storage_File.png](img/zenpack-add_emc_storage_file.png)
--   [Block_VNX_Arrays.png](img/zenpack-block_vnx_arrays.png)
--   [Block_VNX_Batteries.png](img/zenpack-block_vnx_batteries.png)
--   [Block_VNX_DataDevices.png](img/zenpack-block_vnx_datadevices.png)
--   [Block_VNX_HardDisks.png](img/zenpack-block_vnx_harddisks.png)
--   [Block_VNX_LinkControlCards.png](img/zenpack-block_vnx_linkcontrolcards.png)
--   [Block_VNX_PowerSupplies.png](img/zenpack-block_vnx_powersupplies.png)
--   [Block_VNX_SPPorts.png](img/zenpack-block_vnx_spports.png)
--   [Block_VNX_StorageEnclosures.png](img/zenpack-block_vnx_storageenclosures.png)
--   [Block_VNX_StoragePools.png](img/zenpack-block_vnx_storagepools.png)
--   [Block_VNX_StorageProcessors.png](img/zenpack-block_vnx_storageprocessors.png)
--   [Block_VNX_yuml.png](img/zenpack-block_vnx_yuml.png)
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
--   [File_VNX_CIFSServers.png](img/zenpack-file_vnx_cifsservers.png)
--   [File_VNX_ControlStation.png](img/zenpack-file_vnx_controlstation.png)
--   [File_VNX_DataMovers.png](img/zenpack-file_vnx_datamovers.png)
--   [File_VNX_DynamicView.png](img/zenpack-file_vnx_dynamicview.png)
--   [File_VNX_Events.png](img/zenpack-file_vnx_events.png)
--   [File_VNX_FileSystems.png](img/zenpack-file_vnx_filesystems.png)
--   [File_VNX_Impact_Services.png](img/zenpack-file_vnx_impact_services.png)
--   [File_VNX_Interfaces.png](img/zenpack-file_vnx_interfaces.png)
--   [File_VNX_NFSExports.png](img/zenpack-file_vnx_nfsexports.png)
--   [File_VNX_Overview.png](img/zenpack-file_vnx_overview.png)
--   [File_VNX_Shares.png](img/zenpack-file_vnx_shares.png)
--   [File_VNX_StoragePools.png](img/zenpack-file_vnx_storagepools.png)
--   [File_VNX_Volumes.png](img/zenpack-file_vnx_volumes.png)
--   [File_VNX_yuml.png](img/zenpack-file_vnx_yuml.png)
--   [zEMCModelComponents.png](img/zenpack-zemcmodelcomponents.png)
--   [Add_EMC_Storage_Block.png](img/zenpack-add_emc_storage_block.png)
--   [Add_EMC_Storage_dropdown.png](img/zenpack-add_emc_storage_dropdown.png)
--   [Add_EMC_Storage_File.png](img/zenpack-add_emc_storage_file.png)
--   [Block_VNX_Arrays.png](img/zenpack-block_vnx_arrays.png)
--   [Block_VNX_Batteries.png](img/zenpack-block_vnx_batteries.png)
--   [Block_VNX_DataDevices.png](img/zenpack-block_vnx_datadevices.png)
--   [Block_VNX_HardDisks.png](img/zenpack-block_vnx_harddisks.png)
--   [Block_VNX_PowerSupplies.png](img/zenpack-block_vnx_powersupplies.png)
--   [Block_VNX_SPPorts.png](img/zenpack-block_vnx_spports.png)
--   [Block_VNX_StorageEnclosures.png](img/zenpack-block_vnx_storageenclosures.png)
--   [Block_VNX_StoragePools.png](img/zenpack-block_vnx_storagepools.png)
--   [Block_VNX_StorageProcessors.png](img/zenpack-block_vnx_storageprocessors.png)
--   [Block_VNX_yuml.png](img/zenpack-block_vnx_yuml.png)
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
--   [File_VNX_CIFSServers.png](img/zenpack-file_vnx_cifsservers.png)
--   [File_VNX_ControlStation.png](img/zenpack-file_vnx_controlstation.png)
--   [File_VNX_DataMovers.png](img/zenpack-file_vnx_datamovers.png)
--   [File_VNX_Events.png](img/zenpack-file_vnx_events.png)
--   [File_VNX_DynamicView.png](img/zenpack-file_vnx_dynamicview.png)
--   [File_VNX_FileSystems.png](img/zenpack-file_vnx_filesystems.png)
--   [File_VNX_Impact_Services.png](img/zenpack-file_vnx_impact_services.png)
--   [File_VNX_Interfaces.png](img/zenpack-file_vnx_interfaces.png)
--   [File_VNX_NFSExports.png](img/zenpack-file_vnx_nfsexports.png)
--   [File_VNX_Overview.png](img/zenpack-file_vnx_overview.png)
--   [File_VNX_Shares.png](img/zenpack-file_vnx_shares.png)
--   [File_VNX_StoragePools.png](img/zenpack-file_vnx_storagepools.png)
--   [File_VNX_Volumes.png](img/zenpack-file_vnx_volumes.png)
--   [File_VNX_yuml.png](img/zenpack-file_vnx_yuml.png)
--   [zEMCModelComponents.png](img/zenpack-zemcmodelcomponents.png)
--   [Block_VNX_LinkControlCards.png](img/zenpack-block_vnx_linkcontrolcards.png)
-

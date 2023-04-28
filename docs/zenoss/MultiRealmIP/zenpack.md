@@ -1,7 +1,5 @@
 # Multi-Realm IP Networks
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -173,12 +171,3 @@ devices will be returned -- one within each realm.
 -   If a device is moved between realms it must be remodeled so that its
     IPs are placed in the proper location.
 -   The Network Map only supports the display the default realm.
-
-## Attachments:
-
--   [(MultiRealmIP)Multi-RealmIPNetworks.example-multirealmIP.png](img/zenpack-multi-realmipnetworks.example-multirealmip.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [(MultiRealmIP)Multi-RealmIPNetworks.example-multirealmIP.png](img/zenpack-multi-realmipnetworks.example-multirealmip.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [(MultiRealmIP)Multi-RealmIPNetworks.example-multirealmIP.png](img/zenpack-multi-realmipnetworks.example-multirealmip.png)
-

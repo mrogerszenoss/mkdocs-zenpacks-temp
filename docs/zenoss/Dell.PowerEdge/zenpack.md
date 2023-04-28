@@ -1,7 +1,5 @@
 # Dell PowerEdge
 
-@lb[](img/zenpack-dell-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -47,45 +45,6 @@ Version 3.0.1 - [Download](https://delivery.zenoss.com/){.external-link}:   Rele
 Version 2.0.4 - [Download](https://delivery.zenoss.com/){.external-link}:   Released on 2017/11/01:   Requires [WSMAN ZenPack](http://help.zenoss.com/display/in/ZenPacks.zenoss.WSMAN "ZenPack:WSMAN"){.external-link}:   Compatible with Zenoss Resource Manager 4.2.x, Zenoss Resource
     Manager 5.x.x
 
-## Contents
-
--   [Features](#features)
--   [Discovery](#discovery)
-    -   [Dell M1000e Blade Chassis](#dell-m1000e-blade-chassis)
-    -   [Dell PowerEdge 11g, 12g, 13g, and 14g Servers](#dell-power-edge-11g-12g-13g-and-14g-servers)
-    -   [Rack and Tower Servers](#rack-and-tower-servers)
-    -   [Dell iDRAC (Dell Remote Access Controller)](#DellPowerEdge-DelliDRAC(DellRemoteAccessController))
-    -   [iDRAC7, iDRAC8, and iDRAC9 Controllers](#idrac7-idrac8-and-idrac9-controllers)
--   [Performance Monitoring](#performance-monitoring)
--   [Event Management](#event-management)
--   [Installed Items](#installed-items)
-    -   Configuration Properties:
-    -   [Device Classes](#device-classes)
-    -   [Event Classes](#event-classes)
-    -   [Event Mappings](#event-mappings)
-    -   [Event Plugins](#event-plugins)
-    -   [Event Transforms](#event-transforms)
-    -   [Modeler Plugins](#modeler-plugins)
-    -   [Datasource Types](#datasource-types)
-    -   [Monitoring Templates](#monitoring-templates)
--   [Dynamic View](#dynamic-view)
-    -   Chassis Management Controller @lb[](img/zenpack-cmc_device_dv.png)
-    -   PowerEdge Server @lb[](img/zenpack-poweredge_device_dv.png)
--   [Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
--   [Usage](#usage)
-    -   [Prerequisites](#prerequisites)
-    -   [Adding ChassisController](#adding-chassis-controller)
-    -   [Adding Linux SNMP Dell Blade/Rack Device](#DellPowerEdge-AddingLinuxSNMPDellBlade/RackDevice)
-    -   [Adding Windows SNMP Dell Blade/Rack Device](#DellPowerEdge-AddingWindowsSNMPDellBlade/RackDevice)
-    -   [Adding iDRAC6 Controller](#adding-idrac6-controller)
-    -   [Adding iDRAC7 Controller](#adding-idrac7-controller)
-    -   [Adding iDRAC8 Controller](#adding-idrac8-controller)
-    -   [Adding iDRAC9 Controller](#adding-idrac9-controller)
-    -   [zenbatchload](#zenbatchload)
--   [Limitations](#limitations)
--   [Troubleshooting](#troubleshooting)
-    -   [iDRAC Connection Timeouts](#idrac-connection-timeouts)
--   [Changes](#changes)
 
 ## Features
 
@@ -875,7 +834,7 @@ administrative menu will be displayed.
 
 ## Changes
 
-3.0.1
+**3.0.1**
 
 -   Fix missed runs in zenpython from client iDRAC device. (ZPS-4694)
 -   Handle empty empty data from iDRAC device. (ZPS-4794)
@@ -893,7 +852,7 @@ administrative menu will be displayed.
     embedded·Cache·drives·for·Dell·EMC·VxRail·device. (ZPS-6546)
 -   Tested with Zenoss Cloud, Zenoss 6.4.1 and Service Impact 5.5.1.
 
-3.0.0
+**3.0.0**
 
 -   Convert Dell PowerEdge device classes configuration to ZenPackLib
     format. (ZPS-3678)
@@ -947,96 +906,34 @@ administrative menu will be displayed.
 -   Tested with Zenoss Resource Manager 5.3.3, Zenoss Resource Manager
     6.2.1, Zenoss Cloud and Service Impact 5.3.1
 
-2.0.4
+**2.0.4**
 
 -   Fix Dell PowerEdge ZP removed software component navigation menu for
     all devices (ZPS-2016)
 -   Fix Dell PowerEdge ZenPack objects.xml includes HP MIBs (ZPS-244)
 -   Tested with Zenoss 5.3.2 / 4.2.5 RPS 743
 
-2.0.3
+**2.0.3**
 
 -   Fix PowerEdgeModeler modeling. (SVC-833m, ZEN-23224)
 -   Fix Dell PowerEdge 2.0.2 breaks Modeling Plugins page (ZPS-1273)
 -   Fix modeling of IDRAC version 7. (ZEN-21718)
 
-2.0.2
+**2.0.2**
 
 -   Add iDRAC8 and Dell 13G Server support. (ZEN-20738)
 -   Add NIC components to iDRAC7 and iDRAC8 controllers. (ZEN-17954)
 -   Several user interface fixes. (ZEN-20376, ZEN-16190, ZEN-14015,
     ZEN-13987)
 
-2.0.1
+**2.0.1**
 
 -   Fix "compname" error during modeling. (ZEN-13273)
 
-2.0.0
+**2.0.0**
 
 -   Add support for iDRAC.
 
-1.0.0
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [add_menu.png](img/zenpack-add_menu.png)
--   [chassis_mgmt_controller_impact.jpg](img/zenpack-chassis_mgmt_controller_impact.jpg)
--   [cmc_add_dialog.png](img/zenpack-cmc_add_dialog.png)
--   [cmc_device_dv.png](img/zenpack-cmc_device_dv.png)
--   [dell-zenpack.png](img/zenpack-dell-zenpack.png)
--   [idrac6_add_dialog.png](img/zenpack-idrac6_add_dialog.png)
--   [idrac6_connection_info.png](img/zenpack-idrac6_connection_info.png)
--   [idrac7_add_dialog.png](img/zenpack-idrac7_add_dialog.png)
--   [idrac7_connection_info.png](img/zenpack-idrac7_connection_info.png)
--   [idrac8_add_dialog.png](img/zenpack-idrac8_add_dialog.png)
--   [idrac9_add_dialog.png](img/zenpack-idrac9_add_dialog.png)
--   [idrac9_connection_info.png](img/zenpack-idrac9_connection_info.png)
--   [poweredge_analog_sensors_rpm_graph.png](img/zenpack-poweredge_analog_sensors_rpm_graph.png)
--   [poweredge_analog_sensors_temperature_graph.png](img/zenpack-poweredge_analog_sensors_temperature_graph.png)
--   [poweredge_analog_sensors_usage_graph.png](img/zenpack-poweredge_analog_sensors_usage_graph.png)
--   [poweredge_analog_sensors_voltage_graph.png](img/zenpack-poweredge_analog_sensors_voltage_graph.png)
--   [poweredge_device_dv.png](img/zenpack-poweredge_device_dv.png)
--   [poweredge_linux_add_dialog.png](img/zenpack-poweredge_linux_add_dialog.png)
--   [poweredge_linux_power_consumptions_power_consumption_graph.png](img/zenpack-poweredge_linux_power_consumptions_power_consumption_graph.png)
--   [poweredge_linux_processor_caches_cache_utilization_graph.png](img/zenpack-poweredge_linux_processor_caches_cache_utilization_graph.png)
--   [poweredge_linux_temperature_sensors_temperature_graph.png](img/zenpack-poweredge_linux_temperature_sensors_temperature_graph.png)
--   [poweredge_nic_ports_error_rate_graph.png](img/zenpack-poweredge_nic_ports_error_rate_graph.png)
--   [poweredge_nic_ports_packets_graph.png](img/zenpack-poweredge_nic_ports_packets_graph.png)
--   [poweredge_server_impact.jpg](img/zenpack-poweredge_server_impact.jpg)
--   [poweredge_server_power_supply_sensors_current_graph.png](img/zenpack-poweredge_server_power_supply_sensors_current_graph.png)
--   [poweredge_server_power_supply_sensors_power_graph.png](img/zenpack-poweredge_server_power_supply_sensors_power_graph.png)
--   [poweredge_windows_add_dialog.png](img/zenpack-poweredge_windows_add_dialog.png)
--   [idrac8_connection_info.png](img/zenpack-idrac8_connection_info.png)
--   [chassis_mgmt_controller_impact.jpg](img/zenpack-chassis_mgmt_controller_impact.jpg)
--   [add_menu.png](img/zenpack-add_menu.png)
--   [cmc_add_dialog.png](img/zenpack-cmc_add_dialog.png)
--   [cmc_device_dv.png](img/zenpack-cmc_device_dv.png)
--   [dell-zenpack.png](img/zenpack-dell-zenpack.png)
--   [idrac6_add_dialog.png](img/zenpack-idrac6_add_dialog.png)
--   [idrac6_connection_info.png](img/zenpack-idrac6_connection_info.png)
--   [idrac7_add_dialog.png](img/zenpack-idrac7_add_dialog.png)
--   [idrac7_connection_info.png](img/zenpack-idrac7_connection_info.png)
--   [idrac8_add_dialog.png](img/zenpack-idrac8_add_dialog.png)
--   [idrac8_connection_info.png](img/zenpack-idrac8_connection_info.png)
--   [idrac9_add_dialog.png](img/zenpack-idrac9_add_dialog.png)
--   [idrac9_connection_info.png](img/zenpack-idrac9_connection_info.png)
--   [poweredge_analog_sensors_rpm_graph.png](img/zenpack-poweredge_analog_sensors_rpm_graph.png)
--   [poweredge_analog_sensors_temperature_graph.png](img/zenpack-poweredge_analog_sensors_temperature_graph.png)
--   [poweredge_analog_sensors_usage_graph.png](img/zenpack-poweredge_analog_sensors_usage_graph.png)
--   [poweredge_analog_sensors_voltage_graph.png](img/zenpack-poweredge_analog_sensors_voltage_graph.png)
--   [poweredge_device_dv.png](img/zenpack-poweredge_device_dv.png)
--   [poweredge_linux_power_consumptions_power_consumption_graph.png](img/zenpack-poweredge_linux_power_consumptions_power_consumption_graph.png)
--   [poweredge_linux_add_dialog.png](img/zenpack-poweredge_linux_add_dialog.png)
--   [poweredge_linux_processor_caches_cache_utilization_graph.png](img/zenpack-poweredge_linux_processor_caches_cache_utilization_graph.png)
--   [poweredge_linux_temperature_sensors_temperature_graph.png](img/zenpack-poweredge_linux_temperature_sensors_temperature_graph.png)
--   [poweredge_nic_ports_error_rate_graph.png](img/zenpack-poweredge_nic_ports_error_rate_graph.png)
--   [poweredge_nic_ports_packets_graph.png](img/zenpack-poweredge_nic_ports_packets_graph.png)
--   [poweredge_server_impact.jpg](img/zenpack-poweredge_server_impact.jpg)
--   [poweredge_server_power_supply_sensors_current_graph.png](img/zenpack-poweredge_server_power_supply_sensors_current_graph.png)
--   [poweredge_server_power_supply_sensors_power_graph.png](img/zenpack-poweredge_server_power_supply_sensors_power_graph.png)
--   [poweredge_windows_add_dialog.png](img/zenpack-poweredge_windows_add_dialog.png)
--   [idrac8_connection_info.png](img/zenpack-idrac8_connection_info.png)
--   [idrac6_add_dialog.png](img/zenpack-idrac6_add_dialog.png)
-

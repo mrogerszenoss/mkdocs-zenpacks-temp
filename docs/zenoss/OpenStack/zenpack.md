@@ -1,7 +1,5 @@
 # OpenStack (Tenant View)
 
-@lb[](img/zenpack-openstack-zenpack.png)
-
 ## OpenStack (Tenant View) ZenPack
 
 This ZenPack allows for monitoring of OpenStack tenants. This means that
@@ -109,19 +107,15 @@ server.
 
 ## Changes
 
-1.3.2
+**1.3.2**
 
 -   Add support for Twisted library update (ZPS-7071)
 
-1.3.1
+**1.3.1**
 
 -   Address compatibility issues with Impact 5.5
 
-<dl markdown="1">
-<dt markdown="1">
-1.3.0
-</dt>
-</dl>
+**1.3.0**
 
 -   Change "add" form to more closely resemble the one used for
     OpenStackInfrastructure
@@ -131,47 +125,26 @@ server.
 -   Drop novaclient dependency and adopt OSI txapiclient code
 -   Tested with Zenoss Cloud and Zenoss Resource Manager 6.3.2
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.4
-</dt>
-</dl>
+**1.2.4**
 
 -   zOpenStackInsecure option added to skip SSL certificate
     verification, which allows self-signed or third-party certificates.
     (ZEN-23460)
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.3
-</dt>
-</dl>
+**1.2.3**
 
 -   Move devices from /Devices/OpenStack to /Devices/OpenStack/User
 -   Support new OpenStackInfrastructure ZenPack
 -   Drop support for Compute API v1.x
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.2
-</dt>
-</dl>
-
+**1.2.2**
 -   Fix bug that could prevent data collection.
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.1
-</dt>
-</dl>
+**1.2.1**
 
 -   Fix bug in handling of flavor ID. (ZEN-10333)
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.0
-</dt>
-</dl>
+**1.2.0**
 
 -   Add support for compute API versions 2 and 3. Still support
     version 1.
@@ -179,9 +152,8 @@ server.
 -   Update python-novaclient to 2.15.0.
 -   Support uuid format for image identifier.
 
-|                               |                                                                                                                                                                                                                                                                                                                                                                   |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ZenPack Classification**    |                                                                                                                                                                                                                                                                                                                                                                   |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Open Source**               | This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to request more information regarding this or any other ZenPacks. [Click here](https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1091){.external-link} to view all available Zenoss Open Source ZenPacks. |
 | **Organization**              | Zenoss, Inc.                                                                                                                                                                                                                                                                                                                                                      |
 | **License**                   | GNU General Public License, Version 2, or later                                                                                                                                                                                                                                                                                                                   |
@@ -189,11 +161,3 @@ server.
 | **More Information**          | [GitHub page/HomePage](https://github.com/zenoss/ZenPacks.zenoss.WBEM){.external-link}                                                                                                                                                                                                                                                                            |
 | **Git Sources (For Cloning)** | [Link](https://github.com/zenoss/ZenPacks.zenoss.OpenStack.git){.external-link}                                                                                                                                                                                                                                                                                   |
 | **Applications Monitored**    | OpenStack Cloud Computing                                                                                                                                                                                                                                                                                                                                         |
-
-## Attachments:
-
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
-

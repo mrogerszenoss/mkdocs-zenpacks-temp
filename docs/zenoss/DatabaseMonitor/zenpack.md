@@ -1,7 +1,5 @@
 # Database Monitor
 
-@lb[](img/zenpack-oracle-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -58,22 +56,6 @@ This ZenPack is an enhanced version of the older
 ZenPacks.zenoss.DatabaseMonitor 2.5.0, and adds Instances as a component
 thereby allowing multiple components to be associated with a single
 server.
-
-Contents
-
--   [Oracle Database Zenpack](#oracle-database-zenpack)
--   [Releases](#releases)
--   [Background](#background)
--   [Prerequisites](#prerequisites)
--   [Gallery](#gallery)
--   [Features](#features)
--   [Installed Items](#installed-items)
--   [Installation and Configuration](#installation-and-configuration)
--   [Migration from Older Versions](#migration-from-older-versions)
--   [DataPoints and DataSources](#datapoints-and-datasources)
--   [Miscellaneous and Troubleshooting](#miscellaneous-and-troubleshooting)
--   [Zenoss Analytics](#zenoss-analytics)
--   [Changes](#changes)
 
 ## [Prerequisites](#prerequisites){.toc-backref}
 
@@ -670,7 +652,7 @@ querying works:
        /usr/bin/java -Djava.security.egd=file:///dev/urandom \
        -Duser.timezone=UTC -jar "$JARFILE" -c "$constr" -q "$1"
     }
-     
+
     # Test function to use CONNECTION_STRING via environment
     export CONNECTION_STRING="jdbc:oracle:thin:zenoss/zenoss@ipname.zenoss.loc:1521:XE"
     function eora()
@@ -781,20 +763,20 @@ Domains can be used to create Ad Hoc views using the following steps.
 
 ## [Changes](#changes){.toc-backref}
 
-### 3.1.2
+**3.1.2**
 
 -   Fixed mixing results when modeling multiple devices in the same
     container (ZPS-8059)
 -   Tested with Zenoss Resource Manager 6.6.0, Zenoss Cloud, Oracle 12c,
     19c, and Service Impact 5.5.5.
 
-### 3.1.1
+**3.1.1**
 
 -   Add Oracle Instance status event (ZPS-7560)
 -   Tested with Zenoss Resource Manager 6.5.0, 6.6.0, Zenoss Cloud,
     Oracle 12c, 19c, and Service Impact 5.5.3.
 
-### 3.1.0
+**3.1.0**
 
 -   Convert ZenPack to be based on ZenPackLib 2.0 (ZPS-7668)
 -   Fix performance issue with a large number of TableSpaces (ZPS-3488)
@@ -803,7 +785,7 @@ Domains can be used to create Ad Hoc views using the following steps.
 -   Tested with Zenoss Resource Manager 6.5.0, 6.6.0, Zenoss Cloud,
     Oracle 12c, 19c, Analytics, and Service Impact 5.5.3
 
-### 3.0.12
+**3.0.12**
 
 -   Remove platform distribution name from egg (ZPS-2668)
 -   Call python from env to bypass permissions issues (ZPS-2852)
@@ -811,7 +793,7 @@ Domains can be used to create Ad Hoc views using the following steps.
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3, 6.1.0,
     Service Impact 5.2.2, Analytics 5.0.8
 
-### 3.0.11
+**3.0.11**
 
 -   Security: Hide all Connection String info from the process list
     (ZPS-2185)
@@ -822,32 +804,32 @@ Domains can be used to create Ad Hoc views using the following steps.
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3, 6.0.1,
     Service Impact 5.2.2, Analytics 5.0.8
 
-### 3.0.10
+**3.0.10**
 
 -   Add CallHome metric collection (ZPS-1241)
 -   Add READ ONLY status as a clear state (ZPS-1276)
 
-### 3.0.9
+**3.0.9**
 
 -   Provide accurate available TEMP tablespace size for Oracle 11+
     (ZPS-729)
 
-### 3.0.8
+**3.0.8**
 
 -   Fix possible "Permission denied" error after upgrading Zenoss 5
     (ZEN-25575)
 
-### 3.0.7
+**3.0.7**
 
 -   Fix bug in GNUMakefile
 
-### 3.0.6
+**3.0.6**
 
 -   Guard modeler against modeler errors (ZEN-24515)
 -   Correct Analytics Bundle: (ZEN-24317)
 -   Security fixes: Include full regex for mask_pass (ZEN-24634)
 
-### 3.0.5
+**3.0.5**
 
 -   Re-work Analytics for new metrics introduced in 3.0.4
 -   Improve TBSP event handling (ZEN-24339)
@@ -855,7 +837,7 @@ Domains can be used to create Ad Hoc views using the following steps.
 -   Ensure dbmTBSP omits damaged TableSpaces (ZEN-23916)
 -   Minor Graph Adjustments
 
-### 3.0.4
+**3.0.4**
 
 -   Added multi-file support and datasource for tablespaces
 -   Added standard deviation for multi-file tablespaces
@@ -863,69 +845,24 @@ Domains can be used to create Ad Hoc views using the following steps.
     -   As a result: Tablespace IO Operations Read/Write data are lost
         on upgrade
 
-### 3.0.3
+**3.0.3**
 
 -   Added Analytics Support
 -   Added $ and \# to valid ConnectionString passwords
 -   Updated Thresholds
 
-### 3.0.2
+**3.0.2**
 
 -   Enhanced tablespace scalability to 100's of tablespaces (ZEN-11569)
 -   Allow for c\#\#name style usernames for RAC (ZEN-12387)
 -   Enhanced security for the JDBC user
 
-### 3.0.1
+**3.0.1**
 
 -   Added Support for RAC-style service names in connectionStrings
 
-### 3.0.0
+**3.0.0**
 
 -   JDBC connectivity added
 -   Added support for multiple instances
 -   Added support for tablespaces
-
-## Attachments:
-
--   [Databasemonitor_add_connectionstring.png](img/zenpack-databasemonitor_add_connectionstring.png)
--   [Databasemonitor_chr.png](img/zenpack-databasemonitor_chr.png)
--   [Databasemonitor_components.png](img/zenpack-databasemonitor_components.png)
--   [Databasemonitor_instances.png](img/zenpack-databasemonitor_instances.png)
--   [Databasemonitor_messages.png](img/zenpack-databasemonitor_messages.png)
--   [Databasemonitor_model_device.png](img/zenpack-databasemonitor_model_device.png)
--   [Databasemonitor_monitoring_template.png](img/zenpack-databasemonitor_monitoring_template.png)
--   [Databasemonitor_physical_ops.png](img/zenpack-databasemonitor_physical_ops.png)
--   [Databasemonitor_ts_diskspace.png](img/zenpack-databasemonitor_ts_diskspace.png)
--   [Databasemonitor_sga.png](img/zenpack-databasemonitor_sga.png)
--   [Databasemonitor_ts_io.png](img/zenpack-databasemonitor_ts_io.png)
--   [Databasemonitor_ts.png](img/zenpack-databasemonitor_ts.png)
--   [oracle-zenpack.png](img/zenpack-oracle-zenpack.png)
--   [Databasemonitor_instances.png](img/zenpack-databasemonitor_instances.png)
--   [Databasemonitor_add_connectionstring.png](img/zenpack-databasemonitor_add_connectionstring.png)
--   [Databasemonitor_chr.png](img/zenpack-databasemonitor_chr.png)
--   [Databasemonitor_instances.png](img/zenpack-databasemonitor_instances.png)
--   [Databasemonitor_messages.png](img/zenpack-databasemonitor_messages.png)
--   [Databasemonitor_monitoring_template.png](img/zenpack-databasemonitor_monitoring_template.png)
--   [Databasemonitor_physical_ops.png](img/zenpack-databasemonitor_physical_ops.png)
--   [Databasemonitor_ts_io.png](img/zenpack-databasemonitor_ts_io.png)
--   [Databasemonitor_ts.png](img/zenpack-databasemonitor_ts.png)
--   [oracle-zenpack.png](img/zenpack-oracle-zenpack.png)
--   [Databasemonitor_chr.png](img/zenpack-databasemonitor_chr.png)
--   [oracle-zenpack.png](img/zenpack-oracle-zenpack.png)
--   [Databasemonitor_model_device.png](img/zenpack-databasemonitor_model_device.png)
--   [Databasemonitor_ts_diskspace.png](img/zenpack-databasemonitor_ts_diskspace.png)
--   [Databasemonitor_components.png](img/zenpack-databasemonitor_components.png)
--   [Databasemonitor_sga.png](img/zenpack-databasemonitor_sga.png)
--   [Databasemonitor_model_device.png](img/zenpack-databasemonitor_model_device.png)
--   [Databasemonitor_chr.png](img/zenpack-databasemonitor_chr.png)
--   [Databasemonitor_sga.png](img/zenpack-databasemonitor_sga.png)
--   [Databasemonitor_ts_diskspace.png](img/zenpack-databasemonitor_ts_diskspace.png)
--   [Databasemonitor_instances.png](img/zenpack-databasemonitor_instances.png)
--   [Databasemonitor_monitoring_template.png](img/zenpack-databasemonitor_monitoring_template.png)
--   [Databasemonitor_components.png](img/zenpack-databasemonitor_components.png)
--   [Databasemonitor_ts.png](img/zenpack-databasemonitor_ts.png)
--   [Databasemonitor_messages.png](img/zenpack-databasemonitor_messages.png)
--   [Databasemonitor_physical_ops.png](img/zenpack-databasemonitor_physical_ops.png)
--   [Databasemonitor_add_connectionstring.png](img/zenpack-databasemonitor_add_connectionstring.png)
--   [Databasemonitor_ts_io.png](img/zenpack-databasemonitor_ts_io.png)
-

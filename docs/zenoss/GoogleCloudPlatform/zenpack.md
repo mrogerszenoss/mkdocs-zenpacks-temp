@@ -32,46 +32,6 @@ Version 1.0.2 [Download](https://delivery.zenoss.com/){.external-link}:   Releas
     [ZenPackLib](https://help.zenoss.com/in/zenpack-catalog/open-source/zenpacklib){.external-link},
     [PythonCollector](http://help.zenoss.com/display/in/PythonCollector){.external-link}
 
-## Contents
-
--   [Releases](#releases)
-    -   [Features](#features)
-        -   [Discovery](#discovery)
-        -   [Status Monitoring](#status-monitoring)
-        -   [Performance Monitoring](#performance-monitoring)
-        -   [Billing Monitoring](#billing-monitoring)
-        -   [Label Filters](#label-filters)
-        -   [Incremental Instance Monitoring](#incremental-instance-monitoring)
-        -   [Guest Device Discovery](#guest-device-discovery)
-        -   [Expense Analysis](#expense-analysis)
-        -   [](#)
-        -   [Dynamic View](#dynamic-view)
-        -   [Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
-    -   [Usage](#usage)
-        -   [Creating a Service Account](#creatinga-service-account)
-        -   [Adding a Project](#adding-a-project)
-    -   [Installed Items](#installed-items)
-        -   [Configuration Properties](#configuration-properties)
-        -   [Device Classes](#device-classes)
-        -   [Modeler Plugins](#modeler-plugins)
-        -   [Datasource Types](#datasource-types)
-        -   [Monitoring Templates](#monitoring-templates)
-        -   [Event Classes](#event-classes)
-        -   [Event Class Mappings](#event-class-mappings)
-    -   [StackDriver Monitoring](#stack-driver-monitoring)
-        -   [StackDriver Monitoring Configuration](#stack-driver-monitoring-configuration)
-    -   [Limitations and Known Issues](#limitations-and-known-issues)
-        -   [Adding Project](#adding-project)
-        -   [Upgrades to 1.1.0 and Missing Components](#upgradesto1-10and-missing-components)
-        -   [Model Accuracy](#model-accuracy)
-        -   [Datasource Timeouts](#datasource-timeouts)
-    -   [Changes](#changes)
-        -   [1.2.0](#120)
-        -   [1.1.0](#110)
-        -   [1.0.2](#102)
-        -   [1.0.1](#101)
-        -   [1.0.0](#100)
-
 ## Features
 
 The following features are available to help you monitor resources
@@ -1210,7 +1170,7 @@ It is not necessary to restart the child services.
 
 ## Changes
 
-### 1.2.0
+**1.2.0**
 
 -   Add
     support for BigQuery. (ZPS-6363)
@@ -1223,7 +1183,7 @@ It is not necessary to restart the child services.
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.4.x and Service
     Impact 5.5.1
 
-### 1.1.0
+**1.1.0**
 
 -   Add
     support for Dataflow Jobs. (ZPS-5801)
@@ -1248,14 +1208,14 @@ It is not necessary to restart the child services.
     Zenoss Cloud, Zenoss Resource Manager 6.3.x, Zenoss Resource Manager
     6.4 and Service Impact 5.5.1
 
-### 1.0.2
+**1.0.2**
 
 -   Fixing compatibility with DynamicView 1.8.0 and Impact 5.5.
     (ZPS-5666)
 -   Tested with Zenoss Cloud and Zenoss Resource Manager 6.3.x and
     Service Impact 5.5.1.
 
-### 1.0.1
+**1.0.1**
 
 -   Fix false positives for quotas with a limit of 1 and usage of 0.
     (ZPS-4567)
@@ -1268,64 +1228,14 @@ It is not necessary to restart the child services.
 -   Tested with Zenoss Resource Manager 6.3.2, Zenoss Cloud, and Service
     Impact 5.3.4.
 
-### 1.0.0
+**1.0.0**
 
 -   Initial release.
 
-|                            |                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | **ZenPack Classification** |                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Commercial**             | This ZenPack is developed and supported by Zenoss Inc. Commercial ZenPacks are available to Zenoss commercial customers only. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact){.external-link} to request more information regarding this or any other ZenPacks. [Click here](https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1046){.external-link} to view all available Zenoss Commercial ZenPacks. |
 | **Organization**           | [Zenoss, Inc.](http://www.zenoss.com){.external-link}                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Name**                   | ZenPacks.zenoss.GoogleCloudPlatform                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **Applications Monitored** | Google's Cloud Platform                                                                                                                                                                                                                                                                                                                                                                                                                |
-
-## Attachments:
-
--   [gcp-add-project.png](img/zenpack-gcp-add-project.png)
--   [gcp-disk-types.png](img/zenpack-gcp-disk-types.png)
--   [gcp-disks.png](img/zenpack-gcp-disks.png)
--   [gcp-images.png](img/zenpack-gcp-images.png)
--   [gcp-impact-diagram.png](img/zenpack-gcp-impact-diagram.png)
--   [gcp-instance-groups.png](img/zenpack-gcp-instance-groups.png)
--   [gcp-instance-templates.png](img/zenpack-gcp-instance-templates.png)
--   [gcp-instances.png](img/zenpack-gcp-instances.png)
--   [gcp-kubernetes-clusters.png](img/zenpack-gcp-kubernetes-clusters.png)
--   [gcp-kubernetes-node-pools.png](img/zenpack-gcp-kubernetes-node-pools.png)
--   [gcp-machine-types.png](img/zenpack-gcp-machine-types.png)
--   [gcp-network-interfaces.png](img/zenpack-gcp-network-interfaces.png)
--   [gcp-project-dynamic-view.png](img/zenpack-gcp-project-dynamic-view.png)
--   [gcp-project-overview.png](img/zenpack-gcp-project-overview.png)
--   [gcp-quotas.png](img/zenpack-gcp-quotas.png)
--   [gcp-regions.png](img/zenpack-gcp-regions.png)
--   [gcp-snapshots.png](img/zenpack-gcp-snapshots.png)
--   [gcp-zones.png](img/zenpack-gcp-zones.png)
--   [google-cloud-platform-zp.png](img/zenpack-google-cloud-platform-zp.png)
--   [gcp-add-project.png](img/zenpack-gcp-add-project.png)
--   [gcp-disk-types.png](img/zenpack-gcp-disk-types.png)
--   [gcp-disks.png](img/zenpack-gcp-disks.png)
--   [gcp-images.png](img/zenpack-gcp-images.png)
--   [gcp-impact-diagram.png](img/zenpack-gcp-impact-diagram.png)
--   [gcp-instance-templates.png](img/zenpack-gcp-instance-templates.png)
--   [gcp-instance-groups.png](img/zenpack-gcp-instance-groups.png)
--   [gcp-instances.png](img/zenpack-gcp-instances.png)
--   [gcp-kubernetes-clusters.png](img/zenpack-gcp-kubernetes-clusters.png)
--   [gcp-kubernetes-node-pools.png](img/zenpack-gcp-kubernetes-node-pools.png)
--   [gcp-machine-types.png](img/zenpack-gcp-machine-types.png)
--   [gcp-network-interfaces.png](img/zenpack-gcp-network-interfaces.png)
--   [gcp-project-dynamic-view.png](img/zenpack-gcp-project-dynamic-view.png)
--   [gcp-project-overview.png](img/zenpack-gcp-project-overview.png)
--   [gcp-quotas.png](img/zenpack-gcp-quotas.png)
--   [gcp-regions.png](img/zenpack-gcp-regions.png)
--   [gcp-zones.png](img/zenpack-gcp-zones.png)
--   [gcp-snapshots.png](img/zenpack-gcp-snapshots.png)
--   [google-cloud-platform-zp.png](img/zenpack-google-cloud-platform-zp.png)
--   [google-cloud-platform-zp.png](img/zenpack-google-cloud-platform-zp.png)
--   [gcp-impact-diagram.png](img/zenpack-gcp-impact-diagram.png)
--   [gcp-impact-diagram.png](img/zenpack-gcp-impact-diagram.png)
--   [gcp-model-diagram.png](img/zenpack-gcp-model-diagram.png)
--   [Billing Overview.png](img/zenpack-billing-overview.png)
--   [google-cloud-platform-zp.png](img/zenpack-google-cloud-platform-zp.png)
--   [GuestLabelsDialog.png](img/zenpack-guestlabelsdialog.png)
--   [gcp-impact-diagram.png](img/zenpack-gcp-impact-diagram.png)
-

@@ -1,7 +1,5 @@
 # Cisco APIC
 
-@lb[](img/zenpack-cisco-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -46,22 +44,6 @@ Version 1.1.0 [Download](https://zenoss.leapfile.net/){.external-link}:   Releas
 
 Version 1.0.5 [Download](https://zenoss.leapfile.net/){.external-link}:   Released: 2015-08-21:   Compatible with Zenoss 4.2.5 - 5.1.
 :   Requires: [PythonCollector ZenPack](https://help.zenoss.com/display/in/PythonCollector){.external-link}
-
-## Contents
-
-1.  [Features](#features)
-    1.  [Discovery](#discovery)
-    2.  [Performance Monitoring](#performance-monitoring)
-    3.  [Event Management](#event-management)
-    4.  [Impact and Root Cause Analysis](#impact-and-root-cause-analysis)
-2.  [Usage](#usage)
-    1.  [Adding an APIC](#adding-an-apic)
-    2.  [Configuring Management Addresses](#configuring-management-addresses)
-    3.  [Minimum Permissions](#minimum-permissions)
-3.  [Limitations](#limitations)
-4.  [Installed Items](#installed-items)
-5.  [Zenoss Analytics](#zenoss-analytics)
-6.  [Changes](#changes)
 
 ## Features
 
@@ -566,7 +548,7 @@ steps.
 
 ## Changes
 
-### 1.3.0
+**1.3.0**
 
 -   Fix of excessive topSystem API
     calls cause performance problems. (ZPS-5140, ZPS-7150)
@@ -575,49 +557,49 @@ steps.
 -   Tested with Zenoss 6.4.1- 6.5.0,
     Zenoss Cloud and Impact 5.5.1
 
-### 1.2.3
+**1.2.3**
 
 -   Fix controllers appearing with an invalid role of "8". (ZPS-2546)
 -   Fix potential "health_dn" KeyError in health datasource. (ZPS-2380)
 -   Mask APIC credentials in debug log. (ZPS-616)
 
-### 1.2.2
+**1.2.2**
 
 -   Fix modeling failure related to unexpected node roles. (ZPS-1930)
 
-### 1.2.1
+**1.2.1**
 
 -   Collect health data individually and dynamically. (ZEN-22303)
 -   Tested against APIC 1.0(3f), 1.2(1k), 1.2(2h).
 
-### 1.2.0
+**1.2.0**
 
 -   Add attached host, server, network interface Impact relationships.
 
-### 1.1.0
+**1.1.0**
 
 -   Add OpenStack integration.
 
-### 1.0.5
+**1.0.5**
 
 -   Add "Peer Node" and "Peer Interface" properties to physical
     interfaces.
 -   Remove potentially cyclic EPG impact relationships. (ZEN-19310)
 
-### 1.0.4
+**1.0.4**
 
 -   Fix flooding APIC with aaaLogin and aaaRefresh calls. (ZEN-17881)
 -   Remove newlines from dim_ciscoapic_client_endpoint.ip. (ZEN-17914)
 -   Add "Firmware Status" property to fabric nodes.
 
-### 1.0.3
+**1.0.3**
 
 -   Fix duplicate of "Node Overall Health" graph on upgrade. (ZEN-17728)
 -   Add "Usage" property to physical interfaces.
 -   Add zCiscoAPICIgnoreIds and zCiscoAPICIgnoreTypes properties.
 -   Add client endpoint modeling.
 
-### 1.0.2
+**1.0.2**
 
 -   Fix handling of stats and events when APIC has a timezone offset.
     (ZEN-16582)
@@ -634,77 +616,11 @@ steps.
 -   Fixed status field in details panel for all components. (ZEN-17536)
 -   Added physical interface property: operational state. (ZEN-17540)
 
-### 1.0.1
+**1.0.1**
 
 -   Fix "Not valid JSON" errors. (ZEN-16194)
 -   Fix "KeyError: 'None'" modeling error. (ZEN-16314)
 
-### 1.0.0
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Ciscoapic_add_dialog.png](img/zenpack-ciscoapic_add_dialog.png)
--   [Ciscoapic_applications.png](img/zenpack-ciscoapic_applications.png)
--   [Ciscoapic_bridge_domains.png](img/zenpack-ciscoapic_bridge_domains.png)
--   [Ciscoapic_contracts.png](img/zenpack-ciscoapic_contracts.png)
--   [Ciscoapic_endpoint_groups.png](img/zenpack-ciscoapic_endpoint_groups.png)
--   [Ciscoapic_events.png](img/zenpack-ciscoapic_events.png)
--   [Ciscoapic_fabric_nodes.png](img/zenpack-ciscoapic_fabric_nodes.png)
--   [Ciscoapic_fabric_pods.png](img/zenpack-ciscoapic_fabric_pods.png)
--   [Ciscoapic_impact_yuml.png](img/zenpack-ciscoapic_impact_yuml.png)
--   [Ciscoapic_impact.png](img/zenpack-ciscoapic_impact.png)
--   [Ciscoapic_model_yuml.png](img/zenpack-ciscoapic_model_yuml.png)
--   [Ciscoapic_overview.png](img/zenpack-ciscoapic_overview.png)
--   [Ciscoapic_physical_interfaces.png](img/zenpack-ciscoapic_physical_interfaces.png)
--   [Ciscoapic_private_networks.png](img/zenpack-ciscoapic_private_networks.png)
--   [Ciscoapic_service_clusters.png](img/zenpack-ciscoapic_service_clusters.png)
--   [Ciscoapic_service_devices.png](img/zenpack-ciscoapic_service_devices.png)
--   [Ciscoapic_service_function_nodes.png](img/zenpack-ciscoapic_service_function_nodes.png)
--   [Ciscoapic_service_graphs.png](img/zenpack-ciscoapic_service_graphs.png)
--   [Ciscoapic_tenants.png](img/zenpack-ciscoapic_tenants.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Ciscoapic_add_dialog.png](img/zenpack-ciscoapic_add_dialog.png)
--   [Ciscoapic_applications.png](img/zenpack-ciscoapic_applications.png)
--   [Ciscoapic_bridge_domains.png](img/zenpack-ciscoapic_bridge_domains.png)
--   [Ciscoapic_contracts.png](img/zenpack-ciscoapic_contracts.png)
--   [Ciscoapic_events.png](img/zenpack-ciscoapic_events.png)
--   [Ciscoapic_endpoint_groups.png](img/zenpack-ciscoapic_endpoint_groups.png)
--   [Ciscoapic_fabric_nodes.png](img/zenpack-ciscoapic_fabric_nodes.png)
--   [Ciscoapic_fabric_pods.png](img/zenpack-ciscoapic_fabric_pods.png)
--   [Ciscoapic_impact_yuml.png](img/zenpack-ciscoapic_impact_yuml.png)
--   [Ciscoapic_impact.png](img/zenpack-ciscoapic_impact.png)
--   [Ciscoapic_model_yuml.png](img/zenpack-ciscoapic_model_yuml.png)
--   [Ciscoapic_overview.png](img/zenpack-ciscoapic_overview.png)
--   [Ciscoapic_physical_interfaces.png](img/zenpack-ciscoapic_physical_interfaces.png)
--   [Ciscoapic_private_networks.png](img/zenpack-ciscoapic_private_networks.png)
--   [Ciscoapic_service_devices.png](img/zenpack-ciscoapic_service_devices.png)
--   [Ciscoapic_service_clusters.png](img/zenpack-ciscoapic_service_clusters.png)
--   [Ciscoapic_service_function_nodes.png](img/zenpack-ciscoapic_service_function_nodes.png)
--   [Ciscoapic_service_graphs.png](img/zenpack-ciscoapic_service_graphs.png)
--   [Ciscoapic_tenants.png](img/zenpack-ciscoapic_tenants.png)
--   [Ciscoapic_overview.png](img/zenpack-ciscoapic_overview.png)
--   [Ciscoapic_fabric_pods.png](img/zenpack-ciscoapic_fabric_pods.png)
--   [Ciscoapic_service_function_nodes.png](img/zenpack-ciscoapic_service_function_nodes.png)
--   [Ciscoapic_tenants.png](img/zenpack-ciscoapic_tenants.png)
--   [Ciscoapic_bridge_domains.png](img/zenpack-ciscoapic_bridge_domains.png)
--   [Ciscoapic_impact.png](img/zenpack-ciscoapic_impact.png)
--   [Ciscoapic_fabric_pods.png](img/zenpack-ciscoapic_fabric_pods.png)
--   [Ciscoapic_endpoint_groups.png](img/zenpack-ciscoapic_endpoint_groups.png)
--   [Ciscoapic_service_graphs.png](img/zenpack-ciscoapic_service_graphs.png)
--   [Ciscoapic_physical_interfaces.png](img/zenpack-ciscoapic_physical_interfaces.png)
--   [Ciscoapic_contracts.png](img/zenpack-ciscoapic_contracts.png)
--   [Ciscoapic_service_devices.png](img/zenpack-ciscoapic_service_devices.png)
--   [Ciscoapic_add_dialog.png](img/zenpack-ciscoapic_add_dialog.png)
--   [Ciscoapic_applications.png](img/zenpack-ciscoapic_applications.png)
--   [Ciscoapic_private_networks.png](img/zenpack-ciscoapic_private_networks.png)
--   [Ciscoapic_fabric_nodes.png](img/zenpack-ciscoapic_fabric_nodes.png)
--   [Ciscoapic_overview.png](img/zenpack-ciscoapic_overview.png)
--   [Ciscoapic_service_clusters.png](img/zenpack-ciscoapic_service_clusters.png)
--   [ciscoapic_add_menu.png](img/zenpack-ciscoapic_add_menu.png)
--   [Ciscoapic_events.png](img/zenpack-ciscoapic_events.png)
-

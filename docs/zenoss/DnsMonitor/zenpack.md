@@ -1,7 +1,5 @@
 # DNS Monitor
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -42,9 +40,8 @@ turn uses the nslookup command.
 
 ## Prerequisites
 
-|                   |                            |
-|-------------------|----------------------------|
 | Prerequisite      | Restriction                |
+|-------------------|----------------------------|
 | Product           | Zenoss platform 4.2.x, 5.x |
 | Required ZenPacks | ZenPacks.zenoss.DNSMonitor |
 
@@ -66,9 +63,9 @@ To enable monitoring by the system:
     as needed.
 
     DNSMonitor Data Source Options
-    |                     |                                                                                                                                                        |
-    |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Option              | Description                                                                                                                                            |
+
+    | Option              |Description                                          |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|    
     | DNS Server          | Name server against which the nslookup command should be run. If empty (the default), the default DNS server or servers in /etc/resolve.conf are used. |
     | Port                | Port on which the name server is listening. This is normally port 53.                                                                                  |
     | Host Name           | Host name to resolve. The default is the device ID.                                                                                                    |
@@ -76,14 +73,6 @@ To enable monitoring by the system:
 
 ## Daemons
 
-|                       |            |
-|-----------------------|------------|
 | Type                  | Name       |
+|-----------------------|------------|
 | Performance Collector | zencommand |
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

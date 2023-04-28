@@ -1,7 +1,5 @@
 # Dell EMC Isilon (Commercial)
 
-@lb[](img/zenpack-emc-zenpack.png)
-
 ## Dell EMC Isilon ZenPack
 
 The Dell EMC Isilon ZenPack adds support for monitoring Dell EMC Isilon
@@ -34,28 +32,6 @@ Version 1.0.3 - [Download](https://delivery.zenoss.com){.external-link}:   Relea
 Version 1.0.0 - [Download](https://delivery.zenoss.com){.external-link}:   Released 2017/08/15:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector){.external-link},
     [ZenPackLib ZenPack](http://help.zenoss.com/display/in/ZenPackLib){.external-link}
     (&gt;=2.0.6), [CalculatedPerformance ZenPack](http://help.zenoss.com/display/in/Calculated+Performance){.external-link}:   Compatible with Zenoss 4.2 - 5.2
-
-## Contents
-
--   [Background](#background)
--   [Features](#features)
-    -   [Discovery](#discovery)
-    -   [Monitoring](#monitoring)
-    -   [Event Management](#event-management)
-    -   [Service Impact](#service-impact)
--   [Usage](#usage)
-    -   [Adding Isilon Clusters](#adding-isilon-clusters)
-    -   [Configuring optional SNMP Monitoring](#configuring-optional-snmp-monitoring)
-    -   [Configuring Debug Mode](#configuring-debug-mode)
-    -   [Command Line Tools](#command-line-tools)
-    -   [Isilon Cluster Networking Considerations](#isilon-cluster-networking-considerations)
-    -   [OneFS API Minimally Privileged User](#one-fsapi-minimally-privileged-user)
--   [Installed Items](#installed-items)
--   [Required Daemons](#required-daemons)
--   [Upgrade](#upgrade)
--   [Limitations](#limitations)
--   [Known Issues](#known-issues)
--   [Changes](#changes)
 
 ## [Background](#contents)
 
@@ -699,29 +675,29 @@ To solve this this issue follow instructions according this arcticle:
 
 ## [Changes](#contents)
 
-1.1.0
+**1.1.0**
 
 -   Added support API for OneFS 8.2.x, 9.0.0.0, 9.1.0.0 (ZPS-6907)
 -   Tested with Zenoss Cloud, Zenoss 6.6.0 and Service Impact 5.5.5
 
-1.0.4
+**1.0.4**
 
 -   ZenPack does not cause issues with building dim tables in Analytics
     (ZPS-3594)
 
-1.0.3
+**1.0.3**
 
 -   Datapoints are now unique, preventing values from mashing and being
     overwriten (ZPS-7171)
 
-1.0.2
+**1.0.2**
 
 -   Correct zenbatchdump output (ZPS-2900)
 -   IpInterface method override output corrected (ZPS-6182)
 -   Reduce logging verbosity (ZPS-4975)
 -   Tested with Zenoss 6.4.1, Zenoss Cloud with and Service Impact 5.5.1
 
-1.0.1
+**1.0.1**
 
 -   Allow monitoring of nodes without external IP (reservations noted
     above) (ZPS-3910)
@@ -745,20 +721,13 @@ To solve this this issue follow instructions according this arcticle:
     user/role/privilege configuration
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1 and 5.3.3
 
-1.0.0
+**1.0.0**
 
 -   Initial release.
 
-|                            |                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **ZenPack Classification** |                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Commercial**             | This ZenPack is developed and supported by Zenoss Inc. Commercial ZenPacks are available to Zenoss commercial customers only. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact){.external-link} to request more information regarding this or any other ZenPacks. [Click here](https://zenoss.com/product/zenpacks?f%5B0%5D=im_field_zenpack_category:1046){.external-link} to view all available Zenoss Commercial ZenPacks. |
 | **Organization**           | Zenoss, Inc.                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Name**                   | ZenPacks.zenoss.EMC.Isilon                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Applications Monitored** | EMC Isilon Storage Platform                                                                                                                                                                                                                                                                                                                                                                                                            |
-
-## Attachments:
-
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
-
+| **Applications Monitored** | EMC Isilon Storage Platform                                                                                                                                                                                                                                                                                                                             

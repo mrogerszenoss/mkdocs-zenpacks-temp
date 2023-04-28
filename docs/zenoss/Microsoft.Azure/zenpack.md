@@ -1,7 +1,5 @@
 # Microsoft Azure
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -34,74 +32,6 @@ using the Microsoft Azure REST API.
 This ZenPack is included with commercial versions of Zenoss and
 enterprise support for this ZenPack is provided to Zenoss customers with
 an active subscription.
-
-## Contents
-
-[1 Azure ZenPack](#azure-zenpack)
-
-[1.1 Background](#background)
-
-[1.2 Releases](#releases)
-
-[1.3 Features](#features)
-
-[1.3.1 Discovery](#discovery)
-
-[1.3.2 Monitoring](#monitoring)
-
-[1.3.2.1 Activity Log Datasource](#activity-log-datasource)
-
-[1.3.2.2 Metrics Datasource](#metrics-datasource)
-
-[1.3.2.2.1 Testing the datasource](#testing-the-datasource)
-
-[1.3.2.3 Selective monitoring](#selective-monitoring)
-
-[1.3.3 Service Impact](#service-impact)
-
-[1.3.4 Billing Charts for Enterprise Azure Customers](#billing-charts-for-enterprise-azure-customers)
-
-[1.3.4.1 Device Overview Page](#device-overview-page)
-
-[1.3.4.2 Billing Charts Page](#billing-charts-page)
-
-[1.3.5 Reports](#reports)
-
-[1.4 Usage](#usage)
-
-[1.4.1 Adding Azure Subscriptions](#adding-azure-subscriptions)
-
-[1.4.1.1 Collecting Resources Created in Azure Resource Manager Deployment Model (ARM) or Azure Cloud Solution Provider (CSP)](#MicrosoftAzure-CollectingResourcesCreatedinAzureResourceManagerDeploymentModel(ARM)orAzureCloudSolutionProvider(CSP))
-
-[1.4.1.2 Enabling billing data collection for Enterprise Accounts](#enabling-billing-data-collection-for-enterprise-accounts)
-
-[1.4.1.3 Configuration options](#configuration-options)
-
-[1.4.2 Configuring HTTP Proxies](#configuring-httpproxies)
-
-[1.5 Prerequisites](#prerequisites)
-
-[1.5.1 Monitoring configuration](#monitoring-configuration)
-
-[1.5.2 Network access to Azure endpoints](#network-access-to-azure-endpoints)
-
-[1.6 Troubleshooting](#troubleshooting)
-
-[1.7 General troubleshooting using Azure CLI tools](#general-troubleshooting-usinga-zureclitools)
-
-[1.7.1 Billing Charts](#billing-charts)
-
-[1.7.2 Storage Accounts](#storage-accounts)
-
-[1.8 Limitations](#limitations)
-
-[1.9 Known Issues](#known-issues)
-
-[1.9.1 Upgrade to 1.3.1](#upgradeto1-31)
-
-[1.10 Installed Items](#installed-items)
-
-[1.11 Changes](#changes)
 
 ## Releases
 
@@ -1409,7 +1339,7 @@ Component Types
 
 ## Changes
 
-3.0.0
+**3.0.0**
 
 -   Added monitoring of Azure SQL Database Managed Instances (ZPS-8265)
 -   Added monitoring of Azure Log Analytics Workspaces (ZPS-8306)
@@ -1423,7 +1353,7 @@ Component Types
 -   Improved Azure Activity Log events processing (ZPS-7474)
 -   Tested with Zenoss Cloud, Zenoss 6.7.0, and Service Impact 5.5.5
 
-2.2.1
+**2.2.1**
 
 -   Fix modeling and monitoring through a HTTP and HTTPS proxy
     (ZPS-7305)
@@ -1431,7 +1361,7 @@ Component Types
     (ZPS-7291)
 -   Tested with Zenoss Cloud, Zenoss 6.5.0, and Service Impact 5.5.2
 
-2.2.0
+**2.2.0**
 
 -   Add ability to see billing data on SmartView/DashBoard
 -   Fix displaying billing graphs on the overview page (ZPS-6880)
@@ -1444,7 +1374,7 @@ Component Types
 -   Tested with Zenoss 6.4.x, Zenoss 6.5.x, Zenoss Cloud and Service
     Impact 5.5.1
 
-2.1.0
+**2.1.0**
 
 -   Fix events for Service Plan components in case all resources are
     stopped (ZPS-5652)
@@ -1459,7 +1389,7 @@ Component Types
 -   Tested with Zenoss 6.3.x, Zenoss 6.4.x, Zenoss Cloud and Service
     Impact 5.5.1
 
-2.0.0
+**2.0.0**
 
 -   Switch to pure REST API queries in place of Microsoft SDK
 -   Add Azure Metric datasource to collect monitoring data from Azure
@@ -1467,11 +1397,11 @@ Component Types
 -   Fix Azure ZenPack and Exchange Installation Conflict (ZPS-4335)
 -   Tested with Zenoss 6.3.x and Zenoss Cloud. Impact 5.3.4
 
-1.3.3
+**1.3.3**
 
 -   Fix Azure ZenPack and Exchange Installation Conflict (ZPS-5112)
 
-1.3.2
+**1.3.2**
 
 -   Handle inconsistent network configuration (ZPS-3802)
 -   Fix subscription metrics on the device overview page (ZPS-3960)
@@ -1492,7 +1422,7 @@ Component Types
 -   Tested on Zenoss Resource Manager 5.3.3, 6.2.0, Zenoss Cloud with
     Service Impact 5.3.1
 
-1.3.1
+**1.3.1**
 
 -   Fix Error in AzureCollector: 'NoneType' object has no attribute
     'uri' (ZPS-1760)
@@ -1505,7 +1435,7 @@ Component Types
 -   Tested with Zenoss Resource Manager 5.3.3, 6.1.2, Zenoss Resource
     Manager 4.2.5 RPS 743 and Service Impact 5.3.0
 
-1.3.0
+**1.3.0**
 
 -   Strict rules for device ID
 -   Support of Blob Storage Account
@@ -1514,151 +1444,28 @@ Component Types
 -   Separate AzureBlobs modeler plugin to control whether model blobs or
     not
 
-1.2.0
+**1.2.0**
 
 -   Add support for resources deployed in Azure Resource Manager
     deployment model
 -   Add bidirectional associating of Azure Instances (Classic Instances)
     with guest operation systems
 
-1.1.1
+**1.1.1**
 
 -   Fix ID processing for Resource Manager deployment model
 
-1.1.0
+**1.1.0**
 
 -   Add billing data collection and charting for Azure Enterprise
     accounts
 
-1.0.4
+**1.0.4**
 
 -   Add possibility to skip monitoring of particular components
 
-1.0.3
+**1.0.3**
 
 -   5.x support.
 -   Monitoring performance improved.
 -   Various bug fixes.
-
-## Attachments:
-
--   [Azure_AppServicePlans.png](img/zenpack-azure_appserviceplans.png)
--   [Azure_Add_Azure_Subscription_Dialog.png](img/zenpack-azure_add_azure_subscription_dialog.png)
--   [Azure_Add_Azure_Subscription_Menu_Item.png](img/zenpack-azure_add_azure_subscription_menu_item.png)
--   [Azure_AppServices.png](img/zenpack-azure_appservices.png)
--   [Azure_billing_charts.png](img/zenpack-azure_billing_charts.png)
--   [Azure_billing_overview.png](img/zenpack-azure_billing_overview.png)
--   [Azure_Certificates.png](img/zenpack-azure_certificates.png)
--   [Azure_ClassicInstances.png](img/zenpack-azure_classicinstances.png)
--   [Azure_Container_Blobs.png](img/zenpack-azure_container_blobs.png)
--   [Azure_FunctionApps.png](img/zenpack-azure_functionapps.png)
--   [Azure_Cosmos.png](img/zenpack-azure_cosmos.png)
--   [Azure_Impact.png](img/zenpack-azure_impact.png)
--   [Azure_Instances.png](img/zenpack-azure_instances.png)
--   [Azure_KeyVaults.png](img/zenpack-azure_keyvaults.png)
--   [Azure_Kubernetes.png](img/zenpack-azure_kubernetes.png)
--   [Azure_Locations.png](img/zenpack-azure_locations.png)
--   [Azure_RedisCaches.png](img/zenpack-azure_rediscaches.png)
--   [Azure_ServiceBuses.png](img/zenpack-azure_servicebuses.png)
--   [azure_resource_explorer.PNG](img/zenpack-azure_resource_explorer.png)
--   [Azure_SQLDatabases.png](img/zenpack-azure_sqldatabases.png)
--   [Azure_Site_Graphs.png](img/zenpack-azure_site_graphs.png)
--   [Azure_SQLServers.png](img/zenpack-azure_sqlservers.png)
--   [Azure_StorageServices.png](img/zenpack-azure_storageservices.png)
--   [Azure_Storage_Service_Tables.png](img/zenpack-azure_storage_service_tables.png)
--   [Azure_Subscription_Graphs.png](img/zenpack-azure_subscription_graphs.png)
--   [Azure_Subscription_Overview_Page.png](img/zenpack-azure_subscription_overview_page.png)
--   [Certificate_File_on_Azure_Management_Page.PNG](img/zenpack-certificate_file_on_azure_management_page.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Monitoring_Configuration_on_Azure_Management_Page.PNG](img/zenpack-monitoring_configuration_on_azure_management_page.png)
--   [Azure_AppServicePlans.png](img/zenpack-azure_appserviceplans.png)
--   [Azure_KeyVaults.png](img/zenpack-azure_keyvaults.png)
--   [Azure_SQLDatabases.png](img/zenpack-azure_sqldatabases.png)
--   [Azure_AppServices.png](img/zenpack-azure_appservices.png)
--   [Azure_Kubernetes.png](img/zenpack-azure_kubernetes.png)
--   [Azure_Locations.png](img/zenpack-azure_locations.png)
--   [Azure_SQLServers.png](img/zenpack-azure_sqlservers.png)
--   [Azure_StorageServices.png](img/zenpack-azure_storageservices.png)
--   [Azure_billing_overview.png](img/zenpack-azure_billing_overview.png)
--   [Azure_FunctionApps.png](img/zenpack-azure_functionapps.png)
--   [Azure_RedisCaches.png](img/zenpack-azure_rediscaches.png)
--   [Azure_Subscription_Overview_Page.png](img/zenpack-azure_subscription_overview_page.png)
--   [Azure_Add_Azure_Subscription_Dialog.png](img/zenpack-azure_add_azure_subscription_dialog.png)
--   [Azure_Certificates.png](img/zenpack-azure_certificates.png)
--   [Azure_ClassicInstances.png](img/zenpack-azure_classicinstances.png)
--   [Azure_Instances.png](img/zenpack-azure_instances.png)
--   [Azure_ServiceBuses.png](img/zenpack-azure_servicebuses.png)
--   [Azure_Add_Azure_Subscription_Menu_Item.png](img/zenpack-azure_add_azure_subscription_menu_item.png)
--   [Azure_billing_charts.png](img/zenpack-azure_billing_charts.png)
--   [Azure_Cosmos.png](img/zenpack-azure_cosmos.png)
--   [Azure_Impact.png](img/zenpack-azure_impact.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Monitoring_Configuration_on_Azure_Management_Page.PNG](img/zenpack-monitoring_configuration_on_azure_management_page.png)
--   [Azure_Container_Blobs.png](img/zenpack-azure_container_blobs.png)
--   [azure_resource_explorer.PNG](img/zenpack-azure_resource_explorer.png)
--   [Azure_Site_Graphs.png](img/zenpack-azure_site_graphs.png)
--   [Azure_Storage_Service_Tables.png](img/zenpack-azure_storage_service_tables.png)
--   [Azure_Subscription_Graphs.png](img/zenpack-azure_subscription_graphs.png)
--   [Certificate_File_on_Azure_Management_Page.PNG](img/zenpack-certificate_file_on_azure_management_page.png)
--   [Azure_ServiceBuses.png](img/zenpack-azure_servicebuses.png)
--   [Azure_Add_Azure_Subscription_Dialog.png](img/zenpack-azure_add_azure_subscription_dialog.png)
--   [Azure_Add_Azure_Subscription_Menu_Item.png](img/zenpack-azure_add_azure_subscription_menu_item.png)
--   [Azure_AppServicePlans.png](img/zenpack-azure_appserviceplans.png)
--   [Azure_AppServices.png](img/zenpack-azure_appservices.png)
--   [Azure_billing_charts.png](img/zenpack-azure_billing_charts.png)
--   [Azure_billing_overview.png](img/zenpack-azure_billing_overview.png)
--   [Azure_Certificates.png](img/zenpack-azure_certificates.png)
--   [Azure_ClassicInstances.png](img/zenpack-azure_classicinstances.png)
--   [Azure_Container_Blobs.png](img/zenpack-azure_container_blobs.png)
--   [Azure_Cosmos.png](img/zenpack-azure_cosmos.png)
--   [Azure_FunctionApps.png](img/zenpack-azure_functionapps.png)
--   [Azure_Impact.png](img/zenpack-azure_impact.png)
--   [Azure_Instances.png](img/zenpack-azure_instances.png)
--   [Azure_KeyVaults.png](img/zenpack-azure_keyvaults.png)
--   [Azure_Kubernetes.png](img/zenpack-azure_kubernetes.png)
--   [Azure_Locations.png](img/zenpack-azure_locations.png)
--   [Azure_RedisCaches.png](img/zenpack-azure_rediscaches.png)
--   [azure_resource_explorer.PNG](img/zenpack-azure_resource_explorer.png)
--   [Azure_ServiceBuses.png](img/zenpack-azure_servicebuses.png)
--   [Azure_Site_Graphs.png](img/zenpack-azure_site_graphs.png)
--   [Azure_SQLDatabases.png](img/zenpack-azure_sqldatabases.png)
--   [Azure_SQLServers.png](img/zenpack-azure_sqlservers.png)
--   [Azure_Storage_Service_Tables.png](img/zenpack-azure_storage_service_tables.png)
--   [Azure_StorageServices.png](img/zenpack-azure_storageservices.png)
--   [Azure_Subscription_Graphs.png](img/zenpack-azure_subscription_graphs.png)
--   [Azure_Subscription_Overview_Page.png](img/zenpack-azure_subscription_overview_page.png)
--   [Certificate_File_on_Azure_Management_Page.PNG](img/zenpack-certificate_file_on_azure_management_page.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Monitoring_Configuration_on_Azure_Management_Page.PNG](img/zenpack-monitoring_configuration_on_azure_management_page.png)
--   [Azure_Add_Azure_Subscription_Dialog.png](img/zenpack-azure_add_azure_subscription_dialog.png)
--   [Azure_Add_Azure_Subscription_Menu_Item.png](img/zenpack-azure_add_azure_subscription_menu_item.png)
--   [Azure_AppServicePlans.png](img/zenpack-azure_appserviceplans.png)
--   [Azure_AppServices.png](img/zenpack-azure_appservices.png)
--   [Azure_billing_charts.png](img/zenpack-azure_billing_charts.png)
--   [Azure_billing_overview.png](img/zenpack-azure_billing_overview.png)
--   [Azure_Certificates.png](img/zenpack-azure_certificates.png)
--   [Azure_ClassicInstances.png](img/zenpack-azure_classicinstances.png)
--   [Azure_Container_Blobs.png](img/zenpack-azure_container_blobs.png)
--   [Azure_Cosmos.png](img/zenpack-azure_cosmos.png)
--   [Azure_FunctionApps.png](img/zenpack-azure_functionapps.png)
--   [Azure_Impact.png](img/zenpack-azure_impact.png)
--   [Azure_KeyVaults.png](img/zenpack-azure_keyvaults.png)
--   [Azure_Instances.png](img/zenpack-azure_instances.png)
--   [Azure_Kubernetes.png](img/zenpack-azure_kubernetes.png)
--   [Azure_Locations.png](img/zenpack-azure_locations.png)
--   [Azure_RedisCaches.png](img/zenpack-azure_rediscaches.png)
--   [azure_resource_explorer.PNG](img/zenpack-azure_resource_explorer.png)
--   [Azure_ServiceBuses.png](img/zenpack-azure_servicebuses.png)
--   [Azure_Site_Graphs.png](img/zenpack-azure_site_graphs.png)
--   [Azure_SQLDatabases.png](img/zenpack-azure_sqldatabases.png)
--   [Azure_SQLServers.png](img/zenpack-azure_sqlservers.png)
--   [Azure_Storage_Service_Tables.png](img/zenpack-azure_storage_service_tables.png)
--   [Azure_StorageServices.png](img/zenpack-azure_storageservices.png)
--   [Azure_Subscription_Graphs.png](img/zenpack-azure_subscription_graphs.png)
--   [Azure_Subscription_Overview_Page.png](img/zenpack-azure_subscription_overview_page.png)
--   [Certificate_File_on_Azure_Management_Page.PNG](img/zenpack-certificate_file_on_azure_management_page.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [Monitoring_Configuration_on_Azure_Management_Page.PNG](img/zenpack-monitoring_configuration_on_azure_management_page.png)
--   [Azure_billing_charts.png](img/zenpack-azure_billing_charts.png)
--   [Azure_Add_Azure_Subscription_Dialog.png](img/zenpack-azure_add_azure_subscription_dialog.png)
-

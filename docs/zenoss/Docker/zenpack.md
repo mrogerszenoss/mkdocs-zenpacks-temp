@@ -1,7 +1,5 @@
 # Docker
 
-@lb[](img/zenpack-docker-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -64,23 +62,6 @@ Version 2.0.5 [Download](https://delivery.zenoss.com/){.external-link}:   Releas
 <!-- -->
 
 Version 1.1.0 [Download](https://delivery.zenoss.com/){.external-link}:   Released: 2015-04-15:   Compatible with Zenoss 4.2 - 5.0:   No additional requirements.
-
-## Contents
-
-1.  [Features](#features)
-    1.  [Discovery](#discovery)
-    2.  [Monitoring](#monitoring)
-        1.  [Docker Status Monitoring](#docker-status-monitoring)
-        2.  [Podman Status Monitoring](#podman-status-monitoring)
-        3.  [Container Status Monitoring](#container-status-monitoring)
-        4.  [Container Statistics Monitoring](#container-statistics-monitoring)
-    3.  [Service Impact](#service-impact)
-2.  [Usage](#usage)
-    1.  [SSH Configuration](#ssh-configuration)
-    2.  [sudo Configuration](#sudo-configuration)
-3.  [Services](#services)
-4.  [Installed Items](#installed-items)
-5.  [Changes](#changes)
 
 ## Features
 
@@ -648,19 +629,19 @@ Component Types:   DockerContainer (on related device):   PodmanContainer (on re
 
 ## Changes
 
-### 2.1.1
+**2.1.1**
 
 -   Improved error handling to support Podman Containers.
 -   Tested with Zenoss 6.6.0, Zenoss Cloud and Service Impact 5.5.5.0.0
 
-### 2.1.0
+**2.1.0**
 
 -   Added support for Podman Containers. (ZPS-7870)
 -   Added Impact and DynamicView relations for Podman Containers.
     (ZPS-8022)
 -   Tested with Zenoss 6.6.0, Zenoss Cloud and Service Impact 5.5.5.0.0
 
-### 2.0.5
+**2.0.5**
 
 -   Docker Size and Virtual Size are now parsed correctly (ZPS-7037)
 
@@ -673,26 +654,26 @@ Component Types:   DockerContainer (on related device):   PodmanContainer (on re
     Tested with Zenoss Cloud, Zenoss Resource Manager 6.4.1 and Zenoss Resource Manager 6.5.0
     ~~~
 
-### 2.0.4
+**2.0.4**
 
 -   Ignore the new plugin_name attribute in datamaps
 -   Tested with Zenoss 5.3.3. 6.1.0, and 6.1.1
 
-### 2.0.3
+**2.0.3**
 
 -   Update to ZenPackLib v2 to address bugs in v1. (ZPS-2934)
 -   Fix collection of metrics from Kubernetes containers. (ZPS-2935)
 -   Tested with Zenoss 4.2.5, 5.3.3. 6.1.0, and 6.1.1
 
-### 2.0.2
+**2.0.2**
 
 -   Fix disabling of Dynamic View of non-Docker components. (ZPS-703)
 
-### 2.0.1
+**2.0.1**
 
 -   Disable container status monitoring by default. (ZEN-24043)
 
-### 2.0.0
+**2.0.0**
 
 -   Transparently support cgroupfs and systemd cgroup drivers.
 -   Add zDockerMonitor(Status\|Stats\|Size) configuration properties.
@@ -701,46 +682,6 @@ Component Types:   DockerContainer (on related device):   PodmanContainer (on re
 -   Drop support for Docker versions earlier than 1.6.
 -   Support Dynamic View.
 
-### 1.0.0
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [Docker_configuration_properties.png](img/zenpack-docker_configuration_properties.png)
--   [Docker_container_cpu_usage.png](img/zenpack-docker_container_cpu_usage.png)
--   [Docker_container_details.png](img/zenpack-docker_container_details.png)
--   [Docker_container_dynamicview.png](img/zenpack-docker_container_dynamicview.png)
--   [Docker_container_events.png](img/zenpack-docker_container_events.png)
--   [Docker_container_io_rate.png](img/zenpack-docker_container_io_rate.png)
--   [Docker_container_io_throughput.png](img/zenpack-docker_container_io_throughput.png)
--   [Docker_container_memory_usage.png](img/zenpack-docker_container_memory_usage.png)
--   [Docker_container_storage_usage.png](img/zenpack-docker_container_storage_usage.png)
--   [docker-zenpack.png](img/zenpack-docker-zenpack.png)
--   [Docker_configuration_properties.png](img/zenpack-docker_configuration_properties.png)
--   [Docker_container_cpu_usage.png](img/zenpack-docker_container_cpu_usage.png)
--   [Docker_container_details.png](img/zenpack-docker_container_details.png)
--   [Docker_container_dynamicview.png](img/zenpack-docker_container_dynamicview.png)
--   [Docker_container_events.png](img/zenpack-docker_container_events.png)
--   [Docker_container_io_rate.png](img/zenpack-docker_container_io_rate.png)
--   [Docker_container_io_throughput.png](img/zenpack-docker_container_io_throughput.png)
--   [Docker_container_memory_usage.png](img/zenpack-docker_container_memory_usage.png)
--   [Docker_container_storage_usage.png](img/zenpack-docker_container_storage_usage.png)
--   [docker-zenpack.png](img/zenpack-docker-zenpack.png)
--   [Docker_configuration_properties.png](img/zenpack-docker_configuration_properties.png)
--   [Docker_container_cpu_usage.png](img/zenpack-docker_container_cpu_usage.png)
--   [Docker_container_details.png](img/zenpack-docker_container_details.png)
--   [Docker_container_dynamicview.png](img/zenpack-docker_container_dynamicview.png)
--   [Docker_container_events.png](img/zenpack-docker_container_events.png)
--   [Docker_container_io_rate.png](img/zenpack-docker_container_io_rate.png)
--   [Docker_container_io_throughput.png](img/zenpack-docker_container_io_throughput.png)
--   [Docker_container_memory_usage.png](img/zenpack-docker_container_memory_usage.png)
--   [Docker_container_storage_usage.png](img/zenpack-docker_container_storage_usage.png)
--   [docker-zenpack.png](img/zenpack-docker-zenpack.png)
--   [Docker_configuration_properties.png](img/zenpack-docker_configuration_properties.png)
--   [README.html](attachments/14848504/34668856.html)
--   [podman_container_dynamicview.png](img/zenpack-podman_container_dynamicview.png)
--   [podman_container_events.png](img/zenpack-podman_container_events.png)
--   [podman_container_impact.png](img/zenpack-podman_container_impact.png)
--   [Docker_configuration_properties.png](img/zenpack-docker_configuration_properties.png)
-

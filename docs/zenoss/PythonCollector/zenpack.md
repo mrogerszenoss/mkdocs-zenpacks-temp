@@ -1,7 +1,5 @@
 # PythonCollector
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -46,20 +44,6 @@ Version 1.11.1 [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenos
 <!-- -->
 
 Version 1.11.0 [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.PythonCollector/1.11.0/ZenPacks.zenoss.PythonCollector-1.11.0.egg){.external-link}:   Released: 2019-07-03:   Compatible with Zenoss Cloud and Zenoss 6:   No additional requirements.
-
-## Contents
-
-1.  [Background](#background)
-2.  [Usage](#usage)
-    1.  [ZenPython Configuration Options](#zen-python-configuration-options)
-    2.  [ZenPython Statistics](#zen-python-statistics)
-3.  [Developing Plugins](#developing-plugins)
-    1.  [Using the Python Data Source Type Directly](#using-the-python-datasource-type-directly)
-    2.  [Types of Data](#typesof-data)
-    3.  [Publishing Data Immediately](#publishing-data-immediately)
-    4.  [Extending the Python Data Source Type](#extending-the-python-datasource-type)
-    5.  [Updating the Model](#updating-the-model)
-4.  [Changes](#changes)
 
 ## Background
 
@@ -368,13 +352,13 @@ relationship of objects.
 
 ## Changes
 
-### 1.11.1
+**1.11.1**
 
 -   Compatibility changes to work with the latest version.
 -   Fix cyclic references between PythonCollectionTask and plugins.
     (ZPS-6719)
 
-### 1.11.0
+**1.11.0**
 
 -   Support extra datapoint tags in Zenoss Cloud. (ZPS-4587)
 -   Support publishing ad hoc metrics from plugins. (ZPS-4629)
@@ -383,29 +367,29 @@ relationship of objects.
 -   Avoid disabling plugins due to clock jumps by using monotonic clock.
 -   Allow testing of datasources with readable output. (ZEN-31038)
 
-### 1.10.1
+**1.10.1**
 
 -   Fix RunningTimeoutError occurring instead of proper error.
     (ZPS-1755)
 
-### 1.10.0
+**1.10.0**
 
 -   Add "runningtimeout" option to zenpython. (ZPS-1675)
 -   Timeout datasources that stay running for triple their cycletime.
     (ZPS-1675)
 -   Add "timedOutTasks" metric to zenpython. (ZPS-1675)
 
-### 1.9.0
+**1.9.0**
 
 -   Add support of change the execution interval for a started task.
     (ZPS-70)
 -   Fix traceback when applying datamaps to deleted devices. (ZEN-24056)
 
-### 1.8.1 (2016-07-19)
+**1.8.1** (2016-07-19)
 
 -   Fix total collection failure when one bad config exists. (ZEN-23167)
 
-### 1.8.0 (2016-06-22)
+**1.8.0** (2016-06-22)
 
 -   Add 'twistedconcurrenthttp' option to zenpython
 -   Add ZenPacks.zenoss.PythonCollector.web.client.getPage() API
@@ -413,74 +397,74 @@ relationship of objects.
 -   Support optional \_remove property in naked ObjectMaps.
 -   Document modeling from datasource plugins.
 
-### 1.7.4 (2016-03-23)
+**1.7.4** (2016-03-23)
 
 -   Increase default blockingtimeout from 5 to 30 seconds. (ZEN-22632)
 -   Enable all plugins if blockingtimeout is set to 0. (ZEN-22633)
 
-### 1.7.3 (2015-11-25)
+**1.7.3** (2015-11-25)
 
 -   Add "blockingtimeout" option to zenpython. (ZEN-19219)
 -   Change default "blockingwarning" from 30 to 3 seconds.
 
-### 1.7.2 (2015-08-27)
+**1.7.2** (2015-08-27)
 
 -   Add "blockingwarning" option to zenpython.
 -   Add detailed task state tracking to zenpython plugin execution.
 -   Add "percentBlocked" metric to zenpython.
 -   Restore compatibility with Zenoss 4.1.
 
-### 1.7.1 (2015-07-30)
+**1.7.1** (2015-07-30)
 
 -   Avoid a tight loop when writing metrics and events. (ZEN-18956)
 -   Switch back to epoll reactor. No select-dependent plugins left.
 
-### 1.7.0 (2015-07-06)
+**1.7.0** (2015-07-06)
 
 -   Fix datapoint format for Control Center metrics.
 -   Fix potential applyDataMaps traceback. (ZEN-17249)
 -   Add twistedthreadpoolsize configuration option to zenpython.
 -   Add optional startDelay property to PythonDataSourcePlugin.
 
-### 1.6.4 (2015-03-30)
+**1.6.4** (2015-03-30)
 
 -   Fix serviced datapoint format syntax. (ZEN-17255)
 
-### 1.6.3 (2015-02-10)
+**1.6.3** (2015-02-10)
 
 -   Revert to select reactor. Some plugins require it. (ZEN-16542)
 
-### 1.6.2 (2015-01-27)
+**1.6.2** (2015-01-27)
 
 -   Optimize datasource plugin loading. (ZEN-16344)
 -   Use epoll reactor to support &gt;1024 descriptors. (ZEN-16164)
 
-### 1.6.1 (2015-01-13)
+**1.6.1** (2015-01-13)
 
 -   Add container Support for Zenoss 5X (Europa) services including
     RabbitMQ.
 
-### 1.6.0 (2014-11-04)
+**1.6.0** (2014-11-04)
 
 -   Provide PythonDataSourcePlugin instances access to hub services.
 -   Add --ignore and --collect options for zenpython.
 -   Handle Decimal performance values.
 -   Fix indexing bug when adding components with only an "id" property.
 
-### 1.5.3 (2014-09-29)
+**1.5.3** (2014-09-29)
 
 -   Switch to Zenoss 5 writeMetricWithMetadata() API.
 
-### 1.5.2 (2014-09-25)
+**1.5.2** (2014-09-25)
 
 -   Fix bug that causes device corruption on retried model transactions.
 -   Add support for Zenoss 5 writeMetric() API.
 
-### 1.5.1 (2014-07-24)
+**1.5.1** (2014-07-24)
 
 -   Fix bug in handling of long-typed values.
 
-### 1.5.0 (2014-07-03)
+**1.5.0** (2014-07-03)
 
 -   Fix application of maps in "run" mode.
 -   Support TALES evaluation of datapoint properties.
@@ -489,37 +473,29 @@ relationship of objects.
 -   Fix illegal update errors when attempting to write old values.
 -   Support collection of data for multiple timestamps in one interval.
 
-### 1.4.0 (2014-04-02)
+**1.4.0** (2014-04-02)
 
 -   Support callables in PythonDataSourcePlugin.proxy_attributes.
 
-### 1.3.0 (2014-03-20)
+**1.3.0** (2014-03-20)
 
 -   Optionally pass config into datasource plugins' \_\_init\_\_.
 -   Support ds_dp syntax for data\['values'\] keys.
 -   Support None return from datasource plugins' collect method.
 
-### 1.2.0 (2013-11-25)
+**1.2.0** (2013-11-25)
 
 -   Add cleanup hook for datasource plugins.
 
-### 1.1.1 (2013-09-19)
+**1.1.1** (2013-09-19)
 
 -   Improve incremental modeling support.
 
-### 1.1.0 (2013-08-22)
+**1.1.0** (2013-08-22)
 
 -   Support model updates from datasource plugins.
 -   Support incremental modeling.
 
-### 1.0.2 (2013-07-29)
+**1.0.2** (2013-07-29)
 
 -   Initial release.
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

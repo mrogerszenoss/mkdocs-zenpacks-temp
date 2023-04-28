@@ -1,7 +1,5 @@
 # HP Monitor
 
-@lb[](img/zenpack-hp-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -49,9 +47,8 @@ The following information is collected through SNMP:
 
 ## Prerequisites
 
-|                       |                                                                            |
-|-----------------------|----------------------------------------------------------------------------|
 | Prerequisite          | Restriction                                                                |
+|-----------------------|----------------------------------------------------------------------------|
 | Product               | Zenoss platform 4.x, Zenoss 2.2 or higher                                  |
 | Required ZenPacks     | ZenPacks.zenoss.HPMonitor                                                  |
 | On each remote device | The HP Insight SNMP Management Agent gathers information about the device. |
@@ -79,16 +76,7 @@ To enable enhanced modeling:
 
 ## Daemons
 
-|                       |             |
-|-----------------------|-------------|
 | Type                  | Name        |
+|-----------------------|-------------|
 | Modeler               | zenmodeler  |
 | Performance Collector | zenperfsnmp |
-
-## Attachments:
-
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
--   [hp-zenpack.png](img/zenpack-hp-zenpack.png)
-

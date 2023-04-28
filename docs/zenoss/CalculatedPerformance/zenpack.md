@@ -1,7 +1,5 @@
 # Calculated Performance
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -362,17 +360,17 @@ be less than 1 second.
 
 -   Support new contextMetric capability in Zenoss 5.2.3. (ZEN-27010)
 
-**2.3.1 - 2017-03-04**
+**2.3.1** - 2017-03-04
 
 -   Clarify event when aggregation operation is blank or invalid.
     (ZPS-71)
 -   Change default aggregation operation from blank to "sum". (ZPS-71)
 
-**2.3.0 - 2016-11-17**
+**2.3.0** - 2016-11-17
 
 -   Reduce impact on zauth with better cookie usage. (ZEN-24527)
 
-**2.2.1 - 2016-08-02**
+**2.2.1** - 2016-08-02
 
 -   Added zDatasourceDebugLogging property to control debug logging.
     (ZEN-22318)
@@ -381,42 +379,42 @@ be less than 1 second.
 -   Improve performance with HTTP connection pooling in Zenoss 5.
     (ZEN-23868)
 
-**2.2.0 - 2015-11-11**
+**2.2.0** - 2015-11-11
 
 -   Add impact from members to ElementPool. (ZEN-19846)
 -   Fix bogus calculations when basis counters reset. (ZEN-20694)
 
-**2.1.0 - 2015-09-16**
+**2.1.0** - 2015-09-16
 
 -   Improve performance by using wildcard metric queries.
 -   Fix "CookieAgent" error when used with Zenoss 4.
 -   Fix median operation on aggregating datapoints.
 
-**2.0.5 - 2015-02-22**
+**2.0.5** - 2015-02-22
 
 -   Use a requests Session and cache at the class level to reduce
     authentication load. (ZEN-15835)
 
-**2.0.4 - 2014-10-08**
+**2.0.4** - 2014-10-08
 
 -   Descriptions added to aggregating datasources.
 -   Add zDatasourceDebugLogging property to debug calculated/aggregated
     datasources on a single device.
 -   Some defensive improvements with nice error messages.
 
-**2.0.3 - 2014-09-11**
+**2.0.3** - 2014-09-11
 
 -   Add new datapoint\['dpname'\] expression syntax for hyphenated
     datapoint names. (ZEN-12489)
 
-**2.0.2 - 2014-07-14**
+**2.0.2** - 2014-07-14
 
 -   Fix ZEN-11832: Hub will now at least send 'targets' and 'expression'
     when things are wrong. Collection method now will allow some missing
     things from the params dict.
 -   Fix misc issues causing NaNs to show up in graphs.
 
-**2.0.1 - 2014-05-20**
+**2.0.1** - 2014-05-20
 
 -   Ability to concatenate iterables in expressions and methods
 -   New 'madmax' aggregate operation, for Median Absolute Deviation
@@ -431,48 +429,30 @@ be less than 1 second.
 -   Fix ZEN-11580: CalculatedPerformance 2.0.0 has Dependency on
     PythonCollector&gt;1.3.0
 
-**2.0.0 - 2014-04-07**
+**2.0.0** - 2014-04-07
 
 -   Add aggregating datapoint capabilities.
 -   Add ElementPool components for aggregations.
 -   Rewrite collection to use PythonCollector.
 
-**1.0.9 - 2014-03-18**
+**1.0.9** - 2014-03-18
 
 -   Support device properties in expressions. (ZEN-10648)
 -   Prevent failure when one expression contains an error. (ZEN-10649)
 
-**1.0.8 - 2014-01-06**
+**1.0.8** - 2014-01-06
 
 -   Stop defaulting missing datapoints to 0. (ZEN-9610)
 
-**1.0.7 - 2013-07-15**
+**1.0.7** - 2013-07-15
 
 -   Allow short name (*dpname*) or long name (*dsname_dpname*) in
     calculations.
 
-**1.0.6 - 2013-06-19**
+**1.0.6** - 2013-06-19
 
 -   Remove broken 'Test' button from datasource dialog.
 
-**1.0.5 - 2013-04-0388**
+**1.0.5** - 2013-04-0388
 
 -   Initial open source release.
-
-## Attachments:
-
--   [Aggregation_basic_diagram.png](img/zenpack-aggregation_basic_diagram.png)
--   [Aggregation_delay_diagram.png](img/zenpack-aggregation_delay_diagram.png)
--   [Aggregation_delay_mitigated.png](img/zenpack-aggregation_delay_mitigated.png)
--   [Calculation_basic.png](img/zenpack-calculation_basic.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Aggregation_basic_diagram.png](img/zenpack-aggregation_basic_diagram.png)
--   [Aggregation_delay_diagram.png](img/zenpack-aggregation_delay_diagram.png)
--   [Aggregation_delay_mitigated.png](img/zenpack-aggregation_delay_mitigated.png)
--   [Calculation_basic.png](img/zenpack-calculation_basic.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Aggregation_delay_diagram.png](img/zenpack-aggregation_delay_diagram.png)
--   [Aggregation_basic_diagram.png](img/zenpack-aggregation_basic_diagram.png)
--   [Aggregation_delay_mitigated.png](img/zenpack-aggregation_delay_mitigated.png)
--   [Calculation_basic.png](img/zenpack-calculation_basic.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)

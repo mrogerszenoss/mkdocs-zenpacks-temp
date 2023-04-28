@@ -1,7 +1,5 @@
 # IBM WebSphere
 
-@lb[](img/zenpack-ibm-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -188,23 +186,12 @@ graph.
 
 ## Daemons
 
-|                       |          |
-|-----------------------|----------|
 | Type                  | Name     |
+|-----------------------|----------|
 | Performance Collector | zenwebtx |
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.2
-</dt>
-</dl>
+**1.2.2**
 
 -   Added support for Zenoss 5.x
-
-## Attachments:
-
--   [ibm-zenpack.png](img/zenpack-ibm-zenpack.png)
--   [ibm-zenpack.png](img/zenpack-ibm-zenpack.png)
-

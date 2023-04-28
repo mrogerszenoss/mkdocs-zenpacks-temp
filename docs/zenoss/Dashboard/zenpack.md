@@ -1,7 +1,5 @@
 # Dashboard
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -163,96 +161,42 @@ not checked for uniqueness in the new context.
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-1.3.12
-</dt>
-</dl>
+**1.3.12**
 
 -   fix a template to make it compatible with newer version of zope
 
-<dl markdown="1">
-<dt markdown="1">
-1.3.11
-</dt>
-</dl>
+**1.3.11**
 
 -   fixed Open Events Chart portlet shows incorrect events for the last
     x days
 -   added check whether portlet is locked on the backend side during
     update
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.6
-</dt>
-</dl>
+**1.0.6**
 
 -   Added Event Line Chart Portlet
 -   Ability to fullscreen a portlet
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.5
-</dt>
-</dl>
+**1.0.5**
 
 -   Added searching and devices to the Watch List Portlet
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.4
-</dt>
-</dl>
+**1.0.4**
 
 -   Now includes the Impact portlet
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.3
-</dt>
-</dl>
+**1.0.3**
 
 -   Users without a global role could not access the dashboard
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.2
-</dt>
-</dl>
+**1.0.2**
 
 -   The refresh interval wasn't being updated properly
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.1
-</dt>
-</dl>
+**1.0.1**
 
 -   Now works on IE10 and IE11
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.0
-</dt>
-</dl>
+**1.0.0**
 
 -   Initial Release
-
-## Attachments:
-
--   [Add_portlet.png](img/zenpack-add_portlet.png)
--   [Default_dashboard.png](img/zenpack-default_dashboard.png)
--   [Edit_dashboard.png](img/zenpack-edit_dashboard.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Add_portlet.png](img/zenpack-add_portlet.png)
--   [Default_dashboard.png](img/zenpack-default_dashboard.png)
--   [Edit_dashboard.png](img/zenpack-edit_dashboard.png)
--   [Separate_dashboard.png](img/zenpack-separate_dashboard.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Add_portlet.png](img/zenpack-add_portlet.png)
--   [Default_dashboard.png](img/zenpack-default_dashboard.png)
--   [Edit_dashboard.png](img/zenpack-edit_dashboard.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [Separate_dashboard.png](img/zenpack-separate_dashboard.png)
-

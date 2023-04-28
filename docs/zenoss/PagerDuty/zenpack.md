@@ -1,7 +1,5 @@
 # PagerDuty Official - v2 API
 
-@lb[](img/zenpack-pagerduty-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -34,26 +32,6 @@ Zenoss Inc.
 [Git Repo](https://github.com/zenoss/ZenPacks.zenoss.PagerDuty/){.external-link}
 
 ## PagerDuty Official (v2 API)
-
-## Contents
-
-[1 PagerDuty Official (v2 API)](#PagerDutyOfficial-v2API-PagerDutyOfficial(v2API))
-
-[1.1 About](#about)
-
-[1.2 Releases](#releases)
-
-[1.3 ZenPack Installation/Removal](#PagerDutyOfficial-v2API-ZenPackInstallation/Removal)
-
-[1.3.1 Upgrading from ZenPacks.PagerDuty.APINotification](#upgrading-from-zenpacks-pager-duty-api-notification)
-
-[1.4 Usage](#usage)
-
-[1.4.1 Configure PagerDuty](#configure-pager-duty)
-
-[1.4.2 Configure Zenoss](#configure-zenoss)
-
-[1.5 Changes](#changes)
 
 ## About
 
@@ -147,36 +125,28 @@ display.
 Creating PagerDuty Notifications, the following properties can be edited
 in the Notification content tab:
 
-|                 |                                                                        |
-|-----------------|------------------------------------------------------------------------|
 | **Title**       | **Description**                                                        |
+|-----------------|------------------------------------------------------------------------|
 | Service         | PagerDuty Service to send events to                                    |
 | Service API Key | The API Key for the PagerDuty Service you want to alert                |
 | Description     | Text that will appear in the incident's log associated with this event |
 
 ## Changes
 
-Release 2.0.3
+**2.0.3**
 
 -   Workaround for SSLv3 Handshake issues caused by conflict from
     CiscoMonitor
 
-Release 2.0.2
+**2.0.2**
 
 -   Prefer the v2 integration if v1 integration is also defined on the
     service.
 
-Release 2.0.1
+**2.0.1**
 
 -   API Details disappearing from UI
 
-Release 2.0.0
+**2.0.0**
 
 -   Switch to PagerDuty API v2
-
-## Attachments:
-
--   [pagerduty-zenpack.png](img/zenpack-pagerduty-zenpack.png)
--   [pagerduty-zenpack.png](img/zenpack-pagerduty-zenpack.png)
--   [pagerduty-zenpack.png](img/zenpack-pagerduty-zenpack.png)
-

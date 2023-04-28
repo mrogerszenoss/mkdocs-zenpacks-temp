@@ -1,7 +1,5 @@
 # Discovery Mapping
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -27,9 +25,3 @@ the appropriate device class when they're discovered.
 This ZenPack is included with commercial versions of Zenoss and
 enterprise support for this ZenPack is provided to Zenoss customers with
 an active subscription.
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

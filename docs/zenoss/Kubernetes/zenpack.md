@@ -1,7 +1,5 @@
 # Kubernetes
 
-@lb[](img/zenpack-kubernetes-logo-zp.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -47,36 +45,6 @@ Version 1.2.0-[Download](https://delivery.zenoss.com){.external-link}:   Release
 
 Version 1.1.0-[Download](https://delivery.zenoss.com){.external-link}:   Released on January 13, 2020:   Requires [PythonCollector ZenPack](http://zenoss.com/product/zenpacks/pythoncollector){.external-link},
     [ZenPackLib ZenPack](http://zenoss.com/product/zenpacks/zenpacklib){.external-link}:   Compatible with Zenoss Resource Manager 6.2 and Zenoss Cloud
-
-## Contents
-
--   [Background](#background)
-    -   [Support Requirements](#support-requirements)
-    -   [Gallery](#gallery)
--   [Features](#features)
-    -   [Upgrade Notes](#upgrade-notes)
-    -   [Kubernetes Structure and Discovery](#kubernetes-structure-and-discovery)
-    -   [Dashboard Portlets](#dashboard-portlets)
--   [Usage](#usage)
-    -   [RBAC Authentication](#rbac-authentication)
-    -   [Kubernetes Batch Configuration](#kubernetes-batch-configuration)
-    -   [Adding a Custom Datasource to Metrics](#adding-a-custom-datasource-to-metrics)
--   [Installed Items](#installed-items)
-    -   [Configuration and zProperties](#configuration-and-zproperties)
-    -   [Device Modeling Configuration](#device-modeling-configuration)
-    -   [Common values for filter zProperties](#common-values-for-filter-zproperties)
-    -   [Modeler Plugins](#modeler-plugins)
--   [Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
-    -   [Impact Relationships between Kubernetes Components](#impact-relationships-between-kubernetes-components)
--   [Appendix: Kubernetes RBAC Setup](#Kubernetes-Appendix%3AKubernetesRBACSetup)
--   [Appendix: Identifying Master Nodes](#Kubernetes-Appendix%3AIdentifyingMasterNodes)
--   [Appendix: AWS EKS nodes](#Kubernetes-Appendix%3AAWSEKSnodes)
--   [Appendix: AKS, Azure nodes](#Kubernetes-Appendix%3AAKS%2CAzurenodes)
--   [Changes](#changes)
-    -   [1.2.0](#120)
-    -   [1.1.0](#110)
-    -   [1.0.1](#101)
-    -   [1.0.0](#100)
 
 ## Background
 
@@ -881,7 +849,7 @@ An Azure AKS cluster consists of two components:
 
 ## Changes
 
-### 1.2.0
+**1.2.0**
 
 -   Added monitoring of StatefulSet component (ZPS-6984)
 -   Added zKubernetesPodFilter for filtering Pods and Containers
@@ -891,7 +859,7 @@ An Azure AKS cluster consists of two components:
 -   Fixed namespace setting during modeling of Containers (ZPS-7888)
 -   Tested with Zenoss Cloud, Zenoss 6.6.0 and Service Impact 5.5.5
 
-### 1.1.0
+**1.1.0**
 
 -   Added support for incremental modeling
 
@@ -906,69 +874,12 @@ An Azure AKS cluster consists of two components:
 -   Tested with Zenoss 6.4.1,
     Zenoss Cloud and Impact 5.5.1
 
-### 1.0.1
+**1.0.1**
 
 -   Fix install issue with Zenoss 6.2.0 (ZPS-4674)
 -   Tested with Zenoss 6.2.1, Zenoss Cloud and Impact 5.3.1
 
-### 1.0.0
+**1.0.0**
 
 -   Initial Release
 -   Tested with Zenoss 6.2.1, Zenoss Cloud and Impact 5.3.1
-
-## Attachments:
-
--   [header.png](img/zenpack-header.png)
--   [K8sContainers.png](img/zenpack-k8scontainers.png)
--   [K8sDependencyView.png](img/zenpack-k8sdependencyview.png)
--   [K8sDynamicView.png](img/zenpack-k8sdynamicview.png)
--   [K8sImpact.png](img/zenpack-k8simpact.png)
--   [K8sImpactDiagram.png](img/zenpack-k8simpactdiagram.png)
--   [K8sModel.png](img/zenpack-k8smodel.png)
--   [K8sNamespaces.png](img/zenpack-k8snamespaces.png)
--   [K8sNodes.png](img/zenpack-k8snodes.png)
--   [K8sOverview.png](img/zenpack-k8soverview.png)
--   [K8sPersistentVolumes.png](img/zenpack-k8spersistentvolumes.png)
--   [K8sPods.png](img/zenpack-k8spods.png)
--   [K8sPortlets.png](img/zenpack-k8sportlets.png)
--   [K8sServices.png](img/zenpack-k8sservices.png)
--   [kubernetes-logo-zp.png](img/zenpack-kubernetes-logo-zp.png)
--   [K8sContainers.png](img/zenpack-k8scontainers.png)
--   [K8sDependencyView.png](img/zenpack-k8sdependencyview.png)
--   [K8sDynamicView.png](img/zenpack-k8sdynamicview.png)
--   [K8sImpactDiagram.png](img/zenpack-k8simpactdiagram.png)
--   [K8sImpact.png](img/zenpack-k8simpact.png)
--   [K8sModel.png](img/zenpack-k8smodel.png)
--   [K8sNamespaces.png](img/zenpack-k8snamespaces.png)
--   [K8sNodes.png](img/zenpack-k8snodes.png)
--   [K8sOverview.png](img/zenpack-k8soverview.png)
--   [K8sPods.png](img/zenpack-k8spods.png)
--   [K8sPersistentVolumes.png](img/zenpack-k8spersistentvolumes.png)
--   [kubernetes-logo-zp.png](img/zenpack-kubernetes-logo-zp.png)
--   [K8sServices.png](img/zenpack-k8sservices.png)
--   [K8sPortlets.png](img/zenpack-k8sportlets.png)
--   [header.png](img/zenpack-header.png)
--   [K8sNamespaces.png](img/zenpack-k8snamespaces.png)
--   [K8sContainers.png](img/zenpack-k8scontainers.png)
--   [K8sImpactDiagram.png](img/zenpack-k8simpactdiagram.png)
--   [K8sDependencyView.png](img/zenpack-k8sdependencyview.png)
--   [K8sServices.png](img/zenpack-k8sservices.png)
--   [K8sImpact.png](img/zenpack-k8simpact.png)
--   [K8sPersistentVolumes.png](img/zenpack-k8spersistentvolumes.png)
--   [K8sPods.png](img/zenpack-k8spods.png)
--   [header.png](img/zenpack-header.png)
--   [K8sNodes.png](img/zenpack-k8snodes.png)
--   [K8sDynamicView.png](img/zenpack-k8sdynamicview.png)
--   [K8sOverview.png](img/zenpack-k8soverview.png)
--   [K8sImpact.png](img/zenpack-k8simpact.png)
--   [K8sImpactDiagram.png](img/zenpack-k8simpactdiagram.png)
--   [K8sDependencyView.png](img/zenpack-k8sdependencyview.png)
--   [K8sDeployments.png](img/zenpack-k8sdeployments.png)
--   [K8sModelDiagram.png](img/zenpack-k8smodeldiagram.png)
--   [K8sImpactDiagram.png](img/zenpack-k8simpactdiagram.png)
--   [K8sImpact.png](img/zenpack-k8simpact.png)
--   [K8sModelDiagram.png](img/zenpack-k8smodeldiagram.png)
--   [K8sDependencyView.png](img/zenpack-k8sdependencyview.png)
--   [K8sDeployments.png](img/zenpack-k8sdeployments.png)
--   [K8sPods.png](img/zenpack-k8spods.png)
-

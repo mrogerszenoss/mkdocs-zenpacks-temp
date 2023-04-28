@@ -1,6 +1,5 @@
 # IBM Power
 
-@lb[](img/zenpack-ibm-zenpack.png)
 
 ## Commercial
 
@@ -678,35 +677,23 @@ command.
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.4.1 and Service
     Impact 5.5.1
 
-1.1.3
+**1.1.3**
 
 -   Fix inconsistencies in Impact relationships
 -   Do not attempt to set invalid LPAR relations (ZPS-5873)
 
-<dl markdown="1">
-<dt markdown="1">
-1.1.2
-</dt>
-</dl>
+**1.1.2**
 
 -   Guard against empty fields used for component IDs
 -   Less ambiguous event summary for incremental model update failures
 -   ZEN-25867: Updated to txsshclient 1.0.0 for Twisted 15 compatibility
 
-<dl markdown="1">
-<dt markdown="1">
-1.1.1
-</dt>
-</dl>
+**1.1.1**
 
 -   Updated zenpacklib.py to address modeler timeouts from
     attribute-indexed components
 
-<dl markdown="1">
-<dt markdown="1">
-1.1.0
-</dt>
-</dl>
+**1.1.0**
 
 -   Audited, revised, and standardized component classes and relations
     model throughout
@@ -741,77 +728,16 @@ command.
     component
 -   ZEN-15715: Traceback when attempting to open IBM Power device
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.2
-</dt>
-</dl>
+**1.0.2**
 
 -   ZEN-16881: Fix Links in the right hand Services pane
 -   ZEN-16544: Fix missing percent_pool_cycles
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.1
-</dt>
-</dl>
+**1.0.1**
 
 -   Add pool cycles to managed systems that support them
 -   ZEN-16510 Traceback on some datasources.
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.0
-</dt>
-</dl>
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [HMC_analytics.PNG](img/zenpack-hmc_analytics.png)
--   [HMC_events.PNG](img/zenpack-hmc_events.png)
--   [HMC_HEA_Ports.PNG](img/zenpack-hmc_hea_ports.png)
--   [HMC_HEAs.PNG](img/zenpack-hmc_heas.png)
--   [HMC_impact.PNG](img/zenpack-hmc_impact.png)
--   [HMC_IO_Devices.PNG](img/zenpack-hmc_io_devices.png)
--   [HMC_IO_Pools.PNG](img/zenpack-hmc_io_pools.png)
--   [HMC_Logical_HEA_Ports.PNG](img/zenpack-hmc_logical_hea_ports.png)
--   [HMC_Logical_HEAs.PNG](img/zenpack-hmc_logical_heas.png)
--   [HMC_LPAR_Profiles.PNG](img/zenpack-hmc_lpar_profiles.png)
--   [HMC_LPARs.PNG](img/zenpack-hmc_lpars.png)
--   [HMC_Managed_Systems.PNG](img/zenpack-hmc_managed_systems.png)
--   [HMC_Overview.PNG](img/zenpack-hmc_overview.png)
--   [HMC_Port_Groups.PNG](img/zenpack-hmc_port_groups.png)
--   [HMC_Processor_Pools.PNG](img/zenpack-hmc_processor_pools.png)
--   [HMC_Service_Processor.PNG](img/zenpack-hmc_service_processor.png)
--   [IBM_add_dialog.png](img/zenpack-ibm_add_dialog.png)
--   [IBM_add_menu.png](img/zenpack-ibm_add_menu.png)
--   [IBM_model_device.png](img/zenpack-ibm_model_device.png)
--   [Ibm_yuml_1.png](img/zenpack-ibm_yuml_1.png)
--   [ibm-zenpack.png](img/zenpack-ibm-zenpack.png)
--   [HMC_analytics.PNG](img/zenpack-hmc_analytics.png)
--   [HMC_events.PNG](img/zenpack-hmc_events.png)
--   [HMC_HEA_Ports.PNG](img/zenpack-hmc_hea_ports.png)
--   [HMC_HEAs.PNG](img/zenpack-hmc_heas.png)
--   [HMC_impact.PNG](img/zenpack-hmc_impact.png)
--   [HMC_IO_Devices.PNG](img/zenpack-hmc_io_devices.png)
--   [HMC_IO_Pools.PNG](img/zenpack-hmc_io_pools.png)
--   [HMC_Logical_HEA_Ports.PNG](img/zenpack-hmc_logical_hea_ports.png)
--   [HMC_Logical_HEAs.PNG](img/zenpack-hmc_logical_heas.png)
--   [HMC_LPARs.PNG](img/zenpack-hmc_lpars.png)
--   [HMC_Managed_Systems.PNG](img/zenpack-hmc_managed_systems.png)
--   [HMC_Overview.PNG](img/zenpack-hmc_overview.png)
--   [HMC_Port_Groups.PNG](img/zenpack-hmc_port_groups.png)
--   [HMC_Processor_Pools.PNG](img/zenpack-hmc_processor_pools.png)
--   [HMC_Service_Processor.PNG](img/zenpack-hmc_service_processor.png)
--   [IBM_add_dialog.png](img/zenpack-ibm_add_dialog.png)
--   [IBM_add_menu.png](img/zenpack-ibm_add_menu.png)
--   [IBM_model_device.png](img/zenpack-ibm_model_device.png)
--   [Ibm_yuml_1.png](img/zenpack-ibm_yuml_1.png)
--   [ibm-zenpack.png](img/zenpack-ibm-zenpack.png)
--   [HMC_LPAR_Profiles.PNG](img/zenpack-hmc_lpar_profiles.png)
--   [IBM_add_menu.png](img/zenpack-ibm_add_menu.png)
--   [HMC_analytics.PNG](img/zenpack-hmc_analytics.png)
--   [Ibm_yuml_1.png](img/zenpack-ibm_yuml_1.png)
-

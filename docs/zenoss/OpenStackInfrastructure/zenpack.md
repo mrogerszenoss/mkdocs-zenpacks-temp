@@ -1,7 +1,5 @@
 # OpenStack (Provider View)
 
-@lb[](img/zenpack-openstack-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -1559,43 +1557,6 @@ Version 3.0.1- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenos
 Version 2.4.2- [Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.OpenStackInfrastructure/2.4.2/ZenPacks.zenoss.OpenStackInfrastructure-2.4.2.egg){.external-link}:   Released on 2018/08/15:   Requires PythonCollector ZenPack,OpenStack (Tenant View)
     ZenPack,Linux Monitor ZenPack:   Requires [PythonCollector ZenPack](https://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link},[OpenStack     (Tenant View){.external-link}     ZenPack](https://help.zenoss.com/display/in/OpenStack+-+Tenant+View "ZenPack:OpenStack (Tenant View){.external-link}"),[Linux Monitor ZenPack](https://help.zenoss.com/display/in/Linux+Monitor "ZenPack:Linux Monitor"){.external-link}:   Compatible with Zenoss 4.2 - 6.2
 
-## Contents
-
--   [Gallery](#gallery)
--   [Prerequisites](#prerequisites)
-    -   [Supported OpenStack Releases](#supported-open-stack-releases)
--   [Restricted Users](#restricted-users)
--   [Organizational Elements](#organizational-elements)
-    -   [Metrics](#metrics)
--   [Installed Items](#installed-items)
-    -   [Daemons](#daemons)
-    -   [Configuration Properties](#configuration-properties)
-    -   [Device Classes](#device-classes)
-    -   [Modeler Plugins](#modeler-plugins)
-    -   [Datasources](#datasources)
-    -   [Monitoring Templates](#monitoring-templates)
-    -   [Event Classes and Mappings](#event-classes-and-mappings)
-    -   [Processes](#processes)
--   [Zenpack Installation](#zenpack-installation)
-    -   [First-Time Installation](#time-installation)
-    -   [Upgrades from 2.4.x](#)
-    -   [Post-ZenPack Installation](#zenpack-installation)
--   [Device Setup](#devices-etup)
-    -   [Device Setup via UI](#devices-etup-via-ui)
-    -   [Device Setup via Zenbatchload](#devices-etup-via-zenbatchload)
-    -   [Host Identification](#host-identification)
-    -   [Modeling Containerized Environments](#modeling-containerized-environments)
--   [OpenStack Configuration](#open-stack-configuration)
-    -   [OpenStack Ceilometer Configuration](#open-stack-ceilometer-configuration)
--   [Zenoss Analytics](#zenoss-analytics)
--   [Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
-    -   [Recommended Impact Setup](#recommended-impact-setup)
-    -   [Impact Relations](#impact-relations)
-    -   [Examples](#examples)
--   [Integration with other ZenPacks](#integration-with-other-zenpacks)
--   [Known Issues](#known-issues)
--   [Changes](#changes)
-
 ## Gallery
 
 <table>
@@ -2776,7 +2737,7 @@ and impact model integration:
 
 ## Changes
 
-4.0.0
+**4.0.0**
 
 -   Add support for OSP 16.x
 -   Increased Read timeout (ZPS-7352)
@@ -2789,13 +2750,13 @@ and impact model integration:
 -   Tested with Zenoss Resource Manager 6.5.0, 6.6.0, Zenoss Cloud and
     Service Impact 5.5.3
 
-3.0.1
+**3.0.1**
 
 -   Add support for Twisted library update (ZPS-6975)
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service
     Impact 5.5.1
 
-3.0.0
+**3.0.0**
 
 -   Add support for Keystone Domains (ZPS-3850)
 -   Add support for Pike, Rocky, Queens, RHOSP 13-14 versions of
@@ -2813,7 +2774,7 @@ and impact model integration:
 -   The HeartBeat datasource was removed as heartbeats are no longer
     supported by OpenStack (ZPS-1984)
 
-2.4.2
+**2.4.2**
 
 -   Avoid nameconfict for proxy devices and be more flexible in linking
     to existing devices when appropriate (ZPS-3991)
@@ -2833,7 +2794,7 @@ and impact model integration:
 -   Tested with Zenoss Resource Manager 6.2.0, Zenoss Resource Manager
     5.3.3 and Service Impact 5.3.1
 
-2.4.1
+**2.4.1**
 
 -   Disallow spaces in device IDs in the &lsquo;Add OpenStack Endpoint&rsquo; dialog
     (ZPS-2583)
@@ -2846,7 +2807,7 @@ and impact model integration:
 -   Fix for errors when modeling when the hosts already exist in a
     different device class (ZPS-2004)
 
-2.4.0
+**2.4.0**
 
 -   Added support for Newton and Ocata
 -   Added support for Keystone v3 authentication
@@ -2859,20 +2820,22 @@ and impact model integration:
 -   Tested with Zenoss Resource Manager 5.2.6, Zenoss Resource Manager
     4.2.5 RPS 743 and Service Impact 5.1.5
 
-2.3.3 - Fix error in modeler when neutron agent extension is not
-available (ZPS-1243) - Fix certain problems modeling OpenStack
+**2.3.3**
+- Fix error in modeler when neutron agent extension is not
+available (ZPS-1243)
+- Fix certain problems modeling OpenStack
 environments where hosts have .localdomain names (ZPS-1244)
 
-2.3.2
+**2.3.2**
 
 -   Wrap brain.getObject() into try/except block (ZPS-442)
 
-2.3.1
+**2.3.1**
 
 -   Upgrade txsshclient to fix critical change in twisted.conch
     (ZEN-25870)
 
-2.3.0
+**2.3.0**
 
 -   Added support for Mitaka.
 -   Provide various host-checking fixes: (ZEN-24803, ZEN-25262)
@@ -2882,27 +2845,27 @@ environments where hosts have .localdomain names (ZPS-1244)
 -   Upgrade ZenPackLib to 1.1.0 to fix Liberty/Mitaka status:
     (ZEN-24464)
 
-2.2.0
+**2.2.0**
 
 -   Added Cinder block storage components.
 -   Added LVM, Ceph block storage integration via LinuxMonitor and Ceph
     ZenPacks.
 -   Various bug fixes
 
-2.1.3
+**2.1.3**
 
 -   Fix malformed hostnames in the F5 LBAAS plugin (ZEN-22126)
 
-2.1.2
+**2.1.2**
 
 -   Remove deprecated ceilometer-agent-notification heartbeats
 
-2.1.1
+**2.1.1**
 
 -   Various bug fixes
 -   Add meta.zcml feature tags for Neutron Integration
 
-2.1.0
+**2.1.0**
 
 -   Added Neutron network components
 -   Update Impact models for Neutron
@@ -2910,140 +2873,6 @@ environments where hosts have .localdomain names (ZPS-1244)
 -   Upgrade to ZenPackLib 1.0.1
 -   Add ML2 Plugin Capability
 
-2.0.0
+**2.0.0**
 
 -   Initial Release
-
-## Attachments:
-
--   [availabilityzones.png](img/zenpack-availabilityzones.png)
--   [ceilometer_arch.png](img/zenpack-ceilometer_arch.png)
--   [ceilometer_urls.png](img/zenpack-ceilometer_urls.png)
--   [cinderservices.png](img/zenpack-cinderservices.png)
--   [devicegraphs.png](img/zenpack-devicegraphs.png)
--   [flavors.png](img/zenpack-flavors.png)
--   [floatingips.png](img/zenpack-floatingips.png)
--   [hosts.png](img/zenpack-hosts.png)
--   [hypervisors.png](img/zenpack-hypervisors.png)
--   [images.png](img/zenpack-images.png)
--   [impact_instance.png](img/zenpack-impact_instance.png)
--   [impact_ports.png](img/zenpack-impact_ports.png)
--   [impact_region.png](img/zenpack-impact_region.png)
--   [impact_tenant.png](img/zenpack-impact_tenant.png)
--   [impact.png](img/zenpack-impact.png)
--   [instances.png](img/zenpack-instances.png)
--   [ip_assignment.png](img/zenpack-ip_assignment.png)
--   [networks.png](img/zenpack-networks.png)
--   [neutronagents.png](img/zenpack-neutronagents.png)
--   [novaapis.png](img/zenpack-novaapis.png)
--   [novaservices.png](img/zenpack-novaservices.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [overview.png](img/zenpack-overview.png)
--   [openstackcomponentview.png](img/zenpack-openstackcomponentview.png)
--   [ports.png](img/zenpack-ports.png)
--   [regions.png](img/zenpack-regions.png)
--   [routers.png](img/zenpack-routers.png)
--   [subnets.png](img/zenpack-subnets.png)
--   [tenants.png](img/zenpack-tenants.png)
--   [vnics.png](img/zenpack-vnics.png)
--   [volsnapshots.png](img/zenpack-volsnapshots.png)
--   [volumes.png](img/zenpack-volumes.png)
--   [availabilityzones.png](img/zenpack-availabilityzones.png)
--   [ceilometer_arch.png](img/zenpack-ceilometer_arch.png)
--   [ceilometer_urls.png](img/zenpack-ceilometer_urls.png)
--   [cinderservices.png](img/zenpack-cinderservices.png)
--   [devicegraphs.png](img/zenpack-devicegraphs.png)
--   [flavors.png](img/zenpack-flavors.png)
--   [floatingips.png](img/zenpack-floatingips.png)
--   [hosts.png](img/zenpack-hosts.png)
--   [hypervisors.png](img/zenpack-hypervisors.png)
--   [images.png](img/zenpack-images.png)
--   [impact_instance.png](img/zenpack-impact_instance.png)
--   [impact_ports.png](img/zenpack-impact_ports.png)
--   [impact_region.png](img/zenpack-impact_region.png)
--   [impact_tenant.png](img/zenpack-impact_tenant.png)
--   [impact.png](img/zenpack-impact.png)
--   [instances.png](img/zenpack-instances.png)
--   [ip_assignment.png](img/zenpack-ip_assignment.png)
--   [networks.png](img/zenpack-networks.png)
--   [neutronagents.png](img/zenpack-neutronagents.png)
--   [novaapis.png](img/zenpack-novaapis.png)
--   [novaservices.png](img/zenpack-novaservices.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [openstackcomponentview.png](img/zenpack-openstackcomponentview.png)
--   [ports.png](img/zenpack-ports.png)
--   [regions.png](img/zenpack-regions.png)
--   [routers.png](img/zenpack-routers.png)
--   [subnets.png](img/zenpack-subnets.png)
--   [tenants.png](img/zenpack-tenants.png)
--   [vnics.png](img/zenpack-vnics.png)
--   [volsnapshots.png](img/zenpack-volsnapshots.png)
--   [volumes.png](img/zenpack-volumes.png)
--   [impact_instance.png](img/zenpack-impact_instance.png)
--   [overview.png](img/zenpack-overview.png)
--   [volumes.png](img/zenpack-volumes.png)
--   [availabilityzones.png](img/zenpack-availabilityzones.png)
--   [ceilometer_arch.png](img/zenpack-ceilometer_arch.png)
--   [ceilometer_urls.png](img/zenpack-ceilometer_urls.png)
--   [cinderservices.png](img/zenpack-cinderservices.png)
--   [devicegraphs.png](img/zenpack-devicegraphs.png)
--   [flavors.png](img/zenpack-flavors.png)
--   [floatingips.png](img/zenpack-floatingips.png)
--   [hosts.png](img/zenpack-hosts.png)
--   [hypervisors.png](img/zenpack-hypervisors.png)
--   [images.png](img/zenpack-images.png)
--   [impact_instance.png](img/zenpack-impact_instance.png)
--   [impact_ports.png](img/zenpack-impact_ports.png)
--   [impact_region.png](img/zenpack-impact_region.png)
--   [impact_tenant.png](img/zenpack-impact_tenant.png)
--   [impact.png](img/zenpack-impact.png)
--   [instances.png](img/zenpack-instances.png)
--   [ip_assignment.png](img/zenpack-ip_assignment.png)
--   [networks.png](img/zenpack-networks.png)
--   [neutronagents.png](img/zenpack-neutronagents.png)
--   [novaapis.png](img/zenpack-novaapis.png)
--   [novaservices.png](img/zenpack-novaservices.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [openstackcomponentview.png](img/zenpack-openstackcomponentview.png)
--   [overview.png](img/zenpack-overview.png)
--   [ports.png](img/zenpack-ports.png)
--   [regions.png](img/zenpack-regions.png)
--   [routers.png](img/zenpack-routers.png)
--   [subnets.png](img/zenpack-subnets.png)
--   [tenants.png](img/zenpack-tenants.png)
--   [vnics.png](img/zenpack-vnics.png)
--   [volsnapshots.png](img/zenpack-volsnapshots.png)
--   [volumes.png](img/zenpack-volumes.png)
--   [availabilityzones.png](img/zenpack-availabilityzones.png)
--   [ceilometer_arch.png](img/zenpack-ceilometer_arch.png)
--   [ceilometer_urls.png](img/zenpack-ceilometer_urls.png)
--   [cinderservices.png](img/zenpack-cinderservices.png)
--   [flavors.png](img/zenpack-flavors.png)
--   [devicegraphs.png](img/zenpack-devicegraphs.png)
--   [hosts.png](img/zenpack-hosts.png)
--   [floatingips.png](img/zenpack-floatingips.png)
--   [hypervisors.png](img/zenpack-hypervisors.png)
--   [images.png](img/zenpack-images.png)
--   [impact_instance.png](img/zenpack-impact_instance.png)
--   [impact_ports.png](img/zenpack-impact_ports.png)
--   [impact_region.png](img/zenpack-impact_region.png)
--   [impact_tenant.png](img/zenpack-impact_tenant.png)
--   [impact.png](img/zenpack-impact.png)
--   [instances.png](img/zenpack-instances.png)
--   [ip_assignment.png](img/zenpack-ip_assignment.png)
--   [neutronagents.png](img/zenpack-neutronagents.png)
--   [networks.png](img/zenpack-networks.png)
--   [novaapis.png](img/zenpack-novaapis.png)
--   [novaservices.png](img/zenpack-novaservices.png)
--   [openstack-zenpack.png](img/zenpack-openstack-zenpack.png)
--   [openstackcomponentview.png](img/zenpack-openstackcomponentview.png)
--   [overview.png](img/zenpack-overview.png)
--   [ports.png](img/zenpack-ports.png)
--   [regions.png](img/zenpack-regions.png)
--   [routers.png](img/zenpack-routers.png)
--   [subnets.png](img/zenpack-subnets.png)
--   [tenants.png](img/zenpack-tenants.png)
--   [volsnapshots.png](img/zenpack-volsnapshots.png)
--   [vnics.png](img/zenpack-vnics.png)
--   [volumes.png](img/zenpack-volumes.png)
-

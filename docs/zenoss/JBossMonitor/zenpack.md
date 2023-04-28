@@ -1,7 +1,5 @@
 # JBoss Application Server
 
-@lb[](img/zenpack-jboss-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -181,9 +179,8 @@ Note: The zenjmx daemon must be configured and running. .
     devices.
 
     JBoss Configuration Properties
-    |                                 |                                                |
-    |---------------------------------|------------------------------------------------|
     | Name                            | Description                                    |
+    |---------------------------------|------------------------------------------------|
     | zJBossJmxManagementAuthenticate | This configuration property is deprecated.     |
     | zJBossJmxManagementPassword     | JMX password                                   |
     | zJBossJmxManagementPort         | The port number used to gather JMX information |
@@ -211,9 +208,9 @@ in Web application "production server."
     hold down the control key while clicking on the original entries.
 
     JBoss Templates
-    |                           |                                                                                       |
-    |---------------------------|---------------------------------------------------------------------------------------|
+
     | Name                      | Description                                                                           |
+    |---------------------------|---------------------------------------------------------------------------------------|
     | JBoss Core                | Core information about any JBoss server, including memory usage, threads, and uptime. |
     | JBoss JCA Connection Pool |                                                                                       |
     | JBoss JGroups Channel     |                                                                                       |
@@ -230,13 +227,6 @@ in Web application "production server."
 
 ## Daemons
 
-|                       |        |
-|-----------------------|--------|
 | Type                  | Name   |
+|-----------------------|--------|
 | Performance Collector | zenjmx |
-
-## Attachments:
-
--   [jboss-zenpack.png](img/zenpack-jboss-zenpack.png)
--   [jboss-zenpack.png](img/zenpack-jboss-zenpack.png)
-

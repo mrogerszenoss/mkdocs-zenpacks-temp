@@ -1,7 +1,5 @@
 # F5 BIG-IP (Commercial)
 
-@lb[](img/zenpack-f5-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -127,11 +125,7 @@ property. Additional SNMP values can be collected for any of the
 component types listed in the [: Discovery](#)
 section.
 
-<dl markdown="1">
-<dt markdown="1">
 Load Balancer (Device)
-</dt>
-</dl>
 
 -   CPU Utilization: Busy, Idle, Sleep (*percent*)
 -   Memory Utilization: System, Host (*percent*)
@@ -155,11 +149,7 @@ Load Balancer (Device)
 -   Accelerated Packet Rates: Inbound Client, Outbound Client, Inbound
     Server, Outbound Server (*packets/sec*)
 
-<dl markdown="1">
-<dt markdown="1">
 LTM Virtual Server
-</dt>
-</dl>
 
 -   Connections: Client, Client High Water Mark, Client Connections/sec,
     Ephemeral, Ephemeral High Water Mark, Ephemeral Total
@@ -175,27 +165,15 @@ LTM Virtual Server
 -   Connection Duration: Minimum, Maximum, Average (*milliseconds*)
 -   Request Rate: Total (*requests/sec*)
 
-<dl markdown="1">
-<dt markdown="1">
 Load Balancer Pool Member
-</dt>
-</dl>
 
 -   Member Status
 
-<dl markdown="1">
-<dt markdown="1">
 Load Balancer Port
-</dt>
-</dl>
 
 -   Throughput: Inbound, Outbound (*bytes/sec*)
 
-<dl markdown="1">
-<dt markdown="1">
 Network Interface
-</dt>
-</dl>
 
 -   Throughput: Inbound, Outbound (*bits/sec*)
 -   Packets: Inbound, Outbound (*packets/sec*)
@@ -203,19 +181,11 @@ Network Interface
 -   Drops: Inbound, Outbound (*drops/sec*)
 -   Collisions: Collisions (*collisions/sec*)
 
-<dl markdown="1">
-<dt markdown="1">
 Fan
-</dt>
-</dl>
 
 -   Fan Speed: Fan Speed (*rpm*)
 
-<dl markdown="1">
-<dt markdown="1">
 Temperature Sensor
-</dt>
-</dl>
 
 -   Temperature: Temperature (*celsius*)
 
@@ -241,11 +211,7 @@ specific syslog messages.
 -   /BIG-IP/sync_group_joined: Joined sync group.
 -   /BIG-IP/sync_group_left: Left sync group.
 
-<dl markdown="1">
-<dt markdown="1">
 Event Class Mappings (SNMP Notifications)
-</dt>
-</dl>
 
 -   /Status/Snmp/F5 Labs/bigipARPConflict
 -   /Status/Snmp/F5 Labs/bigipActive
@@ -452,11 +418,7 @@ mentioned components.
 
 @lb[](img/zenpack-bigip-impact-yuml.png)
 
-<dl markdown="1">
-<dt markdown="1">
 Internal Impact Relationships
-</dt>
-</dl>
 
 -   Device impacts LTM Virtual Server
 -   Device impacts LB Port
@@ -475,28 +437,16 @@ class. Otherwise they are added in the same manner as any SNMP device.
 Installing this ZenPack will add the following items to your Zenoss
 system.
 
-<dl markdown="1">
-<dt markdown="1">
 Configuration Properties
-</dt>
-</dl>
 
 -   zLTMVirtualServerIgnoreNames: Regular expression that can be used to
     prevent matching LTM Virtual Servers from being modeled.
 
-<dl markdown="1">
-<dt markdown="1">
 Device Classes
-</dt>
-</dl>
 
 -   /Network/BIG-IP
 
-<dl markdown="1">
-<dt markdown="1">
 Modeler Plugins
-</dt>
-</dl>
 
 -   snmp.bigip.DeviceMap (Load Balancer, CPUs, Fans, Power Supplies,
     Temperator Sensors)
@@ -505,11 +455,7 @@ Modeler Plugins
 -   snmp.bigip.LBPort (Load Balancer Ports)
 -   snmp.bigip.VirtualServers (LTM Virtual Servers)
 
-<dl markdown="1">
-<dt markdown="1">
 Monitoring Templates (all in /Network/BIG-IP)
-</dt>
-</dl>
 
 -   BigIpDevice (Load Balancer)
 -   bigipInterface (Network Interface: Physical)
@@ -526,57 +472,41 @@ Monitoring Templates (all in /Network/BIG-IP)
 
 **Upgrade from 2.7.1**
 
-When
-upgrading from 2.7.1 to a newer version, a message such as
-"ERROR:zen.zenpacklib:Monitoring template /Network/BIG-IP/CPU has been
+When upgrading from 2.7.1 to a newer version, a message such as
+
+```
+ERROR:zen.zenpacklib:Monitoring template /Network/BIG-IP/CPU has been
 modified since the ZenPacks.zenoss.BigIpMonitor ZenPack was installed.
 These local changes will be lost as this ZenPack is upgraded or
 reinstalled. Existing template will be renamed to
-'CPU-upgrade-1600253879'. Please review and reconcile local changes:"
+'CPU-upgrade-1600253879'. Please review and reconcile local changes:
+```
+
 may be displayed.
 
-If
-the only difference shown is the changing of some datapoints types from
-'{}' to 'GAUGE' and 'oid' fields from unicode to string, this may be
-disregarded, and the CPU-upgrade-&lt;number&gt; template may be deleted
+If the only difference shown is the changing of some datapoints types from
+`{}`  to `GAUGE` and `oid` fields from unicode to string, this may be
+disregarded, and the `CPU-upgrade-<number>` template may be deleted
 if desired.
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-2.7.2
-</dt>
-</dl>
+**2.7.2**
 
--   Improve UI loading speed of LB
-    Pool Members (ZPS-6488)
--   Fix invalid Threshold in
-    /Network/BIG-IP "Free TMM memory" (ZPS-4831)
--   Fix uncorroborated impact
-    relationships for LB Pool Members (ZPS-5890)
--   Fix CPU Utilization graph
-    (ZPS-7245)
--   Add ZenPackLib ZP and
-    CalculatedPerformance ZP to requirements
--   Tested with Zenoss Resource
-    Manager 6.4.1, Zenoss Resource Manager 6.5.0, Zenoss Cloud and
-    Service Impact 5.5.2
+-   Improve UI loading speed of LB Pool Members (ZPS-6488)
+-   Fix invalid Threshold in /Network/BIG-IP "Free TMM memory" (ZPS-4831)
+-   Fix uncorroborated impact relationships for LB Pool Members (ZPS-5890)
+-   Fix CPU Utilization graph (ZPS-7245)
+-   Add ZenPackLib ZP and CalculatedPerformance ZP to requirements
+-   Tested with Zenoss Resource Manager 6.4.1, Zenoss Resource Manager 6.5.0, 
+    Zenoss Cloud and Service Impact 5.5.2
 
-<dl markdown="1">
-<dt markdown="1">
-2.7.1
-</dt>
-</dl>
+**2.7.1**
 
 -   Convert load balancer port speed from megabits to bits
 -   Add datapoint aliases: mem\_\_pct, in\_\_pct, out\_\_pct (ZEN-24619)
 
-<dl markdown="1">
-<dt markdown="1">
-2.7.0
-</dt>
-</dl>
+**2.7.0**
 
 -   Conversion to ZPL
 -   Updated F5 MIBs
@@ -591,28 +521,16 @@ if desired.
 -   Fixed numerous modeler issues
 -   Improved Zenoss 5.x compatibility
 
-<dl markdown="1">
-<dt markdown="1">
-2.6.4
-</dt>
-</dl>
+**2.6.4**
 
 -   Update CPU Utilization graph to work on Zenoss 5.
 -   Allow toggling of monitoring for components. (ZEN-15232)
 
-<dl markdown="1">
-<dt markdown="1">
-2.6.3
-</dt>
-</dl>
+**2.6.3**
 
 -   Change LTM virtual server and pool IDs to be unique.
 
-<dl markdown="1">
-<dt markdown="1">
-2.6.2
-</dt>
-</dl>
+**2.6.2**
 
--   Change pool member IDs to &lt;pool-address-port&gt;.
+-   Change pool member IDs to <pool-address-port>.
 -   Model chassis serial number.

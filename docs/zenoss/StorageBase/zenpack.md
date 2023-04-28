@@ -1,7 +1,5 @@
 # StorageBase
 
-@lb[](img/zenpack-emc-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -53,12 +51,6 @@ Version 1.3.2- [Download](https://zenoss.leapfile.net/){.external-link}:   Relea
     Manager 5.0.x, Zenoss Resource Manager 5.1.x, Zenoss Resource
     Manager 5.x.x
 
-## Contents
-
--   [Background](#background)
--   [Prerequisites](#prerequisites)
--   [Changes](#changes)
-
 ## Background
 
 The ZenPacks.zenoss.StorageBase ZenPack contains base classes and
@@ -83,29 +75,23 @@ Zenoss Prerequisites
 
 ## Changes
 
-1.4.4
+**1.4.4**
 
 -   Do not automatically generate storage reports (ZPS-4174)
 -   Do not show spinning wheel when generating reports (ZPS-4304)
 -   Tested with Zenoss 6.4.1, Zenoss Cloud with and Service Impact 5.5.1
 
-1.4.3
+**1.4.3**
 
 -   Fix issue which caused to missing data on analytics server.
     (ZPS-1673)
 
-1.4.2
+**1.4.2**
 
 -   Fix incorrect DynamicView relations for ConvergedNetworkAdapter
     components. (ZPS-1162)
 
-1.4.1
+**1.4.1**
 
 -   Handle stale catalog entries when looking up WWNs and IQNs.
     (ZEN-21699)
-
-## Attachments:
-
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
-

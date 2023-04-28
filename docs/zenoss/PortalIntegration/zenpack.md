@@ -1,7 +1,5 @@
 # Portal Integration
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -130,19 +128,19 @@ client/library of choice.
 `listResolvers`:   Method Parameters: None:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "listResolvers",
        "data": [],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "07fc8148-e394-40b7-9c70-a201928ac5e7",
        "action": "IdentificationRouter",
@@ -161,7 +159,7 @@ client/library of choice.
        "type": "rpc",
        "method": "listResolvers"
     }
-    ```
+
 
 <!-- -->
 
@@ -169,7 +167,7 @@ client/library of choice.
 :   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "resolve",
@@ -184,12 +182,12 @@ client/library of choice.
        ],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "ce12820b-03fd-41a7-bb7f-1b7bb0351427",
        "action": "IdentificationRouter",
@@ -203,14 +201,14 @@ client/library of choice.
        "type": "rpc",
        "method": "resolve"
     }
-    ```
+
 
 <!-- -->
 
 `resolve`  - uuid resolver:   Resolver 'id' Parameters: uuid:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "resolve",
@@ -230,7 +228,7 @@ client/library of choice.
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "801f77cc-0a37-47a5-bf38-34836b599a09",
        "action": "IdentificationRouter",
@@ -244,7 +242,7 @@ client/library of choice.
        "type": "rpc",
        "method": "resolve"
     }
-    ```
+
 
 <!-- -->
 
@@ -253,7 +251,7 @@ client/library of choice.
     objectImplements, ipAddress, productKeys, uid:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "resolve",
@@ -276,7 +274,7 @@ client/library of choice.
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "b001aeef-3319-497f-a5f0-5d97fdcfc383",
        "action": "IdentificationRouter",
@@ -292,14 +290,14 @@ client/library of choice.
        "type": "rpc",
        "method": "resolve"
     }
-    ```
+
 
 <!-- -->
 
 `resolve`  - search resolver:   Resolver 'id' Parameters: searchTerm, category:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "resolve",
@@ -320,7 +318,7 @@ client/library of choice.
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "f1b915b5-a203-4578-82f2-5f420822d08e",
        "action": "IdentificationRouter",
@@ -337,14 +335,14 @@ client/library of choice.
        "type": "rpc",
        "method": "resolve"
     }
-    ```
+
 
 <!-- -->
 
 `resolve`  - device or component resolver:   Resolver 'id' Parameters: device, component:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "resolve",
@@ -360,12 +358,12 @@ client/library of choice.
        ],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "3f7b555e-33f5-42b6-8f58-5b63c40d7d76",
        "action": "IdentificationRouter",
@@ -379,7 +377,7 @@ client/library of choice.
        "type": "rpc",
        "method": "resolve"
     }
-    ```
+
 
 <!-- -->
 
@@ -387,7 +385,7 @@ client/library of choice.
     modeledValue:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "IdentificationRouter",
        "method": "resolve",
@@ -402,12 +400,12 @@ client/library of choice.
        }],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "8aece433-83f9-44e9-8769-8c7a224b5199",
        "action": "IdentificationRouter",
@@ -422,7 +420,7 @@ client/library of choice.
        "type": "rpc",
        "method": "resolve"
     }
-    ```
+
 
 ### PortalRouter
 
@@ -434,7 +432,7 @@ fetchMetricValues:   Method Parameters: startTime, endTimem, specs (metricIds,
     returnProperties (optional), allowMultiple, echoInput):   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "PortalRouter",
        "method": "fetchMetricValues",
@@ -457,12 +455,12 @@ fetchMetricValues:   Method Parameters: startTime, endTimem, specs (metricIds,
        ],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "08922cae-c569-4243-96d0-8c2e126073bb",
        "action": "PortalRouter",
@@ -525,7 +523,7 @@ fetchMetricValues:   Method Parameters: startTime, endTimem, specs (metricIds,
        "type": "rpc",
        "method": "fetchMetricValues"
     }
-    ```
+
 
 <!-- -->
 
@@ -533,7 +531,7 @@ fetchEvents:   Method Parameters: startTime, endTime, specs (criteria (optional)
     maxEvents (optional), allowMultiple, echoInput):   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "PortalRouter",
        "method": "fetchEvents",
@@ -551,12 +549,12 @@ fetchEvents:   Method Parameters: startTime, endTime, specs (criteria (optional)
        }],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "cefe3b09-f7ab-45e2-ab39-a5f537cc28eb",
        "action": "PortalRouter",
@@ -652,7 +650,7 @@ fetchEvents:   Method Parameters: startTime, endTime, specs (criteria (optional)
        "type": "rpc",
        "method": "fetchEvents"
     }
-    ```
+
 
 <!-- -->
 
@@ -660,7 +658,7 @@ fetchThresholds:   Method Parameters: startTime, endTime, specs, metricIds (opti
     allowMultiple, echoInput:   HTTP POST Body:
 :
 
-    ```sh
+    sh
     {
        "action": "PortalRouter",
        "method": "fetchThresholds",
@@ -677,12 +675,12 @@ fetchThresholds:   Method Parameters: startTime, endTime, specs, metricIds (opti
        }],
        "tid": 1
     }
-    ```
+
 
 :   API Response:
 :
 
-    ```sh
+    sh
     {
        "uuid": "1d83221a-7cb7-49d5-9996-9d7d4773fdbc",
        "action": "PortalRouter",
@@ -793,10 +791,3 @@ fetchThresholds:   Method Parameters: startTime, endTime, specs, metricIds (opti
        "type": "rpc",
        "method": "fetchThresholds"
     }
-    ```
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

@@ -1,7 +1,5 @@
 # Duration Threshold
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -32,14 +30,6 @@ Version 2.0.5 [Download](https://delivery.zenoss.com/){.external-link}:   Releas
 <!-- -->
 
 Version 2.0.4 [Download](https://delivery.zenoss.com/){.external-link}:   Released: 2017-05-01:   Compatible with Zenoss 4.2.X - 5.2.X
-
-## Contents
-
-1.  [Features](#features)
-2.  [Usage](#usage)
-3.  [Caveats](#caveats)
-    1.  [Zenoss 5.0.x Caveats](#)
-4.  [Changes](#changes)
 
 ## Features
 
@@ -129,30 +119,30 @@ evaluate a DurationThreshold.
 
 ## Changes
 
-#### 2.0.5
+**2.0.5**
 
 -   Add component_guid to Duration Threshold events. (ZPS-1940)
 -   Fix memory leaks. (ZPS-1966)
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3, and 6.1.2
 
-#### 2.0.4
+**2.0.4**
 
 -   Encode self.TimePeriod in checkRaw() into an ascii string.
     (ZPS-1420)
 
-#### 2.0.3
+**2.0.3**
 
 -   Restore event.current field to be current value of datapoint.
     (ZPS-1223)
 -   Clear misconfiguration events when configuration is fixed. (ZPS-675)
 
-#### 2.0.2
+**2.0.2**
 
 -   Fix error when using multiple duration thresholds on same datapoint.
     (ZPS-1133)
 -   Support new contextMetric capability in Zenoss 5.2.3. (ZEN-27018)
 
-#### 2.0.1
+**2.0.1**
 
 -   Prevent excessive authorization calls slowing Zenoss UI. (ZPS-548)
 -   Evaluate thresholds in real time instead of one cycle delayed.
@@ -160,7 +150,7 @@ evaluate a DurationThreshold.
     (ZPS-671)
 -   Support multiple datapoints in the same duration threshold.
 
-#### 2.0.0
+**2.0.0**
 
 -   Allow Custom Properties for time period and violation threshold and
     their use in duration threshold UI.
@@ -168,9 +158,3 @@ evaluate a DurationThreshold.
 -   Generate event if neither maximum threshold nor minimum threshold is
     defined.
 -   Zenoss 5.x.x compatibility.
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

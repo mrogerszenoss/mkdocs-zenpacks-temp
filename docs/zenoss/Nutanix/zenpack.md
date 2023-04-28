@@ -1,7 +1,5 @@
 # Nutanix
 
-@lb[](img/zenpack-nutanix-logo.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -53,24 +51,6 @@ infrastructure.
 <!-- -->
 
 **Version 1.0.0** - [Download](https://delivery.zenoss.com){.external-link}:   Released on 2017/09/22:   Requires [PythonCollector ZenPack](http://zenoss.com/product/zenpacks/pythoncollector){.external-link},[ZenPackLib ZenPack](http://zenoss.com/product/zenpacks/zenpacklib){.external-link}:   Compatible with Zenoss Resource Manager 5.2.x and 5.3.x
-
-## Contents
-
--   [Background](#background)
-    -   [Prerequisites](#prerequisites)
-    -   [Gallery](#gallery)
--   [Features](#features)
-    -   [Nutanix Structure and Discovery](#nutanix-structure-and-discovery)
--   [Usage](#usage)
-    -   [Nutanix Batch Configuration](#nutanix-batch-configuration)
--   [Installed Items](#installed-items)
-    -   [Configuration and zProperties](#configuration-and-zproperties)
-    -   [Modeler Plugins](#modeler-plugins)
--   [Zenoss Analytics](#zenoss-analytics)
--   [Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
-    -   [Internal Impact Relationships between Nutanix Components](#internal-impact-relationships-between-nutanix-components)
-    -   [Internal Impact Relationships between Nutanix Components](#internal-impact-relationships-between-nutanix-components-1)
--   [Changes](#changes)
 
 ## Background
 
@@ -670,69 +650,3 @@ Relationship Diagram
 -   Initial Release
 -   Tested with Zenoss Resource Manager 5.2.6 & 5.3.1, Service Impact
     5.1.7, Analytics 5.0.8
-
-## Attachments:
-
--   [DependencyView.png](img/zenpack-dependencyview.png)
--   [DynamicView.png](img/zenpack-dynamicview.png)
--   [ImpactView.png](img/zenpack-impactview.png)
--   [nutanix-logo.png](img/zenpack-nutanix-logo.png)
--   [NutanixClasses.png](img/zenpack-nutanixclasses.png)
--   [NutanixClusters.png](img/zenpack-nutanixclusters.png)
--   [NutanixContainers.png](img/zenpack-nutanixcontainers.png)
--   [NutanixCVMs.png](img/zenpack-nutanixcvms.png)
--   [NutanixHardDisks.png](img/zenpack-nutanixharddisks.png)
--   [NutanixHosts.png](img/zenpack-nutanixhosts.png)
--   [NutanixImpact.png](img/zenpack-nutaniximpact.png)
--   [NutanixOverview.png](img/zenpack-nutanixoverview.png)
--   [NutanixStoragePools.png](img/zenpack-nutanixstoragepools.png)
--   [NutanixVMs.png](img/zenpack-nutanixvms.png)
--   [DependencyView.png](img/zenpack-dependencyview.png)
--   [DynamicView.png](img/zenpack-dynamicview.png)
--   [ImpactView.png](img/zenpack-impactview.png)
--   [nutanix-logo.png](img/zenpack-nutanix-logo.png)
--   [NutanixClasses.png](img/zenpack-nutanixclasses.png)
--   [NutanixClusters.png](img/zenpack-nutanixclusters.png)
--   [NutanixContainers.png](img/zenpack-nutanixcontainers.png)
--   [NutanixCVMs.png](img/zenpack-nutanixcvms.png)
--   [NutanixHardDisks.png](img/zenpack-nutanixharddisks.png)
--   [NutanixHosts.png](img/zenpack-nutanixhosts.png)
--   [NutanixImpact.png](img/zenpack-nutaniximpact.png)
--   [NutanixOverview.png](img/zenpack-nutanixoverview.png)
--   [NutanixStoragePools.png](img/zenpack-nutanixstoragepools.png)
--   [NutanixVMs.png](img/zenpack-nutanixvms.png)
--   [DependencyView.png](img/zenpack-dependencyview.png)
--   [ImpactView.png](img/zenpack-impactview.png)
--   [nutanix-logo.png](img/zenpack-nutanix-logo.png)
--   [NutanixClasses.png](img/zenpack-nutanixclasses.png)
--   [NutanixClusters.png](img/zenpack-nutanixclusters.png)
--   [NutanixContainers.png](img/zenpack-nutanixcontainers.png)
--   [NutanixHardDisks.png](img/zenpack-nutanixharddisks.png)
--   [NutanixCVMs.png](img/zenpack-nutanixcvms.png)
--   [NutanixHosts.png](img/zenpack-nutanixhosts.png)
--   [NutanixImpact.png](img/zenpack-nutaniximpact.png)
--   [NutanixOverview.png](img/zenpack-nutanixoverview.png)
--   [NutanixStoragePools.png](img/zenpack-nutanixstoragepools.png)
--   [NutanixVMs.png](img/zenpack-nutanixvms.png)
--   [NutanixStoragePools.png](img/zenpack-nutanixstoragepools.png)
--   [DynamicView.png](img/zenpack-dynamicview.png)
--   [ImpactView.png](img/zenpack-impactview.png)
--   [NutanixStoragePools.png](img/zenpack-nutanixstoragepools.png)
--   [NutanixHardDisks.png](img/zenpack-nutanixharddisks.png)
--   [NutanixImpact.png](img/zenpack-nutaniximpact.png)
--   [NutanixVMs.png](img/zenpack-nutanixvms.png)
--   [NutanixOverview.png](img/zenpack-nutanixoverview.png)
--   [NutanixClusters.png](img/zenpack-nutanixclusters.png)
--   [NutanixClasses.png](img/zenpack-nutanixclasses.png)
--   [NutanixCVMs.png](img/zenpack-nutanixcvms.png)
--   [NutanixContainers.png](img/zenpack-nutanixcontainers.png)
--   [NutanixHosts.png](img/zenpack-nutanixhosts.png)
--   [NutanixImpact.png](img/zenpack-nutaniximpact.png)
--   [ImpactView.png](img/zenpack-impactview.png)
--   [NutanixHosts.png](img/zenpack-nutanixhosts.png)
--   [NutanixCVMs.png](img/zenpack-nutanixcvms.png)
--   [NutanixVMs.png](img/zenpack-nutanixvms.png)
--   [NutanixStoragePools.png](img/zenpack-nutanixstoragepools.png)
--   [NutanixContainers.png](img/zenpack-nutanixcontainers.png)
--   [NutanixHardDisks.png](img/zenpack-nutanixharddisks.png)
-

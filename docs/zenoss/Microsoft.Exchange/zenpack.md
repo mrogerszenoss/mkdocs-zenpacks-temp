@@ -1,7 +1,5 @@
 # Microsoft Exchange
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -33,40 +31,6 @@ Version 1.0.6- [Download](https://delivery.zenoss.com/){.external-link}:   Relea
 ## Microsoft Exchange ZenPack
 
 Monitoring for Microsoft Exchange Server Devices.
-
-## Contents
-
-[1 Releases](#releases)
-
-[1 Microsoft Exchange ZenPack](#microsoft-exchange-zenpack)
-
-[1.1 Background](#background)
-
-[1.2 Features](#features)
-
-[1.2.1 Discovery](#discovery)
-
-[1.2.2 Performance Monitoring](#performance-monitoring)
-
-[2 Thresholds](#thresholds)
-
-[2.1 Usage](#usage)
-
-[2.1.1 Configuration Options](#configuration-options)
-
-[2.2 Limitations of Current Release](#limitations-of-current-release)
-
-[2.3 Troubleshooting](#troubleshooting)
-
-[2.4 Zenoss Analytics](#zenoss-analytics)
-
-[2.4.1 Domains](#domains)
-
-[2.5 Service Impact](#service-impact)
-
-[2.6 Installed Items](#installed-items)
-
-[2.7 Changes](#changes)
 
 ## Background
 
@@ -309,7 +273,7 @@ Monitoring Templates:   ClientAccessRole (in /Server/Microsoft):   ClientAccessR
 
 ## Changes
 
-1.1.2
+**1.1.2**
 
 -   Fix MicrosoftExchange - N/A for some graphs of Exchange Server
     component and on Graphs tab (ZPS-2197)
@@ -318,7 +282,7 @@ Monitoring Templates:   ClientAccessRole (in /Server/Microsoft):   ClientAccessR
     (ZPS-3482)
 -   Tested with Zenoss Resource Manager 6.3.1 and Zenoss Cloud
 
-1.1.1
+**1.1.1**
 
 -   Fix Unable to model due to Exchange Server missing Mailbox role
     (ZPS-2641)
@@ -327,7 +291,7 @@ Monitoring Templates:   ClientAccessRole (in /Server/Microsoft):   ClientAccessR
 -   Testing was provided on Zenoss Resource Manager: 4.2.5; 5.3.3. and
     6.1.0 and Serevice Impact 5.2.3
 
-1.1.0
+**1.1.0**
 
 -   Use Microsoft Windows ZenPack 2.7.0 session management (ZPS-1227)
 -   Fix \[Microsoft Exchange\] Netbios username function fails to
@@ -341,35 +305,29 @@ Monitoring Templates:   ClientAccessRole (in /Server/Microsoft):   ClientAccessR
     Database (ZPS-1477)
 -   Verify support for Exchange 2016 (ZPS-2214)
 
-1.0.5
+**1.0.5**
 
 -   Fix Exchange 2013 Missing Counter Events
 
-1.0.4
+**1.0.4**
 
 -   Fix zenpacks.zenoss.microsoft.windows 2.6.0 missing hardware
     relations (ZEN-23968)
 
-1.0.3
+**1.0.3**
 
 -   Fix impact to be compatible with Windows ZenPack version 2.6.0
 
-1.0.2
+**1.0.2**
 
 -   Fix Exchange ZenPack: WinRM error during modeling (ZEN-23351)
 -   Fix Microsoft Exchange modeler type mismatch (ZEN-23317)
 -   Update zenpacklib.py to 1.0.12
 
-1.0.1
+**1.0.1**
 
 -   Fix Exchange modeler plugin gets unauthorized error (ZEN-22314)
 
-1.0.0
+**1.0.0**
 
 -   Inital release of Exchange ZenPack
-
-## Attachments:
-
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
-

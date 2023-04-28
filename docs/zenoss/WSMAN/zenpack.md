@@ -1,7 +1,5 @@
 # WSMAN Support
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -40,36 +38,6 @@ This ZenPack provides a new *WSMAN* data source type that makes it easy
 to collect metrics from a WSMAN provider. It also provides a new
 *WSMANPlugin* modeler plugin base class that simplifies modeling devices
 and applications that support WSMAN.
-
-## Contents
-
-[1 WSMAN ZenPack](#wsmanzen-pack)
-
-[1.1 Releases](#releases)
-
-[1.2 Features](#features)
-
-[1.2.1 WSMAN Datasource Type](#wsman-datasource-type)
-
-[1.2.2 WSMANPlugin Modeler Plugin](#wsman-plugin-modeler-plugin)
-
-[1.3 Installed Items](#installed-items)
-
-[1.3.1 Configuration Properties](#configuration-properties)
-
-[1.4 Troubleshooting](#troubleshooting)
-
-[1.5 Changes](#changes)
-
-[1.5.1 1.0.4](#104)
-
-[1.5.2 1.0.3](#103)
-
-[1.5.3 1.0.2](#102)
-
-[1.5.4 1.0.1](#101)
-
-[1.5.5 1.0.0](#100)
 
 ## Releases
 
@@ -144,13 +112,13 @@ See the following example of a modeler plugin.
 
 ## Changes
 
-### 1.0.5
+**1.0.5**
 
 -   WSMAN events don't clear.
     (ZPS-4958)
 -   Tested with Zenoss Cloud and Zenoss Resource Manager 6.4.1.
 
-### 1.0.4
+**1.0.4**
 
 -   Introduce zWSMANMaxObjectCount zProperty to control the amount of
     returned elements per a request. (ZPS-4484)
@@ -159,7 +127,7 @@ See the following example of a modeler plugin.
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1, and Zenoss
     Resource Manager 5.3.3.
 
-### 1.0.3
+**1.0.3**
 
 -   Use datasource severity for events. (ZPS-3563)
 -   Add zWSMANCollectionInterval zProperty for WSMAN datasources.
@@ -167,25 +135,17 @@ See the following example of a modeler plugin.
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1, and Zenoss
     Resource Manager 5.3.3.
 
-### 1.0.2
+**1.0.2**
 
 -   Prevent DEBUG txwsman logs when not at DEBUG log level. (SVC-920)
 -   Add ability to configure Event Class for WSMAN Data Source.
     (ZPS-3371)
 -   Tested with Zenoss Resource Manager 6.1.2.
 
-### 1.0.1
+**1.0.1**
 
 -   Fix "CIMCLass" typo in WSMANDataSource.
 
-### 1.0.0
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
-

@@ -1,7 +1,5 @@
 # Web-Based Synthetic Transactions
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -388,24 +386,20 @@ follow these steps to test your setup:
 
 ## Changes
 
-3.0.5
+**3.0.5**
 
 -   Add a checkbox in the datasource
     to toggle cert validation (ZPS-6994)
 -   Tested with Zenoss Resource
     Manager 6.6.0 and Zenoss Cloud 7.0.20
 
-3.0.4
+**3.0.4**
 
 -   Fix Webtx checks failing silently (ZPS-7534)
 -   Fix UI bug on the Webtx datatsource (ZPS-7538)
 -   Tested with Zenoss Resource Manager 6.5.0 and Zenoss Cloud
 
-<dl markdown="1">
-<dt markdown="1">
-3.0.3
-</dt>
-</dl>
+**3.0.3**
 
 -   Use zWebTxAgent zProperty value as the user agent for all WebTx
     datasources. (ZPS-1419)
@@ -415,20 +409,10 @@ follow these steps to test your setup:
 -   Tested with Zenoss Resource Manager 6.1.2, Zenoss Resource Manager
     5.3.3, Zenoss Resource Manager 4.2.5.
 
-3.0.1
+**3.0.1**
 
 -   Initial password is not displayed in ZenWebTx datasource. (ZPS-1289)
 
-<dl markdown="1">
-<dt markdown="1">
-3.0.0
-</dt>
-</dl>
+**3.0.0**
 
 -   Added compatibility with Zenoss 5.x for metric publishing
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

@@ -1,7 +1,5 @@
 # Solaris
 
-@lb[](img/zenpack-oracle-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -31,74 +29,6 @@ OpenSolaris (5.11)
 
 The SolarisMonitor ZenPack enables Resource Manager to use Secure Shell
 (SSH) to monitor Solaris hosts.
-
-## Contents
-
-[1 Solaris ZenPack](#solaris-zenpack)
-
-[1.1 Support](#support)
-
-[1.2 Releases](#releases)
-
-[1.3 Background](#background)
-
-[1.4 Solaris Features](#solaris-features)
-
-[1.4.1 Discovery](#discovery)
-
-[1.4.2 Performance Monitoring](#performance-monitoring)
-
-[1.5 Zone Features](#zone-features)
-
-[1.5.1 Discovery](#discovery-1)
-
-[1.5.2 Performance Monitoring](#performance-monitoring-1)
-
-[1.6 LDOM Features](#ldom-features)
-
-[1.6.1 Discovery](#discovery-1)
-
-[1.6.2 Performance Monitoring](#performance-monitoring-1)
-
-[1.6.3 LDOM Device Discovery](#ldom-device-discovery)
-
-[1.7 Cluster Features](#cluster-features)
-
-[1.7.1 Discovery](#discovery-1)
-
-[1.7.2 Performance Monitoring](#performance-monitoring-1)
-
-[1.7.3 Cluster Node Device Discovery](#cluster-node-device-discovery)
-
-[1.8 Service Impact](#service-impact)
-
-[1.9 Usage](#usage)
-
-[1.9.1 Configure SSH Monitoring](#configure-ssh-monitoring)
-
-[1.9.2 Configure SNMP Monitoring](#configure-snmp-monitoring)
-
-[1.9.3 Configure LDOM Monitoring](#configure-ldom-monitoring)
-
-[1.9.4 Configure Cluster Monitoring](#configure-cluster-monitoring)
-
-[1.10 Troubleshooting](#troubleshooting)
-
-[1.10.1 Resolving CHANNEL_OPEN_FAILURE Issues](#resolving-channel-_open-_failure-issues)
-
-[1.10.2 Resolving Command Timeout Issues](#resolving-command-timeout-issues)
-
-[1.10.3 Blank Fields in Analytics View](#blank-fields-in-analytics-view)
-
-[1.11 Known issues](#known-issues)
-
-[1.12 Zenoss Analytics](#zenoss-analytics)
-
-[1.13 Installed Items](#installed-items)
-
-[1.14 Required Daemons](#required-daemons)
-
-[1.15 Changes](#changes)
 
 ## Support
 
@@ -771,11 +701,7 @@ are required for this ZenPack to fully function.
     inte
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1 and 5.3.3
 
-<dl markdown="1">
-<dt markdown="1">
-2.5.1
-</dt>
-</dl>
+**2.5.1**
 
 -   Fix error when modelling non-global Solaris zone (ZPS-1941)
 -   Fix disk utilization threshold on Filesystem components (ZPS-1981)
@@ -783,94 +709,36 @@ are required for this ZenPack to fully function.
 -   Tested with Zenoss Resource Manager 5.3.2 and Zenoss Resource
     Manager 4.2.5 RPS 743
 
-<dl markdown="1">
-<dt markdown="1">
-2.5.0
-</dt>
-</dl>
+**2.5.0**
 
 -   Fix performance issue with Zenoss Analytics (ZEN-24573)
 
-<dl markdown="1">
-<dt markdown="1">
-2.4.2
-</dt>
-</dl>
+**2.4.2**
 
 -   Fix process monitoring event class and threshold (ZEN-21999)
 -   Fix for handling of empty zone status output
 -   Add common datapoint aliases (ZEN-24619)
 
-<dl markdown="1">
-<dt markdown="1">
-2.4.1
-</dt>
-</dl>
+**2.4.1**
 
 -   Fix for systems without Zenoss Analytics
 
-<dl markdown="1">
-<dt markdown="1">
-2.4.0
-</dt>
-</dl>
+**2.4.0**
 
 -   Added support for updating zone status during monitoring (ZEN-17912)
 
-<dl markdown="1">
-<dt markdown="1">
-2.3.1
-</dt>
-</dl>
+**2.3.1**
 
 -   Fix reporting of Solaris System Serial Numbers
 
-<dl markdown="1">
-<dt markdown="1">
-2.3.0
-</dt>
-</dl>
+**2.3.0**
 
 -   Add support for Solaris Cluster.
 
-<dl markdown="1">
-<dt markdown="1">
-2.2.0
-</dt>
-</dl>
+**2.2.0**
 
 -   Add support for zones.
 
-<dl markdown="1">
-<dt markdown="1">
-2.0.0
-</dt>
-</dl>
+**2.0.0**
 
 -   Add support for LDOMs.
-
-## Attachments:
-
--   [ClusterDIDComponent.png](img/zenpack-clusterdidcomponent.png)
--   [ClusterGraphs.png](img/zenpack-clustergraphs.png)
--   [ClusterImpact.png](img/zenpack-clusterimpact.png)
--   [ClusterNodeComponent.png](img/zenpack-clusternodecomponent.png)
--   [oracle-zenpack.png](img/zenpack-oracle-zenpack.png)
--   [Solaris_Impact_YUML.png](img/zenpack-solaris_impact_yuml.png)
--   [ZoneComponent.png](img/zenpack-zonecomponent.png)
--   [ZoneDedicatedCPUComponent.png](img/zenpack-zonededicatedcpucomponent.png)
--   [ZoneFileSystemComponent.png](img/zenpack-zonefilesystemcomponent.png)
--   [ZoneImpact.png](img/zenpack-zoneimpact.png)
--   [ZoneNetworkAdapterComponent.png](img/zenpack-zonenetworkadaptercomponent.png)
--   [ClusterDIDComponent.png](img/zenpack-clusterdidcomponent.png)
--   [ClusterGraphs.png](img/zenpack-clustergraphs.png)
--   [ClusterImpact.png](img/zenpack-clusterimpact.png)
--   [ClusterNodeComponent.png](img/zenpack-clusternodecomponent.png)
--   [oracle-zenpack.png](img/zenpack-oracle-zenpack.png)
--   [Solaris_Impact_YUML.png](img/zenpack-solaris_impact_yuml.png)
--   [ZoneComponent.png](img/zenpack-zonecomponent.png)
--   [ZoneDedicatedCPUComponent.png](img/zenpack-zonededicatedcpucomponent.png)
--   [ZoneFileSystemComponent.png](img/zenpack-zonefilesystemcomponent.png)
--   [ZoneImpact.png](img/zenpack-zoneimpact.png)
--   [ZoneNetworkAdapterComponent.png](img/zenpack-zonenetworkadaptercomponent.png)
-

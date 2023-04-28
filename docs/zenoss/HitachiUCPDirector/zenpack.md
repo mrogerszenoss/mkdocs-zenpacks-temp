@@ -1,7 +1,5 @@
 # Hitachi UCPDirector Integration ZenPack
 
-@lb[](img/zenpack-hitachi-zenpack.png)
-
 ## Subscription
 
 This integration is a subscription-based Professional Services
@@ -80,14 +78,3 @@ development SOW.*
 -   A user is able view the individual components that are present and
     validate data is being monitored
 -   A user is able to add alarm thresholds on the monitored components
-
-## Attachments:
-
--   [hitachi-zenpack.png](img/zenpack-hitachi-zenpack.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/HitachiUCPDirector/zenoss-integration-services-ds.pdf){.external-link}
--   [hitachi-zenpack.png](img/zenpack-hitachi-zenpack.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/HitachiUCPDirector/zenoss-integration-services-ds.pdf){.external-link}
--   [hitachi-zenpack.png](img/zenpack-hitachi-zenpack.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/HitachiUCPDirector/zenoss-integration-services-ds.pdf){.external-link}
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/HitachiUCPDirector/zenoss-integration-services-ds.pdf){.external-link}
-

@@ -1,7 +1,5 @@
 # Dell EMC XtremIO (Commercial)
 
-@lb[](img/zenpack-emc-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -25,48 +23,6 @@ ZenPacks.zenoss.EMC.XtremIO
 
 The EMC XtremIO ZenPack adds support for monitoring Dell EMC XtremIO
 storage management clusters.
-
-## Contents
-
-[1 Dell EMC XtremIO ZenPack](#dell-emcxtrem-io-zenpack)
-
-[1.1 Support](#support)
-
-[1.2 Releases](#releases)
-
-[1.3 Background](#background)
-
-[1.4 Features](#features)
-
-[1.4.1 Discovery](#discovery)
-
-[1.4.2 Monitoring](#monitoring)
-
-[1.4.3 Event Management](#event-management)
-
-[1.4.4 Service Impact](#service-impact)
-
-[1.4.5 Capacity ZenPack Thresholds](#capacity-zenpack-thresholds)
-
-[1.5 Usage](#usage)
-
-[1.5.1 Adding XtremIO Devices](#adding-xtrem-iodevices)
-
-[1.5.2 Command Line Tools](#command-line-tools)
-
-[1.6 Installed Items](#installed-items)
-
-[1.7 Required Daemons](#required-daemons)
-
-[1.8 Upgrade](#upgrade)
-
-[1.9 Limitations](#limitations)
-
-[1.10 Known Issues](#known-issues)
-
-[1.10.1 Known Issue when importing xtremio-bundle.zip into Analytics](#bundle-zipinto-analytics)
-
-[1.11 Changes](#changes)
 
 ## Support
 
@@ -590,7 +546,7 @@ failed"
 
 ## Changes
 
-1.0.1
+**1.0.1**
 
 -   Maintenance release.
 -   Updated icons for better theme compatibility
@@ -599,14 +555,9 @@ failed"
 -   Compatible with Zenoss 5.3.3 - 6.2 and Zenoss Cloud: Incompatible
     with Zenoss Resource Manager 4.x
 
-1.0.0
+**1.0.0**
 
 -   Initial release.
 -   Tested with Zenoss Resource Manager 5.2.5, Zenoss Resource Manager
     5.3.3, Zenoss Resource Manager 6.1.2, Service Impact Service Impact
     5.2.3 and Analytics 5.1.0
-
-## Attachments:
-
--   [emc-zenpack.png](img/zenpack-emc-zenpack.png)
-

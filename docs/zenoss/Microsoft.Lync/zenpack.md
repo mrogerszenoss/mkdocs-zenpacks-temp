@@ -1,7 +1,5 @@
 # Microsoft Lync
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -47,28 +45,6 @@ Version 1.1.2- [Download](https://delivery.zenoss.com/){.external-link}:   Relea
     Manager 5.0.x, Zenoss Resource Manager 5.1.x, Zenoss Resource
     Manager 5.2.x, Zenoss Resource Manager 5.3.x
 
-## Contents
-
--   [Gallery](#gallery)
--   [Features](#features)
-    -   [Discovery](#discovery)
-    -   [Performance Monitoring](#performance-monitoring)
-    -   [Event Monitoring](#event-monitoring)
-    -   [Service Impact](#service-impact)
-    -   Auto-discovery of Lync Computers' Guest Devices
--   [Requirements](#requirements)
--   [Usage](#usage)
--   [Prerequisites](#prerequisites)
-    -   [Domain User Account](#domain-user-account)
-    -   [Collecting Quality of Experience (QoE)         Metrics](#MicrosoftLync-CollectingQualityofExperience(QoE)Metrics)
-    -   [Collecting Performance Counters](#collecting-performance-counters)
--   [Troubleshooting](#troubleshooting)
-    -   [Lync Server Modeling or Monitoring Failed](#lync-server-modeling-or-monitoring-failed)
-    -   [Edge Server Monitoring Failed](#edge-server-monitoring-failed)
-    -   [Quality of Experience Metrics Collection Failed](#quality-of-experience-metrics-collection-failed)
-    -   [Lync Computers Status Monitoring Failed](#lync-computers-status-monitoring-failed)
--   [Installed Items](#installed-items)
--   [Changes](#changes)
 
 ## Gallery
 
@@ -488,28 +464,28 @@ system.
 
 ## Changes
 
-1.1.2
+**1.1.2**
 
 -   Fix QoE data collection and graphs (ZPS-1763)
 -   Fix compatibility with Microsoft Windows zenpack v2.8.0 (ZPS-2203)
 -   Tested with Zenoss Resource Manager 5.3.1 and Zenoss Resource
     Manager 4.2.5 RPS 743
 
-1.1.1
+**1.1.1**
 
 -   Collect QoE metrics from DB host (ZPS-1623)
 -   Create lync_sites relation on Windows devices (ZPS-1624)
 
-1.1.0
+**1.1.0**
 
 -   Add support of Microsoft Skype for Business (Microsoft Lync 2015)
 
-1.0.2
+**1.0.2**
 
 -   Fix zenpacks.zenoss.microsoft.windows 2.6.0 missing hardware
     relations (ZEN-23968)
 
-1.0.1
+**1.0.1**
 
 -   Added subpanels for server components (ZEN-13608)
 -   Documentation update: Update to note proper device class for Lync
@@ -521,28 +497,6 @@ system.
     (ZEN-16635)
 -   Fixed unit tests (ZEN-16635)
 
-1.0.0
+**1.0.0**
 
 -   Initial Release
-
-## Attachments:
-
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [MSLyncConferencingServer.png](img/zenpack-mslyncconferencingserver.png)
--   [MSLyncImpact.png](img/zenpack-mslyncimpact.png)
--   [MSLyncMediationServer.png](img/zenpack-mslyncmediationserver.png)
--   [MSLyncMonitoringDatabases.png](img/zenpack-mslyncmonitoringdatabases.png)
--   [MSLyncSites.png](img/zenpack-mslyncsites.png)
--   [MSLyncUserServer.png](img/zenpack-mslyncuserserver.png)
--   [MSLyncWebServer.png](img/zenpack-mslyncwebserver.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [MSLyncConferencingServer.png](img/zenpack-mslyncconferencingserver.png)
--   [MSLyncImpact.png](img/zenpack-mslyncimpact.png)
--   [MSLyncMediationServer.png](img/zenpack-mslyncmediationserver.png)
--   [MSLyncMonitoringDatabases.png](img/zenpack-mslyncmonitoringdatabases.png)
--   [MSLyncSites.png](img/zenpack-mslyncsites.png)
--   [MSLyncUserServer.png](img/zenpack-mslyncuserserver.png)
--   [MSLyncWebServer.png](img/zenpack-mslyncwebserver.png)
--   [MSLyncWebServer.png](img/zenpack-mslyncwebserver.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
-

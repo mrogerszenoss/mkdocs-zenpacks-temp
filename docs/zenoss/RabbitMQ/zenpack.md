@@ -1,7 +1,5 @@
 # RabbitMQ
 
-@lb[](img/zenpack-rabbitmq-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -342,13 +340,7 @@ as appropriate):
 
 ## Change Log
 
-<dl markdown="1">
-<dt markdown="1">
-
-1.0.10
-
-</dt>
-<dd markdown="1">
+**1.0.10**
 
 -   (ZPS-6912) Fix Traceback generated when no queries are being
     returned for the vhost name
@@ -356,30 +348,18 @@ as appropriate):
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, Zenoss 6.5.0 and Service
     Impact 5.5.3
 
-</dd>
-<dt markdown="1">
-1.0.9
-</dt>
-</dl>
+**1.0.9**
 
 -   (ZPS-2772) Fix modeler omission of RabbitMQ nodes from rabbitmqctl
     status
 -   Tested with Zenoss Resource Manager 6.4.1 and Zenoss Cloud
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.8
-</dt>
-</dl>
+**1.0.8**
 
 -   (ZEN-20898) Support for Federation Plugin
 -   Parser improvements and bug fixes
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.7
-</dt>
-</dl>
+**1.0.7**
 
 -   (ZEN-11451) Zenoss should track and present event processing rates
 
@@ -392,50 +372,6 @@ as appropriate):
 -   (ZEN-5533) /Status/RabbitMQ for queues don't auto-clear when
     resolved
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.5
-</dt>
-</dl>
+**1.0.5**
 
 -   (ZEN-3526) RabbitMQ: No data returned for command
-
-## Attachments:
-
--   [Rabbitmq_components.png](img/zenpack-rabbitmq_components.png)
--   [Rabbitmq_exchanges.png](img/zenpack-rabbitmq_exchanges.png)
--   [Rabbitmq_nodes_channels.png](img/zenpack-rabbitmq_nodes_channels.png)
--   [Rabbitmq_nodes_throughput.png](img/zenpack-rabbitmq_nodes_throughput.png)
--   [Rabbitmq_nodes.png](img/zenpack-rabbitmq_nodes.png)
--   [Rabbitmq_queues_metrics.png](img/zenpack-rabbitmq_queues_metrics.png)
--   [Rabbitmq_queues.png](img/zenpack-rabbitmq_queues.png)
--   [Rabbitmq_vhosts.png](img/zenpack-rabbitmq_vhosts.png)
--   [rabbitmq-zenpack.png](img/zenpack-rabbitmq-zenpack.png)
--   [Rabbitmq_components.png](img/zenpack-rabbitmq_components.png)
--   [Rabbitmq_exchanges.png](img/zenpack-rabbitmq_exchanges.png)
--   [Rabbitmq_nodes_channels.png](img/zenpack-rabbitmq_nodes_channels.png)
--   [Rabbitmq_nodes_throughput.png](img/zenpack-rabbitmq_nodes_throughput.png)
--   [Rabbitmq_nodes.png](img/zenpack-rabbitmq_nodes.png)
--   [Rabbitmq_queues_metrics.png](img/zenpack-rabbitmq_queues_metrics.png)
--   [Rabbitmq_queues.png](img/zenpack-rabbitmq_queues.png)
--   [Rabbitmq_vhosts.png](img/zenpack-rabbitmq_vhosts.png)
--   [rabbitmq-zenpack.png](img/zenpack-rabbitmq-zenpack.png)
--   [Rabbitmq_components.png](img/zenpack-rabbitmq_components.png)
--   [Rabbitmq_exchanges.png](img/zenpack-rabbitmq_exchanges.png)
--   [Rabbitmq_nodes_channels.png](img/zenpack-rabbitmq_nodes_channels.png)
--   [Rabbitmq_nodes_throughput.png](img/zenpack-rabbitmq_nodes_throughput.png)
--   [Rabbitmq_nodes.png](img/zenpack-rabbitmq_nodes.png)
--   [Rabbitmq_queues_metrics.png](img/zenpack-rabbitmq_queues_metrics.png)
--   [Rabbitmq_queues.png](img/zenpack-rabbitmq_queues.png)
--   [Rabbitmq_vhosts.png](img/zenpack-rabbitmq_vhosts.png)
--   [rabbitmq-zenpack.png](img/zenpack-rabbitmq-zenpack.png)
--   [Rabbitmq_components.png](img/zenpack-rabbitmq_components.png)
--   [Rabbitmq_exchanges.png](img/zenpack-rabbitmq_exchanges.png)
--   [Rabbitmq_nodes_channels.png](img/zenpack-rabbitmq_nodes_channels.png)
--   [Rabbitmq_nodes_throughput.png](img/zenpack-rabbitmq_nodes_throughput.png)
--   [Rabbitmq_nodes.png](img/zenpack-rabbitmq_nodes.png)
--   [Rabbitmq_queues_metrics.png](img/zenpack-rabbitmq_queues_metrics.png)
--   [Rabbitmq_queues.png](img/zenpack-rabbitmq_queues.png)
--   [Rabbitmq_vhosts.png](img/zenpack-rabbitmq_vhosts.png)
--   [rabbitmq-zenpack.png](img/zenpack-rabbitmq-zenpack.png)
-

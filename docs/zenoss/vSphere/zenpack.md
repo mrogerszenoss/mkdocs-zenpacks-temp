@@ -1,7 +1,5 @@
 # VMware vSphere
 
-@lb[](img/zenpack-vmware-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -38,126 +36,7 @@ This ZenPack supersedes an earlier ZenPack named
 `ZenPacks.zenoss.ZenVMware`. If you have `ZenPacks.zenoss.ZenVMware`
 installed on your system, please read the [Transitioning from ZenVMware](#transitioning-from-zen-vmware) section below.
 
-## Contents
 
-[1 VMware vSphere ZenPack](#vmwarev-sphere-zenpack)
-
-[1.1 Background](#background)
-
-[1.2 Releases](#releases)
-
-[1.3 Compatibility](#compatibility)
-
-[1.4 Features](#features)
-
-[1.4.1 Discovery](#discovery)
-
-[1.4.2 Performance Monitoring](#performance-monitoring)
-
-[1.4.3 Event Management](#event-management)
-
-[1.4.3.1 Standard Zenoss Event Fields](#standard-zenoss-event-fields)
-
-[1.4.3.2 Additional Event Fields](#additional-event-fields)
-
-[1.4.4 Guest Device Discovery](#guest-device-discovery)
-
-[1.4.5 Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
-
-[1.4.5.1 Internal Impact Relationships](#internal-impact-relationships)
-
-[1.4.5.2 External Impact Relationships](#external-impact-relationships)
-
-[1.4.5.3 Custom Impact Policies](#custom-impact-policies)
-
-[1.4.6 Dynamic View on Device Level](#dynamic-viewon-device-level)
-
-[1.4.7 vSAN Cluster Health](#vsan-cluster-health)
-
-[1.4.8 vSAN Objects](#vsan-objects)
-
-[1.5 Operational Reports](#operational-reports)
-
-[1.6 Usage](#usage)
-
-[1.6.1 Adding vSphere Endpoint](#adding-vsphere-endpoint)
-
-[1.6.2 Monitoring ESX Host Preparation](#monitoring-esxhost-preparation)
-
-[1.6.3 Configuring Guest Device Discovery](#configuring-guest-device-discovery)
-
-[1.6.4 Reasons a Guest Device Fails to be Discovered](#reason-sa-guest-device-failstobe-discovered)
-
-[1.6.5 Configuring Auto Change of the Production State for Guest Devices](#configuring-auto-change-of-the-production-state-for-guest-devices)
-
-[1.6.6 Controlling which VMs are Modeled](#controlling-which-vms-are-modeled)
-
-[1.7 Transitioning from ZenVMware](#transitioning-from-zen-vmware-1)
-
-[1.8 Installed Items](#installed-items)
-
-[1.8.1 Configuration Properties](#configuration-properties)
-
-[1.8.2 Device Classes](#device-classes)
-
-[1.8.3 Modeler Plugins](#modeler-plugins)
-
-[1.8.4 Datasource Types](#datasource-types)
-
-[1.8.5 Monitoring Templates](#monitoring-templates)
-
-[1.8.6 Event Classes](#event-classes)
-
-[1.8.7 Collector Daemons](#collector-daemons)
-
-[1.9 Troubleshooting](#troubleshooting)
-
-[1.9.1 Configuration Checklist](#configuration-checklist)
-
-[1.9.2 Modeling](#modeling)
-
-[1.9.3 Daemon Restart](#daemon-restart)
-
-[1.9.4 Login Credentials](#login-credentials)
-
-[1.9.5 NTP](#ntp)
-
-[1.9.6 Logging](#logging)
-
-[1.9.7 Java Subprocess](#java-subprocess)
-
-1.9.8 Performance Data Collection: Health
-Report
-
-1.9.9 Performance Data Collection:
-maxQueryMetrics and zVSpherePerfQueryVcChunkSize
-
-1.9.10 Performance Data Collection: Gaps
-in Resource Pool Graphs
-
-[1.9.11 Performance Data Collection - Tuning](#tuning)
-
-[1.10 Tuning Modeling](#tuning-modeling)
-
-[1.11 ESX Host Ping Monitoring](#esxhost-ping-monitoring)
-
-[1.12 Zenoss Analytics](#zenoss-analytics)
-
-[1.12.1 Known issues](#known-issues)
-
-[1.12.1.1 SSL Errors with Certain VMware versions](#ssl-errors-with-certain-vmwareversions)
-
-[1.12.1.2 Analytics](#analytics)
-
-[1.12.1.3 Upgrades from 3.5.x](#upgrades-from-35x)
-
-[1.12.1.4 Upgrading from any previous version to 3.7.x or 4.0.x](#upgrading-from-any-previous-version-to-37xor-40x)
-
-[1.12.1.5 Configuring JAVA heap size](#configuring-java-heapsize)
-
-[1.12.1.6 Error vmodl.fault.MethodNotFound](#error-vmodlfault-method-not-found)
-
-[1.13 Changes](#changes)
 
 ## Releases
 
@@ -1786,7 +1665,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 
 ## Changes
 
-4.1.2
+**4.1.2**
 
 -   Fixed modeling of large environments (ZPS-7961)
 -   Fixed modeling for cases when totalMemory was unchanged (ZPS-7689)
@@ -1796,7 +1675,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
     (ZPS-7505)
 -   Tested with Zenoss 6.6.0, Zenoss Cloud and Service Impact 5.5.5.
 
-4.1.1
+**4.1.1**
 
 -   Resolve issue with huge datamaps being produced causing failures in
     zenhub (ZPS-7130)
@@ -1804,7 +1683,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
     datastore components (ZPS-7170)
 -   Tested with Zenoss Cloud, Zenoss 6.5.0, and Service Impact 5.5.3.
 
-4.1.0
+**4.1.0**
 
 -   Fix issue with linking existing guest devices (ZPS-5523)
 -   Return datastoreUsedPercent datasource (ZPS-7112)
@@ -1815,7 +1694,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Add support for Java 11 JVM (ZEN-32976)
 -   Tested with Zenoss Cloud, Zenoss 6.5.0, and Service Impact 5.5.3.
 
-4.0.3
+**4.0.3**
 
 -   Fix modeling failure of vDisk if control is of NVME type (ZPS-6595)
 -   Fix traceback during vsphere_gather operation with apiVersion
@@ -1825,7 +1704,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service
     Impact 5.5.1
 
-4.0.2
+**4.0.2**
 
 -   Fix invalid threshold for memory capacity on vSphere hosts
     (ZPS-4979)
@@ -1843,12 +1722,12 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
     monitoring templates. (ZPS-5628)
 -   Tested with Zenoss Resource Manager 6.3.2, Zenoss Cloud
 
-4.0.1
+**4.0.1**
 
 -   Improve vSAN 6.2 version detection, add zVSphereModelVSAN property
     (ZPS-4810)
 
-4.0.0
+**4.0.0**
 
 -   vSAN support (Disk Groups, Cache and Capacity disk modeling, and
     monitoring, vSAN Cluster Health, vSAN Objects, Compliance status)
@@ -1888,13 +1767,13 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Tested with Zenoss Resource Manager 5.3.3, Zenoss Resource Manager
     6.2.1, Zenoss Cloud and Service Impact 5.3.3
 
-3.7.2
+**3.7.2**
 
 -   Reduce memory usage when used with the Layer2 ZenPack (ZPS-2172)
 -   Tested with Zenoss Resource Manager 6.1.2, Zenoss Resource Manager
     4.2.5 RPS 743, Zenoss Cloud and Service Impact 5.3.0
 
-3.7.1
+**3.7.1**
 
 -   vSphere Report organizer not present with a fresh install (ZPS-3727)
 -   Fix sporadic modeling failures related to empty snapshots data
@@ -1905,7 +1784,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Tested with Zenoss Resource Manager 5.3.3 and 6.1.2, Zenoss Resource
     Manager 4.2.5 RPS 743, and Service Impact 5.3.0
 
-3.7.0
+**3.7.0**
 
 -   Support for vSphere 6.7
 -   Upgraded from ZenPackLib v1 to ZenPackLib v2. Note: ZenPackLib
@@ -1931,13 +1810,13 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Tested with Zenoss Resource Manager 5.3.3 and 6.1.2, Zenoss Resource
     Manager 4.2.5 RPS 743, and Service Impact 5.3.0
 
-3.6.3
+**3.6.3**
 
 -   Fix issue that can cause duplicated components (ZPS-1614)
 -   Include vSphere devices in standard device tables in analytics
     (ZPS-1501)
 
-3.6.2
+**3.6.2**
 
 -   Fix zVSphereLUNContextMetric NameError in zenhub.log. (ZPS-1184)
 
@@ -1945,7 +1824,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 
 -   Support new contextMetric capability in Zenoss 5.2.3. (ZEN-27004)
 
-3.6.0
+**3.6.0**
 
 -   Support for vSphere 6.5
 -   Support monitoring of disk usage on datastores on ESX endpoints
@@ -1978,15 +1857,15 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   \[Analytics\] Count vSphere devices in the overall device inventory
     (add to dim_device) (ZPS-398)
 
-3.5.3
+**3.5.3**
 
 -   Fix TypeError while adding vSphere hypervisor (ZEN-26197)
 
-3.5.1
+**3.5.1**
 
 -   Fix RRD file paths on Zenoss 4.x (ZEN-25807)
 
-3.5.0
+**3.5.0**
 
 -   General
     -   Converted zenpack to use zenpacklib. Small UI differences and
@@ -2062,7 +1941,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
         to be DOWN, rather than ATRISK, regardless of
         powerState/connnectionState values (ZEN-24612)
 
-3.4.1
+**3.4.1**
 
 -   Support multiple –query options in vsphere_queryperf tool
 -   Improved component grid performance with Zenoss 5.1.4+
@@ -2072,7 +1951,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Remove Dynamic View component from navigation, since it is not fully
     supported (ZEN-16277)
 
-3.4.0
+**3.4.0**
 
 -   vSphere Devices can no longer be modeled by zenmodeler or the &ldquo;Model
     Device&rdquo; UI option. Modeling is performed automatically by zenvsphere
@@ -2125,11 +2004,11 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
     need a traceback (ZEN-18760)
 -   Added &lsquo;LUNs&rsquo; report
 
-3.2.1
+**3.2.1**
 
 -   Fix for CiscoUCS startup issue (ZEN-18814)
 
-3.2.0
+**3.2.0**
 
 -   Improve reliability of modeling of vSphere alarm events (model
     pre-existing alarms at startup and apply updates to alarms based on
@@ -2163,16 +2042,16 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Fix error encountered when a vApp contains child resource pools
     (ZEN-17670)
 
-3.1.3
+**3.1.3**
 
 -   Fix potentially missed linkage of UCS service profiles to vSphere
     hosts. (ZEN-18631)
 
-3.1.2
+**3.1.2**
 
 -   Fix ConnectionStateError. (ZEN-16924)
 
-3.1.1
+**3.1.1**
 
 -   Fix bug that halted data collection that after a single TimeoutError
     (ZEN-10927)
@@ -2188,7 +2067,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Model optimization on Zenoss &gt;= 4.2.4 SP728, 4.2.5 SP316 and
     5.0.0. (ZEN-17058)
 
-3.1.0
+**3.1.0**
 
 -   Add support for Zenoss Analytics
 -   Add support for VMware vSphere 5.5
@@ -2229,14 +2108,14 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
     missed during the initial model (ZEN-13124)
 -   Add support for performance counters on vNICs (ZEN-12106)
 
-3.0.4
+**3.0.4**
 
 -   Reduction of invalidations caused by vSphere model changes.
     (ZEN-10838)
 -   Remove modeling of guestHeartbeatStatus. (ZEN-10838)
 -   Ignore pNICs with empty MAC addresses. (ZEN-10836)
 
-3.0.2
+**3.0.2**
 
 -   Disable modeling optimization that led to POSKeyError errors.
 -   Multiple improvements in vSphere API error recovery and session
@@ -2251,7 +2130,7 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
     (ZEN-10741)
 -   More detailed logging.
 
-3.0.1
+**3.0.1**
 
 -   Add vsphere_gather and vsphere_queryperf command-line
     troubleshooting tools.
@@ -2263,46 +2142,6 @@ device, setting zVSphereModelVSAN to False should resolve this issue.
 -   Fix SAN storage impact relationships.
 -   Fix modeling bug on some vSphere endpoints.
 
-3.0.0
+**3.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [add_dialog.png](img/zenpack-add_dialog.png)
--   [add_menu.png](img/zenpack-add_menu.png)
--   [clusters.png](img/zenpack-clusters.png)
--   [datacenters.png](img/zenpack-datacenters.png)
--   [dv_overview.png](img/zenpack-dv_overview.png)
--   [events.png](img/zenpack-events.png)
--   [impact_yuml.png](img/zenpack-impact_yuml.png)
--   [impact.png](img/zenpack-impact.png)
--   [operational_reports.png](img/zenpack-operational_reports.png)
--   [overview.png](img/zenpack-overview.png)
--   [perfcounter_graphs.png](img/zenpack-perfcounter_graphs.png)
--   [pnics.png](img/zenpack-pnics.png)
--   [resourcepools.png](img/zenpack-resourcepools.png)
--   [vms.png](img/zenpack-vms.png)
--   [vmware-zenpack.png](img/zenpack-vmware-zenpack.png)
--   [vsan_cluster_health.png](img/zenpack-vsan_cluster_health.png)
--   [vsan_cluster_objects.png](img/zenpack-vsan_cluster_objects.png)
--   [add_dialog.png](img/zenpack-add_dialog.png)
--   [clusters.png](img/zenpack-clusters.png)
--   [datacenters.png](img/zenpack-datacenters.png)
--   [dv_overview.png](img/zenpack-dv_overview.png)
--   [impact_yuml.png](img/zenpack-impact_yuml.png)
--   [events.png](img/zenpack-events.png)
--   [operational_reports.png](img/zenpack-operational_reports.png)
--   [overview.png](img/zenpack-overview.png)
--   [perfcounter_graphs.png](img/zenpack-perfcounter_graphs.png)
--   [pnics.png](img/zenpack-pnics.png)
--   [resourcepools.png](img/zenpack-resourcepools.png)
--   [vms.png](img/zenpack-vms.png)
--   [vmware-zenpack.png](img/zenpack-vmware-zenpack.png)
--   [vsan_cluster_health.png](img/zenpack-vsan_cluster_health.png)
--   [vsan_cluster_objects.png](img/zenpack-vsan_cluster_objects.png)
--   [add_menu.png](img/zenpack-add_menu.png)
--   [impact.png](img/zenpack-impact.png)
--   [add_dialog.png](img/zenpack-add_dialog.png)
--   [resourcepools.png](img/zenpack-resourcepools.png)
-

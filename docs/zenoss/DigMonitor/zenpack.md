@@ -1,7 +1,5 @@
 # Dig Monitor
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -46,9 +44,8 @@ turn uses the dig command.
 
 ## Prerequisites
 
-|                   |                                           |
-|-------------------|-------------------------------------------|
 | Prerequisite      | Restriction                               |
+|-------------------|-------------------------------------------|
 | Product           | Zenoss platform 4.x, Zenoss 2.2 or higher |
 | Required ZenPacks | ZenPacks.zenoss.DigMonitor                |
 
@@ -70,9 +67,8 @@ To enable monitoring by the system:
     as needed.
 
     DigMonitor Data Source Options
-    |             |                                                                                               |
-    |-------------|-----------------------------------------------------------------------------------------------|
     | Option      | Description                                                                                   |
+    |-------------|-----------------------------------------------------------------------------------------------|
     | DNS Server  | Name server against which the dig command should be run. The default is the device host name. |
     | Port        | Port on which the name server is listening. This is normally port 53.                         |
     | Record Name | Name of the record you want to look up. The default is zenoss.com.                            |
@@ -80,14 +76,6 @@ To enable monitoring by the system:
 
 ## Daemons
 
-|                       |            |
-|-----------------------|------------|
 | Type                  | Name       |
+|-----------------------|------------|
 | Performance Collector | zencommand |
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

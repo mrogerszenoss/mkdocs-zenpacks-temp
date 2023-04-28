@@ -1,7 +1,5 @@
 # Cisco UCS
 
-@lb[](img/zenpack-cisco-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -61,43 +59,6 @@ Version 2.8.1 [Download](https://delivery.zenoss.com/){.external-link}:   Releas
 
 Version 2.7.0 [Download](https://delivery.zenoss.com/){.external-link}:   Released: 2018-04-18:   Compatible with Zenoss 4.2.X - 6.1.X:   Requires: [Dynamic Service View ZenPack](http://help.zenoss.com/display/in/Dynamic+Service+View){.external-link},
     [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector){.external-link}
-
-## Contents
-
--   [Background](#background)
--   [General Features](#general-features)
--   [UCS Manager Features](#ucsmanager-features)
-    -   [UCS Manager Discovery](#ucsmanager-discovery)
-    -   [UCS Manager Performance Monitoring](#ucsmanager-performance-monitoring)
-    -   [UCS Manager Event Management](#ucsmanager-event-management)
-    -   [Dashboard Portlets](#dashboard-portlets)
-    -   [Topology View](#topology-view)
-    -   [Bandwidth Usage View](#bandwidth-usage-view)
-    -   [Dependency View](#dependency-view)
-    -   [UCS Manager Dynamic View](#ucsmanager-dynamic-view)
-    -   [UCS Manager Service Impact and Root Cause Analysis](#ucsmanagers-erviceimpact-and-root-cause-analysis)
-    -   [UCS Manager Reports](#ucsmanager-reports)
--   [UCS C-Series and E-Series Features](#series-features)
-    -   [UCS C-Series and E-Series Discovery](#series-discovery)
-    -   [UCS C-Series and E-Series Performance Monitoring](#series-performance-monitoring)
-    -   [UCS C-Series and E-Series Event Management](#series-event-management)
-    -   [UCS C-Series and E-Series Service Impact and Root Cause Analysis](#series-service-impact-and-root-cause-analysis)
--   [Usage](#usage)
-    -   [Installation](#installation-1)
-    -   [Upgrading the CiscoUCS ZenPack to Version 3.0.0 without UCSCapacity](#)
-    -   [Upgrading the CiscoUCS ZenPack to Version 3.0.0 with UCSCapacity 1.6.0](#1)
-    -   [Configuring UCS Managers](#configuring-ucsmanagers)
-    -   [Adding UCS Managers](#adding-ucsmanagers)
-    -   [Adding Stand-Alone UCS C-Series Servers](#series-servers)
-    -   [Adding UCS E-Series Servers](#series-servers)
--   [Installed Items](#installed-items)
--   [Zenoss Analytics](#zenoss-analytics)
--   [Tested UCS Versions](#tested-ucsversions)
--   [Troubleshooting](#troubleshooting)
-    -   [CIMC Session Leakage](#cimc-session-leakage)
-    -   [CIMC SSL Connection Errors](#cimc-ssl-connection-errors)
-    -   [Cisco UCS Manager - Huge Spikes on Utilization Graphs](#huge-spikes-on-utilization-graphs)
--   [Changes](#changes)
 
 ## Background
 
@@ -1835,7 +1796,7 @@ version on the UCS side.
 
 ## Changes
 
-3.0.2
+**3.0.2**
 
 -   Fix duplicates of fan module components. (ZPS-6047)
 -   Fix CIMC session leakage. (ZPS-6110)
@@ -1845,7 +1806,7 @@ version on the UCS side.
 -   Fix Authentication failure (Authorization Required 552). (ZPS-5921)
 -   Tested with Zenoss Cloud, Zenoss 6.4.1 and Service Impact 5.5.1.
 
-3.0.1
+**3.0.1**
 
 -   Add impact relationships for Aggregation Pools. (ZPS-5836)
 -   Fixes Domain Overview Portlet. (ZPS-5839)
@@ -1855,7 +1816,7 @@ version on the UCS side.
 -   Fixes incorrect events for PSU's. (ZPS-5939)
 -   Tested with Zenoss Cloud, Zenoss 6.4.0 and Service Impact 5.5.1
 
-3.0.0
+**3.0.0**
 
 -   Add all UCSCapacity features
 -   Upgade to ZenPackLib 2.X
@@ -1874,7 +1835,7 @@ version on the UCS side.
 -   Update Topology View for S3260 storage chassis. (ZPS-3576)
 -   Tested with Zenoss Cloud, Zenoss 6.3.2 and Service Impact 5.3.4
 
-2.8.1
+**2.8.1**
 
 -   Do not autogenerate CiscoUCS reports while opening. (ZPS-4175)
 -   Shows a spinner wheel when generating Storage reports. (ZPS-4305)
@@ -1885,7 +1846,7 @@ version on the UCS side.
 -   Fix errors when adding Virtual NICs to Impact services. (ZPS-5872)
 -   Tested with Zenoss Cloud, and Zenoss Resource Manager 6.3.2.
 
-2.8.0
+**2.8.0**
 
 -   Transparent background for overview panel to inherit panel owner
     styles. (ZPS-3798)
@@ -1894,7 +1855,7 @@ version on the UCS side.
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.0, Zenoss
     Resource Manager 5.3.3 and Service Impact 5.3.1
 
-2.7.0
+**2.7.0**
 
 -   Reduce processing time for UCS service profile changes. (ZPS-2552)
 -   Add capacity thresholds to port channels. (ZPS-2697)
@@ -1920,7 +1881,7 @@ version on the UCS side.
 -   Tested with Resource Manager 4.2.5 SP 743, 5.3.3 and 6.1.2, Impact
     5.3.0, and Analytics 5.1.0
 
-2.6.2
+**2.6.2**
 
 -   Reduce "no status maps" events by adding support for more CIMC
     states. (ZPS-1670)
@@ -1928,7 +1889,7 @@ version on the UCS side.
 -   Fix collection interval of datasources calculated from UCS Manager
     datapoints. (ZPS-2077)
 
-2.6.1
+**2.6.1**
 
 -   Add UCS device types to multi-device add wizard. (ZPS-1421)
 -   The severity comment graph points were properly aligned on the CIMC
@@ -1939,7 +1900,7 @@ version on the UCS side.
 -   Add a "Cisco UCS Manager - Huge Spikes on Utilization Graphs" record
     to the Troubleshooting section. (ZPS-1190)
 
-2.6.0
+**2.6.0**
 
 -   Update/remove thresholds for fabric port channels.
     -   Replace here.linkSpeed with here.operSpeed for UCSFabricEthLanPc
@@ -1970,22 +1931,22 @@ version on the UCS side.
 -   Fix "Maximum sessions reached" error on CIMC 2.0(6d) firmware.
     (ZPS-837)
 
-2.5.5
+**2.5.5**
 
 -   Fix warnings in modeling results. (ZPS-645)
 -   Fix CIMC "Maximum sessions reached" error. (ZPS-227)
 
-2.5.4
+**2.5.4**
 
 -   Fix collection stall caused by interrupted connectivity. (ZPS-503)
 
-2.5.1
+**2.5.1**
 
 -   Clarify and reduce chassis and server events (ZEN-25740)
 -   Fix zCredentialsZProperties override warning on Zenoss 5.2
     (ZEN-26164)
 
-2.5.0
+**2.5.0**
 
 -   Added support for UCS Manager 3.1.
 -   Added support for C3260 chassis managed by UCS Manager.
@@ -2011,48 +1972,48 @@ version on the UCS side.
 -   Fixed unnecessary updates being made during modeling. (ZEN-24420)
 -   Removed passwords from debug log output. (ZEN-23587)
 
-2.4.5
+**2.4.5**
 
 -   Fix collection stall caused by interrupted connectivity. (ZPS-503)
 
-2.4.4
+**2.4.4**
 
 -   Fix migration issue related to ucsLayer2Catalog.
 
-2.4.3
+**2.4.3**
 
 -   Fix for undefined componentType variable. (ZEN-23459)
 
-2.4.2
+**2.4.2**
 
 -   Fix for all CIMC fault events occurring in August 2014. (ZEN-23438)
 
-2.4.1
+**2.4.1**
 
 -   Optimization improvements for UCS Layer2 Linkable components.
     (ZEN-19856)
 -   Status map for storageLocalDisk has been updated with JBOD and
     Global Hot Spare drive states. (ZEN-22829)
 
-2.4.0
+**2.4.0**
 
 -   Show bound equipment stats for vNICs.
 -   Fix UCS overview display issue on Zenoss 4. (ZEN-22862)
 
-2.3.4
+**2.3.4**
 
 -   Fix re-opening of events when UCS deletes them. (ZEN-22420)
 
-2.3.3
+**2.3.3**
 
 -   Fix potential Impact modeling performance issue.
 
-2.3.2
+**2.3.2**
 
 -   Fix failure to receive UCS events. (ZEN-21847)
 -   Fix modeling issues with more than 10 chassis. (ZEN-21483)
 
-2.3.1
+**2.3.1**
 
 -   Add rack servers to hardware inventory report. (ZEN-20901)
 -   Prevent adding invalid text as address for UCS domain. (ZEN-20825)
@@ -2060,7 +2021,7 @@ version on the UCS side.
     (ZEN-20789)
 -   Fix potential unicode decode error during modeling. (ZEN-21164)
 
-2.3.0
+**2.3.0**
 
 -   On Migration, replaces the following graphs if they exist
     (ZEN-19377):
@@ -2082,13 +2043,13 @@ version on the UCS side.
     /CiscoUCS/UCS-Manager. (ZEN-19887)
 -   Add Racks to Dynamic View for Mini (ZEN-19792)
 
-2.2.1
+**2.2.1**
 
 -   Fix relationship from HBAs to their adaptor.
 -   Fix potential missed linkage of service profiles to vSphere hosts.
     (ZEN-18631)
 
-2.2.0
+**2.2.0**
 
 -   Major upgrade adding new components:
     -   Now supports M and Mini
@@ -2100,11 +2061,11 @@ version on the UCS side.
 -   Now supported Zenoss &gt;= 4.2
 -   Replace /CiscoUCS/UCS-M device class with /CiscoUCS/UCS-Manager.
 
-2.1.1
+**2.1.1**
 
 -   Fix potential '\_\_dict\_\_' modeling error. (ZEN-17195)
 
-2.1.0
+**2.1.0**
 
 -   Major upgrade adding new components:
     -   Backplane Ports, Fabric Extenders, Fabric Ports, Fans, IO
@@ -2113,11 +2074,11 @@ version on the UCS side.
 -   Updates model, monitoring and analytics
 -   Now supported Zenoss &gt;= 4.2
 
-1.9.3
+**1.9.3**
 
 -   Remove unused Software link from UCS device navigation. (ZEN-14567)
 
-1.9.2
+**1.9.2**
 
 -   Log CIMC API call details at DEBUG level. (ZEN-15770)
 -   Handle missing CIMC classes gracefully. (ZEN-15924)
@@ -2126,194 +2087,47 @@ version on the UCS side.
 -   Use TLSv1 instead of SSLv3 for CIMC. (ZEN-16326)
 -   Fix "FunctionCache" installation error on Zenoss 4.1. (ZEN-16339)
 
-1.9.1
+**1.9.1**
 
 -   Change normal RAID battery statuses from error to clear. (ZEN-15531)
 -   Stop sending events that will be immediately aged. (ZEN-15004)
 
-1.9.0
+**1.9.0**
 
 -   Add support for C-Series and E-Series servers.
 -   Default to monitoring over HTTPS instead of HTTP.
 -   Make Free Slots and Hardware Inventory reports exportable.
 
-1.8.5
+**1.8.5**
 
 -   Reconnect for events after 10 seconds. (ZEN-12858)
 -   Improve model and performance ETL for Analytics.
 -   Add support for zCredentialsZProperties.
 
-1.8.4
+**1.8.4**
 
 -   Associate more events with modeled components. (ZEN-9955)
 
-1.8.3
+**1.8.3**
 
 -   Fix collection issue introduced in 1.8.2. (ZEN-10211)
 
-1.8.2
+**1.8.2**
 
 -   Fix y-axis scale on Chassis Power graph.
 -   Reduce logins to UCS Manager to absolute minimum.
 
-1.8.1
+**1.8.1**
 
 -   Fix clearing for UCS fault events.
 -   Create events for all open faults upon initial connection.
 -   Add description to UCS fault events with no description.
 -   Add "--task" command line option to zenucsevents.
 
-1.8.0
+**1.8.0**
 
 -   Add discovery of Management Interfaces.
 -   Fix association of syslogs and SNMP traps for alternative management
     addresses.
 
 ------------------------------------------------------------------------
-
-## Attachments:
-
--   [Aggregation_Pools.png](img/zenpack-aggregation_pools.png)
--   [Bandwidth_Usage.png](img/zenpack-bandwidth_usage.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Ciscoucs_cimc_cpus.png](img/zenpack-ciscoucs_cimc_cpus.png)
--   [Ciscoucs_cimc_events.png](img/zenpack-ciscoucs_cimc_events.png)
--   [Ciscoucs_cimc_externalinterfaces.png](img/zenpack-ciscoucs_cimc_externalinterfaces.png)
--   [Ciscoucs_cimc_fanmodules.png](img/zenpack-ciscoucs_cimc_fanmodules.png)
--   [Ciscoucs_cimc_fans.png](img/zenpack-ciscoucs_cimc_fans.png)
--   [Ciscoucs_cimc_impact_yuml.png](img/zenpack-ciscoucs_cimc_impact_yuml.png)
--   [Ciscoucs_cimc_impact.png](img/zenpack-ciscoucs_cimc_impact.png)
--   [Ciscoucs_cimc_localdisks.png](img/zenpack-ciscoucs_cimc_localdisks.png)
--   [Ciscoucs_cimc_memoryarrays.png](img/zenpack-ciscoucs_cimc_memoryarrays.png)
--   [Ciscoucs_cimc_memoryunits.png](img/zenpack-ciscoucs_cimc_memoryunits.png)
--   [Ciscoucs_cimc_model_yuml.png](img/zenpack-ciscoucs_cimc_model_yuml.png)
--   [Ciscoucs_cimc_networkadapters.png](img/zenpack-ciscoucs_cimc_networkadapters.png)
--   [Ciscoucs_cimc_overview.png](img/zenpack-ciscoucs_cimc_overview.png)
--   [Ciscoucs_cimc_powersupplies.png](img/zenpack-ciscoucs_cimc_powersupplies.png)
--   [Ciscoucs_cimc_raidbatteries.png](img/zenpack-ciscoucs_cimc_raidbatteries.png)
--   [Ciscoucs_cimc_storagecontrollers.png](img/zenpack-ciscoucs_cimc_storagecontrollers.png)
--   [Ciscoucs_cimc_vhbas.png](img/zenpack-ciscoucs_cimc_vhbas.png)
--   [Ciscoucs_cimc_vicadapters.png](img/zenpack-ciscoucs_cimc_vicadapters.png)
--   [Ciscoucs_cimc_vicexternalinterfaces.png](img/zenpack-ciscoucs_cimc_vicexternalinterfaces.png)
--   [Ciscoucs_cimc_virtualdrives.png](img/zenpack-ciscoucs_cimc_virtualdrives.png)
--   [Ciscoucs_cimc_vnics.png](img/zenpack-ciscoucs_cimc_vnics.png)
--   [Ciscoucs_manager_adaptor_units.png](img/zenpack-ciscoucs_manager_adaptor_units.png)
--   [Ciscoucs_manager_backplane_ports.png](img/zenpack-ciscoucs_manager_backplane_ports.png)
--   [Ciscoucs_manager_blade_servers.png](img/zenpack-ciscoucs_manager_blade_servers.png)
--   [Ciscoucs_manager_cartridge_servers.png](img/zenpack-ciscoucs_manager_cartridge_servers.png)
--   [Ciscoucs_manager_chassis.png](img/zenpack-ciscoucs_manager_chassis.png)
--   [ciscoucs_manager_dv_classic.png](img/zenpack-ciscoucs_manager_dv_classic.png)
--   [ciscoucs_manager_dv_mini.png](img/zenpack-ciscoucs_manager_dv_mini.png)
--   [ciscoucs_manager_dv_modular.png](img/zenpack-ciscoucs_manager_dv_modular.png)
--   [Ciscoucs_manager_ethernet_ports.png](img/zenpack-ciscoucs_manager_ethernet_ports.png)
--   [Ciscoucs_manager_fabric_eth_lan_port_channel.png](img/zenpack-ciscoucs_manager_fabric_eth_lan_port_channel.png)
--   [Ciscoucs_manager_fabric_extenders.png](img/zenpack-ciscoucs_manager_fabric_extenders.png)
--   [Ciscoucs_manager_fabric_fc_san_port_channel.png](img/zenpack-ciscoucs_manager_fabric_fc_san_port_channel.png)
--   [Ciscoucs_manager_fabric_fcoe_san_port_channel.png](img/zenpack-ciscoucs_manager_fabric_fcoe_san_port_channel.png)
--   [Ciscoucs_manager_fabric_interconnects.png](img/zenpack-ciscoucs_manager_fabric_interconnects.png)
--   [Ciscoucs_manager_fabric_ports.png](img/zenpack-ciscoucs_manager_fabric_ports.png)
--   [Ciscoucs_manager_fan_modules.png](img/zenpack-ciscoucs_manager_fan_modules.png)
--   [Ciscoucs_manager_fans.png](img/zenpack-ciscoucs_manager_fans.png)
--   [Ciscoucs_manager_fi_io_modules.png](img/zenpack-ciscoucs_manager_fi_io_modules.png)
--   [Ciscoucs_manager_fibre_channel_ports.png](img/zenpack-ciscoucs_manager_fibre_channel_ports.png)
--   [Ciscoucs_manager_host_bus_adaptors.png](img/zenpack-ciscoucs_manager_host_bus_adaptors.png)
--   [Ciscoucs_manager_host_ethernet_interfaces.png](img/zenpack-ciscoucs_manager_host_ethernet_interfaces.png)
--   [Ciscoucs_manager_impact_yuml.png](img/zenpack-ciscoucs_manager_impact_yuml.png)
--   [Ciscoucs_manager_io_modules.png](img/zenpack-ciscoucs_manager_io_modules.png)
--   [Ciscoucs_manager_management_interfaces.png](img/zenpack-ciscoucs_manager_management_interfaces.png)
--   [Ciscoucs_manager_memory_arrays.png](img/zenpack-ciscoucs_manager_memory_arrays.png)
--   [Ciscoucs_manager_model_yuml.png](img/zenpack-ciscoucs_manager_model_yuml.png)
--   [Ciscoucs_manager_organizations.png](img/zenpack-ciscoucs_manager_organizations.png)
--   [Ciscoucs_manager_overview.png](img/zenpack-ciscoucs_manager_overview.png)
--   [Ciscoucs_manager_power_supply_units.png](img/zenpack-ciscoucs_manager_power_supply_units.png)
--   [Ciscoucs_manager_processor_units.png](img/zenpack-ciscoucs_manager_processor_units.png)
--   [Ciscoucs_manager_rack_servers.png](img/zenpack-ciscoucs_manager_rack_servers.png)
--   [Ciscoucs_manager_service_profiles.png](img/zenpack-ciscoucs_manager_service_profiles.png)
--   [Ciscoucs_manager_shared_adaptors.png](img/zenpack-ciscoucs_manager_shared_adaptors.png)
--   [Ciscoucs_manager_storage_controllers.png](img/zenpack-ciscoucs_manager_storage_controllers.png)
--   [Ciscoucs_manager_storage_localdisks.png](img/zenpack-ciscoucs_manager_storage_localdisks.png)
--   [Ciscoucs_manager_storage_virtualdrives.png](img/zenpack-ciscoucs_manager_storage_virtualdrives.png)
--   [Ciscoucs_manager_switch_cards.png](img/zenpack-ciscoucs_manager_switch_cards.png)
--   [Ciscoucs_manager_virtual_hbas.png](img/zenpack-ciscoucs_manager_virtual_hbas.png)
--   [Ciscoucs_manager_virtual_nics.png](img/zenpack-ciscoucs_manager_virtual_nics.png)
--   [Dashboard.png](img/zenpack-dashboard.png)
--   [Dependency_View.png](img/zenpack-dependency_view.png)
--   [Projected_Values.png](img/zenpack-projected_values.png)
--   [Topology.png](img/zenpack-topology.png)
--   [Ciscoucs_add_dialog.png](img/zenpack-ciscoucs_add_dialog.png)
--   [Ciscoucs_cimc_networkadapters.png](img/zenpack-ciscoucs_cimc_networkadapters.png)
--   [Aggregation_Pools.png](img/zenpack-aggregation_pools.png)
--   [Bandwidth_Usage.png](img/zenpack-bandwidth_usage.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Ciscoucs_add_dialog.png](img/zenpack-ciscoucs_add_dialog.png)
--   [Ciscoucs_cimc_cpus.png](img/zenpack-ciscoucs_cimc_cpus.png)
--   [Ciscoucs_cimc_events.png](img/zenpack-ciscoucs_cimc_events.png)
--   [Ciscoucs_cimc_externalinterfaces.png](img/zenpack-ciscoucs_cimc_externalinterfaces.png)
--   [Ciscoucs_cimc_fanmodules.png](img/zenpack-ciscoucs_cimc_fanmodules.png)
--   [Ciscoucs_cimc_fans.png](img/zenpack-ciscoucs_cimc_fans.png)
--   [Ciscoucs_cimc_impact_yuml.png](img/zenpack-ciscoucs_cimc_impact_yuml.png)
--   [Ciscoucs_cimc_impact.png](img/zenpack-ciscoucs_cimc_impact.png)
--   [Ciscoucs_cimc_localdisks.png](img/zenpack-ciscoucs_cimc_localdisks.png)
--   [Ciscoucs_cimc_memoryarrays.png](img/zenpack-ciscoucs_cimc_memoryarrays.png)
--   [Ciscoucs_cimc_memoryunits.png](img/zenpack-ciscoucs_cimc_memoryunits.png)
--   [Ciscoucs_cimc_model_yuml.png](img/zenpack-ciscoucs_cimc_model_yuml.png)
--   [Ciscoucs_cimc_networkadapters.png](img/zenpack-ciscoucs_cimc_networkadapters.png)
--   [Ciscoucs_cimc_overview.png](img/zenpack-ciscoucs_cimc_overview.png)
--   [Ciscoucs_cimc_powersupplies.png](img/zenpack-ciscoucs_cimc_powersupplies.png)
--   [Ciscoucs_cimc_raidbatteries.png](img/zenpack-ciscoucs_cimc_raidbatteries.png)
--   [Ciscoucs_cimc_storagecontrollers.png](img/zenpack-ciscoucs_cimc_storagecontrollers.png)
--   [Ciscoucs_cimc_vhbas.png](img/zenpack-ciscoucs_cimc_vhbas.png)
--   [Ciscoucs_cimc_vicexternalinterfaces.png](img/zenpack-ciscoucs_cimc_vicexternalinterfaces.png)
--   [Ciscoucs_cimc_virtualdrives.png](img/zenpack-ciscoucs_cimc_virtualdrives.png)
--   [Ciscoucs_cimc_vnics.png](img/zenpack-ciscoucs_cimc_vnics.png)
--   [Ciscoucs_manager_adaptor_units.png](img/zenpack-ciscoucs_manager_adaptor_units.png)
--   [Ciscoucs_manager_backplane_ports.png](img/zenpack-ciscoucs_manager_backplane_ports.png)
--   [Ciscoucs_manager_blade_servers.png](img/zenpack-ciscoucs_manager_blade_servers.png)
--   [Ciscoucs_manager_cartridge_servers.png](img/zenpack-ciscoucs_manager_cartridge_servers.png)
--   [Ciscoucs_manager_chassis.png](img/zenpack-ciscoucs_manager_chassis.png)
--   [ciscoucs_manager_dv_classic.png](img/zenpack-ciscoucs_manager_dv_classic.png)
--   [ciscoucs_manager_dv_mini.png](img/zenpack-ciscoucs_manager_dv_mini.png)
--   [ciscoucs_manager_dv_modular.png](img/zenpack-ciscoucs_manager_dv_modular.png)
--   [Ciscoucs_manager_ethernet_ports.png](img/zenpack-ciscoucs_manager_ethernet_ports.png)
--   [Ciscoucs_manager_fabric_extenders.png](img/zenpack-ciscoucs_manager_fabric_extenders.png)
--   [Ciscoucs_manager_fabric_eth_lan_port_channel.png](img/zenpack-ciscoucs_manager_fabric_eth_lan_port_channel.png)
--   [Ciscoucs_manager_fabric_fc_san_port_channel.png](img/zenpack-ciscoucs_manager_fabric_fc_san_port_channel.png)
--   [Ciscoucs_manager_fabric_fcoe_san_port_channel.png](img/zenpack-ciscoucs_manager_fabric_fcoe_san_port_channel.png)
--   [Ciscoucs_manager_fabric_interconnects.png](img/zenpack-ciscoucs_manager_fabric_interconnects.png)
--   [Ciscoucs_manager_fabric_ports.png](img/zenpack-ciscoucs_manager_fabric_ports.png)
--   [Ciscoucs_manager_fan_modules.png](img/zenpack-ciscoucs_manager_fan_modules.png)
--   [Ciscoucs_manager_fans.png](img/zenpack-ciscoucs_manager_fans.png)
--   [Ciscoucs_manager_fi_io_modules.png](img/zenpack-ciscoucs_manager_fi_io_modules.png)
--   [Ciscoucs_manager_fibre_channel_ports.png](img/zenpack-ciscoucs_manager_fibre_channel_ports.png)
--   [Ciscoucs_manager_host_bus_adaptors.png](img/zenpack-ciscoucs_manager_host_bus_adaptors.png)
--   [Ciscoucs_manager_host_ethernet_interfaces.png](img/zenpack-ciscoucs_manager_host_ethernet_interfaces.png)
--   [Ciscoucs_manager_impact_yuml.png](img/zenpack-ciscoucs_manager_impact_yuml.png)
--   [Ciscoucs_manager_io_modules.png](img/zenpack-ciscoucs_manager_io_modules.png)
--   [Ciscoucs_manager_management_interfaces.png](img/zenpack-ciscoucs_manager_management_interfaces.png)
--   [Ciscoucs_manager_memory_arrays.png](img/zenpack-ciscoucs_manager_memory_arrays.png)
--   [Ciscoucs_manager_model_yuml.png](img/zenpack-ciscoucs_manager_model_yuml.png)
--   [Ciscoucs_manager_organizations.png](img/zenpack-ciscoucs_manager_organizations.png)
--   [Ciscoucs_manager_overview.png](img/zenpack-ciscoucs_manager_overview.png)
--   [Ciscoucs_manager_power_supply_units.png](img/zenpack-ciscoucs_manager_power_supply_units.png)
--   [Ciscoucs_manager_processor_units.png](img/zenpack-ciscoucs_manager_processor_units.png)
--   [Ciscoucs_manager_rack_servers.png](img/zenpack-ciscoucs_manager_rack_servers.png)
--   [Ciscoucs_manager_service_profiles.png](img/zenpack-ciscoucs_manager_service_profiles.png)
--   [Ciscoucs_manager_shared_adaptors.png](img/zenpack-ciscoucs_manager_shared_adaptors.png)
--   [Ciscoucs_manager_storage_controllers.png](img/zenpack-ciscoucs_manager_storage_controllers.png)
--   [Ciscoucs_manager_storage_virtualdrives.png](img/zenpack-ciscoucs_manager_storage_virtualdrives.png)
--   [Ciscoucs_manager_storage_localdisks.png](img/zenpack-ciscoucs_manager_storage_localdisks.png)
--   [Ciscoucs_manager_virtual_hbas.png](img/zenpack-ciscoucs_manager_virtual_hbas.png)
--   [Ciscoucs_manager_switch_cards.png](img/zenpack-ciscoucs_manager_switch_cards.png)
--   [Ciscoucs_manager_virtual_nics.png](img/zenpack-ciscoucs_manager_virtual_nics.png)
--   [Dashboard.png](img/zenpack-dashboard.png)
--   [Dependency_View.png](img/zenpack-dependency_view.png)
--   [Projected_Values.png](img/zenpack-projected_values.png)
--   [Topology.png](img/zenpack-topology.png)
--   [Ciscoucs_cimc_impact.png](img/zenpack-ciscoucs_cimc_impact.png)
--   [Ciscoucs_cimc_vicadapters.png](img/zenpack-ciscoucs_cimc_vicadapters.png)
--   [Ciscoucs_cimc_storagecontrollers.png](img/zenpack-ciscoucs_cimc_storagecontrollers.png)
--   [Ciscoucs_manager_dv_mini.png](img/zenpack-ciscoucs_manager_dv_mini.png)
--   [Ciscoucs_manager_dv_modular.png](img/zenpack-ciscoucs_manager_dv_modular.png)
--   [Ciscoucs_manager_dv_classic.png](img/zenpack-ciscoucs_manager_dv_classic.png)
--   [Ciscoucs_manager_dv_classic.png](img/zenpack-ciscoucs_manager_dv_classic.png)
-

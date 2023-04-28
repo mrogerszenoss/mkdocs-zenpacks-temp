@@ -1,7 +1,5 @@
 # Cisco UCS Central
 
-@lb[](img/zenpack-cisco-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -314,10 +312,9 @@ Datasources
 </dt>
 </dl>
 
-|                  |                          |                        |
+| Name             | Type                     | Plugin name |
 |------------------|--------------------------|------------------------|
-| Name             | Type                     | Plugin name            |
-| faults           | Cisco UCS Central Faults | FaultsDataSourcePlugin |
+ | faults           | Cisco UCS Central Faults | FaultsDataSourcePlugin |
 | modelChangeEvent | Python                   | EventSubscribeDSPlugin |
 
 <dl markdown="1">
@@ -342,46 +339,30 @@ Event Class Mappings
 
 ## Changes
 
-1.3.3
+**1.3.3**
 
 -   Fix import errors in CiscoUCSCentral due to removed dependencies in
     CiscoUCS 3.0.2 (ZPS-6427)
 
-1.3.2
+**1.3.2**
 
 -   Fix import errors from CiscoUCS 3.0.0. (ZPS-5865)
 
-<dl markdown="1">
-<dt markdown="1">
-1.3.1
-</dt>
-</dl>
+**1.3.1**
 
 -   Add Cisco UCS Central to multi-device add wizard. (ZPS-1421)
 -   Fix templates showing in service profiles list and vice versa.
     (ZPS-668)
 
-<dl markdown="1">
-<dt markdown="1">
-1.3.0
-</dt>
-</dl>
+**1.3.0**
 
 -   Improved session handling with the UCS Central XML API. (ZEN-26322)
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.0
-</dt>
-</dl>
+**1.2.0**
 
 -   Show servers by type chart on overview. (ZEN-20849)
 
-<dl markdown="1">
-<dt markdown="1">
-1.1.0
-</dt>
-</dl>
+**1.1.0**
 
 -   Remove unused "Software" from UCS Central view. (ZEN-18673)
 -   Reduce number of UCS Central API sessions used. (ZEN-18959)
@@ -394,42 +375,6 @@ Event Class Mappings
 -   Updates to DynamicView support. (ZEN-20183)
 -   Prevent adding invalid text as a UCS Central instance. (ZEN-20520)
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.0
-</dt>
-</dl>
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [Cisco_ucsc_add_dialog.png](img/zenpack-cisco_ucsc_add_dialog.png)
--   [Cisco_ucsc_add_menu.png](img/zenpack-cisco_ucsc_add_menu.png)
--   [Cisco_ucsc_domain_groups.png](img/zenpack-cisco_ucsc_domain_groups.png)
--   [Cisco_ucsc_global_service_profiles.png](img/zenpack-cisco_ucsc_global_service_profiles.png)
--   [Cisco_ucsc_local_service_profile_templates.png](img/zenpack-cisco_ucsc_local_service_profile_templates.png)
--   [Cisco_ucsc_local_service_profiles.png](img/zenpack-cisco_ucsc_local_service_profiles.png)
--   [Cisco_ucsc_model_yuml.png](img/zenpack-cisco_ucsc_model_yuml.png)
--   [Cisco_ucsc_overview.png](img/zenpack-cisco_ucsc_overview.png)
--   [Cisco_ucsc_servers.png](img/zenpack-cisco_ucsc_servers.png)
--   [Cisco_ucsc_ucs_domains.png](img/zenpack-cisco_ucsc_ucs_domains.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Cisco_ucsc_global_service_profile_templates.png](img/zenpack-cisco_ucsc_global_service_profile_templates.png)
--   [Cisco_ucsc_add_dialog.png](img/zenpack-cisco_ucsc_add_dialog.png)
--   [Cisco_ucsc_add_menu.png](img/zenpack-cisco_ucsc_add_menu.png)
--   [Cisco_ucsc_domain_groups.png](img/zenpack-cisco_ucsc_domain_groups.png)
--   [Cisco_ucsc_add_dialog.png](img/zenpack-cisco_ucsc_add_dialog.png)
--   [Cisco_ucsc_add_menu.png](img/zenpack-cisco_ucsc_add_menu.png)
--   [Cisco_ucsc_domain_groups.png](img/zenpack-cisco_ucsc_domain_groups.png)
--   [Cisco_ucsc_local_service_profile_templates.png](img/zenpack-cisco_ucsc_local_service_profile_templates.png)
--   [Cisco_ucsc_local_service_profiles.png](img/zenpack-cisco_ucsc_local_service_profiles.png)
--   [Cisco_ucsc_model_yuml.png](img/zenpack-cisco_ucsc_model_yuml.png)
--   [Cisco_ucsc_overview.png](img/zenpack-cisco_ucsc_overview.png)
--   [Cisco_ucsc_servers.png](img/zenpack-cisco_ucsc_servers.png)
--   [Cisco_ucsc_ucs_domains.png](img/zenpack-cisco_ucsc_ucs_domains.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Cisco_ucsc_global_service_profiles.png](img/zenpack-cisco_ucsc_global_service_profiles.png)
--   [Cisco_ucsc_global_service_profile_templates.png](img/zenpack-cisco_ucsc_global_service_profile_templates.png)
--   [Cisco_ucsc_add_menu.png](img/zenpack-cisco_ucsc_add_menu.png)
-

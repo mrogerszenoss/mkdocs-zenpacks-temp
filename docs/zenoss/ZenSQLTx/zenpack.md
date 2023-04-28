@@ -1,7 +1,5 @@
 # SQL Transactions
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -28,47 +26,6 @@ of MySQL, Sybase and Microsoft SQL servers. It provides a SQL data
 source where user-defined SQL queries can be executed against a
 database.
 
-## Contents
-
-[1 SQL Transactions ZenPack](#sql-transactions-zenpack)
-
-[1.1 Releases](#releases)
-
-[1.2 Usage](#usage)
-
-[1.2.1 Enable SQL Server Monitoring](#enable-sqlserver-monitoring)
-
-[1.2.2 Enable Sybase Server Monitoring](#enable-sybase-server-monitoring)
-
-[1.2.3 Enable MySQL Server Monitoring](#enable-my-sqlserver-monitoring)
-
-[1.2.4 Storing Query Results](#storing-query-results)
-
-[1.3 Troubleshooting](#troubleshooting)
-
-[1.4 Caveats](#caveats)
-
-[1.4.1 GLIBC Version Error on Zenoss 4.x](#glibc-version-error-on-zenoss-4x)
-
-[1.5 Services](#services)
-
-[1.6 Supported Databases](#supported-databases)
-
-[1.7 Changes](#changes)
-
-[1.7.1 2.7.2](#272)
-
-[1.7.2 2.7.1](#271)
-
-[1.7.3 2.7.0](#270)
-
-[1.7.4 2.6.6](#266)
-
-[1.7.5 2.6.5](#265)
-
-[1.7.6 2.6.4](#264)
-
-[1.7.7 2.6.3](#263)
 
 ## Releases
 
@@ -101,9 +58,8 @@ setting and how to change it, refer to [MSDN Documentation: Change Server Authen
 
 9.  Change options as needed.
 
-    |               |                                                                                                                                                       |
-    |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Option        | Description                                                                                                                                           |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|    
     | Database Type | Enter *MS SQL*                                                                                                                                        |
     | Host Name     | Set the hostname on which the database is located. This field accepts a TALES expression, such as `${here/id}` or `${here/getManageIp}`               |
     | Port          | Set the port on which the database server is listening. If you don't specify a port number, then the default port for the database is used.           |
@@ -138,9 +94,8 @@ setting and how to change it, refer to [MSDN Documentation: Change Server Authen
 
 9.  Change options as needed.
 
-    |               |                                                                                                                                                                                                         |
-    |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Option        | Description                                                                                                                                                                                             |
+    |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|    
     | Database Type | Enter *Sybase*                                                                                                                                                                                          |
     | Host Name     | Set the hostname on which the database is located. This field accepts a TALES expression, such as `${here/id}` or `${here/getManageIp}`                                                                 |
     | Port          | Set the port on which the database server is listening. If you don't specify a port number, then the default port for the database is used.                                                             |
@@ -175,9 +130,8 @@ setting and how to change it, refer to [MSDN Documentation: Change Server Authen
 
 9.  Change options as needed.
 
-    |               |                                                                                                                                                                                                                |
-    |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Option        | Description                                                                                                                                                                                                    |
+    |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Database Type | Enter *MySQL*                                                                                                                                                                                                  |
     | Host Name     | Set the hostname on which the database is located. This field accepts a TALES expression, such as `${here/id}` or `${here/getManageIp}`                                                                        |
     | Port          | Set the port on which the database server is listening. If you don't specify a port number, then the default port for the database is used.                                                                    |
@@ -255,9 +209,8 @@ previous example.
 For the *zensql.py* command, the database types understood are shown in
 the following table.
 
-|        |               |
-|--------|---------------|
 | Name   | Database Type |
+|--------|---------------|
 | mssql  | MS SQL Server |
 | sybase | Sybase        |
 | mysql  | MySQL Server  |
@@ -284,9 +237,8 @@ therefore, the Sybase database monitoring is not supported on Zenoss
 The following Zenoss services are required to be running by this
 ZenPack.
 
-|                       |            |
-|-----------------------|------------|
 | Type                  | Name       |
+|-----------------------|------------|
 | Performance Collector | zencommand |
 
 ## Supported Databases
@@ -294,9 +246,8 @@ ZenPack.
 The following databases are officially supported. Other databases may
 also be supported, especially derivatives of MS SQL, MySQL and Sybase.
 
-|                                      |         |
-|--------------------------------------|---------|
 | Type                                 | Version |
+|--------------------------------------|---------|
 | Microsoft SQL Server                 | 2016    |
 | Microsoft SQL Server                 | 2019    |
 | MySQL Community Server               | 5.7.19  |
@@ -305,7 +256,7 @@ also be supported, especially derivatives of MS SQL, MySQL and Sybase.
 
 ## Changes
 
-### 2.7.2
+**2.7.2**
 
 -   Add encrypted server connection support for MSSQL Server 2019
     (ZPS-5518)
@@ -314,12 +265,12 @@ also be supported, especially derivatives of MS SQL, MySQL and Sybase.
     (ZPS-3291)
 -   Tested with Zenoss Resource Manager 6.7.0 and Zenoss Cloud.
 
-### 2.7.1
+**2.7.1**
 
 -   Fix an error when cycle time in ZenSQLTx Data Source is empty
     (ZEN-29196)
 
-### 2.7.0
+**2.7.0**
 
 -   Add the "Caveat" section to the documentation and update it with the
     "GLIBC Version Error on Zenoss 4.x" topic (ZPS-2209)
@@ -333,28 +284,22 @@ also be supported, especially derivatives of MS SQL, MySQL and Sybase.
 -   Tested with Zenoss Resource Manager 5.3.2 and Zenoss Resource
     Manager 4.2.5 RPS 743
 
-### 2.6.6
+**2.6.6**
 
 -   Fix SQL datasource test to test from an appropriate collector
     (ZEN-22199)
 
-### 2.6.5
+**2.6.5**
 
 -   Fix the traceback associated with errorLog (ZEN-24736)
 
-### 2.6.4
+**2.6.4**
 
 -   Fix the broken "timeout" field in SQL datasource edit dialog
     (ZEN-22955)
 -   Make SQL libraries importable by other ZenPacks (ZEN-23722)
 
-### 2.6.3
+**2.6.3**
 
 -   Added support for Zenoss 5.x
 -   Fixed issue with not secure password on monitoring template
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

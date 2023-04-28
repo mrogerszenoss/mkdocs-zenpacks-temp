@@ -1,7 +1,5 @@
 # HTTP Monitor
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -29,22 +27,6 @@ This ZenPack provides status and response time monitoring of HTTP URLs.
 Version 3.1.2-[Download](https://delivery.zenoss.com/){.external-link}:   Released on 2022/06/20:   Requires [PythonCollector ZenPack](http://zenoss.com/product/zenpacks/pythoncollector){.external-link}:   Compatible with Zenoss 6.x and Zenoss Cloud
 
 Version 3.1.1-[Download](https://delivery.zenoss.com/){.external-link}:   Released on 2022/05/05:   Requires [PythonCollector ZenPack](http://zenoss.com/product/zenpacks/pythoncollector){.external-link}:   Compatible with Zenoss 6.x and Zenoss Cloud
-
-## Contents
-
--   [Background](#background)
--   [Support](#support)
--   [Gallery](#gallery)
--   [Features](#features)
--   [Enable Monitoring](#enable-monitoring)
--   [Check for a Specific URL or Specify Security Settings](#check-for-a-specific-urlor-specify-security-settings)
--   [HttpMonitor Content Checking Data Source Options](#http-monitor-content-checking-datasource-options)
--   [Tuning for Site Responsiveness](#tuningfor-site-responsiveness)
--   [Check for Specific Content on the Web Page](#check-for-specific-contenton-the-web-page)
--   [Configuration to Monitor HTTP Through a Proxy Server](#configuration-to-monitor-httpthrougha-proxy-server)
--   [Proxy usage logic](#proxy-usage-logic)
--   [Daemons](#daemons)
--   [Changes](#changes)
 
 ## Background
 
@@ -266,18 +248,18 @@ as a proxy server if the IP address for resolve in the field `URL` and
 
 ## Changes
 
-3.1.2
+**3.1.2**
 
 -   Improve compatibility with new Python libraries
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, Zenoss 6.7.0
 
-3.1.1
+**3.1.1**
 
 -   Make use of value configured in Datasource "Component" field
     (ZPS-6133)
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, Zenoss 6.7.0
 
-3.1.0
+**3.1.0**
 
 -   Fix infinity redirection in the case with not full URI path in
     header Location (ZPS-4904)
@@ -290,7 +272,7 @@ as a proxy server if the IP address for resolve in the field `URL` and
 -   Provides details on Proxy usage with examples (ZPS-4912)
 -   Tested with 6.3.2 and Zenoss Cloud
 
-3.0.4
+**3.0.4**
 
 -   Fix issue with locally defined monitoring templates after upgrade
     (ZPS-3817)
@@ -303,42 +285,10 @@ as a proxy server if the IP address for resolve in the field `URL` and
 -   Tested with Zenoss Resource Manager 6.2.0, Zenoss Resource Manager
     5.3.3
 
-3.0.0
+**3.0.0**
 
 -   Removes **`Case sensitive/Invert Expression/Regular Expressions`**
     zProperties from DataSource configuration
 -   Changes **`Redirect Behavior`** list to checkbox
 -   Removes dependency library **`check_http`** from Nagios Plugins
 -   Adds unittests
-
-## Attachments:
-
--   [defaultConfiguration.png](img/zenpack-defaultconfiguration.png)
--   [ExampleGraph.png](img/zenpack-examplegraph.png)
--   [ProxyConfiguration.png](img/zenpack-proxyconfiguration.png)
--   [ProxyPort8080.jpg](img/zenpack-proxyport8080.jpg)
--   [ProxyPort8080AndSiteport8888.jpg](img/zenpack-proxyport8080andsiteport8888.jpg)
--   [proxyWithAuth.png](img/zenpack-proxywithauth.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [defaultConfiguration.png](img/zenpack-defaultconfiguration.png)
--   [ExampleGraph.png](img/zenpack-examplegraph.png)
--   [ProxyConfiguration.png](img/zenpack-proxyconfiguration.png)
--   [ProxyPort8080.jpg](img/zenpack-proxyport8080.jpg)
--   [ProxyPort8080AndSiteport8888.jpg](img/zenpack-proxyport8080andsiteport8888.jpg)
--   [proxyWithAuth.png](img/zenpack-proxywithauth.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [defaultConfiguration.png](img/zenpack-defaultconfiguration.png)
--   [ExampleGraph.png](img/zenpack-examplegraph.png)
--   [ProxyConfiguration.png](img/zenpack-proxyconfiguration.png)
--   [ProxyPort8080.jpg](img/zenpack-proxyport8080.jpg)
--   [ProxyPort8080AndSiteport8888.jpg](img/zenpack-proxyport8080andsiteport8888.jpg)
--   [proxyWithAuth.png](img/zenpack-proxywithauth.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [defaultConfiguration.png](img/zenpack-defaultconfiguration.png)
--   [ExampleGraph.png](img/zenpack-examplegraph.png)
--   [ProxyConfiguration.png](img/zenpack-proxyconfiguration.png)
--   [ProxyPort8080.jpg](img/zenpack-proxyport8080.jpg)
--   [ProxyPort8080AndSiteport8888.jpg](img/zenpack-proxyport8080andsiteport8888.jpg)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [proxyWithAuth.png](img/zenpack-proxywithauth.png)
-

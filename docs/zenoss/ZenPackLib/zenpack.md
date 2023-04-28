@@ -1,7 +1,5 @@
 # ZenPackLib
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -58,12 +56,3 @@ Version 1.1.2 [Download](https://raw.githubusercontent.com/zenoss/ZenPacks.zenos
 <!-- -->
 
 Version 1.0.13 [Download](https://raw.githubusercontent.com/zenoss/ZenPacks.zenoss.ZenPackLib/1.0.13/zenpacklib.py){.external-link}:   Released: 2016-06-09:   Comptible with Zenoss 4.2 - 5.2.
-
-## Attachments:
-
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [ZenPacks.zenoss.ZenPackLib-2.1.2-py2.7.egg](attachments/14846573/27689322.egg)
-

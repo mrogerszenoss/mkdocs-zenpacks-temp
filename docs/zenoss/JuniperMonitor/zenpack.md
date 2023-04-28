@@ -1,7 +1,5 @@
 # Juniper Devices
 
-@lb[](img/zenpack-juniper-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -40,9 +38,8 @@ Networks.
 
 ## Prerequisites
 
-|                   |                                           |
-|-------------------|-------------------------------------------|
 | Prerequisite      | Restriction                               |
+|-------------------|-------------------------------------------|
 | Product           | Zenoss platform 4.x, Zenoss 2.2 or higher |
 | Required ZenPacks | ZenPacks.zenoss.JuniperMonitor            |
 
@@ -70,9 +67,8 @@ class.
     devices.
 
     Juniper Configuration Properties
-    |                    |                                                                                     |
-    |--------------------|-------------------------------------------------------------------------------------|
     | Name               | Description                                                                         |
+    |--------------------|-------------------------------------------------------------------------------------|
     | zSnmpCommunity     | Consult with your network administrators to determine the SNMP community permitted. |
     | zSnmpMonitorIgnore | Set to a value of `False`.                                                          |
     | zSnmpPort          | Set the SNMP port. The default port is 161.                                         |
@@ -86,14 +82,8 @@ class.
 
 ## Daemons
 
-|                       |             |
+| Type                  | Name        |
 |-----------------------|-------------|
 | Type                  | Name        |
 | Modeler               | zenmodeler  |
 | Performance Collector | zenperfsnmp |
-
-## Attachments:
-
--   [juniper-zenpack.png](img/zenpack-juniper-zenpack.png)
--   [juniper-zenpack.png](img/zenpack-juniper-zenpack.png)
-

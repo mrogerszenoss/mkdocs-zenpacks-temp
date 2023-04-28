@@ -1,6 +1,5 @@
 # Apache HTTP Server
 
-@lb[](img/zenpack-apache-zenpack.png)
 
 ## Open Source
 
@@ -246,7 +245,7 @@ The following metrics are collected and graphed for Apache HTTP Server.
     following command.
     ```
     apache2ctl restart
-    ``` 
+    ```
 
 ## Verifying Your Apache Configuration
 

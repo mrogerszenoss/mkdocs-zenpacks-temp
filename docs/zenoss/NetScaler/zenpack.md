@@ -1,7 +1,5 @@
 # Citrix NetScaler (Commercial)
 
-@lb[](img/zenpack-citrix-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -255,88 +253,41 @@ device.
 
 ## Changes
 
-2.0.0
+**2.0.0**
 
 -   Updated to support NetScaler SNMP API v11, v12, v13
 -   Compatible with Zenoss Resource Manager 6.2-6.4 and Zenoss Cloud
 -   Tested with Zenoss 6.4.1, Zenoss Cloud
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.6
-</dt>
-</dl>
+**1.0.6**
 
 -   Fix potential "Empty or invalid id specified" modeling error.
 -   Fix change detection on automatic cycle modeling. (ZEN-22442)
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.5 (2016-01-20)
-</dt>
-</dl>
+**1.0.5** (2016-01-20)
 
 -   Licensing fixes. No functional changes.
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.4 (2014-12-08)
-</dt>
-</dl>
+**1.0.4** (2014-12-08)
 
 -   Allow toggling of monitoring for all component types. (ZEN-14859)
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.3 (2014-11-06)
-</dt>
-</dl>
+**1.0.3** (2014-11-06)
 
 -   Add basic virtual server impact.
 -   Replace "Ethernet Interfaces" with more functional standard
     "Interfaces".
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.2 (2014-04-04)
-</dt>
-</dl>
+**1.0.2** (2014-04-04)
+
 
 -   Prevent components from periodically being removed by modeling.
     (ZEN-10499)
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.1 (2014-03-03)
-</dt>
-</dl>
+**1.0.1** (2014-03-03)
 
 -   Fix potential zenchkrels "vlan" error. (ZEN-10424)
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.0 (2013-12-19)
-</dt>
-</dl>
+**1.0.0** (2013-12-19)
 
 -   Initial release.
-
-## Attachments:
-
--   [citrix-zenpack.png](img/zenpack-citrix-zenpack.png)
--   [Netscaler_ethernet_interfaces.png](img/zenpack-netscaler_ethernet_interfaces.png)
--   [Netscaler_events.png](img/zenpack-netscaler_events.png)
--   [Netscaler_servers.png](img/zenpack-netscaler_servers.png)
--   [Netscaler_overview.png](img/zenpack-netscaler_overview.png)
--   [Netscaler_service_groups.png](img/zenpack-netscaler_service_groups.png)
--   [Netscaler_services.png](img/zenpack-netscaler_services.png)
--   [Netscaler_virtual_servers.png](img/zenpack-netscaler_virtual_servers.png)
--   [Netscaler_vlans.png](img/zenpack-netscaler_vlans.png)
--   [Netscaler_virtual_servers.png](img/zenpack-netscaler_virtual_servers.png)
--   [Netscaler_service_groups.png](img/zenpack-netscaler_service_groups.png)
--   [Netscaler_events.png](img/zenpack-netscaler_events.png)
--   [Netscaler_servers.png](img/zenpack-netscaler_servers.png)
--   [Netscaler_services.png](img/zenpack-netscaler_services.png)
--   [Netscaler_virtual_servers.png](img/zenpack-netscaler_virtual_servers.png)
--   [Netscaler_events.png](img/zenpack-netscaler_events.png)
-

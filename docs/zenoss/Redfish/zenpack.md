@@ -1,7 +1,5 @@
 # DMTF Redfish
 
-@lb[](img/zenpack-redfish-logo-zp-card.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -33,56 +31,6 @@ that uses RESTful interface semantics to access data defined in model
 format to perform systems management. It is suitable for a wide range of
 servers, from stand-alone servers to rack mount and bladed environments
 but scales equally well for large-scale cloud environments.
-
-## Contents
-
-[1 DMTF Redfish ZenPack](#dmtfredfish-zenpack)
-
-[1.1 Background](#background)
-
-[1.2 Releases](#releases)
-
-[1.3 Features](#features)
-
-[1.4 Discovery](#discovery)
-
-[1.5 Status Monitoring](#status-monitoring)
-
-[1.6 Performance Monitoring](#performance-monitoring)
-
-[1.7 Event Management](#event-management)
-
-[1.7.1 Logs Monitoring](#logs-monitoring)
-
-[1.8 Installed Items](#installed-items)
-
-1.8.1 Configuration Properties:
-
-[1.8.2 Device Classes](#device-classes)
-
-[1.8.3 Event Classes](#event-classes)
-
-[1.8.4 Event Mappings](#event-mappings)
-
-[1.8.5 Modeler Plugins](#modeler-plugins)
-
-[1.8.6 Datasource Types](#datasource-types)
-
-[1.8.7 Monitoring Templates](#monitoring-templates)
-
-[1.9 Service Impact and Root Cause Analysis](#service-impact-and-root-cause-analysis)
-
-[1.10 Usage](#usage)
-
-[1.10.1 Adding Redfish Endpoint](#adding-redfish-endpoint)
-
-[1.10.2 zenbatchload](#zenbatchload)
-
-[1.10.3 Configuring and Testing Redfish Datasource](#configuring-and-testing-redfish-datasource)
-
-[1.10.4 Limitations](#limitations)
-
-[1.11 Changes](#changes)
 
 ## Releases
 
@@ -460,29 +408,15 @@ API.
 
 ## Changes
 
-1.0.1
+**1.0.1**
 
 -   Improved URI fragmentation for devices (ZPS-8019).
 -   Improved monitoring for Nokia AirFrame (ZPS-7604).
 -   Improved the drive mapping (ZPS-7984).
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, and Service Impact 5.5.5.
 
-1.0.0
+**1.0.0**
 
 -   Initial release.
 -   Tested with Zenoss Resource Manager 6.3.2, Zenoss Cloud and Service
     Impact 5.3.4.
-
-## Attachments:
-
--   [add_single_device.png](img/zenpack-add_single_device.png)
--   [add_menu.png](img/zenpack-add_menu.png)
--   [fan_speed_graph.png](img/zenpack-fan_speed_graph.png)
--   [impact.png](img/zenpack-impact.png)
--   [line_input_voltage_graph.png](img/zenpack-line_input_voltage_graph.png)
--   [power_consumed_graph.png](img/zenpack-power_consumed_graph.png)
--   [redfish_datasource.png](img/zenpack-redfish_datasource.png)
--   [redfish-logo-zp-card.png](img/zenpack-redfish-logo-zp-card.png)
--   [temperature_graph.png](img/zenpack-temperature_graph.png)
--   [voltage_sensors.png](img/zenpack-voltage_sensors.png)
-

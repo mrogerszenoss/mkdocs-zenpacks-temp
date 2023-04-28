@@ -1,7 +1,5 @@
 # NetApp Monitor
 
-@lb[](img/zenpack-netapp-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -51,32 +49,6 @@ Version 4.1.0- [Download](https://delivery.zenoss.com/){.external-link}:   Relea
     [StorageBase ZenPack](https://help.zenoss.com/display/in/StorageBase "ZenPack:StorageBase"){.external-link},
     [CalculatedPerformance ZenPack](https://help.zenoss.com/display/in/Calculated+Performance "ZenPack:CalculatedPerformance"){.external-link},
     [ZenPackLib](https://help.zenoss.com/display/in/ZenPackLib "ZenPackLib"){.external-link}:   Compatible with Zenoss Resource Manager 6.2 - 6.5 and Zenoss Cloud
-
-## Contents
-
--   Gallery
--   [Features](#features)
--   [Usage](#usage)
-    -   [Prerequisites](#prerequisites)
-    -   [Protocols](#protocols)
-    -   [Configuration](#configuration)
-    -   [Monitoring events of OnCommand Unified Manager](#monitoring-events-of-on-command-unified-manager)
-    -   [Custom Threshold Setting](#custom-thresholds-ettin-g)
-    -   [Collecting Additional ZAPI Performance Metrics](#collecting-additional-zapi-performance-metrics)
-    -   [Linking Linux File System Storage Device with NetApp](#linking-linux-file-system-storage-device-with-net-app)
--   [Service Impact](#service-impact)
--   [Zenoss Analytics](#zenoss-analytics)
--   [Troubleshooting](#troubleshooting)
-    -   [Device Modeling or Monitoring Failed](#device-modeling-or-monitoring-failed)
-    -   [No links to components from OnCommand Unified Manager related events](#)
-    -   [Some OnCommand Unified Manager related events are not monitored by Zenoss](#some-on-command-unified-manager-related-events-are-not-monitored-by-zenoss)
--   [Daemons](#daemons)
--   [Limitations](#limitations)
--   [Known Issues](#known-issues)
-    -   [Upgrades from 3.6.x](#upgrades-from-36x)
-    -   [Restarting of zproxy](#restarting-of-zproxy)
-    -   [Events Severity Collision](#events-severity-collision)
--   [Changes](#changes)
 
 ## Gallery
 
@@ -1028,7 +1000,7 @@ automatically.
 
 ## Changes
 
-4.2.1
+**4.2.1**
 
 -   Add SNMP v3 support (ZPS-7590)
 -   Add disk's mediator state support (ZPS-6756)
@@ -1037,7 +1009,7 @@ automatically.
 -   Tested with Zenoss Resource Manager 6.7.0, Zenoss Cloud and Service
     Impact 5.5.5
 
-4.1.0
+**4.1.0**
 
 -   Add separate monitoring and modeling for Volume Data sector and
     Total Volume Utilization. Add Volume Snapshot reserve utilization
@@ -1056,7 +1028,7 @@ automatically.
 -   Tested with Zenoss Resource Manager 6.5.0, Zenoss Cloud and Service
     Impact 5.5.1
 
-4.0.0
+**4.0.0**
 
 -   Add SNMP datapoints and new graphs on device level and for LUN and
     HardDisk components (ZPS-2451)
@@ -1073,7 +1045,7 @@ automatically.
 -   Tested with Zenoss Resource Manager 6.3.2, Zenoss Cloud and Service
     Impact 5.3.4
 
-3.7.0
+**3.7.0**
 
 -   Add capacity thresholds
 -   Add missing /Status/Events event class (ZPS-2404)
@@ -1091,7 +1063,7 @@ automatically.
 -   Tested with Zenoss Resource Manager 5.3.3, Zenoss Resource Manager
     6.2.1, Zenoss Cloud and Service Impact 5.3.4
 
-3.6.0
+**3.6.0**
 
 -   Add support 9.2(C-Mode) ONTAP API version
 -   Add monitoring usage for QTree components (ZPS-410)
@@ -1107,7 +1079,7 @@ automatically.
 -   Tested with Zenoss Resource Manager 5.2.6, Zenoss Resource Manager
     4.2.5 RPS 743 and Service Impact 5.1.7
 
-3.5.0
+**3.5.0**
 
 -   Improve performance during monitoring NetApp devices
 -   Fix recursion error for a specific case regarding modeling of QTree
@@ -1116,7 +1088,7 @@ automatically.
 -   Fix monitoring statuses for 7-Mode interfaces
 -   Fix connection timeout issue during monitoring 7-Mode devices
 
-3.4.2
+**3.4.2**
 
 -   Add support 9.0(C-Mode) ONTAP API version
 -   Add Port component
@@ -1130,15 +1102,15 @@ automatically.
 -   Fix modeling operational status and speed properties for virtual
     Interface components
 
-3.3.0
+**3.3.0**
 
 -   Fix ZEN-20626 (fixed modeling for interfaces with not full data set)
 
-3.2.0
+**3.2.0**
 
 -   Add Fibre Channel support
 
-3.1.0
+**3.1.0**
 
 -   Fix ZEN-15678 (/Status/Perf/ should be /Status/Perf)
 -   Fix ZEN-15558 (Proper formatting of Aggregate Events)
@@ -1150,53 +1122,7 @@ automatically.
 -   Event management for EMS messages on C-Mode Filers
 -   Fix bug with incorrect displaying &ldquo;Physical Storage View&rdquo;
 
-3.0.6
+**3.0.6**
 
 -   Add status monitoring for &ldquo;Volumes&rdquo; and &ldquo;LUNs&rdquo; components
 -   Add support 8.2(7-Mode, C-Mode) and 8.3(C-Mode) ONTAP API version
-
-## Attachments:
-
--   [netapp-zenpack.png](img/zenpack-netapp-zenpack.png)
--   [ZC_Netapp_aggregates.png](img/zenpack-zc_netapp_aggregates.png)
--   [ZC_Netapp_diskshelves.png](img/zenpack-zc_netapp_diskshelves.png)
--   [ZC_Netapp_filesystems.png](img/zenpack-zc_netapp_filesystems.png)
--   [ZC_Netapp_harddisks.png](img/zenpack-zc_netapp_harddisks.png)
--   [ZC_Netapp_interfaces.png](img/zenpack-zc_netapp_interfaces.png)
--   [ZC_Netapp_luns.png](img/zenpack-zc_netapp_luns.png)
--   [ZC_Netapp_plexes.png](img/zenpack-zc_netapp_plexes.png)
--   [ZC_Netapp_ports.png](img/zenpack-zc_netapp_ports.png)
--   [ZC_Netapp_powersupplies.png](img/zenpack-zc_netapp_powersupplies.png)
--   [ZC_Netapp_qtrees.png](img/zenpack-zc_netapp_qtrees.png)
--   [ZC_Netapp_raidgroups.png](img/zenpack-zc_netapp_raidgroups.png)
--   [ZC_Netapp_snapmirrors.png](img/zenpack-zc_netapp_snapmirrors.png)
--   [ZC_Netapp_systemnodes.png](img/zenpack-zc_netapp_systemnodes.png)
--   [ZC_Netapp_temperaturesensors.png](img/zenpack-zc_netapp_temperaturesensors.png)
--   [ZC_Netapp_vfilers.png](img/zenpack-zc_netapp_vfilers.png)
--   [ZC_Netapp_volumes.png](img/zenpack-zc_netapp_volumes.png)
--   [ZC_Netapp_vservers.png](img/zenpack-zc_netapp_vservers.png)
--   [ZC_zNetAppOCUMEventFilter.png](img/zenpack-zc_znetappocumeventfilter.png)
--   [ZC-Netapp_impact_7mode.png](img/zenpack-zc-netapp_impact_7mode.png)
--   [ZC-Netapp_impact_cmode.png](img/zenpack-zc-netapp_impact_cmode.png)
--   [netapp-zenpack.png](img/zenpack-netapp-zenpack.png)
--   [ZC_Netapp_aggregates.png](img/zenpack-zc_netapp_aggregates.png)
--   [ZC_Netapp_diskshelves.png](img/zenpack-zc_netapp_diskshelves.png)
--   [ZC_Netapp_filesystems.png](img/zenpack-zc_netapp_filesystems.png)
--   [ZC_Netapp_harddisks.png](img/zenpack-zc_netapp_harddisks.png)
--   [ZC_Netapp_interfaces.png](img/zenpack-zc_netapp_interfaces.png)
--   [ZC_Netapp_plexes.png](img/zenpack-zc_netapp_plexes.png)
--   [ZC_Netapp_luns.png](img/zenpack-zc_netapp_luns.png)
--   [ZC_Netapp_powersupplies.png](img/zenpack-zc_netapp_powersupplies.png)
--   [ZC_Netapp_ports.png](img/zenpack-zc_netapp_ports.png)
--   [ZC_Netapp_qtrees.png](img/zenpack-zc_netapp_qtrees.png)
--   [ZC_Netapp_raidgroups.png](img/zenpack-zc_netapp_raidgroups.png)
--   [ZC_Netapp_snapmirrors.png](img/zenpack-zc_netapp_snapmirrors.png)
--   [ZC_Netapp_systemnodes.png](img/zenpack-zc_netapp_systemnodes.png)
--   [ZC_Netapp_temperaturesensors.png](img/zenpack-zc_netapp_temperaturesensors.png)
--   [ZC_Netapp_vfilers.png](img/zenpack-zc_netapp_vfilers.png)
--   [ZC_Netapp_volumes.png](img/zenpack-zc_netapp_volumes.png)
--   [ZC_zNetAppOCUMEventFilter.png](img/zenpack-zc_znetappocumeventfilter.png)
--   [ZC_Netapp_vservers.png](img/zenpack-zc_netapp_vservers.png)
--   [ZC-Netapp_impact_cmode.png](img/zenpack-zc-netapp_impact_cmode.png)
--   [ZC-Netapp_impact_7mode.png](img/zenpack-zc-netapp_impact_7mode.png)
-

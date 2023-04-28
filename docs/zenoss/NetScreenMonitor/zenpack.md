@@ -1,7 +1,5 @@
 # Juniper NetScreen
 
-@lb[](img/zenpack-juniper-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -52,15 +50,6 @@ This ZenPack provides support for monitoring Juniper NetScreen devices.
     > -   Add total memory modeling
     > -   Adjust free memory thresholds
     > -   Add common datapoint aliases
-
-Contents
-
--   Releases
--   [Background](#background-this-zen-pa-ckmonitors-juniper-net-screen-devices-using-the-snmp-v2-protocol){.reference     .internal}
--   Features
--   Installation and
-    Configuration
--   Changes
 
 ## [Background](#background){.toc-backref}
 
@@ -231,22 +220,16 @@ You can also add your devices in batch for convenience and automation.
 
 ## [Changes](#changes){.toc-backref}
 
-## 2.2.3
+**2.2.3**
 
 -   Add monitoring and locking to VPN tunnels (ZPS-603)
 
-## 2.2.2
+**2.2.2**
 
 -   Add common datapoint aliases (ZEN-24619)
 
-## 2.2.1
+**2.2.1**
 
 -   Add total memory modeling
 -   Change free memory threshold to 10% of total
 -   Add common datapoint aliases (ZEN-24619)
-
-## Attachments:
-
--   [juniper-zenpack.png](img/zenpack-juniper-zenpack.png)
--   [juniper-zenpack.png](img/zenpack-juniper-zenpack.png)
-

@@ -1,7 +1,5 @@
 # Datacenter View
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -54,9 +52,8 @@ Rack View
 
 ## Prerequisites
 
-|                   |                         |
-|-------------------|-------------------------|
 | Prerequisite      | Restriction             |
+|-------------------|-------------------------|
 | Product           | Zenoss platform 4.x     |
 | Required ZenPacks | ZenPacks.zenoss.Diagram |
 
@@ -199,20 +196,3 @@ In the Custom View, it appears as a single device image.
 
 Note: You can customize this device image by modifying the zIcon
 configuration property in the device class.
-
-## Attachments:
-
--   [(Diagram)DatacenterView.Diagram_Custom_View_Change_Background.png](img/zenpack-datacenterview.diagram_custom_view_change_background.png)
--   [(Diagram)DatacenterView.Diagram_Custom_View.png](img/zenpack-datacenterview.diagram_custom_view.png)
--   [(Diagram)DatacenterView.Diagram_Rack_View.png](img/zenpack-datacenterview.diagram_rack_view.png)
--   [(Diagram)DatacenterView.Diagram_Set_Rack_Slot.png](img/zenpack-datacenterview.diagram_set_rack_slot.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [(Diagram)DatacenterView.Diagram_Rack_View.png](img/zenpack-datacenterview.diagram_rack_view.png)
--   [(Diagram)DatacenterView.Diagram_Custom_View.png](img/zenpack-datacenterview.diagram_custom_view.png)
--   [(Diagram)DatacenterView.Diagram_Rack_View.png](img/zenpack-datacenterview.diagram_rack_view.png)
--   [(Diagram)DatacenterView.Diagram_Set_Rack_Slot.png](img/zenpack-datacenterview.diagram_set_rack_slot.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [(Diagram)DatacenterView.Diagram_Rack_View.png](img/zenpack-datacenterview.diagram_rack_view.png)
--   [(Diagram)DatacenterView.Diagram_Custom_View_Change_Background.png](img/zenpack-datacenterview.diagram_custom_view_change_background.png)
--   [(Diagram)DatacenterView.Diagram_Custom_View_Change_Background.png](img/zenpack-datacenterview.diagram_custom_view_change_background.png)
-

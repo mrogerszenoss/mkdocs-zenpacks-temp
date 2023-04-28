@@ -1,7 +1,5 @@
 # Palo Alto Networks Integration Service
 
-@lb[](img/zenpack-palo-alto-networks-logo.png)
-
 ## **Subscription**
 
 This integration is a subscription-based Professional Services
@@ -520,7 +518,7 @@ The following objects types would typically be added to Impact services:
 
 ## [Changes](https://github.com/zenoss/ZenPacks.zenoss.PS.PaloAlto#id15){.external-link}
 
-Release 2.9.3
+**2.9.3**
 
 -   Fixes
 
@@ -530,13 +528,13 @@ Release 2.9.3
 
     -   SVC-3309 return initial logic for redisStore instantiation
 
-Release 2.9.2
+**2.9.2**
 
 -   Fixes
     -   Require PS.Util 1.9.9 for RedisStore to avoid installation
         failure (SVC-3277)
 
-Release 2.9.1
+**2.9.1**
 
 -   Fixes
     -   Do not create redis store until needed (SVC-3268)
@@ -544,7 +542,7 @@ Release 2.9.1
     -   Allow datapoint values of zero (SVC-3256)
     -   fix AttributeError for foundEntry (SVC-3256)
 
-Release 2.9.0 (Retracted due to SVC-3268)
+**2.9.0** (Retracted due to SVC-3268)
 
 -   Features
     -   PAStatusThreshold suppression based on haState (SVC-2978,
@@ -554,7 +552,7 @@ Release 2.9.0 (Retracted due to SVC-3268)
         state (SVC-3196)
     -   Updated event for sub-interface state monitoring (SVC-3196)
 
-Release 2.8.0
+**2.8.0**
 
 -   Features
     -   Add expanded documentation for possible events (SVC-2822)
@@ -571,7 +569,7 @@ Release 2.8.0
     -   Fix docbuilder not creating correct .pdf file (SVC-2822)
     -   Fix PaloAlto Modeling missing HW and OS attributes (SVC-3059)
 
-Release 2.7.0
+**2.7.0**
 
 -   Features
     -   Add separate event for unauthorized request (403 error)
@@ -595,7 +593,7 @@ Release 2.7.0
     -   Fix device id and device title to be based on values from 'Add
         Palo Alto device' form (SVC-2821, SVC-2909)
 
-Release 2.6.0
+**2.6.0**
 
 -   Features
     -   Add `zPanorama_connected_devices_ignore_names` property to
@@ -608,7 +606,7 @@ Release 2.6.0
     -   Update ip address of a firewall device if a collected ip address
         differs from existing one.
 
-Release 2.5.0
+**2.5.0**
 
 -   Features
     -   Monitor Panorama Disk Pair status via Expected Status
@@ -621,7 +619,7 @@ Release 2.5.0
     -   Fix Panorama filesystem parser to correctly consume extra spaces
         in response.
 
-Release 2.4.0
+**2.4.0**
 
 -   Features
     -   Add zPaloAltoApi_device_class, zPaloAltoApi_production_state,
@@ -639,7 +637,7 @@ Release 2.4.0
     -   Fix RebuildRelationMigration to not fail when upgrading from 2.x
         and higher.
 
-Release 2.3.0
+**2.3.0**
 
 -   Features
     -   Add zPaloAltoApi_concurrency to limit concurrent connections to
@@ -649,13 +647,13 @@ Release 2.3.0
         template. Used an invalid fixed maximum value and was redundant
         to the existing 'session utilization percent' Threshold.
 
-Release 2.2.2
+**2.2.2**
 
 -   Fixes
     -   Resolves missing function from pan.snmp.StorageArea modeling
         plugin.
 
-Release 2.2.1
+**2.2.1**
 
 -   Fixes
     -   Fix failed migration during ZenPack upgrade if devices are in
@@ -663,7 +661,7 @@ Release 2.2.1
     -   Re-class devices in /Network/PaloAlto or
         /Network/PaloAlto/Firewall to a PaloAlto Device type.
 
-Release 2.2.0
+**2.2.0**
 
 -   Features
     -   Add Zone Component and monitoring (new in PAN OS 8)
@@ -673,7 +671,7 @@ Release 2.2.0
     -   Fix alarm_bits datasource monitoring using String Status
         DataSource
 
-Release 2.1.0
+**2.1.0**
 
 -   Features
     -   Split up pan.snmp.Card modeler plugin into modeler for each
@@ -695,7 +693,7 @@ Release 2.1.0
         extra attributes, leading to Warning messages.
     -   fixed errors related to interface monitoring
 
-Release 2.0.0
+**2.0.0**
 
 -   Features
     -   Upgrade to using ZenPackLib 2.1.1
@@ -712,20 +710,9 @@ Release 2.0.0
     -   Adjust Power High Usage Threshold to gracefully handle devices
         which do not report total_power_available
 
-Release 1.5.0
+**1.5.0**
 
 -   Features
     -   New Component
         -   Logical Interface Component - Additional Interface stats not
             captured by SNMP Interface component
-
-## Attachments:
-
--   [palo-alto-networks-logo.png](img/zenpack-palo-alto-networks-logo.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/PS/zenoss-integration-services-ds.pdf){.external-link}
--   [palo-alto-networks-logo.png](img/zenpack-palo-alto-networks-logo.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/PS/zenoss-integration-services-ds.pdf){.external-link}
--   [palo-alto-networks-logo.png](img/zenpack-palo-alto-networks-logo.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/PS/zenoss-integration-services-ds.pdf){.external-link}
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/PS/zenoss-integration-services-ds.pdf){.external-link}
-

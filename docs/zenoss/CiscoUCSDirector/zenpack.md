@@ -1,7 +1,5 @@
 # Cisco UCS Director
 
-@lb[](img/zenpack-cisco-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -136,15 +134,6 @@ system.
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.0
-</dt>
-</dl>
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
-

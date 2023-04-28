@@ -1,6 +1,4 @@
-# Control Center
-
-@lb[](img/zenpack-zenpack-general.png)
+# Control Cente
 
 ## Commercial
 
@@ -138,12 +136,14 @@ the following rules:
 
 @lb[](img/zenpack-three.png)
 
+```
     Note:  Impact Configuration
     In order to easily get a full impact diagram for ControlCenter, identify and add
     the top-level service only. This will normally be one of the following:
 
     * Zenoss.resmgr
     * Zenoss.core
+```
 
 ## Installed Items
 
@@ -207,8 +207,8 @@ Install the target server as you normally would.
 -   Note: The target device **must** be a valid DNS resolvable address.
 
 ### Set the Credentials
-
-> **note**
+``
+**note**
 >
 > If your CCZP lives on the same ControlCenter you are monitoring, you
 > don't need to do anyting: CCZP get's its credentials from the local
@@ -258,47 +258,20 @@ You can also add your devices in batch for convenience and automation.
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-1.2.0
-</dt>
-</dl>
+**1.2.0**
 
 -   Update device status: ZEN-23413
 
-<dl markdown="1">
-<dt markdown="1">
-1.1.0
-</dt>
-</dl>
+**1.1.0**
 
 -   Added distributed storage Volumes
 -   Added health-checks for running services
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.1
-</dt>
-</dl>
+**1.0.1**
 
 -   Upgrade ZenPackLib to YAML format
 -   Fix ZEN-16534: Allow Linux host linking in Impact
 
-<dl markdown="1">
-<dt markdown="1">
-1.0.0
-</dt>
-</dl>
+**1.0.0**
 
 -   Initial release
-
-## Attachments:
-
--   [Ccz.png](img/zenpack-ccz.png)
--   [Hosts.png](img/zenpack-hosts.png)
--   [Pools.png](img/zenpack-pools.png)
--   [Running.png](img/zenpack-running.png)
--   [Services.png](img/zenpack-services.png)
--   [Three.png](img/zenpack-three.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
-

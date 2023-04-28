@@ -1,7 +1,5 @@
 # Dell Monitor (Core)
 
-@lb[](img/zenpack-dell-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -50,9 +48,8 @@ The following information is collected through SNMP:
 
 ## Prerequisites
 
-|                       |                                                                                |
-|-----------------------|--------------------------------------------------------------------------------|
 | Prerequisite          | Restriction                                                                    |
+|-----------------------|--------------------------------------------------------------------------------|
 | Product               | Zenoss platform 4.x, 5.x, Zenoss 2.2 or higher                                 |
 | Required ZenPacks     | ZenPacks.zenoss.DellMonitor                                                    |
 | On each remote device | The Dell OpenManage SNMP Agent is used to gather information about the device. |
@@ -81,15 +78,7 @@ To enable modeling:
 
 ## Daemons
 
-|                       |             |
-|-----------------------|-------------|
 | Type                  | Name        |
+|-----------------------|-------------|
 | Modeler               | zenmodeler  |
 | Performance Collector | zenperfsnmp |
-
-## Attachments:
-
--   [dell-zenpack.png](img/zenpack-dell-zenpack.png)
--   [dell-zenpack.png](img/zenpack-dell-zenpack.png)
--   [dell-zenpack.png](img/zenpack-dell-zenpack.png)
-

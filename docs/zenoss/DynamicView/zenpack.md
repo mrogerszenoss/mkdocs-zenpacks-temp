@@ -1,7 +1,5 @@
 # Dynamic Service View
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -53,9 +51,8 @@ Dynamic Service View: Inspector Panel
 
 ## Prerequisites
 
-|                   |                             |
-|-------------------|-----------------------------|
 | Prerequisite      | Restriction                 |
+|-------------------|-----------------------------|
 | Product           | Zenoss 6.6.0                |
 | Required ZenPacks | ZenPacks.zenoss.DynamicView |
 
@@ -112,22 +109,7 @@ On storage devices, such as NetApp Filers, there are two dynamic views:
 
 ## Changes
 
-2.0.0 (distributed with Zenoss 6.6.0)
+**2.0.0** (distributed with Zenoss 6.6.0)
 
 -   Dynamic View (Visualization) updated to eliminate the dependency on
     Adobe Flash
-
-## Attachments:
-
--   [(DynamicView)DynamicServiceView.dynamicviewcontrols.png](img/zenpack-dynamicserviceview.dynamicviewcontrols.png)
--   [(DynamicView)DynamicServiceView.dynamicviewgraph.png](img/zenpack-dynamicserviceview.dynamicviewgraph.png)
--   [(DynamicView)DynamicServiceView.dynamicviewinspectorpanel.png](img/zenpack-dynamicserviceview.dynamicviewinspectorpanel.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [(DynamicView)DynamicServiceView.dynamicviewcontrols.png](img/zenpack-dynamicserviceview.dynamicviewcontrols.png)
--   [(DynamicView)DynamicServiceView.dynamicviewgraph.png](img/zenpack-dynamicserviceview.dynamicviewgraph.png)
--   [(DynamicView)DynamicServiceView.dynamicviewinspectorpanel.png](img/zenpack-dynamicserviceview.dynamicviewinspectorpanel.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [(DynamicView)DynamicServiceView.dynamicviewgraph.png](img/zenpack-dynamicserviceview.dynamicviewgraph.png)
--   [(DynamicView)DynamicServiceView.dynamicviewinspectorpanel.png](img/zenpack-dynamicserviceview.dynamicviewinspectorpanel.png)
--   [(DynamicView)DynamicServiceView.dynamicviewcontrols.png](img/zenpack-dynamicserviceview.dynamicviewcontrols.png)
-

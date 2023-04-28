@@ -1,7 +1,5 @@
 # Check Point Security Appliance
 
-@lb[](img/zenpack-check-point-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -424,7 +422,7 @@ SNMP Based Monitoring Events:
 
 ## [Changelog](https://github.com/zenoss/ZenPacks.zenoss.CheckPointMonitor#id10){.external-link}
 
-3.0.0
+**3.0.0**
 
 Features:
 
@@ -434,10 +432,3 @@ Features:
 > -   add support for VSX
 > -   High Availability state monitoring
 > -   improved documentation
-
-## Attachments:
-
--   [check-point-zenpack.png](img/zenpack-check-point-zenpack.png)
--   [check-point-zenpack.png](img/zenpack-check-point-zenpack.png)
--   [check-point-zenpack.png](img/zenpack-check-point-zenpack.png)
-

@@ -1,7 +1,5 @@
 # Microsoft Hyper-V
 
-@lb[](img/zenpack-microsoft-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -26,61 +24,6 @@ Microsoft Client Hyper-V (Windows 8)
 ## Microsoft Hyper-V ZenPack
 
 Monitoring for Microsoft Hyper-V Devices.
-
-## Contents
-
-[1 Microsoft Hyper-V ZenPack](#vzenpack)
-
-[1.1 Background](#background)
-
-[1.2 Releases](#releases)
-
-[1.3 Features](#features)
-
-[1.3.1 Discovery](#discovery)
-
-[1.3.2 Monitoring](#monitoring)
-
-[1.3.3 Event monitoring](#event-monitoring)
-
-[1.3.3.1 Hyper-V Server](#vserver)
-
-[1.3.3.2 Host HDD](#host-hdd)
-
-[1.3.3.3 Cluster Shared Volume (CSV)](#MicrosoftHyper-V-ClusterSharedVolume(CSV))
-
-[1.3.3.4 Host Network Adapter](#host-network-adapter)
-
-[1.3.3.5 Virtual Machines](#virtual-machines)
-
-[1.3.4 Guest Device Discovery](#guest-device-discovery)
-
-[1.3.5 Service Impact](#service-impact)
-
-[1.4 Usage](#usage)
-
-[1.4.1 Adding Hyper-V Device](#vdevice)
-
-[1.4.2 Configuring Guest Device Discovery](#configuring-guest-device-discovery)
-
-[1.5 Prerequisites](#prerequisites)
-
-1.5.1 Configure the Hyper-V server's
-hosting machine
-
-[1.6 Average Pressure](#average-pressure)
-
-[1.7 Troubleshooting](#troubleshooting)
-
-[1.8 Caveats](#caveats)
-
-[1.9 Known Limitation](#known-limitation)
-
-[1.10 Zenoss Analytics](#zenoss-analytics)
-
-[1.11 Installed Items](#installed-items)
-
-[1.12 Changes](#changes)
 
 ## Background
 
@@ -748,7 +691,7 @@ Component Types
 
 ## Changes
 
-2.1.0
+**2.1.0**
 
 -   Add custom command datasource for monitoring using WinRM. (ZPS-4498)
 -   Add graph definition for Virtual CPU load. (ZPS-7134)
@@ -763,13 +706,13 @@ Component Types
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Resource Manager
     6.5.0, Zenoss Cloud and Service Impact 5.5.2
 
-2.0.1
+**2.0.1**
 
 -   Add Utilization metrics for Hypervisor Logical Processor. (ZPS-4266)
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.1, Zenoss
     Resource Manager 5.3.3
 
-2.0.0
+**2.0.0**
 
 -   Add option to configure Production State of discovered guest
     devices. (ZPS-400)
@@ -781,29 +724,29 @@ Component Types
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.2.0, Zenoss
     Resource Manager 5.3.3 with Service Impact 5.3.1 and Analytics 5.1.0
 
-1.3.3
+**1.3.3**
 
 -   Fix erroneous Hyper-V VM creation events. (ZPS-841)
 
-1.3.0
+**1.3.0**
 
 -   Fix graphs to have a minimum Y axis of 0.
 -   Remove "Capacity" graph point from resource pool graph. (ZEN-20926)
 
-1.2.2
+**1.2.2**
 
 -   Fix potential Impact modeling performance issue.
 
-1.2.1
+**1.2.1**
 
 -   Fix potential LocationError when modeling. (ZEN-20947)
 
-1.2.0
+**1.2.0**
 
 -   Add *AD Domain Controller* field to *Add Hyper-V Server* dialog
 -   Allow guest discovery to be set from overview. (ZEN-20690)
 
-1.1.0
+**1.1.0**
 
 -   Add support for Zenoss Analytics.
 -   Add support for Windows 8.1 version.
@@ -811,12 +754,12 @@ Component Types
 -   Add modeling Virtual Network Adapters, CPUs and HDDs components for
     virtual machines in down (Off) state.
 
-1.0.5
+**1.0.5**
 
 -   Fix 'NoneType' object has no attribute 'timetuple' job error.
     (ZEN-16638)
 
-1.0.4
+**1.0.4**
 
 -   Add guest device discovery based on IP/ID in case virtual machine
     has no network adapters modeled.
@@ -827,14 +770,14 @@ Component Types
 -   Improvements to guest device linking.
 -   Bug fixes.
 
-1.0.2
+**1.0.2**
 
 -   Automatic adding of Windows and Linux VMs as Zenoss devices.
 -   Honor zWinRMUser and zWinRMPassword properties for Hyper-V host
     credentials.
 -   Other bug fixes.
 
-1.0.1
+**1.0.1**
 
 -   Add link between Hyper-V device and corresponding Windows server.
 -   Make password a required field for adding Hyper-V.
@@ -842,35 +785,6 @@ Component Types
 -   Prevent deleted guests from being re-added.
 -   Honor zWinRMServerName property.
 
-1.0.0
+**1.0.0**
 
 -   Initial release.
-
-## Attachments:
-
--   [HyperV_Account_Overview_0.png](img/zenpack-hyperv_account_overview_0.png)
--   [HyperV_Add_HyperV_Server_Dialog_0.png](img/zenpack-hyperv_add_hyperv_server_dialog_0.png)
--   [HyperV_Add_HyperV_Server_Menu_Item_0.png](img/zenpack-hyperv_add_hyperv_server_menu_item_0.png)
--   [HyperV_Device_Graphs.png](img/zenpack-hyperv_device_graphs.png)
--   [HyperV_Host_CPU_Graphs_0.png](img/zenpack-hyperv_host_cpu_graphs_0.png)
--   [HyperV_Impact.png](img/zenpack-hyperv_impact.png)
--   [HyperV_VM_0.png](img/zenpack-hyperv_vm_0.png)
--   [HyperV_VM_Impact.png](img/zenpack-hyperv_vm_impact.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [HyperV_Add_HyperV_Server_Dialog_0.png](img/zenpack-hyperv_add_hyperv_server_dialog_0.png)
--   [HyperV_Account_Overview_0.png](img/zenpack-hyperv_account_overview_0.png)
--   [HyperV_Add_HyperV_Server_Menu_Item_0.png](img/zenpack-hyperv_add_hyperv_server_menu_item_0.png)
--   [HyperV_Device_Graphs.png](img/zenpack-hyperv_device_graphs.png)
--   [HyperV_Host_CPU_Graphs_0.png](img/zenpack-hyperv_host_cpu_graphs_0.png)
--   [HyperV_Impact.png](img/zenpack-hyperv_impact.png)
--   [HyperV_VM_0.png](img/zenpack-hyperv_vm_0.png)
--   [HyperV_VM_Impact.png](img/zenpack-hyperv_vm_impact.png)
--   [microsoft-zenpack.png](img/zenpack-microsoft-zenpack.png)
--   [HyperV_Device_Graphs.png](img/zenpack-hyperv_device_graphs.png)
--   [HyperV_Device_Graphs.png](img/zenpack-hyperv_device_graphs.png)
--   [HyperV_Account_Overview_0.png](img/zenpack-hyperv_account_overview_0.png)
--   [HyperV_Add_HyperV_Server_Dialog_0.png](img/zenpack-hyperv_add_hyperv_server_dialog_0.png)
--   [HyperV_Host_CPU_Graphs_0.png](img/zenpack-hyperv_host_cpu_graphs_0.png)
--   [HyperV_VM_0.png](img/zenpack-hyperv_vm_0.png)
--   [HyperV_Add_HyperV_Server_Menu_Item_0.png](img/zenpack-hyperv_add_hyperv_server_menu_item_0.png)
-

@@ -1,7 +1,5 @@
 # Amazon Web Services (Commercial)
 
-@lb[](img/zenpack-aws-logo-partner_2_1.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -189,7 +187,7 @@ Tasks, Pending Tasks, Launch Type
 
   Tags: Name
   Collections: ECS Tasks
-  
+
 **Note**: For ECS Tasks that are hosted directly on the ECS Cluster
 additional 'virtual' ECS Service will be added to contain those tasks
 
@@ -282,7 +280,7 @@ Account:   Metrics: EstimatedCharges, EC2EstimatedCharges, S3EstimatedCharges,
 
 Regions:   Metrics: CPUUtilization, DiskReadOps, DiskWriteOps, DiskReadBytes,
     DiskWriteBytes, NetworkIn, NetworkOut
-    
+
 **Note**: These metrics aggregated only for EC2 Instances with detailed monitoring enabled
 
 Instances:   Metrics: CPUUtilization, DiskReadOps, DiskWriteOps, DiskReadBytes,
@@ -381,12 +379,12 @@ help in reducing monitoring costs. It doesn't change the interval of
 datapoints on the graphs, but only changes the frequency Zenoss performs
 API calls to CloudWatch.
 
-!!! note 
-    By default, `CloudFormation`, `ECS` and `ElastiCache` 
-    modeler sub-plugins are not enabled. Users need to add them manually and 
-    initiate the modeling for those components to be modeled and 
-    monitored. For AutoScalingGroup monitoring to become working, the user 
-    needs to enable the monitoring on the AWS console for the specific 
+!!! note
+    By default, `CloudFormation`, `ECS` and `ElastiCache`
+    modeler sub-plugins are not enabled. Users need to add them manually and
+    initiate the modeling for those components to be modeled and
+    monitored. For AutoScalingGroup monitoring to become working, the user
+    needs to enable the monitoring on the AWS console for the specific
     AutoScalingGroups.
 
 ### SQS Queue Messages Monitoring
@@ -434,8 +432,8 @@ others *INFO* one.
 By default, all generated events are mapped to `/AWS/CloudFormation`
 event class.
 
-!!! note 
-    Once the event is sent, it will not be sent again. If the 
+!!! note
+    Once the event is sent, it will not be sent again. If the
     user clears the event, it will not reappear again.
 
 In case `zAWSCloudFormationEventsAutoClear` zProperty set to True for
@@ -469,8 +467,8 @@ By default,
 all generated events are mapped to \`/AWS/ElastiCache\` event
 class.
 
-!!! note 
-    Once the event is sent, it will not be sent again. If the 
+!!! note
+    Once the event is sent, it will not be sent again. If the
     user clears the event, it will not reappear again.
 
 ### Zenoss Notifications with SES
@@ -1119,8 +1117,8 @@ Here is an example of how to add monitoring of AWS ECS:
 3.  Edit datasource created above and
     populate `Namespace` and `Metric Name` fields. Change the `Region` field
     and set the actual region where your ECS cluster is located.
-    In `Dimension` put the string in format 
-    `ServiceName=<service_name>;ClusterName=<cluster_name>` 
+    In `Dimension` put the string in format
+    `ServiceName=<service_name>;ClusterName=<cluster_name>`
     (e.g.`ServiceName=web;ClusterName=test-ec2-cluster`).
 4.  You can add the datapoints you created to a graph for visualization.
 5.  Open your AWS device bind template you just created.

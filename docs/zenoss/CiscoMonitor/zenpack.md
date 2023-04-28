@@ -1,7 +1,5 @@
 # CiscoMonitor
 
-@lb[](img/zenpack-cisco-zenpack.png)
-
 This ZenPack provides monitoring
 for Cisco routers and switches.
 
@@ -24,9 +22,21 @@ Version 5.12.0-[Download](https://delivery.zenoss.com){.external-link}
           Compatible with Zenoss 6.x and Zenoss Cloud
 
 Version 5.11.1-[Download](https://delivery.zenoss.com){.external-link}:   Released on 2020/04/15:   Requires [PythonCollector ZenPack](http://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link},
-    [ZenPackLib ZenPack](http://help.zenoss.com/display/in/ZenPackLib "ZenPack:ZenPackLib"){.external-link}:   Compatible with Zenoss 6.x and Zenoss Cloud
+    [ZenPac## Contents
 
-## Contents
+-   [Background](#background)
+-   [Features](#features)
+    -   [Discovery](#discovery)
+    -   [Monitoring](#monitoring)
+    -   [Additional Features](#additional-features)
+    -   [Class-Based QoS Monitoring](#based-qos-monitoring)
+-   [Usage](#usage)
+    -   [Choosing the Proper Device Class](#choosing-the-proper-device-class)
+    -   [Configuring Credentials](#configuring-credentials)
+    -   [zProperties for CiscoMonitor](#zproperties-for-cisco-monitor)
+    -   [Firewall Access](#firewall-access)
+    -   [Monitoring Logical Contexts](#monitoring-logical-contexts)
+    -   [Controlling Automatic Remodeling](#controlling-automat## Contents
 
 -   [Background](#background)
 -   [Features](#features)
@@ -67,6 +77,34 @@ Version 5.11.1-[Download](https://delivery.zenoss.com){.external-link}:   Releas
     -   [RTTProbeJitter](#rttprobe-jitter)
 -   [Known Issues](#known-issues)
 -   [Changes](#changes)
+ic-remodeling)
+    -   [Monitoring Memory Buffer Pools](#monitoring-memory-buffer-pools)
+    -   [Monitoring CPUs](#monitoring-cpus)
+    -   [Monitoring Memory Pools](#monitoring-memory-pools)
+    -   [Limitations](#limitations)
+    -   [Performance Optimizations for Event Transformations](#performance-optimizations-for-event-transformations)
+    -   [Monitoring Memory Utilization on Cisco ASR 9000](#monitoring-memory-utilization-on-cisco-asr9000)
+    -   [Ethernet Interfaces](#ethernet-interfaces)
+-   [Dynamic View and Service Impact](#dynamic-view-and-service-impact)
+    -   [Nexus Devices](#nexus-devices)
+    -   [Multicast Groups](#multicast-groups)
+    -   [Nexus 1000V and 1010 Devices](#nexus-1000v-and-1010-devices)
+    -   [VSG and VMZone](#vsg-and-vmzone)
+    -   [Application Control Engine         (ACE)](#CiscoMonitor-ApplicationControlEngine(ACE))
+    -   Multilayer Director Switch: MDS 9000 Series
+    -   [ASA and FWSM](#asa-and-fwsm)
+    -   [QoS Class Maps](#qo-sclass-maps)
+    -   [Fans, Power Supplies, and Temperature Sensors](#fans-power-supplies-and-temperature-sensors)
+    -   [Firepower FXOS](#firepower-fxos)
+-   [DynamicView Views](#dynamic-view-views)
+-   Appendix A: Included MIBs
+-   Appendix B: IP-SLA (RTTMON) Monitoring
+    -   [RTTProbeGeneric](#rttprobe-generic)
+    -   [RTTProbeICMPJitter](#rttprobe-icmp-jitter)
+    -   [RTTProbeJitter](#rttprobe-jitter)
+-   [Known Issues](#known-issues)
+-   [Changes](#changes)
+kLib ZenPack](http://help.zenoss.com/display/in/ZenPackLib "ZenPack:ZenPackLib"){.external-link}:   Compatible with Zenoss 6.x and Zenoss Cloud
 
 ## Background
 
@@ -1619,7 +1657,7 @@ following OIDs and values are supported:
 
 ## Changes
 
-6.0.0
+**6.0.0**
 
 -   Cisco ASA model new IOS version Firepower Threat Defense (ZPS-6971)
 -   ASR 9XX vlans showing up as Ethernet Interfaces (ZPS-6972)
@@ -1631,7 +1669,7 @@ following OIDs and values are supported:
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.6.x and Service
     Impact 5.5.5
 
-5.12.1
+**5.12.1**
 
 -   Fix Interfaces not extracted from CiscoMonitor devices for
     Analytics. (ZPS-7587)
@@ -1640,7 +1678,7 @@ following OIDs and values are supported:
 -   Tested with Zenoss Cloud, Zenoss 6.6.0, Zenoss 6.5.0 and Service
     Impact 5.5.3
 
-5.12.0
+**5.12.0**
 
 -   Add option to include Description in temperature sensors identifier.
     (ZPS-4832)
@@ -1653,7 +1691,7 @@ following OIDs and values are supported:
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Resource Manager
     6.5.0, Zenoss Cloud and Service Impact 5.5.2
 
-5.11.1
+**5.11.1**
 
 -   Add zEntSensorStatusIgnoreValues
     zProperty to allow modeling of environment sensors with
@@ -1676,7 +1714,7 @@ following OIDs and values are supported:
 -   Tested with Zenoss Resource
     Manager 6.4.1, Zenoss Cloud and Service Impact 5.5.1
 
-5.11.0
+**5.11.0**
 
 -   Fixes for impact relationships between network interfaces, port
     channels, and VLANs. (ZPS-5790)
@@ -1692,7 +1730,7 @@ following OIDs and values are supported:
 -   Tested with Zenoss Resource Manager 6.4.1, Zenoss Cloud and Service
     Impact 5.5.1
 
-5.10.0
+**5.10.0**
 
 -   Add support for ASA VPN tunnels. (SVC-2005)
 -   Add missing hardware models. (ZPS-3515)
@@ -1711,7 +1749,7 @@ following OIDs and values are supported:
     Devices. (ZPS-3598)
 -   Tested with Zenoss 6.3.2 and Zenoss Cloud
 
-5.9.0
+**5.9.0**
 
 -   Change wrong graph metric names for 'Error Rate' graph defined in
     FibreChannelInterface template. (ZPS-3239)
@@ -1766,7 +1804,7 @@ following OIDs and values are supported:
 -   Tested with Zenoss Resource Manager: 4.2.5 RPS 743, 5.3.3, 6.1.2,
     Service Impact 5.3.0 and Analytics 5.1.0
 
-5.8.2
+**5.8.2**
 
 -   Fix incorrect memory utilization monitoring for Cisco ASR 9000
     devices. (ZPS-1602)
@@ -1778,12 +1816,12 @@ following OIDs and values are supported:
 -   Change WLC devices to inherit CiscoDevice its status_maps (ZPS-1699)
 -   Add capacity thresholds to port channels. (ZPS-2698)
 
-5.8.1
+**5.8.1**
 
 -   Fix ciscoEnvMonTempStatusChangeNotif Transform error. (ZEN-24208)
 -   Add unit test for SNMP event summary after transforms.
 
-5.8.0
+**5.8.0**
 
 -   Add FEX support for Nexus 9000 via NX-API. (ZPS-740)
 -   Use SSL for NX-API connections. (ZPS-785)
@@ -1820,15 +1858,15 @@ following OIDs and values are supported:
     Cisco Nexus 9000 on the 'Add Device' page. (ZPS-1325)
 -   Remove an extra Graphs entry in Display drop-down. (ZPS-1340)
 
-5.7.4
+**5.7.4**
 
 -   Add Catalyst 2960 support.
 
-5.7.3
+**5.7.3**
 
 -   Add support for more TelePresence peripherals. (ZEN-25993)
 
-5.7.2
+**5.7.2**
 
 -   Fix isProjection template copying error. (ZEN-23332)
 -   Set event class mapping sequences to 1000. (ZEN-23103)
@@ -1837,31 +1875,31 @@ following OIDs and values are supported:
 -   Fix broken "\|" eventKey on NX-API events. (ZEN-21247)
 -   Add common datapoint aliases. (ZEN-24619)
 
-5.7.1
+**5.7.1**
 
 -   Fix StatCountInUse and StatCountPeak OID's. (ZEN-12336)
 
-5.7.0
+**5.7.0**
 
 -   Add port-channel monitoring for Nexus 9000. (ZEN-22018)
 
-5.6.3
+**5.6.3**
 
 -   Indicate NX-API for Nexus 9000 in Add Infrastructure Wizard.
     (ZEN-21165)
 -   Associate cefcPowerStatusChange events with Ethernet interfaces.
     (ZEN-21726)
 
-5.6.2
+**5.6.2**
 
 -   Fix "isProjection" error when creating local templates. (ZEN-21691)
 
-5.6.1
+**5.6.1**
 
 -   Improve name of fabric extenders in some cases. (ZEN-17538)
 -   Disable monitoring of admin-down MPLS L3 VPNs. (ZEN-18463)
 
-5.6.0
+**5.6.0**
 
 -   Honor *zInterfaceMapIgnoreNames*, *zInterfaceMapIgnoreTypes* for
     VLAN modeling.
@@ -1871,12 +1909,12 @@ following OIDs and values are supported:
 -   Add units to supervisor module memory utilization graph. (ZEN-19500)
 -   Minor updates to Dynamic View relationships. (ZEN-19289)
 
-5.5.0
+**5.5.0**
 
 -   Added support for modeling/monitoring Nexus 9000 series switches via
     the NX-API.
 
-5.4.1
+**5.4.1**
 
 -   Fixed Layer2 integration for Nexus switches. (ZEN-17290)
 -   Disable monitoring of QoS class maps on disabled interfaces.
@@ -1884,49 +1922,49 @@ following OIDs and values are supported:
 -   Fix misreporting of temperature sensor value in some cases.
     (ZEN-11440)
 
-5.4.0
+**5.4.0**
 
 -   Improved class-based QoS monitoring.
 
-5.3.5
+**5.3.5**
 
 -   Fix to allow Cisco devices to work with Layer2 ZenPack. (ZEN-13859)
 -   Fix potential 'interfaceTypes' modeling error. (ZEN-8991)
 
-5.3.4
+**5.3.4**
 
 -   Fix "Unable to cleanup" warning on first install. (ZEN-16895)
 -   Fix VRF relationship for FastEthernet interfaces. (ZEN-16896)
 
-5.3.3
+**5.3.3**
 
 -   Fix potential installation failure. (ZEN-16307)
 -   Fix HSRPMap modeler plugin for Cisco devices. (ZEN-15427)
 
-5.3.2
+**5.3.2**
 
 -   Fix potential traceback in Interfaces modeler plugin. (ZEN-15619)
 -   Fix auto-classification of 3560 devices. (ZEN-16026)
 -   Change Netconf authentication failure to warnings. (ZEN-16112)
 
-5.3.1
+**5.3.1**
 
 -   Fix potential traceback in CPUs modeling plugin.
 
-5.3.0
+**5.3.0**
 
 -   Add optional support for modeling and monitoring CPUs and memory
     pools.
 
-5.2.0
+**5.2.0**
 
 -   Add optional support for monitoring memory buffers.
 
-5.1.16
+**5.1.16**
 
 -   Fix modeling of IP address on Nexus VLAN (SVI) interfaces.
 
-5.1.15
+**5.1.15**
 
 -   Remove pointless CSR device-level CPU graph.
 -   Fix display of administrative and operational status for IP-SLA
@@ -1935,83 +1973,83 @@ following OIDs and values are supported:
 -   Updated VRF graphs to be compatible with Zenoss 5.
 -   Fix handling of SNMP traps with multiple values for same varbind.
 
-5.1.14
+**5.1.14**
 
 -   Set zCredentialsZProperties for Nexus device classes.
 
-5.1.13
+**5.1.13**
 
 -   Fix conflict with SolarisMonitor 2.2.0.
 -   Properly fix combining of VLAN L2 and L3 data.
 
-5.1.12
+**5.1.12**
 
 -   Improve linking of ASA security contexts.
 -   Add *zCiscoACEUseSSL* property. Defaults to true.
 
-5.1.11
+**5.1.11**
 
 -   Add fan and temperature sensor discovery for devices that only
     support CISCO-ENVMON-MIB.
 -   Add voltage sensor discovery and monitoring.
 -   Revert problematic VLAN naming change in 5.1.8 release.
 
-5.1.10
+**5.1.10**
 
 -   Enable auto-discovery for 6500 switches.
 -   Add support for zCredentialsZProperties.
 
-5.1.9
+**5.1.9**
 
 -   Restore fan cooling capacity monitoring for some 6500 switches.
 
-5.1.8
+**5.1.8**
 
 -   Improve Analytics support.
 -   Improve combining of monitoring for L2 and L3 VLANs.
 
-5.1.7
+**5.1.7**
 
 -   Add Nexus 6000 support.
 
-5.1.6
+**5.1.6**
 
 -   Widen support for 6500 fan monitoring.
 
-5.1.5
+**5.1.5**
 
 -   Add Nexus 9000 support. NX-OS mode only.
 
-5.1.4
+**5.1.4**
 
 -   Fix for missing Nexus 7000 VDC components.
 
-5.1.3
+**5.1.3**
 
 -   Fix vslIndexID error when modeling some devices.
 
-5.1.2
+**5.1.2**
 
 -   Add CISCO-PROCESS-MIB. Fix trap handling.
 -   Add active SNMP monitoring for VRF status.
 -   TelePresence Codecs: Improve modeling and monitor memory usage.
 -   Fix bug in component display for Nexus 7000 VDC devices.
 
-5.1.1
+**5.1.1**
 
 -   Add *zCiscoRemodelEventClassKeys* configuration property. SNMP trap
     types listed in this property will cause an immediate remodel of the
     originating device.
 
-5.1.0
+**5.1.0**
 
 -   Add QoS monitoring.
 
-5.0.6
+**5.0.6**
 
 -   Support CISCO-PAGP-MIB for port-channel association.
 
-5.0.5
+**5.0.5**
 
 -   Add ASA 1000V and CSR 1000V support.
 -   Model more sub-interface types as sub-interfaces.
@@ -2021,13 +2059,13 @@ following OIDs and values are supported:
     1000V.
 -   Fix bug in display of logical contexts for some Cisco devices.
 
-5.0.4
+**5.0.4**
 
 -   Add SNMPv3 support for ISDN and IP-SLA monitoring.
 -   Use EthernetInterface monitoring template for all Ethernet
     interfaces.
 
-5.0.3
+**5.0.3**
 
 -   Stop automatic remodeling when cHsrpStateChange traps occur.
 -   Add "monitor" field for "cannot be remodeled" events.
@@ -2035,7 +2073,7 @@ following OIDs and values are supported:
 -   Fix bug that prevented monitoring control for some components.
 -   Fix bug that broke group membership for some Cisco devices.
 
-5.0.2
+**5.0.2**
 
 -   Zenoss version compatibility changed from &gt;=4.1 to &gt;=4.2.
 -   Interfaces: Use ifType instead of entPhysicalDescr for type.
@@ -2061,20 +2099,20 @@ following OIDs and values are supported:
 -   Fix bug in association of ACE real servers to farms.
 -   Fix bug in display of outbound packetloss for RTT echo probes.
 
-5.0.1
+**5.0.1**
 
 -   Support VRF modeling on older IOS versions.
 -   Model unknown interfaces types.
 -   Disabled incomplete Nexus 1000V Impact support.
 
-5.0.0
+**5.0.0**
 
 -   Support for Nexus 1010.
 -   Support for ASA Service Module (ASA-SM).
 -   Support for Nexus FabricPath cards.
 -   Support for Nexus 3000.
 
-4.0.0
+**4.0.0**
 
 -   Added support for Catalyst 6500 and VSS.
 -   Added support for FWSM.
@@ -2088,82 +2126,3 @@ following OIDs and values are supported:
 -   Extended support for Nexus 7000.
 -   Extended support for ASA.
 -   Extended support for other IOS and Nexus devices.
-
-## Attachments:
-
--   [ACE_DVI.png](img/zenpack-ace_dvi.png)
--   [ASA-FWSM_DVI.png](img/zenpack-asa-fwsm_dvi.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Ciscomonitor_classmap_graphs.png](img/zenpack-ciscomonitor_classmap_graphs.png)
--   [CiscoMonitor_DynamicView_VLAN.png](img/zenpack-ciscomonitor_dynamicview_vlan.png)
--   [Ciscomonitor_interface_classmaps.png](img/zenpack-ciscomonitor_interface_classmaps.png)
--   [CiscoMonitor_NetworkMap_small.png](img/zenpack-ciscomonitor_networkmap_small.png)
--   [CiscoMonitor_NetworkMap.png](img/zenpack-ciscomonitor_networkmap.png)
--   [FanPsuTemp_DVI.png](img/zenpack-fanpsutemp_dvi.png)
--   [Interface.png](img/zenpack-interface.png)
--   [MDS9000_DVI.png](img/zenpack-mds9000_dvi.png)
--   [Module.png](img/zenpack-module.png)
--   [MulticastGroup_DVI.png](img/zenpack-multicastgroup_dvi.png)
--   [MulticastGroup.png](img/zenpack-multicastgroup.png)
--   [Nexus_DVI.png](img/zenpack-nexus_dvi.png)
--   [Nexus1000V-Nexus1010_DVI.png](img/zenpack-nexus1000v-nexus1010_dvi.png)
--   [NexusExtras_DVI.png](img/zenpack-nexusextras_dvi.png)
--   [NVE.png](img/zenpack-nve.png)
--   [PortChannel.png](img/zenpack-portchannel.png)
--   [QoSClassMap_DVI.png](img/zenpack-qosclassmap_dvi.png)
--   [VNI.png](img/zenpack-vni.png)
--   [VLAN.png](img/zenpack-vlan.png)
--   [VRF.png](img/zenpack-vrf.png)
--   [VSG-VMZone_DVI.png](img/zenpack-vsg-vmzone_dvi.png)
--   [Zone.png](img/zenpack-zone.png)
--   [ZoneSet.png](img/zenpack-zoneset.png)
--   [Interface.png](img/zenpack-interface.png)
--   [Nexus1000V-Nexus1010_DVI.png](img/zenpack-nexus1000v-nexus1010_dvi.png)
--   [ACE_DVI.png](img/zenpack-ace_dvi.png)
--   [ASA-FWSM_DVI.png](img/zenpack-asa-fwsm_dvi.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Ciscomonitor_classmap_graphs.png](img/zenpack-ciscomonitor_classmap_graphs.png)
--   [CiscoMonitor_DynamicView_VLAN.png](img/zenpack-ciscomonitor_dynamicview_vlan.png)
--   [Ciscomonitor_interface_classmaps.png](img/zenpack-ciscomonitor_interface_classmaps.png)
--   [CiscoMonitor_NetworkMap_small.png](img/zenpack-ciscomonitor_networkmap_small.png)
--   [CiscoMonitor_NetworkMap.png](img/zenpack-ciscomonitor_networkmap.png)
--   [FanPsuTemp_DVI.png](img/zenpack-fanpsutemp_dvi.png)
--   [Interface.png](img/zenpack-interface.png)
--   [MDS9000_DVI.png](img/zenpack-mds9000_dvi.png)
--   [Module.png](img/zenpack-module.png)
--   [MulticastGroup_DVI.png](img/zenpack-multicastgroup_dvi.png)
--   [MulticastGroup.png](img/zenpack-multicastgroup.png)
--   [Nexus_DVI.png](img/zenpack-nexus_dvi.png)
--   [Nexus1000V-Nexus1010_DVI.png](img/zenpack-nexus1000v-nexus1010_dvi.png)
--   [NexusExtras_DVI.png](img/zenpack-nexusextras_dvi.png)
--   [NVE.png](img/zenpack-nve.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [ACE_DVI.png](img/zenpack-ace_dvi.png)
--   [ASA-FWSM_DVI.png](img/zenpack-asa-fwsm_dvi.png)
--   [CiscoMonitor_DynamicView_VLAN.png](img/zenpack-ciscomonitor_dynamicview_vlan.png)
--   [Ciscomonitor_classmap_graphs.png](img/zenpack-ciscomonitor_classmap_graphs.png)
--   [Ciscomonitor_interface_classmaps.png](img/zenpack-ciscomonitor_interface_classmaps.png)
--   [CiscoMonitor_NetworkMap_small.png](img/zenpack-ciscomonitor_networkmap_small.png)
--   [CiscoMonitor_NetworkMap.png](img/zenpack-ciscomonitor_networkmap.png)
--   [FanPsuTemp_DVI.png](img/zenpack-fanpsutemp_dvi.png)
--   [Interface.png](img/zenpack-interface.png)
--   [MDS9000_DVI.png](img/zenpack-mds9000_dvi.png)
--   [Module.png](img/zenpack-module.png)
--   [MulticastGroup.png](img/zenpack-multicastgroup.png)
--   [MulticastGroup_DVI.png](img/zenpack-multicastgroup_dvi.png)
--   [Nexus_DVI.png](img/zenpack-nexus_dvi.png)
--   [Nexus1000V-Nexus1010_DVI.png](img/zenpack-nexus1000v-nexus1010_dvi.png)
--   [NexusExtras_DVI.png](img/zenpack-nexusextras_dvi.png)
--   [NVE.png](img/zenpack-nve.png)
--   [QoSClassMap_DVI.png](img/zenpack-qosclassmap_dvi.png)
--   [PortChannel.png](img/zenpack-portchannel.png)
--   [VLAN.png](img/zenpack-vlan.png)
--   [VRF.png](img/zenpack-vrf.png)
--   [VSG-VMZone_DVI.png](img/zenpack-vsg-vmzone_dvi.png)
--   [ZoneSet.png](img/zenpack-zoneset.png)
--   [Zone.png](img/zenpack-zone.png)
--   [VNI.png](img/zenpack-vni.png)
--   [cisco-zenpack.png](img/zenpack-cisco-zenpack.png)
--   [Nexus1000V-Nexus1010_DVI.png](img/zenpack-nexus1000v-nexus1010_dvi.png)
--   [ZoneSet.png](img/zenpack-zoneset.png)
-

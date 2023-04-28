@@ -1,7 +1,5 @@
 # IBM DB2
 
-@lb[](img/zenpack-ibm-zenpack.png)
-
 ## Commercial
 
 This ZenPack is developed and supported by Zenoss Inc. Commercial
@@ -592,29 +590,29 @@ the standard way.
 
 ## [Changes](#changes){.toc-backref}
 
-### 1.0.8
+**1.0.8**
 
 -   Improved the tablespace parser for mixed case results (ZPS-2913)
 -   Fixed the scripts missing execute permissions (ZPS-2147)
 -   Tested with Zenoss Cloud, Zenoss Resource Manager 6.6.0, and Service
     Impact 5.5.5.
 
-### 1.0.7
+**1.0.7**
 
 -   Secure exposed passwords in process list and events (ZPS-2207)
 -   Enhance username/password analysis in modeler and docs (ZPS-2548)
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3, 6.0.1, and
     Service Impact 5.2.2.
 
-### 1.0.6
+**1.0.6**
 
 -   Add CallHome metrics (ZPS-1242)
 
-### 1.0.5
+**1.0.5**
 
 -   Improve sanity checks for ConnectionString in modeler (ZEN-24868)
 
-### 1.0.4
+**1.0.4**
 
 -   Improve Graphs
 -   Added failsafe for multi-partitioned databases
@@ -635,45 +633,13 @@ Note
 4.2.X users will have to remove the RRD data files associated with those
 data points so that affected graphs will populate.
 
-### 1.0.3
+**1.0.3**
 
 -   Improved Java detection
 -   Allow Java Binary to be set by an environment variable
 -   Improve ConnectionString handling
 -   Add Europa Support for graphs
 
-### 1.0.2
+**1.0.2**
 
 -   Improved modeler handling
-
-## Attachments:
-
--   [db2_add_connectionstrings.png](img/zenpack-db2_add_connectionstrings.png)
--   [db2_chr.png](img/zenpack-db2_chr.png)
--   [db2_databases.png](img/zenpack-db2_databases.png)
--   [db2_db_templates.png](img/zenpack-db2_db_templates.png)
--   [db2_model_device.png](img/zenpack-db2_model_device.png)
--   [db2_modeler_plugin.png](img/zenpack-db2_modeler_plugin.png)
--   [db2_overview.png](img/zenpack-db2_overview.png)
--   [db2_row_stats.png](img/zenpack-db2_row_stats.png)
--   [db2_sql_statements.png](img/zenpack-db2_sql_statements.png)
--   [db2_structure.png](img/zenpack-db2_structure.png)
--   [db2_ts_graphs.png](img/zenpack-db2_ts_graphs.png)
--   [db2_ts.png](img/zenpack-db2_ts.png)
--   [db2_write_read_ratio.png](img/zenpack-db2_write_read_ratio.png)
--   [ibm-zenpack.png](img/zenpack-ibm-zenpack.png)
--   [db2_add_connectionstrings.png](img/zenpack-db2_add_connectionstrings.png)
--   [db2_chr.png](img/zenpack-db2_chr.png)
--   [db2_databases.png](img/zenpack-db2_databases.png)
--   [db2_db_templates.png](img/zenpack-db2_db_templates.png)
--   [db2_model_device.png](img/zenpack-db2_model_device.png)
--   [db2_modeler_plugin.png](img/zenpack-db2_modeler_plugin.png)
--   [db2_overview.png](img/zenpack-db2_overview.png)
--   [db2_sql_statements.png](img/zenpack-db2_sql_statements.png)
--   [db2_row_stats.png](img/zenpack-db2_row_stats.png)
--   [db2_structure.png](img/zenpack-db2_structure.png)
--   [db2_ts_graphs.png](img/zenpack-db2_ts_graphs.png)
--   [db2_ts.png](img/zenpack-db2_ts.png)
--   [db2_write_read_ratio.png](img/zenpack-db2_write_read_ratio.png)
--   [ibm-zenpack.png](img/zenpack-ibm-zenpack.png)
-

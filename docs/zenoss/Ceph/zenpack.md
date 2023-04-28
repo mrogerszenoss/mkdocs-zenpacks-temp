@@ -1,6 +1,5 @@
 # Ceph
 
-@lb[](img/zenpack-ceph-zenpack.png){.confluence-embedded-image .confluence-thumbnail width="250"}
 
 ## Name:ZenPacks.zenoss.Ceph
 
@@ -30,8 +29,6 @@ Ceph is a distributed object storage and file system.
 
 **Version 2.0.1**
 
-:
-
     Released on 2016/11/03
 
     Requires PythonCollector ZenPack
@@ -47,37 +44,11 @@ Ceph is a distributed object storage and file system.
 
 **Version-1.0.0**
 
-:
-
     Released on 2016/01/22
 
     Requires PythonCollector ZenPack
 
     Compatible with Zenoss Resource Manager 5.0.x
-
-**Contents:**
-
--   [Releases](#releases){.reference .internal}
--   [Background](#background){.reference .internal}
-    -   [Prerequisites](#prerequisites){.reference .internal}
-    -   [Gallery](#gallery){.reference .internal}
--   [Features](#features){.reference .internal}
-    -   [Ceph Structure and Discovery](#discovery){.reference .internal}
--   [Usage](#usage){.reference .internal}
-    -   [ZenPack setup with Calamari/Graphite](#graphite){.reference         .internal}
-    -   [SSH Configuration for Ceph Octopus/Pacific cluster versions](#5){.reference .internal}
-    -   [SSH Configuration for older versions](#configuration){.reference .internal}
-    -   [Event Transformation](#transformation){.reference         .internal}
-    -   [TroubleShooting](#troubleshooting){.reference .internal}
-    -   [Host Discovery](#discovery){.reference .internal}
--   [Installed Items](#items){.reference .internal}
-    -   [Configuration and zProperties](#zproperties){.reference         .internal}
-    -   [Modeler Plugin](#plugin){.reference .internal}
--   [Zenoss Analytics](#analytics){.reference .internal}
--   [Service Impact and Root Cause Analysis](#analysis){.reference     .internal}
--   [OpenStack Integration](#integration){.reference     .internal}
--   [Known Issues](#issues){.reference .internal}
--   [Changes](#changes){.reference .internal}
 
 ## [Background](#id2)
 
@@ -694,36 +665,19 @@ Installation consists of the following steps:
 5.  After refreshing Infrastructure, go into the device's Configuration
     Properties and:
 
-    > -
-    >
-    >
-    >
-    >     Set zCephHosts as the list of your Ceph Hosts, one FQDN or IP
-    >     per line.
-    >
-    >
-    >
-    >
-    >
-    >     If you use containers the format should be:
-    >     *&lt;fqdn&gt;:&lt;container_name&gt;*
-    >
-    >
-    >
-    >
-    >
-    >     For example::
-    >
-    >
-    >
-    >
-    >
-    >     > 192.168.10.1:cephmon 192.168.10.2:cephmon
-    >     > 192.168.10.3:cephmon
-    >
-    > -   Ensure all other zProperties are correct.
-    >
-    > -   Click on *Model Device*
+```
+- Set zCephHosts as the list of your Ceph Hosts, one FQDN or IP per line.
+  If you use containers the format should be: <fqdn>:<container_name>
+
+  For example::
+
+    192.168.10.1:cephmon
+    192.168.10.2:cephmon
+    192.168.10.3:cephmon
+
+- Ensure all other zProperties are correct.
+- Click on *Model Device*
+```
 
 ### SSH Batch Configuration
 
@@ -1087,7 +1041,7 @@ OpenStack volumes and snapshots.
 
 ## [Changes](#id20)
 
-2.2.0
+**2.2.0**
 
 -   Add
     support for Ceph Octopus/Pacific versions via SSH API
@@ -1110,7 +1064,7 @@ OpenStack volumes and snapshots.
 -   Tested
     with Zenoss 6.6.0, Zenoss Cloud and Service Impact 5.5.5.0.0
 
-2.1.0
+**2.1.0**
 
 -   Add backend_addr to host components (ZPS-281)
 -   Clarify and enhance docs for sudoers (ZPS-270)
@@ -1123,13 +1077,13 @@ OpenStack volumes and snapshots.
 -   Clarify docs on installing SSH device (ZPS-5742)
 -   Tested with Zenoss Cloud, Zenoss 6.3.2 and Service Impact 5.3.4
 
-2.0.1
+**2.0.1**
 
 -   Upgrade txsshclient to fix critical change in twisted.conch
     (ZEN-25737)
 -   Reduce INFO logs in modeler to reduce noise (ZEN-25738)
 
-2.0.0
+**2.0.0**
 
 -   OpenStack integration for volumes and snapshots
 -   Added SSH type API connectivity to clusters
@@ -1147,45 +1101,6 @@ OpenStack volumes and snapshots.
     -   OSDs: OSD's In and Up
     -   OSDs: Disk Space
 
-1.0.0
+**1.0.0**
 
 -   Initial Release
-
-## Attachments:
-
--   [Ceph_Design.png](img/zenpack-ceph_design.png)
--   [ceph-zenpack.png](img/zenpack-ceph-zenpack.png)
--   [CephClusterUI.png](img/zenpack-cephclusterui.png)
--   [CephHostUI.png](img/zenpack-cephhostui.png)
--   [CephImpactDiagram.png](img/zenpack-cephimpactdiagram.png)
--   [CephMDSUI.png](img/zenpack-cephmdsui.png)
--   [CephMonUI.png](img/zenpack-cephmonui.png)
--   [CephOSDUI.png](img/zenpack-cephosdui.png)
--   [CephOverviewUI.png](img/zenpack-cephoverviewui.png)
--   [CephPoolUI.png](img/zenpack-cephpoolui.png)
--   [CephZenpackModel.png](img/zenpack-cephzenpackmodel.png)
--   [ceph-zenpack.png](img/zenpack-ceph-zenpack.png)
--   [Ceph_Design.png](img/zenpack-ceph_design.png)
--   [CephHostUI.png](img/zenpack-cephhostui.png)
--   [CephClusterUI.png](img/zenpack-cephclusterui.png)
--   [CephImpactDiagram.png](img/zenpack-cephimpactdiagram.png)
--   [CephMDSUI.png](img/zenpack-cephmdsui.png)
--   [CephMonUI.png](img/zenpack-cephmonui.png)
--   [CephOSDUI.png](img/zenpack-cephosdui.png)
--   [CephOverviewUI.png](img/zenpack-cephoverviewui.png)
--   [CephPoolUI.png](img/zenpack-cephpoolui.png)
--   [CephZenpackModel.png](img/zenpack-cephzenpackmodel.png)
--   [CephMonUI.png](img/zenpack-cephmonui.png)
--   [CephMonUI.png](img/zenpack-cephmonui.png)
--   [CephImpactDiagram.png](img/zenpack-cephimpactdiagram.png)
--   [CephHostUI.png](img/zenpack-cephhostui.png)
--   [CephPoolUI.png](img/zenpack-cephpoolui.png)
--   [CephOverviewUI.png](img/zenpack-cephoverviewui.png)
--   [CephMDSUI.png](img/zenpack-cephmdsui.png)
--   [CephZenpackModel.png](img/zenpack-cephzenpackmodel.png)
--   [CephOSDUI.png](img/zenpack-cephosdui.png)
--   [Ceph_Design.png](img/zenpack-ceph_design.png)
--   [CephClusterUI.png](img/zenpack-cephclusterui.png)
--   [CephOverviewUI.png](img/zenpack-cephoverviewui.png)
--   [Ceph.png](img/zenpack-ceph.png)
-

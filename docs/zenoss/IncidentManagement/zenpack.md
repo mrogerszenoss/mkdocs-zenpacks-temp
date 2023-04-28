@@ -523,7 +523,7 @@ This can be modified similar to other services via Control Center:
 
 ### Change Log
 
-Hotfix 3.3.1
+**3.3.1** Hotfix
 
 -   Bug Fixes
     -   SVC-3383: Ensure zenincidentpoll checks the status of all
@@ -533,7 +533,7 @@ Hotfix 3.3.1
         with notificastion info
     -   SVC-3382: remove extra zep refresh when not updating events
 
-Release 3.3.0
+**3.3.0**
 
 -   Bug Fixes
     -   SVC-2643: batch requests for zenincidentpoll for ServiceNow
@@ -576,30 +576,30 @@ Release 3.3.0
     -   SVC-3323: cleanup separation between Notification Action and
         Incident Integrate
 
-#### Release 3.2.4
+**3.2.4**
 
 -   Bug Fixes
     -   Moved retry flow for HTTP notification actions to QFramework
 
-#### Release 3.2.3
+**3.2.3**
 
 -   Bug Fixes
     -   Fixes HTTP notification won't send non-initial occurrences
 
-#### Release 3.2.2
+**3.2.2**
 
 -   Bug Fixes
     -   Fixes tracebacks due to missing OAuth settings on non-supported
         integrations (problem introduced in 3.2.0)
 
-#### Release 3.2.1
+**3.2.1**
 
 -   Bug Fixes
     -   Fixes an extra argument to a method call when processing HTTP
         Notifications, leading to tracebacks (problem introduced in
         3.2.0)
 
-#### Release 3.2.0
+**3.2.0**
 
 -   Features
     -   ServiceNow log response details if hitting the REST API
@@ -609,13 +609,13 @@ Release 3.3.0
     -   Added 'jsonstring' context for use in fieldMapping
         configurations
 
-#### Release 3.1.1
+**3.1.1**
 
 -   Bug Fixes
     -   Allow ServiceNow Certified Notifications stateField to be
         customized.
 
-#### Release 3.1.0
+**3.1.0**
 
    Features
 
@@ -629,25 +629,25 @@ Release 3.3.0
 -   Don&rsquo;t add multiple zenactiond.conf config files (SVC-2664 /
     SVC-2602)
 
-#### Release 3.0.4
+**3.0.4**
 
 -   SVC-2662: ignore suppression rules for events that have no device
 
-#### Release 3.0.3
+**3.0.3**
 
 -   Add redis endpoint to zenincidentpoll service
 
-#### Release 3.0.2
+**3.0.2**
 
 -   Fix &ldquo;403 Forbidden&rdquo; error when assigning an Incident when manually
     creating a ServiceNow incidentwhen REST API is used.
 
-#### Release 3.0.1
+**3.0.1**
 
 -   Fix AddZenactiondConfToZope migration to support zopeurl configs
     with spaces (for when templating isused).
 
-#### Release 3.0.0
+**3.0.0**
 
 -   Switch to using zenNotify (from QFramework) for processing instead
     of zenactiond
@@ -671,7 +671,7 @@ Release 3.3.0
 -   Slack: Fix not creating new incidents due to incorrect deduplication
     rules.
 
-Release 2.9.4
+**2.9.4**
 
     Bug Fixes
 
@@ -685,14 +685,14 @@ Release 2.9.4
 -   ServiceNow &lsquo;Incident Final States&rsquo; configuration added (default &lsquo;7&rsquo;)
 -   Extensive documentation updates.
 
-Release 2.9.3
+**2.9.3**
 
     Bug Fix
 
 -   When more than one Notification is configured, Incident polling may
     have used the incorrect settings.
 
-Release 2.9.2
+**2.9.2**
 
     Bug Fix
 
@@ -701,21 +701,9 @@ Release 2.9.2
 -   Fix &lsquo;BadRequest&rsquo; Exception when creating Incidents manually from the
     Event Console.
 
-Release 2.9.1
+**2.9.1**
 
     Bug Fix
 
 -   Fixes an exception from formattedDatetime after some upgrades to
     2.9.0
-
-## Attachments:
-
--   [servicenow-logo-partner_0\_1.png](img/zenpack-servicenow-logo-partner_0_1.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/IncidentManagement/zenoss-integration-services-ds.pdf){.external-link}
--   [servicenow-logo-partner_0\_1.png](img/zenpack-servicenow-logo-partner_0_1.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/IncidentManagement/zenoss-integration-services-ds.pdf){.external-link}
--   [servicenow-logo-partner_0\_1.png](img/zenpack-servicenow-logo-partner_0_1.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/IncidentManagement/zenoss-integration-services-ds.pdf){.external-link}
--   [servicenow-logo-partner_0\_1.png](img/zenpack-servicenow-logo-partner_0_1.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/IncidentManagement/zenoss-integration-services-ds.pdf){.external-link}
-

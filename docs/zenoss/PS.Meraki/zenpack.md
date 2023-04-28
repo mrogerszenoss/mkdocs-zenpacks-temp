@@ -1,7 +1,5 @@
 # Meraki Integration ZenPack
 
-** @lb[](img/zenpack-meraki.png){.confluence-embedded-image .confluence-thumbnail width="200"}**
-
 ** **Subscription
 
 This integration is a subscription-based Professional Services
@@ -442,26 +440,26 @@ change, login to confirm the current settings).
 
 ## Changes
 
-Release 3.6.0
+**3.6.0**
 
 -   Fixes
     -   Reduce the occurrence and fix the event message for Intermittent
         Twisted Connection Lost Errors / Events
 
-Release 3.5.2
+**3.5.2**
 
 -   Fixes
     -   Updated twisted client to use HTTP Connection Pool
     -   Added client cache and agent timeouts to configurations
     -   Added a millisecond wait before returning Client cache
 
-Release 3.5.1
+**3.5.1**
 
 -   Fixes
     -   Remove default Device SNMP sysUpTime template for Dashboard
         Devices
 
-Release 3.5.0
+**3.5.0**
 
 -   Features
     -   Add zMerakiDefaultProdState
@@ -471,19 +469,19 @@ Release 3.5.0
     -   Fix DeviceUplinks modeler skipped when Organization has no
         Uplinks on any devices.
 
-Release 3.4.2
+**3.4.2**
 
 -   Fixes
     -   Fix some requests caching to invalid Url, effectively skipping
         caching.
 
-Release 3.4.1
+**3.4.1**
 
 -   Fixes
     -   Fix DeviceUplinks modeler processing skipped if no Device
         results.
 
-Release 3.4.0
+**3.4.0**
 
 -   Features
     -   Increase internal response cache from 180 Seconds to 290 seconds
@@ -494,7 +492,7 @@ Release 3.4.0
         issue on Switch and Access Point devices which don't have
         Uplinks in Dashboard API v1).
 
-Release 3.3.0
+**3.3.0**
 
 -   Features
     -   Remove Latency and Loss monitoring from Cellular components -
@@ -510,7 +508,7 @@ Release 3.3.0
     -   Fix traceback in MerakiUplinkStatusDataSourcePlugin when missing
         Uplink data.
 
-Release 3.2.0
+**3.2.0**
 
 -   Features
     -   Enable merakiUplinkStatus status monitoring template for
@@ -525,7 +523,7 @@ Release 3.2.0
     -   Remove Ping monitoring from Cellular Uplinks by default (the
         merakiPingStatus template can be added where needed).
 
-Release 3.1.0
+**3.1.0**
 
 -   Features
     -   Add zMerakiNetworkNamesIgnore to ignore Networks by Names
@@ -534,7 +532,7 @@ Release 3.1.0
     -   Fix missing pagination in requests leading to missing components
         / monitoring.
 
-Release 3.0.0
+**3.0.0**
 
 -   Features
     -   Switch to Dashboard API v1 endpoints
@@ -542,30 +540,30 @@ Release 3.0.0
     -   Default Device ID no longer includes network name as device may
         be moved between networks.
 
-Release 2.2.0
+**2.2.0**
 
 -   Fixes
     -   Missing 'devMac' causes a traceback in modeler
     -   MerakiUplinkLatencyDataSourcePlugin - separate events for
         missing datapoints and polling issues.
 
-Release 2.1.2
+**2.1.2**
 
 -   Fixes
     -   Fix "NotFound is not defined" error when running jobs
 
-Release 2.1.1
+**2.1.1**
 
 -   Fixes
     -   Index devices on creation to add to Catalog
 
-Release 2.1.0
+**2.1.0**
 
 -   Features
     -   Add 'speed' attribute to Device Interface components for manual
         tracking.
 
-Release 2.0.0
+**2.0.0**
 
 -   Features
     -   The Device Interfaces component is moved from the Dashboard
@@ -575,19 +573,19 @@ Release 2.0.0
         will need to be manually deleted if the data is no longer
         needed.
 
-Release 1.7.1
+**1.7.1**
 
 -   Fixes
     -   Move Device Status event to /Status/Meraki/Device since events
         in /Status/Ping disable monitoring.
 
-Release 1.7.0
+**1.7.0**
 
 -   Fixes
     -   Move Device Status event to /Status/Ping to provide availability
         for reporting.
 
-Release 1.6.0
+**1.6.0**
 
 -   Fixes
     -   Add missing eventClass mappings causing events in /Unknown class
@@ -599,55 +597,55 @@ Release 1.6.0
     -   Update UplinkStatus monitoring to not use a separate API call,
         rather derive from Latency monitoring status.
 
-Release 1.5.0
+**1.5.0**
 
 -   Features
     -   Add HTTP Proxy support
 
-Release 1.4.3
+**1.4.3**
 
 -   Features
     -   Improved logging details for missing 'lanIp' on devices.
 
-Release 1.4.2
+**1.4.2**
 
 -   Fixes
     -   Add migration to rebuild device relations.
 
-Release 1.4.1
+**1.4.1**
 
 -   Fixes
     -   Remove port from zMerakiSnmpHost default - use zSnmpPort instead
     -   'Ready' is a valid status for merakiUplinkStatus
     -   Relationship for MerakiDevInterface to MerakiDevice
 
-Release 1.4.0
+**1.4.0**
 
 -   Features
     -   Add zMerakiSnmpHost to override SNMP connection IP to connect to
         Meraki proxy.
     -   Now requires ZenPacks.zenoss.PS.Util &gt;= 1.7.0
 
-Release 1.3.0
+**1.3.0**
 
 -   Features
     -   Add Uplink Ping Monitoring DataSource
     -   Model Meraki Device Name in meraki.rest.Device
     -   Now requires ZenPacks.zenoss.PS.Util &gt;= 1.3.0
 
-Release 1.2.0
+**1.2.0**
 
 -   Features
     -   Disable Ping based monitoring by default, use device status from
         Meraki API.
     -   Split DeviceClasses based on zMerakiDeviceClassMapping
 
-Release 1.1.1
+**1.1.1**
 
 -   Fixes
     -   Fix catalog load to create missing index.
 
-Release 1.1.0
+**1.1.0**
 
 -   Features
     -   Remove the zMerakiOrganizationId zProperty, replace with a
@@ -657,5 +655,3 @@ Release 1.1.0
     -   Use the Device Name from the Meraki API for Device Title
     -   Update Device and Uplink Status Templates to set Event Class and
         Severity
-
-

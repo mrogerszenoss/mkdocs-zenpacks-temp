@@ -1,7 +1,5 @@
 # Brocade SAN Switches
 
-@lb[](img/zenpack-broacade-zenpack.png)
-
 ## Community
 
 This ZenPack is developed and supported by the Zenoss User Community.
@@ -92,17 +90,6 @@ To view the virtual servers, select Brocade Details.
 
 ## Changes
 
-<dl markdown="1">
-<dt markdown="1">
-2.1.1 (2014-10-23)
-</dt>
-</dl>
+**2.1.1** (2014-10-23)
 
 -   Improve performance of FCPort component grid on Zenoss 5.
-
-## Attachments:
-
--   [broacade-zenpack.png](img/zenpack-broacade-zenpack.png)
--   [broacade-zenpack.png](img/zenpack-broacade-zenpack.png)
--   [broacade-zenpack.png](img/zenpack-broacade-zenpack.png)
--   [broacade-zenpack.png](img/zenpack-broacade-zenpack.png)

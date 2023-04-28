@@ -1,7 +1,5 @@
 # MySQL
 
-@lb[](img/zenpack-mysql-zenpack.png)
-
 ## Open Source
 
 This ZenPack is developed and supported by Zenoss Inc. [Contact Zenoss](https://tryit.zenoss.com/zenpack-contact/){.external-link} to
@@ -52,22 +50,6 @@ Version 3.0.8-[Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss
 
 Version 3.0.7-[Download](https://storage.googleapis.com/zenpacks/ZenPacks.zenoss.MySqlMonitor/3.0.7/ZenPacks.zenoss.MySqlMonitor-3.0.7.egg){.external-link}:   Released on 2015/11/25:   Requires [PythonCollector ZenPack](https://help.zenoss.com/display/in/PythonCollector "ZenPack:PythonCollector"){.external-link}:   Compatible with Zenoss Core 4.2.x, Zenoss Core 5.0.x, Zenoss
     Resource Manager 4.1.x, Zenoss Resource Manager 4.2.x
-
-## Contents
-
--   [Background](#background)
--   [Gallery](#gallery)
--   [Features](#features)
-    -   [Discovery](#discovery)
-    -   [Monitoring](#monitoring)
-    -   [Event monitoring](#event-monitoring)
-    -   [Service Impact](#service-impact)
--   [Usage](#usage)
--   [Prerequisites](#prerequisites)
--   [Troubleshooting](#troubleshooting)
--   [Migration](#migration)
--   [Installed Items](#installed-items)
--   [Changes](#changes)
 
 ## Background
 
@@ -134,9 +116,8 @@ Server:
 
 -   Metrics:
 
-    |                       |                         |                          |                           |
-    |:----------------------|:------------------------|:-------------------------|:--------------------------|
     | \* Size               | \* Data size            | \* Index size            | \* Connections            |
+    |:----------------------|:------------------------|:-------------------------|:--------------------------|
     | \* Threads connected  | \* Max used connections | \* Uptime                | \* Aborted clients        |
     | \* Aborted connects   | \* Bytes received       | \* Bytes sent            | \* Com create db          |
     | \* Com drop db        | \* Com alter db         | \* Com create table      | \* Com alter table        |
@@ -337,80 +318,43 @@ Component Types
 
 ## Changes
 
-3.1.0 (2017-12-29)
+**3.1.0** (2017-12-29)
 
 -   Fixed error messages to be more informative. (ZPS-2684)
 -   Fix missing clear events. (ZPS-2432)
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3, 6.1.0
 
-3.0.9 (2017-04-04)
+**3.0.9** (2017-04-04)
 
 -   Update events and event class mappings to facilitate transforms
     (ZPS-500)
 
-3.0.8 (2017-01-16)
+**3.0.8** (2017-01-16)
 
 -   Give datasource events unique eventKeys to avoid false-clearing.
     (ZPS-500)
 -   Set default timeouts for data collection DB connection. (ZPS-313)
 
-3.0.7 (2015-11-25)
+**3.0.7** (2015-11-25)
 
 -   Fix datasources to not block zenpython. (ZEN-19220)
 
-3.0.6 (2015-06-18)
+**3.0.6** (2015-06-18)
 
 -   Added zMySQLTimeout property and timeout for datasource plugins.
 
-3.0.5 (2015-02-05)
+**3.0.5** (2015-02-05)
 
 -   Restore functionality of deprecated MySqlMonitor datasource.
     (ZEN-16452)
 
-3.0.4 (2014-12-18)
+**3.0.4** (2014-12-18)
 
 -   Add support for Zenoss 5x.
 -   Move InnoDB Deadlock event to database component, and clear it in
     30min.
 
-3.0.3 (2014-11-05)
+**3.0.3** (2014-11-05)
 
 -   Fix graphpoint sequences to fix graphpoint colors.
 -   Close connections pools when done to avoid leaking threads.
-
-## Attachments:
-
--   [Configuration_properties_panel.png](img/zenpack-configuration_properties_panel.png)
--   [Edit_zMySQLConnectionString_property.png](img/zenpack-edit_zmysqlconnectionstring_property.png)
--   [MySQL_Impact.png](img/zenpack-mysql_impact.png)
--   [mysql-zenpack.png](img/zenpack-mysql-zenpack.png)
--   [MySQLDatabase_Graphs.png](img/zenpack-mysqldatabase_graphs.png)
--   [MySQLDatabase.png](img/zenpack-mysqldatabase.png)
--   [MySQLServer_Graphs.png](img/zenpack-mysqlserver_graphs.png)
--   [MySQLServer.png](img/zenpack-mysqlserver.png)
--   [Configuration_properties_panel.png](img/zenpack-configuration_properties_panel.png)
--   [Edit_zMySQLConnectionString_property.png](img/zenpack-edit_zmysqlconnectionstring_property.png)
--   [MySQL_Impact.png](img/zenpack-mysql_impact.png)
--   [mysql-zenpack.png](img/zenpack-mysql-zenpack.png)
--   [MySQLDatabase_Graphs.png](img/zenpack-mysqldatabase_graphs.png)
--   [MySQLDatabase.png](img/zenpack-mysqldatabase.png)
--   [MySQLServer_Graphs.png](img/zenpack-mysqlserver_graphs.png)
--   [MySQLServer.png](img/zenpack-mysqlserver.png)
--   [MySQLDatabase.png](img/zenpack-mysqldatabase.png)
--   [Configuration_properties_panel.png](img/zenpack-configuration_properties_panel.png)
--   [Edit_zMySQLConnectionString_property.png](img/zenpack-edit_zmysqlconnectionstring_property.png)
--   [MySQL_Impact.png](img/zenpack-mysql_impact.png)
--   [mysql-zenpack.png](img/zenpack-mysql-zenpack.png)
--   [MySQLDatabase_Graphs.png](img/zenpack-mysqldatabase_graphs.png)
--   [MySQLDatabase.png](img/zenpack-mysqldatabase.png)
--   [MySQLServer_Graphs.png](img/zenpack-mysqlserver_graphs.png)
--   [MySQLServer.png](img/zenpack-mysqlserver.png)
--   [Edit_zMySQLConnectionString_property.png](img/zenpack-edit_zmysqlconnectionstring_property.png)
--   [Configuration_properties_panel.png](img/zenpack-configuration_properties_panel.png)
--   [mysql-zenpack.png](img/zenpack-mysql-zenpack.png)
--   [MySQL_Impact.png](img/zenpack-mysql_impact.png)
--   [MySQLServer_Graphs.png](img/zenpack-mysqlserver_graphs.png)
--   [MySQLDatabase.png](img/zenpack-mysqldatabase.png)
--   [MySQLDatabase_Graphs.png](img/zenpack-mysqldatabase_graphs.png)
--   [MySQLServer.png](img/zenpack-mysqlserver.png)
-

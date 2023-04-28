@@ -1,7 +1,5 @@
 # Single Sign-On - SSO SAML Authenticator Integration Service
 
-@lb[](img/zenpack-zenpack-general.png)
-
 ## Subscription
 
 This integration is a subscription-based Professional Services
@@ -152,7 +150,7 @@ It is expected that the IdP will return RelayState unmodified.
 
 ## Change Log
 
-Release 1.4.1
+**1.4.1**
 
 -   Features
     -   Expose ability to logout and be directed to the Zenoss login
@@ -161,7 +159,7 @@ Release 1.4.1
     -   When logged in through SAML remove prompt for password on the
         Settings and User Settings page
 
-Release 1.4.0
+**1.4.0**
 
 -   Features
     -   Support for Single Logout (SLO) added
@@ -169,27 +167,16 @@ Release 1.4.0
     -   Use RelayState to persist original url request rather than
         session
 
-Release 1.5.0
+**1.5.0**
 
 -   Features
     -   Support for signed AuthNRequest
     -   Add possibility to configure SLO Response Redirect URL
     -   move common code to PS.util ZenPack
 
-Release 1.6.0
+**1.6.0**
 
 -   Features
     -   Add config entry for user ID field
 -   Bug fixes
     -   Fix hardcoded NameIDFormat for service provider metadata
-
-## Attachments:
-
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/SAMLAuthenticator/zenoss-integration-services-ds.pdf){.external-link}
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/SAMLAuthenticator/zenoss-integration-services-ds.pdf){.external-link}
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenpack-general.png](img/zenpack-zenpack-general.png)
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/SAMLAuthenticator/zenoss-integration-services-ds.pdf){.external-link}
--   [zenoss-integration-services-ds.pdf](https://storage.googleapis.com/zenoss-doc-artifacts/SAMLAuthenticator/zenoss-integration-services-ds.pdf){.external-link}
-

@@ -914,7 +914,7 @@ and Red Hat Enterprise Linux.
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3 and 6.1.2
     and Service Impact 5.3.1.
 
-2.3.0
+**2.3.0**
 
 -   The zenoss.cmd.linux.rpm modeler plugin is now disabled by default.
     (ZPS-1603)
@@ -945,12 +945,12 @@ and Red Hat Enterprise Linux.
 -   Tested with Zenoss Resource Manager 4.2.5 RPS 743, 5.3.3 and 6.1.2
     and Service Impact 5.3.0
 
-2.2.7
+**2.2.7**
 
 -   Allow for restricted dmesg access in Debian 9 and SUSE 12.
     (ZPS-1933, ZPS-550)
 
-2.2.6
+**2.2.6**
 
 -   Fix issue with links between Linux and NetApp FileSystem components.
     (ZPS-1736)
@@ -965,18 +965,18 @@ and Red Hat Enterprise Linux.
 -   Fix 0.0% utilization in Windows filesystem threshold event
     summaries. (ZPS-1844)
 
-2.2.5
+**2.2.5**
 
 -   Fix modeler 'AttributeError: type' error when
     zInterfaceMapIgnoreTypes is set. (ZPS-1695)
 -   Fix RPN errors in aliases for memory, swap, and LVM (ZPS-757)
 
-2.2.4
+**2.2.4**
 
 -   Escape the commandTemplate expression for disk and idisk datasources
     to avoid TALES errors. (ZPS-1616)
 
-2.2.3
+**2.2.3**
 
 -   Use FileSystem_NFS_Client template for all NFS mounts (including
     nfs4). (ZPS-1495)
@@ -984,18 +984,18 @@ and Red Hat Enterprise Linux.
 -   Add percentUsed datapoint for filesystems. Use for UI and events.
     (ZPS-1545)
 
-2.2.2
+**2.2.2**
 
 -   Fix query service overloading during Analytics ETL of Linux devices.
     (ZPS-1312)
 -   Honor zFileSystemIgnoreTypes in zenoss.cmd.linux.df modeler plugin.
     (ZPS-1494)
 
-2.2.1
+**2.2.1**
 
 -   Improved OS Model parser for os_release modeler plugin. (ZPS-1177)
 
-2.2.0
+**2.2.0**
 
 -   Add disk id modeling for correlation with underlying hardware.
     (ZPS-510)
@@ -1005,20 +1005,20 @@ and Red Hat Enterprise Linux.
     (ZPS-1266)
 -   Fix NFS filesystem monitoring not working as expected. (ZPS-1006)
 
-2.1.3
+**2.1.3**
 
 -   Properly account for reserved space to match df output. (ZPS-26739)
 
-2.1.2
+**2.1.2**
 
 -   Improve OS process detection. (ZPS-659)
 -   Quiet modeler error messages for missing services. (ZPS-644)
 
-2.1.1
+**2.1.1**
 
 -   Fix "ifconfig" is checked before "ip" Linux Monitor (ZEN-25425)
 
-2.1.0
+**2.1.0**
 
 -   Add cpu_ssCpuUsedPerCpu and mem_MemUsedPercent datapoints.
     (ZEN-22978)
@@ -1032,29 +1032,29 @@ and Red Hat Enterprise Linux.
 -   Fix setIdForRelationship error when modeling some LVM versions.
     (ZEN-22409)
 
-2.0.6
+**2.0.6**
 
 -   Fix "string index out of range" error when modeling older LVM
     versions (ZEN-25792)
 
-2.0.4
+**2.0.4**
 
 -   Fix "unimplemented" SSH error on 4.2.5 SP709. (ZEN-23392)
 
-2.0.3
+**2.0.3**
 
 -   Fix migration of Linux devices to new type. (ZEN-24293)
 
-2.0.2
+**2.0.2**
 
 -   Added property to ignore unmounted hard disks
 -   Improve 1.x to 2.x migration time. (ZEN-24024)
 
-2.0.1
+**2.0.1**
 
 -   Fix invalid event class in filesystem threshold
 
-2.0.0
+**2.0.0**
 
 -   Added support for LVM Physical Volumes, Volume Groups, and Logical
     Volumes
@@ -1066,11 +1066,3 @@ and Red Hat Enterprise Linux.
 -   Added Dynamic View Support
 -   Completely replaces EnterpriseLinux ZenPack
 -   Many other smaller improvements.
-
-## Attachments:
-
--   [linux-zenpack.png](img/zenpack-linux-zenpack.png)
--   [linux-zenpack.png](img/zenpack-linux-zenpack.png)
--   [linux-zenpack.png](img/zenpack-linux-zenpack.png)
--   [linux-zenpack.png](img/zenpack-linux-zenpack.png)
--   [linux-zenpack.png](img/zenpack-linux-zenpack.png)
